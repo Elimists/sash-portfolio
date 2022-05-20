@@ -7,7 +7,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Sash Mahara</title>
-        <meta name="description" content="Sash Mahara's Portfolio" />
+        <meta name="description" content="Sash Mahara Portfolio" />
         <link rel="icon" href="/sash-logo.svg" />
       </Head>
 
