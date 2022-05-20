@@ -13,8 +13,8 @@ export default function Navbar(){
                     <a><Image src={SashLogo} alt="Sash Mahara Logo"/></a>
                 </Link>
                 <div className={styles.nav_link_group}>
-                    <Link href='/'><a className={(router.pathname == "/") && styles.nav_links_active}>Home</a></Link>
-                    <Link href='/about'><a className={(router.pathname == "/about") && styles.nav_links_active}>About</a></Link>
+                    <Link href='/'><a className={(router.pathname == "/") ? styles.nav_links_active : undefined}>Home</a></Link>
+                    <Link href='/about'><a className={(router.pathname == "/about") ? styles.nav_links_active : undefined}>About</a></Link>
                 </div>
 
             </div>
