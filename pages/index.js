@@ -5,7 +5,7 @@ import CoreProjectImage from '../public/images/projects/core.png'
 import HomieProjectImage from '../public/images/projects/homie.png'
 import LisnProjectImage from '../public/images/projects/lisn.png'
 import WorldJournalProjectImage from '../public/images/projects/world-journal.png'
-
+import Link from 'next/link'
 
 const projects = [
   {
@@ -44,6 +44,12 @@ const projects = [
 
 
 export default function Home() {
+
+  function handleScroll(){
+    var scrollToDiv = document.getElementById("my-projects-library").offsetTop
+    window.scrollTo({ top: scrollToDiv, behavior: 'smooth' });
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -59,18 +65,20 @@ export default function Home() {
             Sash Mahara
           </p>
           <p className={styles.hello}>I&apos;m a industrial designer who specializes in user-centered design and research. I&apos;m passionate about all things tech and love to create amazing experiences through digital or phsyical products.</p>
-          <div className={styles.check_out}>
+          
+          <div className={styles.check_out} onClick={() => handleScroll()}>
             <p className={styles.check_out_text}>
               Check out my work! 
             </p>
             <div className={styles.bouncy_arrow}>&darr;</div>
           </div>
+          
 
           <p className={styles.work_heading}>WORK</p>
         </div>
         
         
-
+        <section id="my-projects-library">
         <div className={styles.grid}>
 
           {projects.map((project) => {
@@ -85,6 +93,7 @@ export default function Home() {
           })}
          
         </div>
+        </section>
       </main>
 
      
