@@ -40,7 +40,7 @@ export default function Home() {
 
           {allProjects.map((project) => {
             return(
-              <div key={project.id} className={styles.card}>
+              <div key={project.id.toString()} className={styles.card}>
                 <Image src={project.image} alt={project.name} height={400} width={600}></Image>
                 <h3 className={styles.project_title}>{project.name}</h3>
                 <p className={styles.project_description}>{project.description}</p>
