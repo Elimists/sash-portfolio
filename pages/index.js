@@ -71,9 +71,9 @@ export default function Home() {
             return(
               <div key={project.id} className={styles.card}>
                 <Image src={project.image} alt={project.name} height={400} width={600}></Image>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                <p>{project.tags}</p>
+                <h3 className={styles.project_title}>{project.name}</h3>
+                <p className={styles.project_description}>{project.description}</p>
+                <p className={styles.projeect_tags}>{project.tags}</p>
               </div>
             )
           })}
