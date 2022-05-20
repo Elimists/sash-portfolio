@@ -8,7 +8,7 @@ export default function Layout({children}){
             <Head>
                 <title>Sash Mahara Portfolio</title>
                 <meta name="keywords" content="HTML, CSS, JavaScript"/>
-                <meta name="description" content="Sash Mahara Portfolio. Portfolio created by ProReactLabs." />
+                <meta name="description" content="Industrial designer specializing in user centered design and research. Love to create amazing experiences through digital or physical products."/>
                 <meta name="author" content="ProReact Labs - Pran Pandey"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <meta charSet="utf-8"/>
