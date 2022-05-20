@@ -53,11 +53,11 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <div>
+        <div className={styles.intro}>
           <p>Hello, I&apos;m</p>
-          <h1 className={styles.title}>
+          <p className={styles.my_name}>
             Sash Mahara
-          </h1>
+          </p>
           <p>I&apos;m a industrial designer who specializes in user-centered design and research. I&apos;m passionate about all things tech and love to create amazing experiences through digital or phsyical products.</p>
           <div className={styles.check_out}>
             <p>

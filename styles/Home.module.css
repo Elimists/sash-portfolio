@@ -47,12 +47,29 @@
   }
 }
 
+.intro{
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.my_name{
+  font-size: 64px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  background: rgb(244, 168, 161);
+  background: linear-gradient(90deg, rgba(244, 168, 161, 1) 0%, rgba(143, 161, 233, 1) 12%, rgba(116, 179, 245, 1) 25%, rgba(92, 216, 243, 1) 41%, rgba(74, 173, 238, 1) 56%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .grid {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 1000px;
+  max-width: 1100px;
 }
 
 .card {
@@ -63,7 +80,7 @@
   text-decoration: none;
   border-radius: 6px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  width: 400px;
+  width: 450px;
   cursor: pointer;
 }
 
