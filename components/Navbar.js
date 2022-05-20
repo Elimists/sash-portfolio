@@ -10,7 +10,7 @@ export default function Navbar(){
         <div className={styles.container}>
             <div className={styles.inner_content}>
                 <Link href="/">
-                    <a><Image src={SashLogo} /></a>
+                    <a><Image src={SashLogo} alt="Sash Mahara Logo"/></a>
                 </Link>
                 <div className={styles.nav_link_group}>
                     <Link href='/'><a className={(router.pathname == "/") && styles.nav_links_active}>Home</a></Link>
