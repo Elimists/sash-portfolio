@@ -1,2 +1,23 @@
 .container{
+    display: flex;
+    justify-content: center;
+}
+
+.inner_content{
+    display: flex;
+    width: 1100px;
+    padding: 1rem 0rem 1rem 0rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_link_group{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.nav_link_group > a {
+    font-size: 20px;
+    font-weight: 300;
+    padding-right: 3rem;
 }

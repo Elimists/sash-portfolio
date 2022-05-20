@@ -5,9 +5,15 @@ import Image from 'next/image'
 export default function Navbar(){
     return(
         <div className={styles.container}>
-            <Image src={SashLogo}></Image>
-            <Link href='/'><a>Home</a></Link>
-            <Link href='/about'><a>About</a></Link>
+            <div className={styles.inner_content}>
+
+                <Image src={SashLogo}></Image>
+                <div className={styles.nav_link_group}>
+                    <Link href='/'><a>Home</a></Link>
+                    <Link href='/about'><a>About</a></Link>
+                </div>
+                
+            </div>
         </div>
     )
 }
