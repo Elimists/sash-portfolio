@@ -8,10 +8,12 @@ import HomieProjectImage from '../public/images/projects/homie.png'
 
 const projects = [
   {
+    'image': HomieProjectImage,
     'name': "Rental Housing Search - Homie",
     'description': "Web application that simplifies and assists the housing rental search process.",
     'tags': ['UX/UI - User Research', 'Visual Design', 'Behavioural Design']
-  }
+  },
+  
 ]
 
 
@@ -65,7 +67,7 @@ export default function Home() {
             <p>This is a project description. Temporary description is awesome!</p>
             <p>UI/UX - User Desgin - Tags</p>
           </div>
-          
+
         </div>
       </main>
 
