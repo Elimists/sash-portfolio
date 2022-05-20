@@ -1,4 +1,4 @@
-import Head from 'next/head'
+
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import CoreProjectImage from '../public/images/projects/core.png'
@@ -52,18 +52,14 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Sash Mahara</title>
-        <meta name="description" content="Sash Mahara Portfolio" />
-        <link rel="icon" href="/sash-logo.svg" />
-      </Head>
+      
 
       <main className={styles.main}>
         <div className={styles.intro}>
           <p className={styles.hello}>Hello, I&apos;m</p>
-          <p className={styles.my_name}>
+          <h1 className={styles.my_name}>
             Sash Mahara
-          </p>
+          </h1>
           <p className={styles.hello}>I&apos;m a industrial designer who specializes in user-centered design and research. I&apos;m passionate about all things tech and love to create amazing experiences through digital or phsyical products.</p>
           
           <div className={styles.check_out} onClick={() => handleScroll()}>
