@@ -13,11 +13,11 @@ export default function Home() {
 
       <main className={styles.main}>
         <div>
-          <p>Hello, I'm</p>
+          <p>Hello, I&apos;m</p>
           <h1 className={styles.title}>
             Sash Mahara
           </h1>
-          <p>I&apos;m a industrial designer who specializes in user-centered design and research. I’m passionate about all things tech and love to create amazing experiences through digital or phsyical products.</p>
+          <p>I&apos;m a industrial designer who specializes in user-centered design and research. I&apos;m passionate about all things tech and love to create amazing experiences through digital or phsyical products.</p>
         </div>
         <p className={styles.description}>
           Check out my work! &darr;
