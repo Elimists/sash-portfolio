@@ -132,9 +132,17 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+
+  .main{
+    padding: 0;
+  }
+
+  .intro {
+    padding: 0rem 0.5rem 0rem 0.5rem;
   }
 }
