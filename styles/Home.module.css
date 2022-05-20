@@ -22,6 +22,7 @@
 .check_out{
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .check_out_text{
@@ -31,7 +32,7 @@
 
 .bouncy_arrow{
   margin-left: 10px;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 200;
   animation: bounce 1s infinite;
 }
@@ -67,7 +68,7 @@
 
 .grid {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
   max-width: 1100px;
@@ -80,9 +81,10 @@
   text-decoration: none;
   border-radius: 4px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 540px;
+  width: auto;
+  max-width: calc(100% * 0.48);
   cursor: pointer;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .project_title{
@@ -124,7 +126,7 @@
   }
 
   50% {
-    transform: translateY(6px);
+    transform: translateY(10px);
   }
 
   100% {
@@ -145,4 +147,11 @@
   .intro {
     padding: 0rem 0.5rem 0rem 0.5rem;
   }
+
+  .card {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+  }
 }
+
