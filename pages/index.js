@@ -13,7 +13,7 @@ const projects = [
     'image': HomieProjectImage,
     'name': "Rental Housing Search - Homie",
     'description': "Web application that simplifies and assists the housing rental search process.",
-    'tags': ['UX/UI - User Research', 'Visual Design', 'Behavioural Design']
+    'tags': "UX/UI - User Research - Visual Design - Behavioural Design"
   },
 
   {
@@ -21,7 +21,7 @@ const projects = [
     'image': LisnProjectImage,
     'name': "User Research and Onboarding - LISN",
     'description': "Expanding product market research and improving new user onboarding for a mobile application.",
-    'tags': ['UX / UI', 'User Research', 'Product Roadmapping',  'Prototyping',  'Branding']
+    'tags': "UX / UI - User Research - Product Roadmapping - Prototyping - Branding"
   },
 
   {
@@ -59,9 +59,12 @@ export default function Home() {
             Sash Mahara
           </h1>
           <p>I&apos;m a industrial designer who specializes in user-centered design and research. I&apos;m passionate about all things tech and love to create amazing experiences through digital or phsyical products.</p>
-          <p>
-            Check out my work! &darr;
-          </p>
+          <div className={styles.check_out}>
+            <p>
+              Check out my work! 
+            </p>
+            <div className={styles.bouncy_arrow}>&darr;</div>
+          </div>
         </div>
         
 
@@ -73,7 +76,7 @@ export default function Home() {
                 <Image src={project.image} alt={project.name} height={400} width={600}></Image>
                 <h3 className={styles.project_title}>{project.name}</h3>
                 <p className={styles.project_description}>{project.description}</p>
-                <p className={styles.projeect_tags}>{project.tags}</p>
+                <p className={styles.project_tags}>{project.tags}</p>
               </div>
             )
           })}
