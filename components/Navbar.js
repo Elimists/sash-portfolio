@@ -2,6 +2,7 @@ import styles from '../styles/Navbar.module.css'
 import SashLogo from '../public/sash-logo.svg'
 import Link from 'next/link'
 import Image from 'next/image'
+import Router from 'next/router'
 export default function Navbar(){
     return(
         <div className={styles.container}>
@@ -12,7 +13,7 @@ export default function Navbar(){
                     <Link href='/'><a>Home</a></Link>
                     <Link href='/about'><a>About</a></Link>
                 </div>
-                
+
             </div>
         </div>
     )
