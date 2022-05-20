@@ -91,11 +91,14 @@
 }
 
 .project_description{
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 200;
 }
 
 .project_tags{
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 200;
+  color: #0D4E93;
 }
 
 .card:hover,
