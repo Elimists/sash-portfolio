@@ -54,18 +54,21 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className={styles.intro}>
-          <p>Hello, I&apos;m</p>
+          <p className={styles.hello}>Hello, I&apos;m</p>
           <p className={styles.my_name}>
             Sash Mahara
           </p>
-          <p>I&apos;m a industrial designer who specializes in user-centered design and research. I&apos;m passionate about all things tech and love to create amazing experiences through digital or phsyical products.</p>
+          <p className={styles.hello}>I&apos;m a industrial designer who specializes in user-centered design and research. I&apos;m passionate about all things tech and love to create amazing experiences through digital or phsyical products.</p>
           <div className={styles.check_out}>
-            <p>
+            <p className={styles.check_out_text}>
               Check out my work! 
             </p>
             <div className={styles.bouncy_arrow}>&darr;</div>
           </div>
+
+          <p className={styles.work_heading}>WORK</p>
         </div>
+        
         
 
         <div className={styles.grid}>

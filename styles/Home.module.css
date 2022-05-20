@@ -4,7 +4,7 @@
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
+  padding: 2rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -22,39 +22,35 @@
 .check_out{
   display: flex;
   align-items: center;
-  font-size: 16px;
+}
+
+.check_out_text{
+  font-size: 24px;
+  font-weight: 200;
 }
 
 .bouncy_arrow{
   margin-left: 10px;
-  font-size: 20px;
+  font-size: 24px;
+  font-weight: 200;
   animation: bounce 1s infinite;
 }
 
-@keyframes bounce {
-
-
-  0%{
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(6px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
+.work_heading{
+  font-size: 26px;
+  font-weight: 200;
+  padding-top: 4.5rem;
 }
 
 .intro{
   max-width: 1100px;
   display: flex;
   flex-direction: column;
+  padding: 7rem 0.5rem 4.5rem 0.5rem;
 }
 
 .my_name{
-  font-size: 64px;
+  font-size: 96px;
   font-weight: 600;
   margin: 0;
   padding: 0;
@@ -64,24 +60,29 @@
   -webkit-text-fill-color: transparent;
 }
 
+.hello{
+  font-size: 18px;
+  font-weight: 200;
+}
+
 .grid {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   max-width: 1100px;
 }
 
 .card {
-  margin: 0.4rem;
-  padding: 1rem;
+  padding: 0.5rem;
   text-align: left;
   color: inherit;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 4px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  width: 450px;
+  max-width: 540px;
   cursor: pointer;
+  margin-bottom: 4rem;
 }
 
 .project_title{
@@ -106,12 +107,26 @@
     transition: 200ms ease-in;
 }
 
-
-
-
 .logo {
   height: 1em;
   margin-left: 0.5rem;
+}
+
+
+@keyframes bounce {
+
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(6px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 @media (max-width: 600px) {
