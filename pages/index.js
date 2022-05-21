@@ -3,15 +3,30 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { allProjects } from '../data/projects'
 import Link from 'next/link'
+import {useState, useEffect} from 'react'
 
-export const getStaticProps = async () => {
-  
-  return {
-    props: {projects: allProjects}
-  }
-}
+
 
 export default function Home({projects}) {
+
+  const [isScrolledDown, setIsScrolledDown] = useState(false)
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if(window.pageYOffset > 200){
+        setIsScrolledDown(true)
+      }else{
+        setIsScrolledDown(false)
+      }
+    })
+  }, [])
+
+  function scrollToTheTop(){
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
 
   function handleScroll(){
     var scrollToDiv = document.getElementById("my-projects-library").offsetTop
@@ -60,9 +75,19 @@ export default function Home({projects}) {
          
         </div>
         </section>
+
+        {(isScrolledDown) ? <div className={styles.go_top_button} onClick={() => scrollToTheTop()}>&uarr;</div> : null}
       </main>
 
      
     </div>
   )
+}
+
+
+export const getStaticProps = async () => {
+
+  return {
+    props: { projects: allProjects }
+  }
 }

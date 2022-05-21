@@ -117,6 +117,17 @@
   margin-left: 0.5rem;
 }
 
+.go_top_button{
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  background-color: black;
+  color: white;
+  font-size: 26px;
+  padding: 0.4rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
 
 @keyframes bounce {
 
