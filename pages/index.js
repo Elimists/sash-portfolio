@@ -47,7 +47,7 @@ export default function Home({projects}) {
 
           {projects.map((project) => {
             return(
-              <Link href={'/' + project.id} key={project.id.toString()}>
+              <Link href={'/' + project.id + '#' + project.title_url_safe} key={project.id.toString()}>
               <div className={styles.card}>
                 <Image src={project.image} alt={project.name} height={400} width={600}></Image>
                 <h3 className={styles.project_title}>{project.name}</h3>

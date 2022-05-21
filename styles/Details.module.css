@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 6rem 2rem 6rem 2rem;
+    padding: 10rem 2rem 6rem 2rem;
     width: auto;
 }
 
@@ -66,3 +66,18 @@
     font-size: 16px;
     font-weight: 300;
 }
+
+.go_back_button{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 300;
+    color: #004E93;
+}
+
+.left_arrow{
+    color: #004E93;
+    font-weight: 400;
+    margin-right: 0.5rem;
+}
+

@@ -1,6 +1,7 @@
 import styles from '../styles/Details.module.css'
 import Image from 'next/image'
 import { allProjects } from '../data/projects'
+import {useRouter} from 'next/router'
 
 export const getStaticPaths = async () => {
 
@@ -11,7 +12,6 @@ export const getStaticPaths = async () => {
             }
         }
     })
-    console.log(paths)
     return {
         paths,
         fallback: false 
@@ -29,11 +29,18 @@ export const getStaticProps = async (context) => {
 
 export default function ProjectDetail({project}){
 
+    const router = useRouter()
+
     return(
-        <div className={styles.container}>
+        <div className={styles.container} id={project.title_url_safe}>
             
             <div className={styles.top_section}>
+                
                 <div className={styles.details_top_left}>
+                    <a className={styles.go_back_button} onClick={() => {
+                        router.push("/#my-projects-library")
+                    }}>
+                        <p className={styles.left_arrow}>&larr; </p>Back</a>
                     <p className={styles.project_title}>{project.title}</p>
                     <p className={styles.project_description}>{project.description}</p>
                     <p className={styles.project_tags}>{project.tags}</p>
