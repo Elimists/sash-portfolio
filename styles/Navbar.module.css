@@ -21,7 +21,7 @@
 .nav_link_group > a {
     font-size: 20px;
     font-weight: 200;
-    padding-right: 3rem;
+    margin-right: 3rem;
 }
 
 .nav_links_active{

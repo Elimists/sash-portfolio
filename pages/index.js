@@ -33,6 +33,24 @@ export default function Home({projects}) {
     window.scrollTo({ top: scrollToDiv, behavior: 'smooth' });
   }
 
+  function handleOnEnterPressToProjects(event){
+    if (event.key === 'Enter'){
+      handleScroll()
+    }
+  }
+
+  function handleOnEnterPressToTop(event){
+    if (event.key === 'Enter'){
+      scrollToTheTop()
+    }
+  }
+
+  function handleEnterToClickSwitch(event, elementID){
+    if (event.key === 'Enter'){
+      document.getElementById(elementID).click()
+    }
+  }
+
   return (
     <div className={styles.container}>
       
@@ -45,10 +63,12 @@ export default function Home({projects}) {
           </h1>
           <p className={styles.hello}>I&apos;m a industrial designer who specializes in user-centered design and research. I&apos;m passionate about all things tech and love to create amazing experiences through digital or phsyical products.</p>
           
-          <div className={styles.check_out} onClick={() => handleScroll()}>
+          <div className={styles.check_out} onClick={() => handleScroll()} onKeyDown={(e) => handleOnEnterPressToProjects(e)} role="button" tabindex="0" >
+            
             <p className={styles.check_out_text}>
               Check out my work! 
             </p>
+          
             <div className={styles.bouncy_arrow}>&darr;</div>
           </div>
           
@@ -62,13 +82,13 @@ export default function Home({projects}) {
 
           {projects.map((project) => {
             return(
-              <Link href={'/' + project.id + '#' + project.title_url_safe} key={project.id.toString()}>
-              <div className={styles.card}>
-                <Image src={project.image} alt={project.name} height={400} width={600}></Image>
-                <h3 className={styles.project_title}>{project.name}</h3>
-                <p className={styles.project_description}>{project.description}</p>
-                <p className={styles.project_tags}>{project.tags}</p>
-              </div>
+              <Link  href={'/' + project.id + '#' + project.title_url_safe} key={project.id.toString()} >
+                <div id={project.title_url_safe} className={styles.card} tabindex="0" onKeyDown={(e) => handleEnterToClickSwitch(e, project.title_url_safe)} >
+                  <Image src={project.image} alt={project.name} height={400} width={600}></Image>
+                  <h3 className={styles.project_title}>{project.name}</h3>
+                  <p className={styles.project_description}>{project.description}</p>
+                  <p className={styles.project_tags}>{project.tags}</p>
+                </div>
               </Link>
             )
           })}
@@ -76,7 +96,7 @@ export default function Home({projects}) {
         </div>
         </section>
 
-        {(isScrolledDown) ? <div className={styles.go_top_button} onClick={() => scrollToTheTop()}>&uarr;</div> : null}
+        {(isScrolledDown) ? <div tabindex="0" className={styles.go_top_button} onClick={() => scrollToTheTop()} onKeyDown={(e) => handleOnEnterPressToTop(e)}>&uarr;</div> : null}
       </main>
 
      
