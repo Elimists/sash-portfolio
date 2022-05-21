@@ -27,19 +27,19 @@
 
 .check_out_text{
   font-size: 24px;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 .bouncy_arrow{
   margin-left: 10px;
   font-size: 28px;
-  font-weight: 200;
+  font-weight: 300;
   animation: bounce 1s infinite;
 }
 
 .work_heading{
-  font-size: 26px;
-  font-weight: 200;
+  font-size: 24px;
+  font-weight: 300;
   padding-top: 4.5rem;
 }
 
@@ -52,7 +52,7 @@
 
 .my_name{
   font-size: 96px;
-  font-weight: 600;
+  font-weight: 700;
   margin: 0;
   padding: 0;
   background: rgb(244, 168, 161);
@@ -62,8 +62,8 @@
 }
 
 .hello{
-  font-size: 20px;
-  font-weight: 200;
+  font-size: 18px;
+  font-weight: 300;
 }
 
 .grid {
@@ -88,18 +88,18 @@
 }
 
 .project_title{
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 300;
 }
 
 .project_description{
-  font-size: 18px;
-  font-weight: 200;
+  font-size: 16px;
+  font-weight: 300;
 }
 
 .project_tags{
   font-size: 14px;
-  font-weight: 200;
+  font-weight: 300;
   color: #0D4E93;
 }
 
