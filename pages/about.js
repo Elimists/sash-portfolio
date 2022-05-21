@@ -5,7 +5,7 @@ export default function About(){
 
     return(
         <div className={styles.container}>
-            <Image src={UnderConstruction} height={500} width={700}/>
+            <Image src={UnderConstruction} height={500} width={700} alt="Under Construction"/>
             <p>Page is currently under construction</p>
         </div>
     )

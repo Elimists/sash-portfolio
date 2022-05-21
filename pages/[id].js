@@ -51,7 +51,7 @@ export default function ProjectDetail({project}){
                     <p className={styles.project_description}>{project.description}</p>
                     <p className={styles.project_tags}>{project.tags}</p>
                 </div>
-                <Image src={project.image} height={400} width={600} alt={project.title + " image"}></Image>
+                <Image src={project.image} height={400} width={600} alt={project.title}></Image>
             </div>
 
             <div className={styles.bottom_section}>
