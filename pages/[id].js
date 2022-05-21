@@ -43,7 +43,7 @@ export default function ProjectDetail({project}){
             <div className={styles.top_section}>
                 
                 <div className={styles.details_top_left}>
-                    <a tabindex="0" className={styles.go_back_button} onKeyDown={(e) => handleGoingBackOnEnter(e)} onClick={() => {
+                    <a tabIndex="0" className={styles.go_back_button} onKeyDown={(e) => handleGoingBackOnEnter(e)} onClick={() => {
                         router.push("/#my-projects-library")
                     }}>
                         <p className={styles.left_arrow}>&larr; </p>Back</a>
@@ -83,7 +83,7 @@ export default function ProjectDetail({project}){
                         <p className={styles.property_heading}>Research</p>
                         <p className={styles.property_value}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed malesuada et a in. Placerat mattis lobortis nulla vitae nec, bibendum nec. Sit a etiam nec est et. Habitasse eleifend purus vivamus augue mauris nisl scelerisque. Blandit facilisi cursus faucibus donec placerat varius vitae, iaculis.</p>
                     </div>
-                    <div tabindex="0">
+                    <div tabIndex="0">
                         <p className={styles.property_heading}>Subheading</p>
                         <p className={styles.property_value}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed malesuada et a in. Placerat mattis lobortis nulla vitae nec, bibendum nec. Sit a etiam nec est et. Habitasse eleifend purus vivamus augue mauris nisl scelerisque. Blandit facilisi cursus faucibus donec placerat varius vitae, iaculis.</p>
                     </div>
