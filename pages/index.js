@@ -2,9 +2,16 @@
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { allProjects } from '../data/projects'
+import Link from 'next/link'
 
+export const getStaticProps = async () => {
+  
+  return {
+    props: {projects: allProjects}
+  }
+}
 
-export default function Home() {
+export default function Home({projects}) {
 
   function handleScroll(){
     var scrollToDiv = document.getElementById("my-projects-library").offsetTop
@@ -38,14 +45,16 @@ export default function Home() {
         <section id="my-projects-library">
         <div className={styles.grid}>
 
-          {allProjects.map((project) => {
+          {projects.map((project) => {
             return(
-              <div key={project.id.toString()} className={styles.card}>
+              <Link href={'/' + project.id} key={project.id.toString()}>
+              <div className={styles.card}>
                 <Image src={project.image} alt={project.name} height={400} width={600}></Image>
                 <h3 className={styles.project_title}>{project.name}</h3>
                 <p className={styles.project_description}>{project.description}</p>
                 <p className={styles.project_tags}>{project.tags}</p>
               </div>
+              </Link>
             )
           })}
          
