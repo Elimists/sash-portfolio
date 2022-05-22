@@ -97,7 +97,7 @@
     .details_top_left{
         flex-direction: row;
         flex-wrap: wrap;
-        width: auto;
+        max-width: 100%;
         padding: 0;
     }
 
