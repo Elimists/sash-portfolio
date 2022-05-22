@@ -6,6 +6,10 @@ const nextConfig = {
     locales: ["en"],
     defaultLocale: "en",
   },
+
+  images: {
+    domains: ['picsum.photos', 'sash-portfolio.vercel.app']
+  }
 }
 
 module.exports = nextConfig
