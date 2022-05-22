@@ -84,7 +84,7 @@ export default function Home({projects}) {
             return(
               <Link  href={'/' + project.id + '#' + project.title_url_safe} key={project.id.toString()} >
                 <div id={project.title_url_safe} className={styles.card} tabIndex="0" role="button" onKeyDown={(e) => handleEnterToClickSwitch(e, project.title_url_safe)} >
-                  <Image src={project.image} alt={project.name} height={400} width={600}></Image>
+                  <Image src={project.image} alt={project.name} height={375} width={575}></Image>
                   <p className={styles.project_title}>{project.name}</p>
                   <p className={styles.project_description}>{project.description}</p>
                   <p className={styles.project_tags}>{project.tags}</p>
