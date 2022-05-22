@@ -56,19 +56,19 @@ export default function ProjectDetail({project}){
 
             <div className={styles.bottom_section}>
                 <div className={styles.bottom_left}>
-                    <div>
+                    <div className={styles.property_div}>
                         <p className={styles.property_heading}>Duration</p>
                         <p className={styles.property_value}>{project.duration}</p>
                     </div>
-                    <div>
+                    <div className={styles.property_div}>
                         <p className={styles.property_heading}>Type</p>
                         <p className={styles.property_value}>{project.type}</p>
                     </div>
-                    <div>
+                    <div className={styles.property_div}>
                         <p className={styles.property_heading}>Role</p>
                         <p className={styles.property_value}>{project.role}</p>
                     </div>
-                    <div>
+                    <div className={styles.property_div}>
                         <p className={styles.property_heading}>Tools</p>
                         <p className={styles.property_value}>{project.tools}</p>
                     </div>
