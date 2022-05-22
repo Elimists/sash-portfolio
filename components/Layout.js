@@ -11,7 +11,6 @@ export default function Layout({children}){
                 <meta name="description" content="Industrial designer specializing in user centered design and research. Love to create amazing experiences through digital or physical products."/>
                 <meta name="author" content="ProReact Labs - Pran Pandey"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-                
                 <link rel="icon" href="/sash-logo.svg" />
             </Head>
             <Navbar/>
