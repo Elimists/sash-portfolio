@@ -30,6 +30,7 @@ export const getStaticProps = async (context) => {
 export default function ProjectDetail({project}){
 
     const router = useRouter()
+
     function handleGoingBackOnEnter(event){
         if (event.key === 'Enter'){
             router.push("/#my-projects-library")

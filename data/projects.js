@@ -1,7 +1,7 @@
-import CoreProjectImage from '/public/core.png'
-import HomieProjectImage from '/public/homie.png'
-import LisnProjectImage from '/public/lisn.png'
-import WorldJournalProjectImage from '/public/world-journal.png'
+import CoreProjectImage from '/public/images/projects/core.png'
+import HomieProjectImage from '/public/images/projects/homie.png'
+import LisnProjectImage from '/public/images/projects/lisn.png'
+import WorldJournalProjectImage from '/public/images/projects/world-journal.png'
 
 export const allProjects = [
     {
