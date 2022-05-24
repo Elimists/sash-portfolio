@@ -129,6 +129,7 @@
 
     .property_div{
         padding-right: 1.5rem;
+        margin-bottom: 1.2rem;
     }
     .property_heading{
         font-size: 20px;
@@ -136,6 +137,8 @@
     }
     .property_value{
         font-size: 16px;
+        margin: 0;
+        transform: translateY(6px);
     }
 
     .bottom_right{
