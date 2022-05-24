@@ -75,11 +75,11 @@ export default function ProjectDetail({project}){
                 </div>
 
                 <div className={styles.bottom_right}>
-                    <div>
+                    <div tabIndex="0">
                         <p className={styles.property_heading}>Problem</p>
                         <p className={styles.property_value}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed malesuada et a in. Placerat mattis lobortis nulla vitae nec, bibendum nec. Sit a etiam nec est et. Habitasse eleifend purus vivamus augue mauris nisl scelerisque. Blandit facilisi cursus faucibus donec placerat varius vitae, iaculis.</p>
                     </div>
-                    <div>
+                    <div tabIndex="0">
                         <p className={styles.property_heading}>Research</p>
                         <p className={styles.property_value}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed malesuada et a in. Placerat mattis lobortis nulla vitae nec, bibendum nec. Sit a etiam nec est et. Habitasse eleifend purus vivamus augue mauris nisl scelerisque. Blandit facilisi cursus faucibus donec placerat varius vitae, iaculis.</p>
                     </div>
