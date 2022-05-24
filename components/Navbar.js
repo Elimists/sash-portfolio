@@ -14,7 +14,9 @@ export default function Navbar(){
                 </Link>
                 <div className={styles.nav_link_group}>
                     <Link href='/'><a className={(router.pathname == "/") ? styles.nav_links_active : undefined}>Home</a></Link>
-                    <Link href='/about'><a className={(router.pathname == "/about") ? styles.nav_links_active : undefined}>About</a></Link>
+                    <Link href='https://www.linkedin.com/in/sashmahara/?originalSubdomain=ca'><a target="_blank">About</a></Link>
+                    {/*<Link href='/about'><a className={(router.pathname == "/about") ? styles.nav_links_active : undefined}>About</a></Link>*/}
+
                 </div>
 
             </div>
