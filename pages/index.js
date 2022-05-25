@@ -70,10 +70,14 @@ export default function Home({projects}) {
     }
   }
 
+  function handleOnEnterPressSetFilterTerm(event, filterTerm){
+    if (event.key === 'Enter'){
+      setFilterTerm(filterTerm)
+    }
+  }
+
   return (
     <div className={styles.container}>
-      
-
       <main className={styles.main}>
         <div className={styles.intro}>
           <p className={styles.hello}>Hello, I&apos;m</p>
@@ -87,23 +91,19 @@ export default function Home({projects}) {
             <p className={styles.check_out_text}>
               Check out my work! 
             </p>
-          
             <div className={styles.bouncy_arrow}>&darr;</div>
           </div>
-          
-
-          
         </div>
         
         
         <section id="my-projects-library" className={styles.my_project_section}>
         <p className={styles.work_heading}>WORK</p>
           <div className={styles.filter_options}>
-            <div tabIndex="0" className={(filterTerm == "All") ? styles.filter_active : styles.filter} onClick={() => setFilterTerm("All")}>All</div>
-            <div tabIndex="0" className={(filterTerm == "UX/UI") ? styles.filter_active : styles.filter} onClick={() => setFilterTerm("UX/UI")}>UX/UI</div>
-            <div tabIndex="0" className={(filterTerm == "Industrial Design") ? styles.filter_active : styles.filter} onClick={() => setFilterTerm("Industrial Design")}>Industrial Design</div>
-            <div tabIndex="0" className={(filterTerm == "Logos & Branding") ? styles.filter_active : styles.filter} onClick={() => setFilterTerm("Logos & Branding")}>Logos &#38; Branding </div>
-            <div tabIndex="0" className={(filterTerm == "Fun") ? styles.filter_active : styles.filter} onClick={() => setFilterTerm("Fun")}>Fun</div>
+            <div id='filter_term' tabIndex="0" className={(filterTerm == "All") ? styles.filter_active : styles.filter} onClick={() => setFilterTerm("All")} onKeyDown={(e) => handleOnEnterPressSetFilterTerm(e, "All")}>All</div>
+            <div id='filter_term' tabIndex="0" className={(filterTerm == "UX/UI") ? styles.filter_active : styles.filter} onClick={() => setFilterTerm("UX/UI")} onKeyDown={(e) => handleOnEnterPressSetFilterTerm(e, "UX/UI")}>UX/UI</div>
+            <div id='filter_term' tabIndex="0" className={(filterTerm == "Industrial Design") ? styles.filter_active : styles.filter} onClick={() => setFilterTerm("Industrial Design")} onKeyDown={(e) => handleOnEnterPressSetFilterTerm(e, "Industrial Design")}>Industrial Design</div>
+            <div id='filter_term' tabIndex="0" className={(filterTerm == "Logos & Branding") ? styles.filter_active : styles.filter} onClick={() => setFilterTerm("Logos & Branding")} onKeyDown={(e) => handleOnEnterPressSetFilterTerm(e, "Logos & Branding")}>Logos &#38; Branding </div>
+            <div id='filter_term' tabIndex="0" className={(filterTerm == "Fun") ? styles.filter_active : styles.filter} onClick={() => setFilterTerm("Fun")} onKeyDown={(e) => handleOnEnterPressSetFilterTerm(e, "Fun")}>Fun</div>
           </div>
         <div className={styles.grid}>
 
