@@ -5,7 +5,13 @@ import { allProjects } from '../data/projects'
 import Link from 'next/link'
 import {useState, useEffect} from 'react'
 
-
+const filterTerms = [
+  {'term': 'All'},
+  {'term': 'UX/UI'},
+  {'term': 'Industrial Design'},
+  {'term': 'Logos & Branding'},
+  {'term': 'Fun'}
+]
 
 export default function Home({projects}) {
 
@@ -99,11 +105,12 @@ export default function Home({projects}) {
         <section id="my-projects-library" className={styles.my_project_section}>
         <p className={styles.work_heading}>WORK</p>
           <div className={styles.filter_options}>
-            <div id='filter_term' tabIndex="0" className={(filterTerm == "All") ? styles.filter_active : styles.filter} onClick={() => setFilterTerm("All")} onKeyDown={(e) => handleOnEnterPressSetFilterTerm(e, "All")}>All</div>
-            <div id='filter_term' tabIndex="0" className={(filterTerm == "UX/UI") ? styles.filter_active : styles.filter} onClick={() => setFilterTerm("UX/UI")} onKeyDown={(e) => handleOnEnterPressSetFilterTerm(e, "UX/UI")}>UX/UI</div>
-            <div id='filter_term' tabIndex="0" className={(filterTerm == "Industrial Design") ? styles.filter_active : styles.filter} onClick={() => setFilterTerm("Industrial Design")} onKeyDown={(e) => handleOnEnterPressSetFilterTerm(e, "Industrial Design")}>Industrial Design</div>
-            <div id='filter_term' tabIndex="0" className={(filterTerm == "Logos & Branding") ? styles.filter_active : styles.filter} onClick={() => setFilterTerm("Logos & Branding")} onKeyDown={(e) => handleOnEnterPressSetFilterTerm(e, "Logos & Branding")}>Logos &#38; Branding </div>
-            <div id='filter_term' tabIndex="0" className={(filterTerm == "Fun") ? styles.filter_active : styles.filter} onClick={() => setFilterTerm("Fun")} onKeyDown={(e) => handleOnEnterPressSetFilterTerm(e, "Fun")}>Fun</div>
+            {filterTerms.map((theTerm) => {
+              return(
+                <div id={theTerm.term} tabIndex="0" className={(filterTerm == theTerm.term) ? styles.filter_active : styles.filter} onClick={() => setFilterTerm(theTerm.term)} onKeyDown={(e) => handleOnEnterPressSetFilterTerm(e, theTerm.term)}>{theTerm.term}</div>
+              )
+            })}
+           
           </div>
         <div className={styles.grid}>
 
