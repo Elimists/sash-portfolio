@@ -10,6 +10,7 @@ import {useState, useEffect} from 'react'
 export default function Home({projects}) {
 
   const [isScrolledDown, setIsScrolledDown] = useState(false)
+  const [filterTerm, setFilterTerm] = useState("All")
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -73,11 +74,19 @@ export default function Home({projects}) {
           </div>
           
 
-          <p className={styles.work_heading}>WORK</p>
+          
         </div>
         
         
-        <section id="my-projects-library">
+        <section id="my-projects-library" className={styles.my_project_section}>
+        <p className={styles.work_heading}>WORK</p>
+        <div className={styles.filter_options}>
+          <div className={(filterTerm == "All") ? styles.filter_active : styles.filter} onClick={() => setFilterTerm("All")}>All</div>
+          <div className={(filterTerm == "UI/UX") ? styles.filter_active : styles.filter} onClick={() => setFilterTerm("UI/UX")}>UI/UX</div>
+          <div className={(filterTerm == "Industrial Design") ? styles.filter_active : styles.filter} onClick={() => setFilterTerm("Industrial Design")}>Industrial Design</div>
+          <div className={(filterTerm == "Logos & Branding") ? styles.filter_active : styles.filter} onClick={() => setFilterTerm("Logos & Branding")}>Logos &#38; Branding </div>
+          <div className={(filterTerm == "Fun") ? styles.filter_active : styles.filter} onClick={() => setFilterTerm("Fun")}>Fun</div>
+        </div>
         <div className={styles.grid}>
 
           {projects.map((project) => {
