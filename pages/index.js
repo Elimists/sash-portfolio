@@ -54,8 +54,8 @@ export default function Home({projects}) {
   }
 
   function handleScroll(){
-    var scrollToDiv = document.getElementById("my-projects-library").offsetTop
-    window.scrollTo({ top: scrollToDiv, behavior: 'smooth' });
+    var scrollToDiv = document.getElementById("my-projects-library")
+    scrollToDiv.scrollIntoView({ block: 'start', behavior: 'smooth' });
   }
 
   function handleOnEnterPressToProjects(event){
