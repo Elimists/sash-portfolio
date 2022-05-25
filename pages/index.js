@@ -11,6 +11,7 @@ export default function Home({projects}) {
 
   const [isScrolledDown, setIsScrolledDown] = useState(false)
   const [filterTerm, setFilterTerm] = useState("All")
+  const [allProjects, setAllProjects] = useState([])
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -21,6 +22,23 @@ export default function Home({projects}) {
       }
     })
   }, [])
+
+ 
+  useEffect(() => {
+    if (filterTerm == "All"){
+      setAllProjects(projects)
+    }
+    else{
+      var newArr = []
+      projects.map((project) => {
+        if (project.tags.includes(filterTerm)){
+          newArr.push(project)
+        }
+       
+      })
+      setAllProjects(newArr)
+    }
+  }, [filterTerm])
 
   function scrollToTheTop(){
     window.scrollTo({
@@ -82,14 +100,14 @@ export default function Home({projects}) {
         <p className={styles.work_heading}>WORK</p>
           <div className={styles.filter_options}>
             <div tabIndex="0" className={(filterTerm == "All") ? styles.filter_active : styles.filter} onClick={() => setFilterTerm("All")}>All</div>
-            <div tabIndex="0" className={(filterTerm == "UI/UX") ? styles.filter_active : styles.filter} onClick={() => setFilterTerm("UI/UX")}>UI/UX</div>
+            <div tabIndex="0" className={(filterTerm == "UX/UI") ? styles.filter_active : styles.filter} onClick={() => setFilterTerm("UX/UI")}>UX/UI</div>
             <div tabIndex="0" className={(filterTerm == "Industrial Design") ? styles.filter_active : styles.filter} onClick={() => setFilterTerm("Industrial Design")}>Industrial Design</div>
             <div tabIndex="0" className={(filterTerm == "Logos & Branding") ? styles.filter_active : styles.filter} onClick={() => setFilterTerm("Logos & Branding")}>Logos &#38; Branding </div>
             <div tabIndex="0" className={(filterTerm == "Fun") ? styles.filter_active : styles.filter} onClick={() => setFilterTerm("Fun")}>Fun</div>
           </div>
         <div className={styles.grid}>
 
-          {projects.map((project) => {
+          {allProjects.map((project) => {
             return(
               <Link  href={'/' + project.id + '#' + project.title_url_safe} key={project.id.toString()} >
                 <div id={project.title_url_safe} className={styles.card} tabIndex="0" role="button" onKeyDown={(e) => handleEnterToClickSwitch(e, project.title_url_safe)} >
