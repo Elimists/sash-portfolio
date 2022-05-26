@@ -101,7 +101,7 @@ export default function Home({projects}) {
           </div>
         </div>
         
-        
+       
         <section id="my-projects-library" className={styles.my_project_section}>
         <p className={styles.work_heading}>WORK</p>
           <div className={styles.filter_options}>
@@ -110,7 +110,7 @@ export default function Home({projects}) {
                 <div key={theTerm.term} id={theTerm.term} tabIndex="0" className={(filterTerm == theTerm.term) ? styles.filter_active : styles.filter} onClick={() => setFilterTerm(theTerm.term)} onKeyDown={(e) => handleOnEnterPressSetFilterTerm(e, theTerm.term)}>{theTerm.term}</div>
               )
             })}
-           
+            
           </div>
         <div className={styles.grid}>
 
