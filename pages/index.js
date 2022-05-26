@@ -107,7 +107,7 @@ export default function Home({projects}) {
           <div className={styles.filter_options}>
             {filterTerms.map((theTerm) => {
               return(
-                <div id={theTerm.term} tabIndex="0" className={(filterTerm == theTerm.term) ? styles.filter_active : styles.filter} onClick={() => setFilterTerm(theTerm.term)} onKeyDown={(e) => handleOnEnterPressSetFilterTerm(e, theTerm.term)}>{theTerm.term}</div>
+                <div key={theTerm.term} id={theTerm.term} tabIndex="0" className={(filterTerm == theTerm.term) ? styles.filter_active : styles.filter} onClick={() => setFilterTerm(theTerm.term)} onKeyDown={(e) => handleOnEnterPressSetFilterTerm(e, theTerm.term)}>{theTerm.term}</div>
               )
             })}
            
