@@ -23,7 +23,7 @@ body[data-theme="light"]{
 body[data-theme="dark"]{
   --color-text: #fff;
   --color-background: black;
-  --color-gray: rgba(220, 220, 220, 0.5);
+  --color-gray: rgba(232, 232, 232, 0.5);
   --color-blue: #1c89fe;
 
   --color-theme-toggle-border: #fff;
