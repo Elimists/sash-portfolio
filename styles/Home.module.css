@@ -133,27 +133,28 @@
 .filter_options{
   display: flex;
   /*flex-wrap: wrap;*/
-  overflow: auto;
+  overflow-y: scroll;
   align-items: center;
   padding: 0rem 0rem 2rem 0rem;
 }
 .filter{
   cursor: pointer;
   padding: 0.4rem 1.2rem 0.4rem 1.2rem;
-  margin: 0.6rem;
-  border: 2px solid rgba(0, 0, 0, 0.5);
+  margin: 0.6rem 1rem 0.6rem 0;
+  border: 2px solid var(--color-gray);
   border-radius: 50px;
   color: rgba(26, 26, 26, 0.5);
   white-space: nowrap;
+  color: var(--color-gray)
 }
 .filter_active{
   cursor: pointer;
   padding: 0.4rem 1.2rem 0.4rem 1.2rem;
-  margin: 0.6rem;
-  border: 3px solid black;
+  margin: 0.6rem 1rem 0.6rem 0;
+  border: 3px solid var(--color-text);
   border-radius: 50px;
-  color: black;
   white-space: nowrap;
+  color: var(--color-text)
 }
 
 .my_project_section{
@@ -197,5 +198,6 @@
     max-width: 100%;
     height: auto;
   }
+
 }
 

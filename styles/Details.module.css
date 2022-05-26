@@ -74,6 +74,7 @@
     cursor: pointer;
     font-weight: 300;
     color: #004E93;
+    transform: translateY(-5rem);
     
 }
 
@@ -81,6 +82,7 @@
     color: #004E93;
     font-weight: 400;
     margin-right: 0.5rem;
+    
 }
 
 
