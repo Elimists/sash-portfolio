@@ -1,10 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-html,
-body {
+
+
+html{
   padding: 0;
   margin: 0;
   font-family: 'Inter', sans-serif;
+  
+}
+
+body,
+body[data-theme="light"]{
+  --color-text: black;
+  --color-background: #fff;
+  --color-gray: rgba(26, 26, 26, 0.5);
+
+  --color-theme-toggle-border: rgb(249, 0, 0);
+
+}
+
+body[data-theme="dark"]{
+  --color-text: #fff;
+  --color-background: black;
+  --color-gray: rgba(220, 220, 220, 0.5);
+
+  --color-theme-toggle-border: #fff;
+}
+
+
+body{
+  margin: 0 auto;
+  width: auto;
+  max-width: 1110px;
+  background-color: var(--color-background);
+  color: var(--color-text);
 }
 
 a {
