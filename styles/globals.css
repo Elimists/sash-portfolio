@@ -15,7 +15,7 @@ body[data-theme="light"]{
   --color-background: #fff;
   --color-gray: rgba(26, 26, 26, 0.5);
 
-  --color-theme-toggle-border: rgb(249, 0, 0);
+  --color-theme-toggle-border: black;
 
 }
 
