@@ -14,6 +14,7 @@ body[data-theme="light"]{
   --color-text: black;
   --color-background: #fff;
   --color-gray: rgba(26, 26, 26, 0.5);
+  --color-blue: #0D4E93;
 
   --color-theme-toggle-border: black;
 
@@ -23,6 +24,7 @@ body[data-theme="dark"]{
   --color-text: #fff;
   --color-background: black;
   --color-gray: rgba(220, 220, 220, 0.5);
+  --color-blue: #1c89fe;
 
   --color-theme-toggle-border: #fff;
 }

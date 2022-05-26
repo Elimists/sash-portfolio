@@ -100,7 +100,7 @@
 .project_tags{
   font-size: 14px;
   font-weight: 300;
-  color: #0D4E93;
+  color: var(--color-blue);
 }
 
 .card:hover,
