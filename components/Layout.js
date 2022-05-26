@@ -12,6 +12,7 @@ export default function Layout({children}){
                 <meta name="author" content="ProReact Labs - Pran Pandey"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <link rel="icon" href="/sash-logo.svg" />
+                <script defer src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
             </Head>
             <Navbar/>
             {children}
