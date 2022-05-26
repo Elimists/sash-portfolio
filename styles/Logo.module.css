@@ -6,4 +6,5 @@
 
 .theme_toggle_border{
     stroke: var(--color-theme-toggle-border);
+    fill: var(--color-theme-toggle-border)
 }
