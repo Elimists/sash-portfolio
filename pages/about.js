@@ -1,13 +1,7 @@
 import UnderConstruction from '../public/under_construction.svg'
 import Image from 'next/image'
 import styles from '../styles/About.module.css'
-import animationData from '../public/fun-animation.json'
 
-const defaultOptions = {
-    autoplay: true,
-    animationData: animationData,
-    
-};
 export default function About(){
 
     return(
