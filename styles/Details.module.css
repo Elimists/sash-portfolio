@@ -53,7 +53,7 @@
 .project_tags{
     font-size: 13px;
     font-weight: 300;
-    color: #004E93;
+    color: var(--color-blue);
 }
 
 .property_heading{
@@ -73,13 +73,13 @@
     align-items: center;
     cursor: pointer;
     font-weight: 300;
-    color: #004E93;
+    color: var(--color-blue);
     transform: translateY(-5rem);
     
 }
 
 .left_arrow{
-    color: #004E93;
+    color: var(--color-blue);
     font-weight: 400;
     margin-right: 0.5rem;
     
