@@ -98,6 +98,8 @@
     transition: 0.35s;
     box-shadow: var(--bg-shadow);
     -webkit-tap-highlight-color: transparent;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 

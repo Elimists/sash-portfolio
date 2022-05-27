@@ -38,8 +38,14 @@ export default function Navbar(){
         setIsMobileNavOpened(isMobileNavOpened => !isMobileNavOpened)
         const navBarRight = document.getElementById("mobile-nav-bar")
 
-        if (isMobileNavOpened){navBarRight.style.right = "0"}
-        else{navBarRight.style.right = "-100%"}
+        if (isMobileNavOpened){
+            navBarRight.style.right = "0"
+            document.body.style.overflowY  = "hidden"
+        }
+        else{
+            navBarRight.style.right = "-100%"
+            document.body.style.overflowY = "scroll"
+        }
     }
 
     
