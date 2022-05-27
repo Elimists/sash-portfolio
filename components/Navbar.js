@@ -18,6 +18,8 @@ export default function Navbar(){
     const router = useRouter()
     const [activeTheme, setActiveTheme] = useState("light")
 
+    
+
     function swapTheme(){
         if (activeTheme == "light"){
             setActiveTheme("dark")
@@ -27,10 +29,25 @@ export default function Navbar(){
         }
     }
     
+    
     useEffect(() => {
         document.body.dataset.theme = activeTheme
     }, [activeTheme])
 
+    useEffect(() => {
+        document.getElementById("mobile-nav-bar").style.right = "-100%"
+    }, [])
+
+    const [isMobileNavOpened, setIsMobileNavOpened] = useState(false)
+    function handleMobileNavBarOpening(){
+        setIsMobileNavOpened(!isMobileNavOpened)
+        const navBarRight = document.getElementById("mobile-nav-bar")
+
+        if (isMobileNavOpened){navBarRight.style.right = "0"}
+        else{navBarRight.style.right = "-100%"}
+    }
+
+    
     return(
         <div className={styles.container}>
             <div className={styles.inner_content}>
@@ -58,16 +75,39 @@ export default function Navbar(){
                     <div className={(activeTheme == "light") ? styles.light_theme : styles.dark_theme} onClick={() => swapTheme()}>
                         <ThemeToggle/>
                     </div>
+                </div>
 
-                    <div className={styles.mobile_hamburger_menu}>
-                        <div></div>
-                    </div>
-
+                <div className={styles.mobile_hamburger_menu} onClick={() => handleMobileNavBarOpening()}>
+                    <div className={styles.hamburger_line}></div>
+                    <div className={styles.hamburger_line}></div>
+                    <div className={styles.hamburger_line}></div>
                 </div>
 
             </div>
 
             {/*MOBILE NAV BAR */}
+            <div className={styles.nav_link_group_mobile} id="mobile-nav-bar">
+                <div className={styles.nav_mobile_close_button} onClick={() => {handleMobileNavBarOpening()}}>&times;</div>
+                {navLinks.map(links => {
+                    return (
+                        <div>
+                            <Link key={links.name} href={links.href}><a onClick={() => {handleMobileNavBarOpening()}} className={(router.pathname == links.href) ? styles.nav_links_active_mobile : styles.nav_links_inactive_mobile}>{links.name}</a></Link>
+                        </div>
+                    )
+                })}
+
+                <div>
+                    <Link href="https://www.linkedin.com/in/sashmahara" passHref={true}>
+                        <a target="_blank">
+                            <LinkedInLogo />
+                        </a>
+                    </Link>
+                </div>
+
+                <div className={(activeTheme == "light") ? styles.light_theme : styles.dark_theme} onClick={() => swapTheme()}>
+                    <ThemeToggle />
+                </div>
+            </div>
             
         </div>
     )

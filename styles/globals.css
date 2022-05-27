@@ -18,6 +18,8 @@ body[data-theme="light"]{
 
   --color-theme-toggle-border: black;
 
+  --bg-shadow: 0px 0px 15px 1px #000000;
+
 }
 
 body[data-theme="dark"]{
@@ -27,6 +29,8 @@ body[data-theme="dark"]{
   --color-blue: #1c89fe;
 
   --color-theme-toggle-border: #fff;
+
+  --bg-shadow: 0px 0px 15px 1px #b7b7b7;
 }
 
 

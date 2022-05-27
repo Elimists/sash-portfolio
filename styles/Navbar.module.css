@@ -48,6 +48,7 @@
     padding: 1rem;
     margin: 1rem;
     animation: animateToLight 0.5s;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .dark_theme{
@@ -58,14 +59,85 @@
     padding: 1rem;
     margin: 1rem;
     animation: animateToDark 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);
+    -webkit-tap-highlight-color: transparent;
 }
 
 .sash_logo{
     cursor: pointer;
 }
-@media (max-width: 750px){
-    .sash_logo{
-        
+
+.mobile_hamburger_menu{
+   display: none;
+   flex-direction: column;
+   cursor: pointer;
+   margin-right: 2rem;
+   padding-left: 1rem;
+   height: 100%;
+   justify-content: center;
+}
+
+.hamburger_line {
+    background-color: var(--color-text);
+    margin: 3px 0;
+    height: 2px;
+    width: 30px;
+    -webkit-tap-highlight-color: transparent;
+    
+}
+
+.nav_link_group_mobile{
+    position: fixed;
+    display: flex;
+    top: 0;
+    align-items: center;
+    z-index: 10000;
+    flex-direction: column;
+    background-color: var(--color-background);
+    height: 100%;
+    width: 250px;
+    transition: 0.35s;
+    box-shadow: var(--bg-shadow);
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+.nav_link_group_mobile > div {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    margin: 1rem;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.nav_links_active_mobile{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.nav_links_inactive_mobile{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.nav_mobile_close_button{
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 300;
+}
+@media (max-width: 650px){
+    .mobile_hamburger_menu{
+        display: flex;
+    }
+
+    .nav_link_group{
+        display: none;
+    }
+
+}
+
+@media (min-width: 650px) {
+    .nav_link_group_mobile{
+        display: none;
     }
 }
 
