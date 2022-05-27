@@ -1,10 +1,11 @@
 .linkedin_svg_style{
     stroke: var(--color-text);
-    fill: var(--color-text)
+    fill: var(--color-text);
 }
 
 
 .theme_toggle_border{
     stroke: var(--color-theme-toggle-border);
-    fill: var(--color-theme-toggle-border)
+    fill: var(--color-theme-toggle-border);
+    overflow: visible;
 }
