@@ -34,19 +34,18 @@ export default function Navbar(){
         document.body.dataset.theme = activeTheme
     }, [activeTheme])
 
-    function handleMobileNavBarOpening(){
-        setIsMobileNavOpened(isMobileNavOpened => !isMobileNavOpened)
+    useEffect(() => {
         const navBarRight = document.getElementById("mobile-nav-bar")
-
-        if (isMobileNavOpened){
+        if (isMobileNavOpened) {
             navBarRight.style.right = "0"
-            document.body.style.overflowY  = "hidden"
+            document.body.style.overflowY = "hidden"
         }
-        else{
+        else {
             navBarRight.style.right = "-100%"
             document.body.style.overflowY = "scroll"
         }
-    }
+        
+    }, [isMobileNavOpened])
 
     
     return(
@@ -78,7 +77,7 @@ export default function Navbar(){
                     </div>
                 </div>
 
-                <div className={styles.mobile_hamburger_menu} onClick={() => handleMobileNavBarOpening()}>
+                <div className={styles.mobile_hamburger_menu} onClick={() => setIsMobileNavOpened(prevState => !prevState)}>
                     <div className={styles.hamburger_line}></div>
                     <div className={styles.hamburger_line}></div>
                     <div className={styles.hamburger_line}></div>
@@ -88,11 +87,11 @@ export default function Navbar(){
 
             {/*MOBILE NAV BAR */}
             <div className={styles.nav_link_group_mobile} id="mobile-nav-bar">
-                <div className={styles.nav_mobile_close_button} onClick={() => {handleMobileNavBarOpening()}}>&times;</div>
+                <div className={styles.nav_mobile_close_button} onClick={() => setIsMobileNavOpened(prevState => !prevState)}>&times;</div>
                 {navLinks.map(links => {
                     return (
                         <div key={links.name}>
-                            <Link  href={links.href}><a onClick={() => {handleMobileNavBarOpening()}} className={(router.pathname == links.href) ? styles.nav_links_active_mobile : styles.nav_links_inactive_mobile}>{links.name}</a></Link>
+                            <Link href={links.href}><a onClick={() => setIsMobileNavOpened(prevState => !prevState)} className={(router.pathname == links.href) ? styles.nav_links_active_mobile : styles.nav_links_inactive_mobile}>{links.name}</a></Link>
                         </div>
                     )
                 })}
