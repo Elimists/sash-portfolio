@@ -17,7 +17,7 @@ const navLinks = [
 export default function Navbar(){
     const router = useRouter()
     const [activeTheme, setActiveTheme] = useState("light")
-
+    const [isMobileNavOpened, setIsMobileNavOpened] = useState(false)
     
 
     function swapTheme(){
@@ -34,13 +34,8 @@ export default function Navbar(){
         document.body.dataset.theme = activeTheme
     }, [activeTheme])
 
-    useEffect(() => {
-        document.getElementById("mobile-nav-bar").style.right = "-100%"
-    }, [])
-
-    const [isMobileNavOpened, setIsMobileNavOpened] = useState(false)
     function handleMobileNavBarOpening(){
-        setIsMobileNavOpened(!isMobileNavOpened)
+        setIsMobileNavOpened(isMobileNavOpened => !isMobileNavOpened)
         const navBarRight = document.getElementById("mobile-nav-bar")
 
         if (isMobileNavOpened){navBarRight.style.right = "0"}
