@@ -90,8 +90,8 @@ export default function Navbar(){
                 <div className={styles.nav_mobile_close_button} onClick={() => {handleMobileNavBarOpening()}}>&times;</div>
                 {navLinks.map(links => {
                     return (
-                        <div>
-                            <Link key={links.name} href={links.href}><a onClick={() => {handleMobileNavBarOpening()}} className={(router.pathname == links.href) ? styles.nav_links_active_mobile : styles.nav_links_inactive_mobile}>{links.name}</a></Link>
+                        <div key={links.name}>
+                            <Link  href={links.href}><a onClick={() => {handleMobileNavBarOpening()}} className={(router.pathname == links.href) ? styles.nav_links_active_mobile : styles.nav_links_inactive_mobile}>{links.name}</a></Link>
                         </div>
                     )
                 })}
