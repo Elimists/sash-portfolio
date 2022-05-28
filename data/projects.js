@@ -8,7 +8,7 @@ const randomPic = "https://picsum.photos/600/400"
 export const allProjects = [
     {
         'id': 1,
-        'image': HomieProjectImage, //randomPic,//
+        'image': randomPic,//HomieProjectImage, //
         'title': "Homie",
         'title_url_safe': "Homie",
         'name': "Rental Housing Search - Homie",
@@ -22,7 +22,7 @@ export const allProjects = [
 
     {
         'id': 2,
-        'image': LisnProjectImage,//randomPic,//
+        'image': randomPic,//LisnProjectImage,//
         'title': "Lisn",
         'title_url_safe': "Lisn",
         'name': "User Research and Onboarding - LISN",
@@ -36,7 +36,7 @@ export const allProjects = [
 
     {
         'id': 3,
-        'image': CoreProjectImage,//randomPic,//CoreProjectImage,
+        'image': randomPic,//CoreProjectImage,//
         'title': "Core",
         'title_url_safe': "Core",
         'name': "Blood Pressure Monitor - Core.",
@@ -50,7 +50,7 @@ export const allProjects = [
 
     {
         'id': 4,
-        'image': WorldJournalProjectImage,//randomPic,//WorldJournalProjectImage,
+        'image': randomPic,//WorldJournalProjectImage,//
         'title': "World Journal",
         'title_url_safe': "WorldJournal",
         'name': "NASA Design Sprint - World Journal",
