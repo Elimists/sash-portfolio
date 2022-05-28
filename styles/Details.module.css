@@ -1,10 +1,9 @@
 .container{
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 4rem 2rem 6rem 2rem;
+    padding: 4.25rem 0rem 6rem 0rem;
     width: auto;
 }
 
@@ -88,19 +87,21 @@
 
 @media (max-width: 750px) {
 
-    .container{
+    .image_container{
+        width: 100%;
     }
 
     .top_section{
         flex-direction: column-reverse;
-        
     }
+
 
     .details_top_left{
         flex-direction: row;
         flex-wrap: wrap;
         max-width: 100%;
-        padding: 0;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 
     .project_title{
@@ -111,17 +112,20 @@
     .go_back_button{
         transform: none;
         position: absolute;
-        top: 5.5rem;
+        top: 5.8rem;
         left: 2rem;
     }
 
     .bottom_section{
         flex-direction: column;
         margin-top: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 
     .bottom_left{
-        display: flex;
+        display: grid;
+        grid-template-columns: 120px 120px;
         width: auto;
         justify-content: space-between;
         flex-wrap: wrap;

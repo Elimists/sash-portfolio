@@ -123,8 +123,8 @@
 
 .nav_mobile_close_button{
     cursor: pointer;
-    font-size: 2rem;
-    font-weight: 300;
+    font-size: 2.75rem;
+    font-weight: 200;
 }
 @media (max-width: 650px){
     .mobile_hamburger_menu{
@@ -133,6 +133,10 @@
 
     .nav_link_group{
         display: none;
+    }
+
+    .mobile_hamburger_menu{
+        margin-right: 1rem;
     }
 
 }

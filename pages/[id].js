@@ -2,6 +2,7 @@ import styles from '../styles/Details.module.css'
 import Image from 'next/image'
 import { allProjects } from '../data/projects'
 import {useRouter} from 'next/router'
+import useWindowDimensions from '../hooks/useWindowDimensions'
 
 export const getStaticPaths = async () => {
 
@@ -30,6 +31,7 @@ export const getStaticProps = async (context) => {
 export default function ProjectDetail({project}){
 
     const router = useRouter()
+    const { height, width } = useWindowDimensions()
 
     function handleGoingBackOnEnter(event){
         if (event.key === 'Enter'){
@@ -46,12 +48,14 @@ export default function ProjectDetail({project}){
                     <a tabIndex="0" className={styles.go_back_button} onKeyDown={(e) => handleGoingBackOnEnter(e)} onClick={() => {
                         router.push("/#my-projects-library")
                     }}>
-                        <p className={styles.left_arrow}>&larr; </p>Back</a>
+                    <p className={styles.left_arrow}>&larr; </p>Back</a>
                     <p className={styles.project_title}>{project.title}</p>
                     <p className={styles.project_description}>{project.description}</p>
                     <p className={styles.project_tags}>{project.tags}</p>
                 </div>
-                <Image src={project.image} height={400} width={600} alt={project.title}></Image>
+                <div className={styles.image_container}>
+                    <Image src={project.image} height={400} width={600} alt={project.title}></Image>
+                </div>
             </div>
 
             <div className={styles.bottom_section}>
@@ -76,16 +80,16 @@ export default function ProjectDetail({project}){
 
                 <div className={styles.bottom_right}>
                     <div tabIndex="0">
-                        <p className={styles.property_heading}>Problem</p>
-                        <p className={styles.property_value}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed malesuada et a in. Placerat mattis lobortis nulla vitae nec, bibendum nec. Sit a etiam nec est et. Habitasse eleifend purus vivamus augue mauris nisl scelerisque. Blandit facilisi cursus faucibus donec placerat varius vitae, iaculis.</p>
+                        <p className={styles.details_heading}>Problem</p>
+                        <p className={styles.details_value}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed malesuada et a in. Placerat mattis lobortis nulla vitae nec, bibendum nec. Sit a etiam nec est et. Habitasse eleifend purus vivamus augue mauris nisl scelerisque. Blandit facilisi cursus faucibus donec placerat varius vitae, iaculis.</p>
                     </div>
                     <div tabIndex="0">
-                        <p className={styles.property_heading}>Research</p>
-                        <p className={styles.property_value}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed malesuada et a in. Placerat mattis lobortis nulla vitae nec, bibendum nec. Sit a etiam nec est et. Habitasse eleifend purus vivamus augue mauris nisl scelerisque. Blandit facilisi cursus faucibus donec placerat varius vitae, iaculis.</p>
+                        <p className={styles.details_heading}>Research</p>
+                        <p className={styles.details_value}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed malesuada et a in. Placerat mattis lobortis nulla vitae nec, bibendum nec. Sit a etiam nec est et. Habitasse eleifend purus vivamus augue mauris nisl scelerisque. Blandit facilisi cursus faucibus donec placerat varius vitae, iaculis.</p>
                     </div>
                     <div tabIndex="0">
-                        <p className={styles.property_heading}>Subheading</p>
-                        <p className={styles.property_value}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed malesuada et a in. Placerat mattis lobortis nulla vitae nec, bibendum nec. Sit a etiam nec est et. Habitasse eleifend purus vivamus augue mauris nisl scelerisque. Blandit facilisi cursus faucibus donec placerat varius vitae, iaculis.</p>
+                        <p className={styles.details_heading}>Subheading</p>
+                        <p className={styles.details_value}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed malesuada et a in. Placerat mattis lobortis nulla vitae nec, bibendum nec. Sit a etiam nec est et. Habitasse eleifend purus vivamus augue mauris nisl scelerisque. Blandit facilisi cursus faucibus donec placerat varius vitae, iaculis.</p>
                     </div>
                 </div>
             </div>
