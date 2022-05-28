@@ -8,6 +8,7 @@ import LinkedInLogo from './logos/LinkedinLogo'
 import ThemeToggle from './logos/ThemeToggle'
 import SashLogo from './logos/SashLogo'
 
+import useWindowDimensions from '../hooks/useWindowDimensions'
 
 const navLinks = [
     {'name': 'Home', 'href': '/'},
@@ -18,17 +19,20 @@ export default function Navbar(){
     const router = useRouter()
     const [activeTheme, setActiveTheme] = useState("light")
     const [isMobileNavOpened, setIsMobileNavOpened] = useState(false)
-    
+    const { height, width } = useWindowDimensions()
 
-    function swapTheme(){
-        if (activeTheme == "light"){
+    function swapTheme() {
+        if (activeTheme == "light") {
             setActiveTheme("dark")
         }
-        else{
+        else {
             setActiveTheme("light")
         }
     }
-    
+
+    useEffect(() => {
+        if (width > 650) {setIsMobileNavOpened(false)}
+    }, [width])
     
     useEffect(() => {
         document.body.dataset.theme = activeTheme
