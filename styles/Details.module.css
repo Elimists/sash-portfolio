@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 4.25rem 0rem 6rem 0rem;
+    padding: 4.25rem 2rem 6rem 2rem;
     width: auto;
 }
 
@@ -87,6 +87,9 @@
 
 @media (max-width: 750px) {
 
+    .container{
+        padding: 0;
+    }
     .image_container{
         width: 100%;
     }
