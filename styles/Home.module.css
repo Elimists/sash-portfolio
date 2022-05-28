@@ -4,8 +4,6 @@
 
 .main {
   min-height: 100vh;
-  padding: 2rem 0;
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,8 +21,6 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  width: auto;
-  max-width: 270px;
 }
 
 .check_out_text{
@@ -46,7 +42,6 @@
 }
 
 .intro{
-  max-width: 1100px;
   display: flex;
   flex-direction: column;
   padding: 4.7rem 0 3rem 0;
@@ -138,6 +133,7 @@
   padding: 0rem 0rem 2rem 0rem;
 }
 .filter{
+  z-index: 1000;
   cursor: pointer;
   padding: 0.4rem 1.2rem 0.4rem 1.2rem;
   margin: 0.6rem 1rem 0.6rem 0;
@@ -148,6 +144,7 @@
   color: var(--color-gray)
 }
 .filter_active{
+  z-index: 1000;
   cursor: pointer;
   padding: 0.4rem 1.2rem 0.4rem 1.2rem;
   margin: 0.6rem 1rem 0.6rem 0;
@@ -163,6 +160,22 @@
   height: 100vh;
 }
 
+.fun_filter{
+  display: grid;
+  grid-template: 1fr / 1fr;
+  place-items: center;
+  background-color: aqua ;
+}
+
+.fun_filter > * {
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+}
+
+.lottie_container{
+  height: 50px;
+  width: 200px;
+}
 @keyframes bounce {
 
 
@@ -189,14 +202,15 @@
     padding: 0;
   }
 
-  .intro {
-    padding: 0rem 0.5rem 0rem 0.5rem;
-  }
 
   .card {
     width: auto;
     max-width: 100%;
     height: auto;
+  }
+
+  .my_name{
+    font-size: 72px;
   }
 
 }
