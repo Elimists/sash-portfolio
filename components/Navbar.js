@@ -56,7 +56,7 @@ export default function Navbar(){
         <div className={styles.container}>
             <div className={styles.inner_content}>
                 <div className={styles.sash_logo}>
-                    <Link href="/">   
+                    <Link href="/" >   
                         <a><SashLogo /></a>
                     </Link>
                 </div>
