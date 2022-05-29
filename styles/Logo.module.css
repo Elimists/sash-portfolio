@@ -1,6 +1,6 @@
 .linkedin_svg_style{
     stroke: var(--color-text);
-    fill: var(--color-text);
+    fill: none;
 }
 
 
