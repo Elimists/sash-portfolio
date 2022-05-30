@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 import { allProjects } from '../data/projects'
 import Link from 'next/link'
 import {useState, useEffect} from 'react'
+import Script from 'next/script'
 
 const filterTerms = [
   {'term': 'All'},
@@ -18,6 +19,7 @@ export default function Home({projects}) {
   const [isScrolledDown, setIsScrolledDown] = useState(false)
   const [filterTerm, setFilterTerm] = useState("All")
   const [allProjects, setAllProjects] = useState([])
+
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -82,59 +84,95 @@ export default function Home({projects}) {
     }
   }
 
+  const [lottieClicked, setLottieClicked] = useState(false)
+  
+  useEffect((lp) => {
+    var lp = document.getElementById("lottie-player")
+  
+  }, [lottieClicked])
+
+  function handleLottiePlayer(lp){
+
+  }
+
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <div className={styles.intro}>
-          <p className={styles.hello}>Hello, I&apos;m</p>
-          <h1 className={styles.my_name}>
-            Sash Mahara
-          </h1>
-          <p className={styles.hello}>I&apos;m a industrial designer who specializes in user-centered design and research. I&apos;m passionate about all things tech and love to create amazing experiences through digital or phsyical products.</p>
-          
-          <div role='button' className={styles.check_out} onClick={() => handleScroll()} onKeyDown={(e) => handleOnEnterPressToProjects(e)} tabIndex="0" >
+    <>
+      <Script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"/>
+      <div className={styles.container}>
+        <main className={styles.main}>
+          <div className={styles.intro}>
+            <p className={styles.hello}>Hello, I&apos;m</p>
+            <h1 className={styles.my_name}>
+              Sash Mahara
+            </h1>
+            <p className={styles.hello}>I&apos;m a industrial designer who specializes in user-centered design and research. I&apos;m passionate about all things tech and love to create amazing experiences through digital or phsyical products.</p>
             
-            <p className={styles.check_out_text}>
-              Check out my work! 
-            </p>
-            <div className={styles.bouncy_arrow}>&darr;</div>
+            <div role='button' className={styles.check_out} onClick={() => handleScroll()} onKeyDown={(e) => handleOnEnterPressToProjects(e)} tabIndex="0" >
+              
+              <p className={styles.check_out_text}>
+                Check out my work! 
+              </p>
+              <div className={styles.bouncy_arrow}>&darr;</div>
+            </div>
           </div>
-        </div>
+          
         
-       
-        <section id="my-projects-library" className={styles.my_project_section}>
-        <p className={styles.work_heading}>WORK</p>
-          <div className={styles.filter_options}>
-            {filterTerms.map((theTerm) => {
+          <section id="my-projects-library" className={styles.my_project_section}>
+          <p className={styles.work_heading}>WORK</p>
+            <div className={styles.filter_options}>
+              {filterTerms.map((theTerm) => {
+                return(
+                  <div key={theTerm.term} id={theTerm.term} tabIndex="0" className={(filterTerm == theTerm.term) ? styles.filter_active : styles.filter} onClick={() => setFilterTerm(theTerm.term)} onKeyDown={(e) => handleOnEnterPressSetFilterTerm(e, theTerm.term)}>{theTerm.term}</div>
+                )
+              })}
+
+              {/**              
+              <div className={styles.fun_filter} onClick={() => setLottieClicked(!lottieClicked)}>
+                <div className={styles.lottie_container}>
+                  <lottie-player
+                    id="lottie-player"
+                    src="https://assets8.lottiefiles.com/packages/lf20_pnrpmopy.json"
+                    background="transparent"
+                    speed="0.8"
+                    />
+                </div>
+                <div
+                  id="fun"
+                  tabIndex="0"
+                  className={(filterTerm == "Fun") ? styles.filter_active : styles.filter}
+                  onClick={() => setFilterTerm("Fun")}
+                  onKeyDown={(e) => handleOnEnterPressSetFilterTerm(e, "Fun")}
+                >
+                  Fun
+                </div>
+              </div>
+              */} 
+              
+            </div>
+          <div className={styles.grid}>
+
+            {allProjects.map((project) => {
               return(
-                <div key={theTerm.term} id={theTerm.term} tabIndex="0" className={(filterTerm == theTerm.term) ? styles.filter_active : styles.filter} onClick={() => setFilterTerm(theTerm.term)} onKeyDown={(e) => handleOnEnterPressSetFilterTerm(e, theTerm.term)}>{theTerm.term}</div>
+                <Link  href={'/' + project.id + '#' + project.title_url_safe} key={project.id.toString()} >
+                  <div id={project.title_url_safe} className={styles.card} tabIndex="0" role="button" onKeyDown={(e) => handleEnterToClickSwitch(e, project.title_url_safe)} >
+                    <Image src={project.image} alt={project.name} width={600} height={400}></Image>
+                    <p className={styles.project_title}>{project.name}</p>
+                    <p className={styles.project_description}>{project.description}</p>
+                    <p className={styles.project_tags}>{project.tags}</p>
+                  </div>
+                </Link>
               )
             })}
-            
+          
           </div>
-        <div className={styles.grid}>
+          </section>
 
-          {allProjects.map((project) => {
-            return(
-              <Link  href={'/' + project.id + '#' + project.title_url_safe} key={project.id.toString()} >
-                <div id={project.title_url_safe} className={styles.card} tabIndex="0" role="button" onKeyDown={(e) => handleEnterToClickSwitch(e, project.title_url_safe)} >
-                  <Image src={project.image} alt={project.name} width={600} height={400}></Image>
-                  <p className={styles.project_title}>{project.name}</p>
-                  <p className={styles.project_description}>{project.description}</p>
-                  <p className={styles.project_tags}>{project.tags}</p>
-                </div>
-              </Link>
-            )
-          })}
-         
-        </div>
-        </section>
+          {(isScrolledDown) ? <div tabIndex="0" role="button" className={styles.go_top_button} onClick={() => scrollToTheTop()} onKeyDown={(e) => handleOnEnterPressToTop(e)}>&uarr;</div> : null}
+        </main>
 
-        {(isScrolledDown) ? <div tabIndex="0" role="button" className={styles.go_top_button} onClick={() => scrollToTheTop()} onKeyDown={(e) => handleOnEnterPressToTop(e)}>&uarr;</div> : null}
-      </main>
-
-     
-    </div>
+      
+      </div>
+    </>
   )
 }
 

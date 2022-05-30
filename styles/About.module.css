@@ -1,17 +1,47 @@
 .container{
     display: flex;
-    flex-direction: column;
+    padding-left: 2rem;
+    padding-right: 4rem;
+    padding-bottom: 2rem;
+    margin-top: 6rem;
+    height: 726px;
+    width: 100%;
+}
+
+
+.image_container{
+    height: 100%;
+    width: 520px;
+}
+
+.about_section{
+    padding-top: 3rem;
+    padding-left: 2rem;
+    height: 100%;
+    font: 18px;
+}
+
+.meet_sash{
+    font-size: 64px;
+    font-weight: 700;
+    margin: 0;
+    background: linear-gradient(90deg, rgba(244, 168, 161, 1) 0%, rgba(143, 161, 233, 1) 12%, rgba(116, 179, 245, 1) 25%, rgba(92, 216, 243, 1) 41%, rgba(74, 173, 238, 1) 56%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.view_resume_button{
+    display: flex;
     align-items: center;
+    text-align: center;
     justify-content: center;
-    height: 80vh;
-    padding: 1rem
-}
-
-.container > p {
-    font-size: 22px;
-    font-weight: 200;
-}
-
-.lottie_animation{
-    height: 100px;
+    width: 175px;
+    height: 50px;
+    cursor: pointer;
+    border: 2px;
+    border-style: solid;
+    border-image: linear-gradient(90deg, rgba(244, 168, 161, 1) 0%, rgba(143, 161, 233, 1) 12%, rgba(116, 179, 245, 1) 25%, rgba(92, 216, 243, 1) 41%, rgba(74, 173, 238, 1) 56%) 1;
+    font: 18px;
+    margin-top: 2rem;
+    border-radius: 10px !important;
 }
