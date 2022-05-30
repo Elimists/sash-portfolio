@@ -24,10 +24,10 @@ export default function About(){
             <div className={styles.container}>
                 { !isMobileView ? 
                     <div className={styles.image_container}>
-                        <Image src={AboutSashImage} />
+                        <Image src={AboutSashImage} quality={100} unoptimized={true} loading="eager"/>
                     </div> :
                     <div className={styles.image_container}>
-                        <Image src={AboutSashImageMobile} />
+                        <Image src={AboutSashImageMobile} quality={100} unoptimized={true} loading="eager"/>
                     </div>
                     }
                
