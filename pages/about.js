@@ -15,8 +15,8 @@ export default function About(){
                 <div className={styles.about_section}>
                     <h3 className={styles.meet_sash}>Meet Sash</h3>
                     <p>I am a very cool designer. I love designing Stuff. Designing stuff is my passion.</p>
-                    <p>I like to think that I am a free spirit. I'm just trying to find my path in this world.</p>
-                    <p>So holla @ me on Linkedin. Peace out.</p>
+                    <p>I like to think that I am a free spirit. Im just trying to find my path in this world.</p>
+                    <p>So holla &#x40; me on Linkedin. Peace out.</p>
                     <div tabIndex="0" className={styles.view_resume_button}>
                         View Resume
                     </div>
