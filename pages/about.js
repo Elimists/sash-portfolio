@@ -54,13 +54,14 @@ export default function About(){
                     <div className={styles.button_container}>
                         <a tabIndex="0" className={styles.view_resume_button} href="https://google.com" target="_blank" rel="noreferrer">
                             <span className={styles.material_symbols_sharp}>
-                                mail
+                                description
                             </span>
                             View Resume
                         </a>
                         <a tabIndex="0" className={styles.view_resume_button} href="mailto: sash.mahara@gmail.com">
+                            
                             <span className={styles.material_symbols_sharp}>
-                                description
+                                mail
                             </span>
                             Get In Touch
                         </a>
