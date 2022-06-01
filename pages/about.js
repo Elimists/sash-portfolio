@@ -22,7 +22,6 @@ export default function About(){
         else { setIsMobileView(false)}
     }, [width])
 
-    
     return(
         <>
             <div className={styles.container}>
