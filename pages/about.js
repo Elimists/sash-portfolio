@@ -52,7 +52,7 @@ export default function About(){
                      </p>
                     
                     <div className={styles.button_container}>
-                        <a tabIndex="0" className={styles.view_resume_button}>
+                        <a tabIndex="0" className={styles.view_resume_button} href="https://google.com" target="_blank">
                             <span className={styles.material_symbols_sharp}>
                                 mail
                             </span>
