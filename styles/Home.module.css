@@ -116,6 +116,8 @@
 .go_top_button{
   position: fixed;
   bottom: 20px;
+  width: 50px;
+  text-align: center;
   right: 40px;
   background-color: var(--color-text);
   color: var(--color-background);
@@ -140,23 +142,27 @@
 .filter{
   z-index: 1000;
   cursor: pointer;
-  padding: 0.4rem 1.2rem 0.4rem 1.2rem;
-  margin: 0.6rem 1rem 0.6rem 0;
-  border: 2px solid var(--color-gray);
+  padding: 0.4rem 1rem 0.4rem 1rem;
+  margin-right: 0.4rem;
+  border: 1px solid var(--color-gray);
   border-radius: 50px;
   color: rgba(26, 26, 26, 0.5);
   white-space: nowrap;
-  color: var(--color-gray)
+  color: var(--color-gray);
+  font-size: 14px;
+  -webkit-tap-highlight-color: transparent;
 }
 .filter_active{
   z-index: 1000;
   cursor: pointer;
   padding: 0.4rem 1.2rem 0.4rem 1.2rem;
-  margin: 0.6rem 1rem 0.6rem 0;
-  border: 3px solid var(--color-text);
+  margin-right: 0.4rem;
+  border: 2px solid var(--color-text);
   border-radius: 50px;
   white-space: nowrap;
-  color: var(--color-text)
+  color: var(--color-text);
+  font-size: 14px;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .my_project_section{
