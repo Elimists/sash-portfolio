@@ -1,5 +1,6 @@
 .container {
   padding: 0 2rem;
+  overflow-x: hidden;
 }
 
 .main {
@@ -132,7 +133,9 @@
   /*flex-wrap: wrap;*/
   overflow-y: scroll;
   align-items: center;
-  padding: 0rem 0rem 2rem 0rem;
+  padding: 0 2rem 2rem 2rem;
+  width: 100vw !important;
+  transform: translateX(-26px);
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
