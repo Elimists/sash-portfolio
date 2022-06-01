@@ -4,7 +4,7 @@
     padding-right: 4rem;
     padding-bottom: 2rem;
     margin-top: 6rem;
-    height: 726px;
+    height: auto;
     width: 100%;
 }
 
@@ -16,9 +16,14 @@
 }
 
 .about_section{
-    padding-top: 3rem;
     padding-left: 2rem;
     height: 100%;
+    width: auto;
+    max-width: 500px; 
+}
+
+.about_section > p{
+    font-weight: 300;
     font: 18px;
 }
 
@@ -26,6 +31,7 @@
     font-size: 64px;
     font-weight: 700;
     margin: 0;
+    padding: 0;
     background: linear-gradient(90deg, rgba(244, 168, 161, 1) 0%, rgba(143, 161, 233, 1) 12%, rgba(116, 179, 245, 1) 25%, rgba(92, 216, 243, 1) 41%, rgba(74, 173, 238, 1) 56%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -47,15 +53,28 @@
     border-radius: 10px !important;
 }
 
+.button_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+    width: 100%;
+}
 
-@media (max-width: 750px) {
+.button_container > div{
+    
+}
+
+@media (max-width: 1000px) {
     .container{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         padding: 0;
-        margin-top: 2rem;
+        height: auto;
+        padding-top: 2rem;
+        margin-top: 0;
     }
 
     .image_container{
@@ -69,6 +88,7 @@
         align-items: center;
         font: 18px;
         padding: 1rem 2rem;
+        max-width: 100%;
     }
 
     .meet_sash{
@@ -78,5 +98,13 @@
     .about_section > p {
         display: flex;
         text-align: left !important;
+    }
+
+    .button_container{
+        justify-content: space-evenly;
+    }
+
+    .view_resume_button{
+        width: 140px;
     }
 }
