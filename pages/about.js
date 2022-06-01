@@ -52,18 +52,18 @@ export default function About(){
                      </p>
                     
                     <div className={styles.button_container}>
-                        <div tabIndex="0" className={styles.view_resume_button}>
+                        <a tabIndex="0" className={styles.view_resume_button}>
                             <span className={styles.material_symbols_sharp}>
                                 mail
                             </span>
                             View Resume
-                        </div>
-                        <div tabIndex="0" className={styles.view_resume_button}>
+                        </a>
+                        <a tabIndex="0" className={styles.view_resume_button} href="mailto: sash.mahara@gmail.com">
                             <span className={styles.material_symbols_sharp}>
                                 description
                             </span>
                             Get In Touch
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
