@@ -109,7 +109,7 @@ export default function Home({projects}) {
       scale: 1,
       opacity: 1,
       transition: {
-        delay: .6
+        delay: .7
       }
     }
   }
@@ -125,7 +125,7 @@ export default function Home({projects}) {
       scale: 1,
       opacity: 1,
       transition: {
-        delay: .8
+        delay: .9
       }
     }
   }
@@ -153,57 +153,37 @@ export default function Home({projects}) {
             </div>
           </motion.div>
           
-          <motion.div initial={setProjectsVariants.initial} animate={setProjectsVariants.animate} variants={setProjectsVariants}>
-          <section id="my-projects-library" className={styles.my_project_section}>
-          <p className={styles.work_heading}>WORK</p>
-            <div className={styles.filter_options}>
-              {filterTerms.map((theTerm) => {
-                return(
-                  <div key={theTerm.term} id={theTerm.term} tabIndex="0" className={(filterTerm == theTerm.term) ? styles.filter_active : styles.filter} onClick={() => setFilterTerm(theTerm.term)} onKeyDown={(e) => handleOnEnterPressSetFilterTerm(e, theTerm.term)}>{theTerm.term}</div>
-                )
-              })}
-
-              {/**              
-              <div className={styles.fun_filter} onClick={() => setLottieClicked(!lottieClicked)}>
-                <div className={styles.lottie_container}>
-                  <lottie-player
-                    id="lottie-player"
-                    src="https://assets8.lottiefiles.com/packages/lf20_pnrpmopy.json"
-                    background="transparent"
-                    speed="0.8"
-                    />
-                </div>
-                <div
-                  id="fun"
-                  tabIndex="0"
-                  className={(filterTerm == "Fun") ? styles.filter_active : styles.filter}
-                  onClick={() => setFilterTerm("Fun")}
-                  onKeyDown={(e) => handleOnEnterPressSetFilterTerm(e, "Fun")}
-                >
-                  Fun
-                </div>
+          <motion.div className={styles.my_project_section} initial={setProjectsVariants.initial} animate={setProjectsVariants.animate} variants={setProjectsVariants}>
+            <section id="my-projects-library" className={styles.my_project_section}>
+            <p className={styles.work_heading}>WORK</p>
+              <div className={styles.filter_options}>
+                {filterTerms.map((theTerm) => {
+                  return(
+                    <div key={theTerm.term} id={theTerm.term} tabIndex="0" className={(filterTerm == theTerm.term) ? styles.filter_active : styles.filter} onClick={() => setFilterTerm(theTerm.term)} onKeyDown={(e) => handleOnEnterPressSetFilterTerm(e, theTerm.term)}>{theTerm.term}</div>
+                  )
+                })}
+                
               </div>
-              */} 
-              
-            </div>
-          <div className={styles.grid}>
+              <div className={styles.grid}>
 
-            {allProjects.map((project) => {
-              return(
-                <Link  href={'/' + project.id + '#' + project.title_url_safe} key={project.id.toString()} >
-                  <div id={project.title_url_safe} className={styles.card} tabIndex="0" role="button" onKeyDown={(e) => handleEnterToClickSwitch(e, project.title_url_safe)} >
-                    <Image src={project.image} alt={project.name} width={600} height={400}></Image>
-                    <p className={styles.project_title}>{project.name}</p>
-                    <p className={styles.project_description}>{project.description}</p>
-                    <p className={styles.project_tags}>{project.tags}</p>
-                  </div>
-                </Link>
-              )
-            })}
-          
-          </div>
-          </section>
+                {allProjects.map((project) => {
+                  return(
+                    <Link  href={'/' + project.id + '#' + project.title_url_safe} key={project.id.toString()} >
+                      <div id={project.title_url_safe} className={styles.card} tabIndex="0" role="button" onKeyDown={(e) => handleEnterToClickSwitch(e, project.title_url_safe)} >
+                        <Image src={project.image} alt={project.name} width={600} height={400}></Image>
+                        <p className={styles.project_title}>{project.name}</p>
+                        <p className={styles.project_description}>{project.description}</p>
+                        <p className={styles.project_tags}>{project.tags}</p>
+                      </div>
+                    </Link>
+                  )
+                })}
+              
+              </div>
+            </section>
           </motion.div>
+
+
           {(isScrolledDown) ? <div tabIndex="0" role="button" className={styles.go_top_button} onClick={() => scrollToTheTop()} onKeyDown={(e) => handleOnEnterPressToTop(e)}>&uarr;</div> : null}
         </main>
 

@@ -66,7 +66,7 @@ export default function Navbar(){
             scale: 1,
                 opacity: 1,
                     transition: {
-                delay: .4
+                delay: .5
             }
         }
     }
@@ -105,12 +105,14 @@ export default function Navbar(){
                         </div>
                     </div>
                 </motion.div>
-
-                <div className={styles.mobile_hamburger_menu} onClick={() => setIsMobileNavOpened(prevState => !prevState)}>
-                    <div className={styles.hamburger_line}></div>
-                    <div className={styles.hamburger_line}></div>
-                    <div className={styles.hamburger_line}></div>
-                </div>
+                
+                <motion.div initial={setNavVariants.initial} animate={setNavVariants.animate} variants={setNavVariants}>
+                    <div className={styles.mobile_hamburger_menu} onClick={() => setIsMobileNavOpened(prevState => !prevState)}>
+                        <div className={styles.hamburger_line}></div>
+                        <div className={styles.hamburger_line}></div>
+                        <div className={styles.hamburger_line}></div>
+                    </div>
+                </motion.div>
 
             </div>
 
