@@ -7,6 +7,8 @@ import AboutSashImage from '../public/about_image.png'
 import AboutSashImageMobile from '../public/about_image_mobile.png'
 import useWindowDimensions from '../hooks/useWindowDimensions'
 
+import {motion} from 'framer-motion'
+
 
 
 
@@ -22,19 +24,55 @@ export default function About(){
         else { setIsMobileView(false)}
     }, [width])
 
+    const setImageVariants = {
+        hidden: {
+            x: -350
+        },
+        visible: {
+            x: 0,
+            transition: {
+                duration: .55
+            }
+        }
+    }
+
+    const setMeetSashVariants = {
+        hidden: {
+            x: 350
+        },
+        visible: {
+            x: 0,
+            transition: {
+                duration: .55
+            }
+        }
+    }
+
     return(
         <>
             <div className={styles.container}>
                 { !isMobileView ? 
-                    <div className={styles.image_container}>
+                    <motion.div 
+                        className={styles.image_container}
+                        variants={setImageVariants} 
+                        initial="hidden"
+                        animate="visible">
                         <Image src={AboutSashImage} quality={100} unoptimized={true} loading="eager"/>
-                    </div> :
-                    <div className={styles.image_container}>
+                    </motion.div> :
+                    <motion.div 
+                        className={styles.image_container}
+                        variants={setImageVariants}
+                        initial="hidden"
+                        animate="visible">
                         <Image src={AboutSashImageMobile} quality={100} unoptimized={true} loading="eager"/>
-                    </div>
+                    </motion.div>
                     }
                
-                <div className={styles.about_section}>
+                <motion.div 
+                    className={styles.about_section}
+                    variants={setMeetSashVariants}
+                    initial="hidden"
+                    animate="visible">
                     <h3 className={styles.meet_sash}>Meet Sash</h3>
                     <p>Hi there! I&#39;m an Industrial Designer from Canada who loves to create unique and meaningful products.</p>
                     <p>I completed my Bachelor&#39;s degree in Industrial Design from Carleton University in 2022. My projects included 
@@ -69,7 +107,7 @@ export default function About(){
                             Get In Touch
                         </a>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </>
 

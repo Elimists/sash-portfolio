@@ -12,7 +12,6 @@
 .image_container{
     height: 100%;
     width: 520px;
-    transition: width 2s, height 2s;
 }
 
 .about_section{
