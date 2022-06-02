@@ -6,6 +6,8 @@ import Link from 'next/link'
 import {useState, useEffect} from 'react'
 import Script from 'next/script'
 
+import { motion } from 'framer-motion'
+
 const filterTerms = [
   {'term': 'All'},
   {'term': 'UX/UI'},
@@ -95,28 +97,63 @@ export default function Home({projects}) {
 
   }
 
+
+  const setAboutMeVariants = {
+    initial: "hidden",
+    animate: "visible",
+    hidden: {
+      scale: 0.8,
+      opacity: 0
+    },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        delay: .6
+      }
+    }
+  }
+
+  const setProjectsVariants = {
+    initial: "hidden",
+    animate: "visible",
+    hidden: {
+      scale: 0.8,
+      opacity: 0
+    },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        delay: .8
+      }
+    }
+  }
+
+
   return (
     <>
-      <Script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"/>
       <div className={styles.container}>
         <main className={styles.main}>
-          <div className={styles.intro}>
-            <p className={styles.hello}>Hello, I&apos;m</p>
-            <h1 className={styles.my_name}>
-              Sash Mahara
-            </h1>
-            <p className={styles.hello}>I&apos;m a industrial designer who specializes in user-centered design and research. I&apos;m passionate about all things tech and love to create amazing experiences through digital or phsyical products.</p>
-            
-            <div role='button' className={styles.check_out} onClick={() => handleScroll()} onKeyDown={(e) => handleOnEnterPressToProjects(e)} tabIndex="0" >
+          <motion.div initial={setAboutMeVariants.initial} animate={setAboutMeVariants.animate} variants={setAboutMeVariants}>
+            <div className={styles.intro}>
+              <p className={styles.hello}>Hello, I&apos;m</p>
+              <h1 className={styles.my_name}>
+                Sash Mahara
+              </h1>
+              <p className={styles.hello}>I&apos;m a industrial designer who specializes in user-centered design and research. I&apos;m passionate about all things tech and love to create amazing experiences through digital or phsyical products.</p>
               
-              <p className={styles.check_out_text}>
-                Check out my work! 
-              </p>
-              <div className={styles.bouncy_arrow}>&darr;</div>
+              <div role='button' className={styles.check_out} onClick={() => handleScroll()} onKeyDown={(e) => handleOnEnterPressToProjects(e)} tabIndex="0" >
+                
+                <p className={styles.check_out_text}>
+                  Check out my work! 
+                </p>
+                <div className={styles.bouncy_arrow}>&darr;</div>
+              </div>
             </div>
-          </div>
+          </motion.div>
           
-        
+          <motion.div initial={setProjectsVariants.initial} animate={setProjectsVariants.animate} variants={setProjectsVariants}>
           <section id="my-projects-library" className={styles.my_project_section}>
           <p className={styles.work_heading}>WORK</p>
             <div className={styles.filter_options}>
@@ -166,7 +203,7 @@ export default function Home({projects}) {
           
           </div>
           </section>
-
+          </motion.div>
           {(isScrolledDown) ? <div tabIndex="0" role="button" className={styles.go_top_button} onClick={() => scrollToTheTop()} onKeyDown={(e) => handleOnEnterPressToTop(e)}>&uarr;</div> : null}
         </main>
 

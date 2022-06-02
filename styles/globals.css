@@ -9,7 +9,7 @@ html{
   
 }
 
-body,
+
 body[data-theme="light"]{
   --color-text: black;
   --color-background: #fff;

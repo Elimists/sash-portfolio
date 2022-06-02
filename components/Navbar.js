@@ -8,6 +8,8 @@ import LinkedInLogo from './logos/LinkedinLogo'
 import ThemeToggle from './logos/ThemeToggle'
 import SashLogo from './logos/SashLogo'
 
+import {motion} from 'framer-motion'
+
 import useWindowDimensions from '../hooks/useWindowDimensions'
 
 const navLinks = [
@@ -43,43 +45,66 @@ export default function Navbar(){
         if (isMobileNavOpened) {
             navBarRight.style.right = "0"
             document.body.style.overflowY = "hidden"
+            document.body.style.position = "fixed"
         }
         else {
             navBarRight.style.right = "-100%"
             document.body.style.overflowY = "scroll"
+            document.body.style.position = "relative"
         }
         
     }, [isMobileNavOpened])
 
+    const setNavVariants = {
+        initial: "hidden",
+        animate: "visible",
+        hidden: {
+            scale: 0.8,
+            opacity: 0
+        },
+        visible: {
+            scale: 1,
+                opacity: 1,
+                    transition: {
+                delay: .4
+            }
+        }
+    }
+    
     
     return(
         <div className={styles.container}>
             <div className={styles.inner_content}>
-                <div className={styles.sash_logo}>
-                    <Link href="/" >   
-                        <a><SashLogo /></a>
-                    </Link>
-                </div>
 
-                <div className={styles.nav_link_group}>
-                    {navLinks.map(links => {
-                        return(
-                        <Link key={links.name} href={links.href}><a className={(router.pathname == links.href) ? styles.nav_links_active : undefined}>{links.name}</a></Link>
-                        )
-                    })}
-                    
-                    <div className={styles.linkedin_logo}>
-                        <Link href="https://www.linkedin.com/in/sashmahara" passHref={true}>
-                            <a target="_blank">
-                                <LinkedInLogo/>
-                            </a>
+                <motion.div initial={setNavVariants.initial} animate={setNavVariants.animate} variants={setNavVariants}>
+                    <div className={styles.sash_logo}>
+                        <Link href="/" >   
+                            <a><SashLogo /></a>
                         </Link>
                     </div>
+                </motion.div>
 
-                    <div className={(activeTheme == "light") ? styles.light_theme : styles.dark_theme} onClick={() => swapTheme()}>
-                        <ThemeToggle/>
+                <motion.div initial={setNavVariants.initial} animate={setNavVariants.animate} variants={setNavVariants}>
+                    <div className={styles.nav_link_group}>
+                        {navLinks.map(links => {
+                            return(
+                            <Link key={links.name} href={links.href}><a className={(router.pathname == links.href) ? styles.nav_links_active : undefined}>{links.name}</a></Link>
+                            )
+                        })}
+                        
+                        <div className={styles.linkedin_logo}>
+                            <Link href="https://www.linkedin.com/in/sashmahara" passHref={true}>
+                                <a target="_blank">
+                                    <LinkedInLogo/>
+                                </a>
+                            </Link>
+                        </div>
+
+                        <div className={(activeTheme == "light") ? styles.light_theme : styles.dark_theme} onClick={() => swapTheme()}>
+                            <ThemeToggle/>
+                        </div>
                     </div>
-                </div>
+                </motion.div>
 
                 <div className={styles.mobile_hamburger_menu} onClick={() => setIsMobileNavOpened(prevState => !prevState)}>
                     <div className={styles.hamburger_line}></div>
