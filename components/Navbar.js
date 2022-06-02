@@ -64,9 +64,9 @@ export default function Navbar(){
         },
         visible: {
             scale: 1,
-                opacity: 1,
-                    transition: {
-                delay: .5
+            opacity: 1,
+            transition: {
+                duration: .3
             }
         }
     }

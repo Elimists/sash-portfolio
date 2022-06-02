@@ -131,13 +131,8 @@
 .filter_options{
   display: flex;
   /*flex-wrap: wrap;*/
-  overflow-y: scroll;
   align-items: center;
   padding-bottom: 2rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-left: -2rem;
-  width: 100vw;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -225,6 +220,15 @@
 
   .my_name{
     font-size: 72px;
+  }
+
+  .filter_options {
+    overflow-y: scroll;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: -2rem;
+    width: 100vw;
   }
 
 }

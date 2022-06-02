@@ -109,7 +109,7 @@ export default function Home({projects}) {
       scale: 1,
       opacity: 1,
       transition: {
-        delay: .5
+        duration: .5
       }
     }
   }
@@ -125,7 +125,7 @@ export default function Home({projects}) {
       scale: 1,
       opacity: 1,
       transition: {
-        delay: .9
+        duration: .9
       }
     }
   }
