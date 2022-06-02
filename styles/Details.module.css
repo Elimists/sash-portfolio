@@ -34,6 +34,9 @@
 .detail_section{
     margin: 4rem 0;
 }
+.detail_section > p {
+    font-weight: 300;
+}
 .details_heading{
     margin: 0.5rem 0;
     font-weight: 600;
@@ -41,18 +44,47 @@
 }
 
 .process_image_container{
-    margin-top: 2rem;
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-top: 2rem;
 }
 
 .research_goal_ul{
-   padding-left: 1rem;
+   padding-left: 1.5rem;
 }
 .research_goal_list_item{
     padding-bottom: 1rem;
 }
+
+.user_group_image{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.criteria_ol > li::marker{
+    font-weight: 700;
+}
+.criteria_list_title{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.insights_image_section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+}
+.insights_images_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
 /*Heading Bar - Colored bar that goes over the heading*/
 .heading_bar {
     height: 3px;

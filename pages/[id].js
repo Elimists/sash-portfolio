@@ -133,22 +133,23 @@ export default function ProjectDetail({project}){
                     {('user_groups' in project) && 
                         <div tabIndex="0" className={styles.detail_section} >
                             <div className={styles.heading_bar}></div> 
-                        <h2 className={styles.details_heading}>User Groups</h2>
-                        <p>{project.user_groups.description}</p>
-                        <Image src={project.user_groups.image} height={400} width={600} alt="User Group Image"></Image>
-                    </div>
+                            <h2 className={styles.details_heading}>User Groups</h2>
+                            <p>{project.user_groups.description}</p>
+                            <div className={styles.user_group_image}>
+                                <Image src={project.user_groups.image} height={400} width={600} alt="User Group Image"></Image>
+                            </div>
+                        </div>
                     }
 
                     {('recruitment_criterias' in project ) && 
                         <div tabIndex="0" className={styles.detail_section} >
                             <div className={styles.heading_bar}></div> 
                         <h2 className={styles.details_heading}>Recruitment Criteria</h2>
-                        <ol type='1'>
+                        <ol type='1' className={styles.criteria_ol}>
                         {project.recruitment_criterias.map((criteria, index) => {
                             return(
                                 <li key={index.toString()}>
-                                
-                                        <h4>{criteria.title}</h4>
+                                        <h4 className={styles.criteria_list_title}>{criteria.title}</h4>
                                         <p>{criteria.description}</p>
                                 </li>
                             )
@@ -160,15 +161,17 @@ export default function ProjectDetail({project}){
                     {('key_insights' in project) &&
                         <div tabIndex="0" className={styles.detail_section} >
                             <div className={styles.heading_bar}></div> 
-                        <h2>Key Insights</h2>
-                        <p>{project.key_insights.details}</p>
-                        <div className={styles.key_insights_images}>
-                            <Image src={project.key_insights.image} height={275} width={375} alt="Key Insights Image 1"></Image>
-                            <Image src={project.key_insights.image2} height={275} width={375} alt="Key Insights Image 2"></Image>
+                            <h2>Key Insights</h2>
+                            <p>{project.key_insights.details}</p>
+                            <div className={styles.insights_image_section}>
+                                <div className={styles.insights_images_container}>
+                                    <Image src={project.key_insights.image} height={275} width={375} alt="Key Insights Image 1"></Image>
+                                    <Image src={project.key_insights.image2} height={275} width={375} alt="Key Insights Image 2"></Image>
+                                </div>
+                                <p>Data Coding</p>
+                            </div>
+                            <Image src={project.key_insights.image} height={170} width={1000} alt="Key Insights Image"></Image>
                         </div>
-                        <p>Data Coding</p>
-                        <Image src={project.key_insights.image} height={100} width={1100} alt="Key Insights Image"></Image>
-                    </div>
                     }
 
                     {('problem_statement' in project) &&
