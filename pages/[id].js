@@ -83,43 +83,47 @@ export default function ProjectDetail({project}){
 
                     {('overview' in project) &&
                     
-                    <div tabIndex="0">
-                        <div className={styles.heading_bar}></div> 
-                        <h2 className={styles.details_heading}>Overview</h2>
-                        <p className={styles.details_value}>{project.overview}</p>
-                    </div>
+                        <div tabIndex="0" className={styles.detail_section}>
+                            <div className={styles.heading_bar}></div> 
+                            <h2 className={styles.details_heading}>Overview</h2>
+                            <p className={styles.details_value}>{project.overview}</p>
+                        </div>
                     }
 
                     {('problem' in project) && 
-                    <div tabIndex="0">
-                        <div className={styles.heading_bar}></div> 
-                        <h2 className={styles.details_heading}>Problem</h2>
-                        <p className={styles.details_value}>{project.problem}</p>
-                    </div>
+                        <div tabIndex="0" className={styles.detail_section} >
+                            <div className={styles.heading_bar}></div> 
+                            <h2 className={styles.details_heading}>Problem</h2>
+                            <p className={styles.details_value}>{project.problem}</p>
+                        </div>
                     }
 
                     {('process' in project) &&
-                    <div tabIndex="0">
-                        <div className={styles.heading_bar}></div> 
-                        <h2 className={styles.details_heading}>Process</h2>
-                        <Image src={project.process} height={250} width={650} alt="Process Image"></Image>
-                    </div>
+                        <div tabIndex="0" className={styles.detail_section} >
+                            <div className={styles.heading_bar}></div> 
+                            <h2 className={styles.details_heading}>Process</h2>
+                            <div className={styles.process_image_container}>
+                                <Image src={project.process} height={250} width={650} alt="Process Image"></Image>
+                            </div>
+                        </div>
                     }
 
                     {('research_goals' in project) &&
-                    <div tabIndex="0">
+                        <div tabIndex="0" className={styles.detail_section} >
                             <div className={styles.heading_bar}></div> 
                         <h2 className={styles.details_heading}>Research Goals</h2>
-                        {project.research_goals.map((goal, index) => {
-                            return(
-                                <li key={index.toString()} className={styles.list}>{goal}</li>
-                            )
-                        })}
+                        <ul className={styles.research_goal_ul}>
+                            {project.research_goals.map((goal, index) => {
+                                return(
+                                    <li key={index.toString()} className={styles.research_goal_list_item}>{goal}</li>
+                                )
+                            })}
+                        </ul>
                     </div>
                     }
 
                     {('recruitment_method' in project) && 
-                    <div tabIndex="0">
+                        <div tabIndex="0" className={styles.detail_section} >
                             <div className={styles.heading_bar}></div> 
                         <h2 className={styles.details_heading}>Recruitment Method</h2>
                         <p>{project.recruitment_method}</p>
@@ -127,7 +131,7 @@ export default function ProjectDetail({project}){
                     }
 
                     {('user_groups' in project) && 
-                    <div tabIndex="0">
+                        <div tabIndex="0" className={styles.detail_section} >
                             <div className={styles.heading_bar}></div> 
                         <h2 className={styles.details_heading}>User Groups</h2>
                         <p>{project.user_groups.description}</p>
@@ -136,7 +140,7 @@ export default function ProjectDetail({project}){
                     }
 
                     {('recruitment_criterias' in project ) && 
-                    <div tabIndex="0">
+                        <div tabIndex="0" className={styles.detail_section} >
                             <div className={styles.heading_bar}></div> 
                         <h2 className={styles.details_heading}>Recruitment Criteria</h2>
                         <ol type='1'>
@@ -146,8 +150,6 @@ export default function ProjectDetail({project}){
                                 
                                         <h4>{criteria.title}</h4>
                                         <p>{criteria.description}</p>
-                                    
-                                    
                                 </li>
                             )
                         })}
@@ -156,10 +158,10 @@ export default function ProjectDetail({project}){
                     }
 
                     {('key_insights' in project) &&
-                    <div tabIndex="0">
+                        <div tabIndex="0" className={styles.detail_section} >
                             <div className={styles.heading_bar}></div> 
                         <h2>Key Insights</h2>
-                        <p className={styles.details_heading}>{project.key_insights.details}</p>
+                        <p>{project.key_insights.details}</p>
                         <div className={styles.key_insights_images}>
                             <Image src={project.key_insights.image} height={275} width={375} alt="Key Insights Image 1"></Image>
                             <Image src={project.key_insights.image2} height={275} width={375} alt="Key Insights Image 2"></Image>
@@ -170,17 +172,18 @@ export default function ProjectDetail({project}){
                     }
 
                     {('problem_statement' in project) &&
-                    <div>
-                        <h2>Problem Statement</h2>
-                        <p>{project.problem_statement}</p>
-                    </div>
+                        <div className={styles.detail_section} >
+                            <div className={styles.heading_bar}></div>
+                            <h2>Problem Statement</h2>
+                            <p>{project.problem_statement}</p>
+                        </div>
                     }
 
                     {/** DESIGN BRIEFS */}
                     {('design_briefs' in project) &&
-                    <div>
+                        <div className={styles.detail_section} >
                             <div className={styles.heading_bar}></div> 
-                        <h2>Design Brief</h2>
+                        <h2 className={styles.details_heading}>Design Brief</h2>
                         {project.design_briefs.map((brief, index) => {
                             if (brief.title === "Goal & Objectives"){
                                 return(
@@ -224,7 +227,8 @@ export default function ProjectDetail({project}){
                     {/** PERSONAS */}
                     {('personas' in project) &&
                     <div>
-                        <h2>Personas</h2>
+                        <div className={styles.heading_bar}></div>
+                        <h2 className={styles.details_heading}>Personas</h2>
                         <p>{project.personas.description}</p>
                         <div className={styles.personas_image_container}>
                             {project.personas.images.map((imageObj, index) => {
