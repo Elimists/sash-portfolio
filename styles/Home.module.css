@@ -134,8 +134,8 @@
   overflow-y: scroll;
   align-items: center;
   padding-bottom: 2rem;
-  padding-left: 0.4rem;
-  padding-right: 0.4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   margin-left: -2rem;
   width: 100vw;
   -ms-overflow-style: none;
