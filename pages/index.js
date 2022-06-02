@@ -99,8 +99,6 @@ export default function Home({projects}) {
 
 
   const setAboutMeVariants = {
-    initial: "hidden",
-    animate: "visible",
     hidden: {
       scale: 0.8,
       opacity: 0
@@ -115,8 +113,6 @@ export default function Home({projects}) {
   }
 
   const setProjectsVariants = {
-    initial: "hidden",
-    animate: "visible",
     hidden: {
       scale: 0.6,
       opacity: 0
@@ -125,7 +121,7 @@ export default function Home({projects}) {
       scale: 1,
       opacity: 1,
       transition: {
-        duration: .9
+        duration: .7
       }
     }
   }
@@ -135,7 +131,7 @@ export default function Home({projects}) {
     <>
       <div className={styles.container}>
         <main className={styles.main}>
-          <motion.div initial={setAboutMeVariants.initial} animate={setAboutMeVariants.animate} variants={setAboutMeVariants}>
+          <motion.div variants={setAboutMeVariants} initial="hidden" animate="visible" >
             <div className={styles.intro}>
               <p className={styles.hello}>Hello, I&apos;m</p>
               <h1 className={styles.my_name}>
@@ -153,7 +149,7 @@ export default function Home({projects}) {
             </div>
           </motion.div>
           
-          <motion.div className={styles.my_project_section} initial={setProjectsVariants.initial} animate={setProjectsVariants.animate} variants={setProjectsVariants}>
+          <motion.div className={styles.my_project_section} variants={setProjectsVariants} initial="hidden" animate="visible">
             <section id="my-projects-library" className={styles.my_project_section}>
             <p className={styles.work_heading}>WORK</p>
               <div className={styles.filter_options}>

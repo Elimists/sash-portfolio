@@ -56,8 +56,6 @@ export default function Navbar(){
     }, [isMobileNavOpened])
 
     const setNavVariants = {
-        initial: "hidden",
-        animate: "visible",
         hidden: {
             scale: 0.8,
             opacity: 0
@@ -76,7 +74,7 @@ export default function Navbar(){
         <div className={styles.container}>
             <div className={styles.inner_content}>
 
-                <motion.div className={styles.motion_nav_div} initial={setNavVariants.initial} animate={setNavVariants.animate} variants={setNavVariants}>
+                <motion.div className={styles.motion_nav_div} variants={setNavVariants} initial="hidden" animate="visible" >
                     <div className={styles.sash_logo}>
                         <Link href="/" >   
                             <a><SashLogo /></a>
