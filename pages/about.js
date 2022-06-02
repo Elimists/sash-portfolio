@@ -57,14 +57,14 @@ export default function About(){
                         variants={setImageVariants} 
                         initial="hidden"
                         animate="visible">
-                        <Image src={AboutSashImage} quality={100} unoptimized={true} loading="eager"/>
+                        <Image src={AboutSashImage} quality={100} unoptimized={true} loading="eager" alt='Sash Picture'/>
                     </motion.div> :
                     <motion.div 
                         className={styles.image_container}
                         variants={setImageVariants}
                         initial="hidden"
                         animate="visible">
-                        <Image src={AboutSashImageMobile} quality={100} unoptimized={true} loading="eager"/>
+                        <Image src={AboutSashImageMobile} quality={100} unoptimized={true} loading="eager" alt="Sash Picture"/>
                     </motion.div>
                     }
                

@@ -1,11 +1,9 @@
 .container{
     display: flex;
-    padding-left: 2rem;
-    padding-right: 4rem;
-    padding-bottom: 2rem;
-    margin-top: 6rem;
-    height: auto;
-    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    margin: var(--padding-main);
+    padding: 2rem 2rem;
 }
 
 
@@ -98,7 +96,6 @@
         align-items: center;
         font: 18px;
         padding: 1rem 2rem;
-        max-width: 100%;
     }
 
     .meet_sash{
@@ -111,6 +108,7 @@
     }
 
     .button_container{
+        
         justify-content: space-evenly;
     }
 
