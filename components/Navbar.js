@@ -76,15 +76,13 @@ export default function Navbar(){
         <div className={styles.container}>
             <div className={styles.inner_content}>
 
-                <motion.div initial={setNavVariants.initial} animate={setNavVariants.animate} variants={setNavVariants}>
+                <motion.div className={styles.motion_nav_div} initial={setNavVariants.initial} animate={setNavVariants.animate} variants={setNavVariants}>
                     <div className={styles.sash_logo}>
                         <Link href="/" >   
                             <a><SashLogo /></a>
                         </Link>
                     </div>
-                </motion.div>
-
-                <motion.div initial={setNavVariants.initial} animate={setNavVariants.animate} variants={setNavVariants}>
+               
                     <div className={styles.nav_link_group}>
                         {navLinks.map(links => {
                             return(
