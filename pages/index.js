@@ -109,7 +109,7 @@ export default function Home({projects}) {
       scale: 1,
       opacity: 1,
       transition: {
-        delay: .7
+        delay: .5
       }
     }
   }
@@ -118,7 +118,7 @@ export default function Home({projects}) {
     initial: "hidden",
     animate: "visible",
     hidden: {
-      scale: 0.8,
+      scale: 0.6,
       opacity: 0
     },
     visible: {

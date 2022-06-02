@@ -207,9 +207,8 @@
 }
 
 @media (max-width: 700px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+  .container{
+    overflow-x: hidden;
   }
 
   .main{
