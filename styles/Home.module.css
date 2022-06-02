@@ -138,7 +138,6 @@
   padding-right: 0.4rem;
   margin-left: -2rem;
   width: 100vw;
-  background-color: beige;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -211,8 +210,6 @@
 
 @media (max-width: 700px) {
   .container{
-    overflow-x: hidden;
-    width: 100%;
   }
 
   .main{
