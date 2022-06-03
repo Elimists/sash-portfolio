@@ -8,8 +8,8 @@ import Script from 'next/script'
 
 //Do not remove the below Image imports
 import CoreProjectImage from '../public/projects/core/core.webp'
-import HomieProjectImage from '../public/projects/homie/homie.png' 
-import LisnProjectImage from '../public/projects/lisn/lisn.png'
+import HomieProjectImage from '../public/projects/homie/homie.webp' 
+import LisnProjectImage from '../public/projects/lisn/lisn.webp'
 import WorldJournalProjectImage from '../public/projects/world-journal/world-journal.webp'
 
 import { motion } from 'framer-motion'
