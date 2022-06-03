@@ -86,6 +86,29 @@
     justify-content: space-between;
 }
 
+.briefs_li{
+    padding-bottom: 1rem;
+}
+.briefs_ol > li::marker{
+    font-weight: 700;
+}
+
+.personas_image_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+}
+.persona_image_div{
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 250px;
+}
+.persona_container{
+    margin: 1rem 0;
+}
+
 /*Heading Bar - Colored bar that goes over the heading*/
 .heading_bar {
     height: 3px;
@@ -93,6 +116,21 @@
     border-radius: 20px;
     background: rgb(159, 199, 252);
     background: linear-gradient(90deg, rgba(159, 199, 252, 1) 0%, rgba(230, 177, 254, 1) 50%, rgba(211, 77, 116, 1) 100%);
+}
+
+/* Go Back Button*/
+.go_back_button > p{
+    padding: 0;
+    margin-left: 0;
+
+}
+.go_back_button{
+    display: flex;
+    justify-content: space-between;
+    width: 60px;
+    align-items: center;
+    cursor: pointer;
+    color: var(--color-blue);
 }
 @media (max-width: 900px){
     .top_section{
