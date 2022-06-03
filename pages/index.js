@@ -149,7 +149,7 @@ export default function Home({projects}) {
               </div>
             </div>
           </motion.div>
-          <Image src={HomieImage}></Image>
+          
           
           <motion.div className={styles.my_project_section} variants={setProjectsVariants} initial="hidden" animate="visible">
             <section id="my-projects-library" className={styles.my_project_section}>
