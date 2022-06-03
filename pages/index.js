@@ -5,6 +5,7 @@ import { allProjects } from '../data/projects'
 import Link from 'next/link'
 import {useState, useEffect} from 'react'
 import Script from 'next/script'
+import HomieImage from '../public/homie.png'
 
 import { motion } from 'framer-motion'
 
@@ -148,6 +149,7 @@ export default function Home({projects}) {
               </div>
             </div>
           </motion.div>
+          <Image src={HomieImage}></Image>
           
           <motion.div className={styles.my_project_section} variants={setProjectsVariants} initial="hidden" animate="visible">
             <section id="my-projects-library" className={styles.my_project_section}>
