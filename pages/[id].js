@@ -48,7 +48,8 @@ export default function ProjectDetail({project}){
                     <a tabIndex="0" className={styles.go_back_button} onKeyDown={(e) => handleGoingBackOnEnter(e)} onClick={() => {
                         router.push("/#my-projects-library")
                     }}>
-                    <p className={styles.left_arrow}>&larr; </p>Back</a>
+                        <p className={styles.left_arrow}>&larr; </p>Back
+                    </a>
                     <h1 className={styles.project_title}>{project.title}</h1>
                     <p className={styles.project_description}>{project.description}</p>
                     <p className={styles.project_tags}>{project.tags}</p>
@@ -192,11 +193,13 @@ export default function ProjectDetail({project}){
                                 return(
                                     <>
                                         <h3>{brief.title}</h3>
-                                        
-                                        {brief.goals.map((goal, index) => {
-                                            return (<li key={index.toString()}>{goal}</li>)
-                                            
-                                        })} 
+                                        <ul>
+                                            {brief.goals.map((goal, index) => {
+                                                return (
+                                                    <li className={styles.briefs_li} key={index.toString()}>{goal}</li>
+                                                    )
+                                            })} 
+                                        </ul>
                                     
                                     </>
                                 )
@@ -207,7 +210,7 @@ export default function ProjectDetail({project}){
                                     <>
                                         <h3>{brief.title}</h3>
                                         <div className={styles.brief_req_feat}>
-                                            <ol type="1">
+                                            <ol type="1" className={styles.briefs_ol}>
                                                 {brief.goals.map((goal, index) => {
                                                     return(
                                                         <>
@@ -236,11 +239,11 @@ export default function ProjectDetail({project}){
                         <div className={styles.personas_image_container}>
                             {project.personas.images.map((imageObj, index) => {
                                 return(
-                                    <div key={index.toString()} className={styles.persona_image}>
-                                        <div>
+                                    <div key={index.toString()} className={styles.persona_container}>
+                                        <div className={styles.persona_image_div}>
                                             <Image src={imageObj.image} height={250} width={350}></Image>
                                         </div>
-                                        <p>{imageObj.title}</p>
+                                        <p className={styles.persona_paragraph}>{imageObj.title}</p>
                                     </div>
                                 )
                                 
