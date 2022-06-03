@@ -2,13 +2,14 @@ import CoreProjectImage from '/public/core.png'
 import HomieProjectImage from '/public/homie.png'
 import LisnProjectImage from '/public/lisn.png'
 import WorldJournalProjectImage from '/public/world-journal.png'
+import Image from 'next/image'
 
 const randomPic = "https://picsum.photos/600/400"
 
 export const allProjects = [
     {
         id: 1, //Requried
-        image: randomPic,//HomieProjectImage, //
+        image: HomieProjectImage,//HomieProjectImage, //
         title: "Homie",
         title_url_safe: "Homie",
         name: "Rental Housing Search - Homie",
@@ -131,6 +132,119 @@ export const allProjects = [
                     title: "Samu: Young Professional",
                     image: randomPic
                 }
+            ]
+        },
+        user_journey_map:{
+            description: "Having uncovered many of the pain-points and oppurtunites from our research we put together a user journey map that showed the rental housing process from start to finish. This journey map allowed us to visualize where the problem areas where and highlight key touch points that could be improved.",
+            images: [
+                {
+                    image: randomPic,
+                    title: "Use Journey Map"
+                }
+            ]
+        },
+        concept_development:[
+            {
+                title: "Competitive Analysis",
+                description: "We began our concept development by doing some market research on existing products and understanding their approach, functionality, and layout.",
+                images: [
+                    {
+                        image: randomPic,
+                        title: "Competitive Analysis"
+                    }
+                ]
+            },
+            {
+                title: "Application Architecture",
+                description: "The design solution involved creating an information architecture, comprised of all the possible pages, content, features, and user actions for Homie. Each of these assets were then grouped into named catergories and organized in a hierarchical structure.",
+                image: [
+                    {
+                        image: randomPic,
+                        title: "Information Architecture"
+                    }
+                ]
+            },
+            {
+                title: "UI Development",
+                description: "We focused our concept development into three key areas of the application that we identified from our research which needed the most imporvement.",
+                image:[
+                    {
+                        image: randomPic,
+                        title: "Landlord Portal - Creating and Managing Listings "
+                    },
+                    {
+                        image: randomPic,
+                        title: "Searching, Organizing, and Saving Listings"
+                    },
+                    {
+                        image: randomPic,
+                        title: "Scheduling Viewings and Communication"
+                    }
+                ]
+            }
+        ],
+        user_testing: {
+            description: "The usability testing was an eye opening moment for the group to update and improve our design. We asked each participant to complete a certain task and we were not allowed to intervene. We also timed each participant to understand how efficient each user task was. At the end we interviewed each participant on their experience. Through our user testers, we gained key insights into what features functioned smoothly and what needed tweaking.",
+            insights: [
+                {
+                    title: "Task: Conduct a search for a 2 bedroom house in the local area",
+                    time: "26 seconds",
+                    results: "Easy to understand and navigate. No issue."
+                },
+                {
+                    title: "Task: Compare 2 listings from your favourites",
+                    time: "2:25 minutes",
+                    results: "Mixed reviews, users had trouble understanding where their fourite listings go and how to select them for comparison. Needs improvement."
+                },
+                {
+                    title: "Task: Book a virtual meeting with a landlord",
+                    time: "1:30 minutes",
+                    results: "Difficult to find at first but once started it was easy to understand and schedule. Needs slight improvement."
+                },
+                {
+                    title: "Task: Create and fill out a listing",
+                    time: "8:16 minutes",
+                    results: "User had difficulty uploading multiple images, image navigation was hard to understand. Listing score confused users and no ability to tag photos. Needs improvement."
+                }
+            ]
+        },
+        iterations: {
+            description: "After getting the results from our user testing we iterated on the problem areas that confused users. We redesigned certain user flows to have more clarity and organization from the feedback we gained from our testing.",
+            image: randomPic,
+            title: "Iterations"
+        },
+        final_desing:{
+            description: "After addressing the concerns from our user testing we began the finalization of the design by creating a branding guideline and developing a high-fidelity version of the application.",
+            images:[
+                {
+                    image: randomPic,
+                    title: "Mood Board"
+                },
+                {
+                    image: randomPic,
+                    title: "Landing Page"
+                },
+                {
+                    image: randomPic,
+                    title: "Housing Search"
+                },
+                {
+                    image: randomPic,
+                    title: "Listing View"
+                },
+                {
+                    image: randomPic,
+                    title: "Comparison Page"
+                },
+                {
+                    image: randomPic,
+                    title: "Messaging"
+                },
+                {
+                    image: randomPic,
+                    title: "Booking Page"
+                },
+
             ]
         }
 
