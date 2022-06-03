@@ -8,7 +8,7 @@ const nextConfig = {
   },
 
   images: {
-    domains: ['picsum.photos', 'sash-portfolio.vercel.app']
+    domains: ['picsum.photos']
   }
 }
 
