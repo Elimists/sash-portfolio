@@ -5,8 +5,10 @@ import { allProjects } from '../data/projects'
 import Link from 'next/link'
 import {useState, useEffect} from 'react'
 import Script from 'next/script'
+
+//Do not remove the below Image imports
 import CoreProjectImage from '../public/core.png'
-import HomieProjectImage from '../public/homie.png'
+import HomieProjectImage from '../public/projects/homie/homie.png' 
 import LisnProjectImage from '../public/lisn.png'
 import WorldJournalProjectImage from '../public/world-journal.png'
 

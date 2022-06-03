@@ -1,5 +1,5 @@
 import CoreProjectImage from '../public/core.png'
-import HomieProjectImage from '../public/homie.png'
+import HomieProjectImage from '../public/projects/homie/homie.png'
 import LisnProjectImage from '../public/lisn.png'
 import WorldJournalProjectImage from '../public/world-journal.png'
 
