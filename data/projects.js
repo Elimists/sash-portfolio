@@ -1,7 +1,8 @@
-import CoreProjectImage from '/public/core.png'
-import HomieProjectImage from '/public/homie.png'
-import LisnProjectImage from '/public/lisn.png'
-import WorldJournalProjectImage from '/public/world-journal.png'
+import CoreProjectImage from '../public/core.png'
+import HomieProjectImage from '../public/homie.png'
+import LisnProjectImage from '../public/lisn.png'
+import WorldJournalProjectImage from '../public/world-journal.png'
+
 
 
 const randomPic = "https://picsum.photos/600/400"
@@ -9,7 +10,7 @@ const randomPic = "https://picsum.photos/600/400"
 export const allProjects = [
     {
         id: 1, //Requried
-        image: randomPic,//HomieProjectImage, //
+        image: HomieProjectImage,//HomieProjectImage, //
         title: "Homie",
         title_url_safe: "Homie",
         name: "Rental Housing Search - Homie",
@@ -252,7 +253,7 @@ export const allProjects = [
 
     {
         'id': 2,
-        'image': randomPic,//LisnProjectImage,//
+        'image': LisnProjectImage,//LisnProjectImage,//
         'title': "Lisn",
         'title_url_safe': "Lisn",
         'name': "User Research and Onboarding - LISN",
@@ -266,7 +267,7 @@ export const allProjects = [
 
     {
         'id': 3,
-        'image': randomPic,//CoreProjectImage,//
+        'image': CoreProjectImage,//CoreProjectImage,//
         'title': "Core",
         'title_url_safe': "Core",
         'name': "Blood Pressure Monitor - Core.",
@@ -280,7 +281,7 @@ export const allProjects = [
 
     {
         'id': 4,
-        'image': randomPic,//WorldJournalProjectImage,//
+        'image': WorldJournalProjectImage,//WorldJournalProjectImage,//
         'title': "World Journal",
         'title_url_safe': "WorldJournal",
         'name': "NASA Design Sprint - World Journal",
