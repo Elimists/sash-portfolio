@@ -232,7 +232,7 @@ export default function ProjectDetail({project}){
 
                     {/** PERSONAS */}
                     {('personas' in project) &&
-                    <div>
+                        <div className={styles.detail_section} >
                         <div className={styles.heading_bar}></div>
                         <h2 className={styles.details_heading}>Personas</h2>
                         <p>{project.personas.description}</p>
@@ -253,7 +253,7 @@ export default function ProjectDetail({project}){
                     }
 
                     {('user_journey_map' in project) &&
-                        <div>
+                        <div className={styles.detail_section} >
                             <div className={styles.heading_bar}></div>
                             <h2 className={styles.details_heading}>User Journey Map</h2>
                             <p>{project.user_journey_map.description}</p>
@@ -270,7 +270,7 @@ export default function ProjectDetail({project}){
                     }
 
                     {('concept_development' in project) &&
-                        <div>
+                        <div className={styles.detail_section} >
                             <div className={styles.heading_bar}></div>
                             <h2 className={styles.details_heading}>Concept Developmet</h2>
                             <div>
@@ -297,6 +297,65 @@ export default function ProjectDetail({project}){
                             </div>
                         </div>
                     }
+
+                    {('user_testing' in project) && 
+                        <div className={styles.detail_section} >
+                            <div className={styles.heading_bar}></div>
+                            <h2 className={styles.details_heading}>User Testing</h2>
+                            <p>{project.user_testing.description}</p>
+                            <ol type="1">
+                                {project.user_testing.insights.map((insight, index) => {
+                                    return(
+                                        <>
+                                            <li key={index}>
+                                                <h3>{insight.title}</h3>
+                                                <p>Average Time: {insight.time}</p>
+                                                <p>Results: {insight.results}</p>
+                                            </li>
+                                        </>
+                                    )
+                                })}
+                            </ol>
+                        </div>
+                    }
+
+                    {('iterations' in project) && 
+                        <div className={styles.detail_section} >
+                            <div className={styles.heading_bar}></div>
+                            <h2 className={styles.details_heading}>Iterations</h2>
+                            <p>{project.iterations.description}</p>
+                            <div>
+                                <Image src={project.iterations.image} height={300} width={400}></Image>
+                                <p>{project.title}</p>
+                            </div>
+                        </div>
+                    }
+
+                    {('final_design' in project) && 
+                        <div className={styles.detail_section}>
+                            <div className={styles.heading_bar}></div>
+                            <h2 className={styles.details_heading}>Final Design</h2>
+                            <p>{project.final_design.description}</p>
+                            <div>
+                                {project.final_design.images.map((img, index) => {
+                                    return(
+                                        <div key={index}>
+                                            <Image src={img.image} height={300} width={425}></Image>
+                                            <p>{img.title}</p>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        </div>
+                    }
+
+                    <div className={styles.detail_section}>
+                        <div className={styles.heading_bar}></div>
+                        <h2 className={styles.details_heading}>Figma Prototype</h2>
+                        {(project.title === "Homie") &&
+                            <iframe width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FQnIjL0JceLMksfBaxw0JWi%2FSash's-Portfolio%3Fnode-id%3D435%253A1599" allowfullscreen></iframe>
+                        }
+                    </div>
                 </div>
                 {/**End of BOttom Detail section div */}
             </div>

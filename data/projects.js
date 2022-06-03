@@ -214,7 +214,7 @@ export const allProjects = [
             image: randomPic,
             title: "Iterations"
         },
-        final_desing:{
+        final_design:{
             description: "After addressing the concerns from our user testing we began the finalization of the design by creating a branding guideline and developing a high-fidelity version of the application.",
             images:[
                 {
@@ -247,7 +247,7 @@ export const allProjects = [
                 },
 
             ]
-        }
+        },
 
     },
 
