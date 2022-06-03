@@ -251,7 +251,54 @@ export default function ProjectDetail({project}){
                         </div>
                     </div>
                     }
+
+                    {('user_journey_map' in project) &&
+                        <div>
+                            <div className={styles.heading_bar}></div>
+                            <h2 className={styles.details_heading}>User Journey Map</h2>
+                            <p>{project.user_journey_map.description}</p>
+                            <div>
+                                {project.user_journey_map.images.map((img, index) => {
+                                    return(
+                                        <>
+                                            <Image key={index} src={img.image} height={275} width={900} ></Image>
+                                        </>
+                                    )
+                                })}
+                            </div>
+                        </div>
+                    }
+
+                    {('concept_development' in project) &&
+                        <div>
+                            <div className={styles.heading_bar}></div>
+                            <h2 className={styles.details_heading}>Concept Developmet</h2>
+                            <div>
+                                {project.concept_development.map((concept, index) => {
+                                    return(
+                                        <div key={index}>
+                                            <h3>{concept.title}</h3>
+                                            <p>{concept.description}</p>
+                                            <div>
+                                                {concept.images.map((img, index) => {
+                                                    return(
+                                                        <div key={index} >
+                                                            <div className={styles.concept_image_container}>
+                                                                <Image src={img.image} layout="fill" objectFit='cover'></Image>
+                                                            </div>
+                                                            <p>{img.title}</p>
+                                                        </div>
+                                                    )
+                                                })}
+                                            </div>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        </div>
+                    }
                 </div>
+                {/**End of BOttom Detail section div */}
             </div>
             
         </div>
