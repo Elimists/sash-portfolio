@@ -353,7 +353,7 @@ export default function ProjectDetail({project}){
                         <div className={styles.heading_bar}></div>
                         <h2 className={styles.details_heading}>Figma Prototype</h2>
                         {(project.title === "Homie") &&
-                            <iframe width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FQnIjL0JceLMksfBaxw0JWi%2FSash's-Portfolio%3Fnode-id%3D435%253A1599" allowfullscreen></iframe>
+                            <iframe width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FQnIjL0JceLMksfBaxw0JWi%2FSash's-Portfolio%3Fnode-id%3D435%253A1599" allowFullScreen></iframe>
                         }
                     </div>
                 </div>
