@@ -2,14 +2,14 @@ import CoreProjectImage from '/public/core.png'
 import HomieProjectImage from '/public/homie.png'
 import LisnProjectImage from '/public/lisn.png'
 import WorldJournalProjectImage from '/public/world-journal.png'
-import Image from 'next/image'
+
 
 const randomPic = "https://picsum.photos/600/400"
 
 export const allProjects = [
     {
         id: 1, //Requried
-        image: HomieProjectImage,//HomieProjectImage, //
+        image: randomPic,//HomieProjectImage, //
         title: "Homie",
         title_url_safe: "Homie",
         name: "Rental Housing Search - Homie",
