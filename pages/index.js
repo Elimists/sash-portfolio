@@ -10,7 +10,7 @@ import Script from 'next/script'
 import CoreProjectImage from '../public/projects/core/core.webp'
 import HomieProjectImage from '../public/projects/homie/homie.png' 
 import LisnProjectImage from '../public/projects/lisn/lisn.png'
-import WorldJournalProjectImage from '../public/projects/world-journal/world-journal.png'
+import WorldJournalProjectImage from '../public/projects/world-journal/world-journal.webp'
 
 import { motion } from 'framer-motion'
 
