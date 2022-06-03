@@ -7,7 +7,7 @@ import {useState, useEffect} from 'react'
 import Script from 'next/script'
 
 //Do not remove the below Image imports
-import CoreProjectImage from '../public/projects/core/core.png'
+import CoreProjectImage from '../public/projects/core/core.webp'
 import HomieProjectImage from '../public/projects/homie/homie.png' 
 import LisnProjectImage from '../public/projects/lisn/lisn.png'
 import WorldJournalProjectImage from '../public/projects/world-journal/world-journal.png'

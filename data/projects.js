@@ -1,4 +1,4 @@
-import CoreProjectImage from '../public/projects/core/core.png'
+import CoreProjectImage from '../public/projects/core/core.webp'
 import HomieProjectImage from '../public/projects/homie/homie.png'
 import LisnProjectImage from '../public/projects/lisn/lisn.png'
 import WorldJournalProjectImage from '../public/projects/world-journal/world-journal.png'
@@ -158,7 +158,7 @@ export const allProjects = [
             {
                 title: "Application Architecture",
                 description: "The design solution involved creating an information architecture, comprised of all the possible pages, content, features, and user actions for Homie. Each of these assets were then grouped into named catergories and organized in a hierarchical structure.",
-                image: [
+                images: [
                     {
                         image: randomPic,
                         title: "Information Architecture"
@@ -168,7 +168,7 @@ export const allProjects = [
             {
                 title: "UI Development",
                 description: "We focused our concept development into three key areas of the application that we identified from our research which needed the most imporvement.",
-                image:[
+                images:[
                     {
                         image: randomPic,
                         title: "Landlord Portal - Creating and Managing Listings "
