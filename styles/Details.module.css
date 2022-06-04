@@ -1,6 +1,7 @@
 .container{
     margin: var(--spacing-main);
     margin-top: 4rem;
+    margin-bottom: 4rem;
 }
 
 
@@ -29,7 +30,7 @@
 }
 
 .project_indepth{
-    padding: 0 5rem;
+    padding: 0 0rem; /*CHANGE from 0rem  to 5rem if you want padding for bottom sections*/
 }
 
 .detail_section{
@@ -111,6 +112,45 @@
     margin: 1rem 0;
 }
 
+.iframe{
+    display: flex;
+    width: 100%;
+    height: 450px;
+    border-radius: 10px;
+    border: none;
+}
+.iframe_onload{
+    
+}
+
+.concept_image_container {
+    position: relative;
+    background-color: aquamarine;
+    height: 200px;
+    width: 300px;
+}
+
+.other_projects_container {
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    background-color: var(--seperation-background);
+    margin-top: 1rem;
+    padding: 0 1rem;
+    border-radius: 5px;
+}
+
+.other_project_img_continer {
+    position: relative;
+    background-color: aquamarine;
+    height: 200px;
+    width: 300px;
+}
+
 /*Heading Bar - Colored bar that goes over the heading*/
 .heading_bar {
     height: 3px;
@@ -118,13 +158,6 @@
     border-radius: 20px;
     background: rgb(159, 199, 252);
     background: linear-gradient(90deg, rgba(159, 199, 252, 1) 0%, rgba(230, 177, 254, 1) 50%, rgba(211, 77, 116, 1) 100%);
-}
-
-.concept_image_container{
-    position: relative;
-    background-color: aquamarine;
-    height: 200px;
-    width: 300px;
 }
 
 /* Go Back Button*/
@@ -141,6 +174,7 @@
     cursor: pointer;
     color: var(--color-blue);
 }
+
 @media (max-width: 900px){
     .top_section{
         flex-direction: column-reverse;

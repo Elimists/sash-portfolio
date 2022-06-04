@@ -13,10 +13,11 @@ html{
 
 
 body[data-theme="light"]{
-  --color-text: black;
-  --color-background: #fff;
-  --color-gray: rgba(26, 26, 26, 0.5);
-  --color-blue: #0D4E93;
+  --color-text: hsl(0, 0%, 0%);
+  --color-background: hsl(0, 0%, 100%);
+  --color-gray: hsla(0, 0%, 10%, 0.5);
+  --color-blue: hsl(211, 84%, 31%);
+  --seperation-background: hsl(0, 0%, 95%);
 
   --color-theme-toggle-border: black;
 
@@ -27,8 +28,9 @@ body[data-theme="light"]{
 body[data-theme="dark"]{
   --color-text: #fff;
   --color-background: black;
-  --color-gray: rgba(232, 232, 232, 0.5);
+  --color-gray: hsl(0, 0%, 3%);
   --color-blue: #1c89fe;
+  --seperation-background: hsl(0, 0%, 23%);
 
   --color-theme-toggle-border: #fff;
 
