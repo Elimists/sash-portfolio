@@ -283,11 +283,12 @@ export default function ProjectDetail({project, otherProjects}){
                             <div className={styles.heading_bar}></div>
                             <h2 className={styles.details_heading}>User Journey Map</h2>
                             <p>{project.user_journey_map.description}</p>
-                            <div>
+                            <div className={styles.user_journey_img_container}>
                                 {project.user_journey_map.images.map((img, index) => {
                                     return(
                                         <>
-                                            <Image key={index.toString()} src={img.image} height={275} width={900} ></Image>
+                                            <Image key={index.toString()} src={img.image} height={300} width={1000} ></Image>
+                                            <p>{img.title}</p>
                                         </>
                                     )
                                 })}
@@ -299,17 +300,17 @@ export default function ProjectDetail({project, otherProjects}){
                         <div className={styles.detail_section} >
                             <div className={styles.heading_bar}></div>
                             <h2 className={styles.details_heading}>Concept Developmet</h2>
-                            <div>
+                            <div className={styles.concept_container_outer}>
                                 {project.concept_development.map((concept, index) => {
                                     return(
-                                        <div key={index.toString()}>
+                                        <div key={index.toString()} className={styles.concept_conatiner_inner}>
                                             <h3>{concept.title}</h3>
                                             <p>{concept.description}</p>
-                                            <div>
+                                            <div className={styles.concept_images_container}>
                                                 {concept.images.map((img, index) => {
                                                     return(
-                                                        <div key={index.toString()} >
-                                                            <div className={styles.concept_image_container}>
+                                                        <div key={index.toString()} className={styles.concept_div}>
+                                                            <div className={styles.concept_image_div}>
                                                                 <Image src={img.image} layout="fill" objectFit='cover'></Image>
                                                             </div>
                                                             <p>{img.title}</p>
@@ -333,7 +334,7 @@ export default function ProjectDetail({project, otherProjects}){
                                 {project.user_testing.insights.map((insight, index) => {
                                     return(
                                         <>
-                                            <li key={index.toString()}>
+                                            <li key={index.toString()} className={styles.user_testing_li}>
                                                 <h3>{insight.title}</h3>
                                                 <p>Average Time: {insight.time}</p>
                                                 <p>Results: {insight.results}</p>
@@ -350,8 +351,10 @@ export default function ProjectDetail({project, otherProjects}){
                             <div className={styles.heading_bar}></div>
                             <h2 className={styles.details_heading}>Iterations</h2>
                             <p>{project.iterations.description}</p>
-                            <div>
-                                <Image src={project.iterations.image} height={300} width={400}></Image>
+                            <div className={styles.iteration_image_container}>
+                                <div>
+                                    <Image src={project.iterations.image} height={350} width={750}></Image>
+                                </div>
                                 <p>{project.title}</p>
                             </div>
                         </div>
@@ -362,8 +365,8 @@ export default function ProjectDetail({project, otherProjects}){
                             <div className={styles.heading_bar}></div>
                             <h2 className={styles.details_heading}>Final Design</h2>
                             <p>{project.final_design.description}</p>
-                            <div>
-                                {project.final_design.images.map((img, index) => {
+                            <div className={styles.final_design_imgs_container}>
+                                {project.final_design.images.slice(0).reverse().map((img, index) => {
                                     return(
                                         <div key={index.toString()}>
                                             <Image src={img.image} height={300} width={425}></Image>

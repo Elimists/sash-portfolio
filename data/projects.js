@@ -221,17 +221,14 @@ export const allProjects = [
                     image: randomPic,
                     title: "Mood Board"
                 },
-                {
-                    image: randomPic,
-                    title: "Landing Page"
-                },
+                
                 {
                     image: randomPic,
                     title: "Housing Search"
                 },
                 {
                     image: randomPic,
-                    title: "Listing View"
+                    title: "Landing Page"
                 },
                 {
                     image: randomPic,
@@ -239,11 +236,17 @@ export const allProjects = [
                 },
                 {
                     image: randomPic,
-                    title: "Messaging"
+                    title: "Listing View"
                 },
+                
+                
                 {
                     image: randomPic,
                     title: "Booking Page"
+                },
+                {
+                    image: randomPic,
+                    title: "Messaging"
                 },
 
             ]
