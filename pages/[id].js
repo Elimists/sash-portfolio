@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { allProjects } from '../data/projects'
 import {useRouter} from 'next/router'
 import useWindowDimensions from '../hooks/useWindowDimensions'
+import Link from 'next/link'
 
 export const getStaticPaths = async () => {
 
@@ -21,14 +22,33 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
     const id = context.params.id
-    const project = allProjects[parseInt(id-1)]
+   
+    const project = allProjects[parseInt(id-1)] // Since its an array, index needs to start at 0
+
+   
+    const otherProjects = []
+
+    const previousProject = parseInt(id) - 1
+    const nextProject = parseInt(id) + 1
+    allProjects.forEach((element) => {
+        if (element.id == previousProject){
+            otherProjects.push({type: "Previous", element})
+        }
+        if (element.id == nextProject){
+            otherProjects.push({type: "Next", element})
+        }
+    })
+
 
     return{
-        props: {project: project}
+        props: {
+            project,
+            otherProjects
+        }
     }
 }
 
-export default function ProjectDetail({project}){
+export default function ProjectDetail({project, otherProjects}){
 
     const router = useRouter()
     const { height, width } = useWindowDimensions()
@@ -36,6 +56,12 @@ export default function ProjectDetail({project}){
     function handleGoingBackOnEnter(event){
         if (event.key === 'Enter'){
             router.push("/#my-projects-library")
+        }
+    }
+
+    function handleEnterToClickSwitch(event, elementID) {
+        if (event.key === 'Enter') {
+            document.getElementById(elementID).click()
         }
     }
 
@@ -192,7 +218,7 @@ export default function ProjectDetail({project}){
                             if (brief.title === "Goal & Objectives"){
                                 return(
                                     <>
-                                        <h3>{brief.title}</h3>
+                                        <h3 key={index.toString()}>{brief.title}</h3>
                                         <ul>
                                             {brief.goals.map((goal, index) => {
                                                 return (
@@ -214,7 +240,7 @@ export default function ProjectDetail({project}){
                                                 {brief.goals.map((goal, index) => {
                                                     return(
                                                         <>
-                                                            <li>
+                                                            <li key={index.toString()}>
                                                                 <h4>{goal.title}</h4>
                                                                 <p>{goal.description}</p>
                                                             </li>
@@ -261,7 +287,7 @@ export default function ProjectDetail({project}){
                                 {project.user_journey_map.images.map((img, index) => {
                                     return(
                                         <>
-                                            <Image key={index} src={img.image} height={275} width={900} ></Image>
+                                            <Image key={index.toString()} src={img.image} height={275} width={900} ></Image>
                                         </>
                                     )
                                 })}
@@ -276,13 +302,13 @@ export default function ProjectDetail({project}){
                             <div>
                                 {project.concept_development.map((concept, index) => {
                                     return(
-                                        <div key={index}>
+                                        <div key={index.toString()}>
                                             <h3>{concept.title}</h3>
                                             <p>{concept.description}</p>
                                             <div>
                                                 {concept.images.map((img, index) => {
                                                     return(
-                                                        <div key={index} >
+                                                        <div key={index.toString()} >
                                                             <div className={styles.concept_image_container}>
                                                                 <Image src={img.image} layout="fill" objectFit='cover'></Image>
                                                             </div>
@@ -307,7 +333,7 @@ export default function ProjectDetail({project}){
                                 {project.user_testing.insights.map((insight, index) => {
                                     return(
                                         <>
-                                            <li key={index}>
+                                            <li key={index.toString()}>
                                                 <h3>{insight.title}</h3>
                                                 <p>Average Time: {insight.time}</p>
                                                 <p>Results: {insight.results}</p>
@@ -339,7 +365,7 @@ export default function ProjectDetail({project}){
                             <div>
                                 {project.final_design.images.map((img, index) => {
                                     return(
-                                        <div key={index}>
+                                        <div key={index.toString()}>
                                             <Image src={img.image} height={300} width={425}></Image>
                                             <p>{img.title}</p>
                                         </div>
@@ -349,15 +375,43 @@ export default function ProjectDetail({project}){
                         </div>
                     }
 
-                    <div className={styles.detail_section}>
-                        <div className={styles.heading_bar}></div>
-                        <h2 className={styles.details_heading}>Figma Prototype</h2>
-                        {(project.title === "Homie") &&
-                            <iframe width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FQnIjL0JceLMksfBaxw0JWi%2FSash's-Portfolio%3Fnode-id%3D435%253A1599" allowFullScreen></iframe>
+                    {('figma_prototype' in project) &&
+                        <div className={styles.detail_section}>
+                            <div className={styles.heading_bar}></div>
+                            <h2 className={styles.details_heading}>Figma Prototype</h2>
+                            {(project.title === "Homie") &&
+                                <iframe className={styles.iframe} loading="lazy"  src={project.figma_prototype.src} allowFullScreen></iframe>
+                            }
+                        </div>
+                    }
+                </div>
+                {/**End of BOttom Detail section div */}
+                
+                {/**PREVIOUS & NEXT PROJECTS*/}
+                <div className={styles.detail_section}>
+                    <div className={styles.heading_bar}></div>
+                    <h2 className={styles.details_heading}>Other Projects</h2>
+                    <div className={styles.other_projects_container}>
+                        
+                        {(otherProjects.length > 0) &&
+                            <>
+                                {otherProjects.map((otherProject, index) => {
+                                    return(
+                                        <>
+                                            <Link href={'/' + otherProject.element.id + '#' + otherProject.element.title_url_safe} key={otherProject.element.id.toString()}>
+                                                <div id={otherProject.element.title_url_safe} className={styles.other_project_img_container} tabIndex="0" role="button" onKeyDown={(e) => handleEnterToClickSwitch(e, otherProject.element.title_url_safe)} >
+                                                    <p className={styles.project_title}>{otherProject.type} &#160; Project</p>
+                                                    <Image src={otherProject.element.image} alt={otherProject.element.name} width="400" height="250" placeholder="blur"></Image>
+                                                    <p className={styles.project_title}>{otherProject.element.title}</p>
+                                                </div> 
+                                            </Link>
+                                        </>
+                                    )
+                                })}
+                            </>
                         }
                     </div>
                 </div>
-                {/**End of BOttom Detail section div */}
             </div>
             
         </div>
