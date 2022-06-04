@@ -190,14 +190,16 @@ export default function ProjectDetail({project, otherProjects}){
                             <div className={styles.heading_bar}></div> 
                             <h2>Key Insights</h2>
                             <p>{project.key_insights.details}</p>
-                            <div className={styles.insights_image_section}>
-                                <div className={styles.insights_images_container}>
-                                    <Image src={project.key_insights.image} height={275} width={375} alt="Key Insights Image 1"></Image>
-                                    <Image src={project.key_insights.image2} height={275} width={375} alt="Key Insights Image 2"></Image>
-                                </div>
-                                <p>Data Coding</p>
+                            <div className={styles.key_insights_imgs_container}>
+                                {project.key_insights.images.map((img, index) => {
+                                    return(
+                                        <div key={index.toString()} className={styles.key_insight_img}>
+                                            <Image src={img.img} height={200} width={700}></Image>
+                                                <p>{img.title}</p>
+                                        </div>
+                                    )
+                                })}
                             </div>
-                            <Image src={project.key_insights.image} height={170} width={1000} alt="Key Insights Image"></Image>
                         </div>
                     }
 
