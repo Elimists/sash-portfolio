@@ -4,6 +4,8 @@ import { allProjects } from '../data/projects'
 import {useRouter} from 'next/router'
 import useWindowDimensions from '../hooks/useWindowDimensions'
 import Link from 'next/link'
+import {useState, useEffect} from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 export const getStaticPaths = async () => {
 
@@ -22,6 +24,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
     const id = context.params.id
+    
    
     const project = allProjects[parseInt(id-1)] // Since its an array, index needs to start at 0
 
@@ -48,11 +51,41 @@ export const getStaticProps = async (context) => {
     }
 }
 
+const backdrop = {
+    visible:{
+        opacity: 1
+    },
+    hidden:{
+        opacity: 0
+    }
+}
+
+const EnlargedImageComponent = (imageSource, enlargeImageState, setEnlargeImageState) => {
+    return (
+        <AnimatePresence exitBeforeEnter>
+            { enlargeImageState &&
+                <motion.div 
+                    className={styles.enlarged_image_container}
+                    variants={backdrop}
+                    initial="hidden"
+                    animate="visible">
+                    <div className={styles.enlarged_image}>
+                    </div>
+                    <div className={styles.enlarged_image_close_btn}>Close</div>
+                </motion.div>
+            }
+        </AnimatePresence>
+    )
+}
+
 export default function ProjectDetail({project, otherProjects}){
 
     const router = useRouter()
     const { height, width } = useWindowDimensions()
+    const [enlargeImageState, setEnlargeImageState] = useState(false)
+    const [imageSource, setImageSource] = useState("https://picsum.photos/200/300")
 
+    console.log(enlargeImageState)
     function handleGoingBackOnEnter(event){
         if (event.key === 'Enter'){
             router.push("/#my-projects-library")
@@ -65,7 +98,12 @@ export default function ProjectDetail({project, otherProjects}){
         }
     }
 
+
+    
+
     return(
+        <>
+       
         <div className={styles.container} id={project.title_url_safe}>
             
             <div className={styles.top_section}>
@@ -80,8 +118,8 @@ export default function ProjectDetail({project, otherProjects}){
                     <p className={styles.project_description}>{project.description}</p>
                     <p className={styles.project_tags}>{project.tags}</p>
                 </div>
-                <div className={styles.image_container}>
-                    <Image src={project.image} height={400} width={600} alt={project.title}></Image>
+                    <div className={styles.image_container} onClick={() => [setEnlargeImageState(true), setImageSource(project.image)]}>
+                        <Image  src={project.image} height={400} width={600} alt={project.title} placeholder="blur" blurDataURL={project.image}></Image>
                 </div>
             </div>
 
@@ -130,7 +168,7 @@ export default function ProjectDetail({project, otherProjects}){
                             <div className={styles.heading_bar}></div> 
                             <h2 className={styles.details_heading}>Process</h2>
                             <div className={styles.process_image_container}>
-                                <Image src={project.process} height={250} width={650} alt="Process Image"></Image>
+                                <Image src={project.process} height={250} width={650} alt="Process Image" placeholder="blur" blurDataURL={project.process}></Image>
                             </div>
                         </div>
                     }
@@ -163,7 +201,7 @@ export default function ProjectDetail({project, otherProjects}){
                             <h2 className={styles.details_heading}>User Groups</h2>
                             <p>{project.user_groups.description}</p>
                             <div className={styles.user_group_image}>
-                                <Image src={project.user_groups.image} height={400} width={600} alt="User Group Image"></Image>
+                                <Image src={project.user_groups.image} height={400} width={600} alt="User Group Image" blurDataURL={project.user_groups.image}></Image>
                             </div>
                         </div>
                     }
@@ -194,7 +232,7 @@ export default function ProjectDetail({project, otherProjects}){
                                 {project.key_insights.images.map((img, index) => {
                                     return(
                                         <div key={index.toString()} className={styles.key_insight_img}>
-                                            <Image src={img.img} height={200} width={700}></Image>
+                                            <Image src={img.img} height={200} width={700} alt={img.title} placeholder="blur" blurDataURL={img.img}></Image>
                                                 <p>{img.title}</p>
                                         </div>
                                     )
@@ -269,7 +307,7 @@ export default function ProjectDetail({project, otherProjects}){
                                 return(
                                     <div key={index.toString()} className={styles.persona_container}>
                                         <div className={styles.persona_image_div}>
-                                            <Image src={imageObj.image} height={250} width={350}></Image>
+                                            <Image src={imageObj.image} height={250} width={350} alt={imageObj.title} placeholder="blur" blurDataURL={imageObj.image}></Image>
                                         </div>
                                         <p className={styles.persona_paragraph}>{imageObj.title}</p>
                                     </div>
@@ -289,7 +327,7 @@ export default function ProjectDetail({project, otherProjects}){
                                 {project.user_journey_map.images.map((img, index) => {
                                     return(
                                         <>
-                                            <Image key={index.toString()} src={img.image} height={300} width={1000} ></Image>
+                                            <Image key={index.toString()} src={img.image} height={300} width={1000} alt={img.title} placeholder="blur" blurDataURL={img.image}></Image>
                                             <p>{img.title}</p>
                                         </>
                                     )
@@ -313,7 +351,7 @@ export default function ProjectDetail({project, otherProjects}){
                                                     return(
                                                         <div key={index.toString()} className={styles.concept_div}>
                                                             <div className={styles.concept_image_div}>
-                                                                <Image src={img.image} layout="fill" objectFit='cover'></Image>
+                                                                <Image src={img.image} layout="fill" objectFit='cover' alt={img.title} placeholder="blur" blurDataURL={img.image}></Image>
                                                             </div>
                                                             <p>{img.title}</p>
                                                         </div>
@@ -355,7 +393,7 @@ export default function ProjectDetail({project, otherProjects}){
                             <p>{project.iterations.description}</p>
                             <div className={styles.iteration_image_container}>
                                 <div>
-                                    <Image src={project.iterations.image} height={350} width={750}></Image>
+                                    <Image src={project.iterations.image} height={350} width={750} alt={project.title} placeholder="blur" blurDataURL={project.iterations.image}></Image>
                                 </div>
                                 <p>{project.title}</p>
                             </div>
@@ -371,7 +409,7 @@ export default function ProjectDetail({project, otherProjects}){
                                 {project.final_design.images.slice(0).reverse().map((img, index) => {
                                     return(
                                         <div key={index.toString()}>
-                                            <Image src={img.image} height={300} width={425}></Image>
+                                            <Image src={img.image} height={300} width={425} alt={img.title} placeholder="blur" blurDataURL={img.image}></Image>
                                             <p>{img.title}</p>
                                         </div>
                                     )
@@ -406,7 +444,7 @@ export default function ProjectDetail({project, otherProjects}){
                                             <Link href={'/' + otherProject.element.id + '#' + otherProject.element.title_url_safe} key={otherProject.element.id.toString()}>
                                                 <div id={otherProject.element.title_url_safe} className={styles.other_project_img_container} tabIndex="0" role="button" onKeyDown={(e) => handleEnterToClickSwitch(e, otherProject.element.title_url_safe)} >
                                                     <p className={styles.project_title}>{otherProject.type} &#160; Project</p>
-                                                    <Image src={otherProject.element.image} alt={otherProject.element.name} width="400" height="250" placeholder="blur"></Image>
+                                                    <Image src={otherProject.element.image} alt={otherProject.element.name} width="400" height="250" placeholder="blur" blurDataURL={otherProject.element.image}></Image>
                                                     <p className={styles.project_title}>{otherProject.element.title}</p>
                                                 </div> 
                                             </Link>
@@ -418,7 +456,7 @@ export default function ProjectDetail({project, otherProjects}){
                     </div>
                 </div>
             </div>
-            
         </div>
+        </>
     )
 }
