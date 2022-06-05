@@ -16,6 +16,18 @@ import FinalDesignLanding from '../public/projects/homie/final_design_landing.we
 import FinalDesignListing from '../public/projects/homie/final_design_listing.webp'
 import FinalDesignMessaging from '../public/projects/homie/final_design_messaging.webp'
 import FinalDesignMood from '../public/projects/homie/final_design_mood.webp'
+import Iterations from '../public/projects/homie/iterations.webp'
+import KeyInsights1 from '../public/projects/homie/key_insights1.webp'
+import KeyInsights2 from '../public/projects/homie/key_insights2.webp'
+import PersonasAiden from '../public/projects/homie/personas_aiden.webp'
+import PersonasCarly from '../public/projects/homie/personas_carly.webp'
+import PersonasSamu from '../public/projects/homie/personas_samu.webp'
+import PersonasTamira from '../public/projects/homie/personas_tamira.webp'
+import Process from '../public/projects/homie/process.svg'
+import UserGroupLandlord from '../public/projects/homie/user_group_landlords.svg'
+import UserGroupTenants from '../public/projects/homie/user_group_tenants.svg'
+import UserJourneyMap from '../public/projects/homie/user_journey.webp'
+
 
 
 
