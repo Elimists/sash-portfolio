@@ -1,7 +1,24 @@
 import CoreProjectImage from '../public/projects/core/core.webp'
-import HomieProjectImage from '../public/projects/homie/homie.webp'
 import LisnProjectImage from '../public/projects/lisn/lisn.webp'
 import WorldJournalProjectImage from '../public/projects/world-journal/world-journal.webp'
+
+/** HOMIE Imports */
+import HomieProjectImage from '../public/projects/homie/homie.webp'
+import ConceptCompAnalysis from '../public/projects/homie/concept_comp_analysis.webp'
+import ConceptDevInfoArch from '../public/projects/homie/concept_dev_info_arch.webp'
+import ConceptLandlordUi from '../public/projects/homie/concept_dev_landlord_ui.webp'
+import ConceptScheduling from '../public/projects/homie/concept_dev_scheduling_ui.webp'
+import ConceptSearching from '../public/projects/homie/concept_dev_searching_ui.webp'
+import FinalDesignBooking from '../public/projects/homie/final_design_booking.webp'
+import FinalDesignComparison from '../public/projects/homie/final_design_comparison.webp'
+import FinalDesignHousing from '../public/projects/homie/final_design_housing.webp'
+import FinalDesignLanding from '../public/projects/homie/final_design_landing.webp'
+import FinalDesignListing from '../public/projects/homie/final_design_listing.webp'
+import FinalDesignMessaging from '../public/projects/homie/final_design_messaging.webp'
+import FinalDesignMood from '../public/projects/homie/final_design_mood.webp'
+
+
+
 
 
 
@@ -252,6 +269,7 @@ export const allProjects = [
                     image: randomPic,
                     title: "Booking Page"
                 },
+
                 {
                     image: randomPic,
                     title: "Messaging"
