@@ -136,7 +136,11 @@ export default function ProjectDetail({project, otherProjects}){
         }
     }, [showModal])
 
-    
+    useEffect(() => {
+        if(showModal){
+            setQuickNavPressed(false)
+        }
+    }, [showModal])
 
     return(
         <>
@@ -144,7 +148,7 @@ export default function ProjectDetail({project, otherProjects}){
             <div className={styles.arrow_container}>
                 <motion.div 
                     className={styles.arrow} 
-                    animate={(quickNavPressed) ? { rotate: 270, duration: .5} : {rotate: 90, duration: .5}}>
+                    animate={(quickNavPressed) ? { rotate: 270} : {rotate: 90}}>
                     &lt;
                 </motion.div>
             </div>
@@ -159,7 +163,7 @@ export default function ProjectDetail({project, otherProjects}){
             imageSource={imageSource} 
             imageDimension={imageDimension}/>
 
-        <div className={styles.container} id={project.title_url_safe}>
+        <div className={styles.container} id={project.title_url_safe} onClick={() => setQuickNavPressed(false)}>
             
                 <div className={styles.top_section} id={"#" + elementIds[0].replace(/\s/g, "")}>
                 
