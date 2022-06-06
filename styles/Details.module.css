@@ -86,6 +86,11 @@
 .key_insight_img{
     margin-top: 2rem;
 }
+.key_insight_img2{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
 
 .briefs_li{
     padding-bottom: 1rem;

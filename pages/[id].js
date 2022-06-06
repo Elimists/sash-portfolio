@@ -266,6 +266,8 @@ export default function ProjectDetail({project, otherProjects}){
                                         </div>
                                     )
                                 })}
+                            </div>
+                            <div className={styles.key_insight_img2}>
                                 <KeyInsightsJsx/>
                             </div>
                         </div>

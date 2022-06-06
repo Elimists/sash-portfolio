@@ -15,6 +15,13 @@
     height: 50px;
 }
 
+.process_svg_style{
+    fill: var(--color-text)
+}
+
+.user_group_svg_style{
+    stroke: var(--color-text);
+}
 @media (max-width: 650px) {
     .sash_logo{
         width: 36px;
