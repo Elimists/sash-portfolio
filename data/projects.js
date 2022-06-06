@@ -28,12 +28,6 @@ import UserGroupLandlord from '../public/projects/homie/user_group_landlords.svg
 import UserGroupTenants from '../public/projects/homie/user_group_tenants.svg'
 import UserJourneyMap from '../public/projects/homie/user_journey.webp'
 
-
-
-
-
-
-
 const randomPic = "https://picsum.photos/600/400"
 
 export const allProjects = [
@@ -51,7 +45,11 @@ export const allProjects = [
         tools: "Interviews, Surveys, Market Research, Competitive Analysis, Figma",
         overview: "This senior project focsued on researching, designing, and validating a digital service that could help improve the user journey in a chosen problem space. Our group chose to tackle the rental housing experience and develop a solution that could streamline the process for beginners and experienced renters.",
         problem: "Overall, the process of finding and securing a housing rental can be a daunting, overwhelming, and cumbersome journey. Most of the process is learned by word of mouth and through trial and error, making it difficult for inexperienced renters to know where to begin and confidently carry out the entire process. There is also a need for more semi-formal education or resources concerning the renting process as a whole, including knowledge around renter rights. Even more experienced renters encounter a slew of issues relating to poor information across rental ads, usability and experience of rental platforms and listings, communication with landlords and roommates, decision making, and legal matters.",
-        process: randomPic,
+        process: {
+            image: Process,
+            width: 640,
+            height: 250
+        },
         research_goals:[
             "Understand the tools and services that renters are currently using during their house hunt to find areas of improvement within existing tools.",
             "Identify key criteria renters look for when searching for housing to empower them to make better housing decisions.",
@@ -61,7 +59,20 @@ export const allProjects = [
         recruitment_method: "Our methods involved reaching out to friends and family (and their wider network) to find users that would fit our recruitment criteria (see below). Posting in Carleton University student groups on social media (ie: Reddit and Facebook) requesting volunteers.",
         user_groups: {
             description: "We divided our recruitment to 75-80% of interviewees from User Group 1, and 20-25% interviewees from User Group 2 since the service is targeted towards tenants.",
-            image: randomPic
+            images: [
+                {
+                    image: UserGroupTenants,
+                    title: "User Group Tenants",
+                    width: 77,
+                    height: 142
+                },
+                {
+                    image: UserGroupLandlord,
+                    title: "User Group Landlords",
+                    width: 93,
+                    height: 142
+                }
+            ]
         },
         recruitment_criterias: [
             {
@@ -89,12 +100,16 @@ export const allProjects = [
             details: "The results of our user research highlight many pain-points and oppurtunities for improvement. Using data coding methods (see below) we identified key insights revolved around the lack of standardization of listings, communication methods, lease agreements, and the rental platforms themselves. There was a need for more consistency and streamlining in these areas to ensure users have more pleasant experiences at different touchpoints and make the most informed housing decisions. There was also a need for more personal, accurate, centralized and verified information regarding landlords and their properties (including roommates where applicable). The issue here is that tenants often desire a better sense of their potential living conditions and interactions with thelandlord, and landlords feel the same way about tenants. Addressing these challenges will ultimately lead to more trust between users and confidence in the housing rental journey.",
             images:[
                 {
-                    img: randomPic,
-                    title: "Data Incoding"
+                    img: KeyInsights1,
+                    title: "Data Incoding",
+                    width: 715,
+                    height: 200
                 },
                 {
-                    img: randomPic,
-                    title: ""
+                    img: KeyInsights2,
+                    title: "",
+                    width: 900,
+                    height: 160
                 }
             ]
         },

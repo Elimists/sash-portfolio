@@ -62,8 +62,9 @@
 .user_group_image{
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     margin-top: 2rem;
+    background-color: aqua;
 }
 
 .criteria_ol > li::marker{

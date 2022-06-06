@@ -107,7 +107,6 @@ export default function ProjectDetail({project, otherProjects}){
     const [enlargeImageState, setEnlargeImageState] = useState(false)
     const [imageSource, setImageSource] = useState("https://picsum.photos/200/300")
 
-    console.log(enlargeImageState)
     function handleGoingBackOnEnter(event){
         if (event.key === 'Enter'){
             router.push("/#my-projects-library")
@@ -190,7 +189,13 @@ export default function ProjectDetail({project, otherProjects}){
                             <div className={styles.heading_bar}></div> 
                             <h2 className={styles.details_heading}>Process</h2>
                             <div className={styles.process_image_container}>
-                                <Image src={project.process} height={250} width={650} alt="Process Image" placeholder="blur" blurDataURL={project.process}></Image>
+                                <Image 
+                                    src={project.process.image} 
+                                    height={project.process.height} 
+                                    width={project.process.width} 
+                                    alt="Process Image" 
+                                    placeholder="blur" 
+                                    blurDataURL={project.process}></Image>
                             </div>
                         </div>
                     }
@@ -223,7 +228,17 @@ export default function ProjectDetail({project, otherProjects}){
                             <h2 className={styles.details_heading}>User Groups</h2>
                             <p>{project.user_groups.description}</p>
                             <div className={styles.user_group_image}>
-                                <Image src={project.user_groups.image} height={400} width={600} alt="User Group Image" blurDataURL={project.user_groups.image}></Image>
+                                {project.user_groups.images.map((img, index) => {
+                                    <Image 
+                                        key={index.toString()} 
+                                        src={img.image} 
+                                        height={img.height} 
+                                        width={img.width} 
+                                        alt={img.title} 
+                                        placeholder="blur"
+                                        blurDataURL={img.image}/>
+                                })}
+                               
                             </div>
                         </div>
                     }
@@ -254,7 +269,13 @@ export default function ProjectDetail({project, otherProjects}){
                                 {project.key_insights.images.map((img, index) => {
                                     return(
                                         <div key={index.toString()} className={styles.key_insight_img}>
-                                            <Image src={img.img} height={200} width={700} alt={img.title} placeholder="blur" blurDataURL={img.img}></Image>
+                                            <Image 
+                                                src={img.img} 
+                                                height={img.height} 
+                                                width={img.width} 
+                                                alt={img.title} 
+                                                placeholder="blur" 
+                                                blurDataURL={img.img}></Image>
                                                 <p>{img.title}</p>
                                         </div>
                                     )
