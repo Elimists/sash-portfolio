@@ -4,7 +4,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(0, 0, 0, 0.80);
     z-index: 10000;
     display: flex;
     align-items: center;
@@ -20,8 +20,8 @@
     position: fixed;
     height: 50px;
     width: 100px;
-    color: var(--color-text);
-    background-color: var(--color-background);
+    color: var(--color-background);
+    background-color: var(--color-text);
     top: 2rem;
     right: 4rem;
 }
