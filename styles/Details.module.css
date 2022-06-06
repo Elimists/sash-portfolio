@@ -112,6 +112,7 @@
 }
 .persona_container{
     margin: 1rem 0;
+    cursor: pointer;
 }
 
 .user_journey_img_container{
@@ -122,10 +123,12 @@
     justify-content: space-evenly;
     font-size: 14px;
     padding-top: 1rem;
+    cursor: pointer;
 }
 
 .concept_div{
     position: relative;
+    cursor: pointer;
 }
 .concept_images_container{
     display: flex;

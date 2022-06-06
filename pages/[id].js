@@ -83,23 +83,7 @@ const backdrop = {
     }
 }
 
-const EnlargedImageComponent = (imageSource, enlargeImageState, setEnlargeImageState) => {
-    return (
-        <AnimatePresence exitBeforeEnter>
-            { enlargeImageState &&
-                <motion.div 
-                    className={styles.enlarged_image_container}
-                    variants={backdrop}
-                    initial="hidden"
-                    animate="visible">
-                    <div className={styles.enlarged_image}>
-                    </div>
-                    <div className={styles.enlarged_image_close_btn}>Close</div>
-                </motion.div>
-            }
-        </AnimatePresence>
-    )
-}
+
 
 export default function ProjectDetail({project, otherProjects}){
 
@@ -337,7 +321,13 @@ export default function ProjectDetail({project, otherProjects}){
                         <div className={styles.personas_image_container}>
                             {project.personas.images.map((imageObj, index) => {
                                 return(
-                                    <div key={index.toString()} className={styles.persona_container}>
+                                    <motion.div 
+                                        key={index.toString()} 
+                                        className={styles.persona_container}
+                                        whileHover={{
+                                            scale: 1.05,
+                                            transition: { duration: .4 },
+                                        }}>
                                         <div className={styles.persona_image_div}>
                                             <Image 
                                                 src={imageObj.image} 
@@ -348,7 +338,7 @@ export default function ProjectDetail({project, otherProjects}){
                                                 blurDataURL={imageObj.image}></Image>
                                         </div>
                                         <p className={styles.persona_paragraph}>{imageObj.title}</p>
-                                    </div>
+                                    </motion.div>
                                 )
                                 
                             })}
@@ -364,7 +354,10 @@ export default function ProjectDetail({project, otherProjects}){
                             <div className={styles.user_journey_img_container}>
                                 {project.user_journey_map.images.map((img, index) => {
                                     return(
-                                        <>
+                                        <motion.div whileHover={{
+                                            scale: 1.05,
+                                            transition: { duration: .4 },
+                                        }}>
                                             <Image 
                                                 key={index.toString()} 
                                                 src={img.image} 
@@ -374,7 +367,7 @@ export default function ProjectDetail({project, otherProjects}){
                                                 placeholder="blur" 
                                                 blurDataURL={img.image}></Image>
                                             <p>{img.title}</p>
-                                        </>
+                                        </motion.div>
                                     )
                                 })}
                             </div>
@@ -394,7 +387,13 @@ export default function ProjectDetail({project, otherProjects}){
                                             <div className={styles.concept_images_container}>
                                                 {concept.images.map((img, index) => {
                                                     return(
-                                                        <div key={index.toString()} className={styles.concept_div}>
+                                                        <motion.div 
+                                                            key={index.toString()} 
+                                                            className={styles.concept_div}
+                                                            whileHover={{
+                                                                scale: 1.05,
+                                                                transition: { duration: .4 },
+                                                            }}>
                                                             <div className={styles.concept_image_div}>
                                                                 <Image 
                                                                     src={img.image}
@@ -405,7 +404,7 @@ export default function ProjectDetail({project, otherProjects}){
                                                                     blurDataURL={img.image}></Image>
                                                             </div>
                                                             <p>{img.title}</p>
-                                                        </div>
+                                                        </motion.div>
                                                     )
                                                 })}
                                             </div>
@@ -443,7 +442,12 @@ export default function ProjectDetail({project, otherProjects}){
                             <h2 className={styles.details_heading}>Iterations</h2>
                             <p>{project.iterations.description}</p>
                             <div className={styles.iteration_image_container}>
-                                <div>
+                                <motion.div
+                                    style={{cursor: 'pointer'}}
+                                    whileHover={{
+                                        scale: 1.05,
+                                        transition: { duration: .4 },
+                                    }}>
                                     <Image 
                                         src={project.iterations.image} 
                                         height={project.iterations.height} 
@@ -451,7 +455,7 @@ export default function ProjectDetail({project, otherProjects}){
                                         alt={project.title} 
                                         placeholder="blur" 
                                         blurDataURL={project.iterations.image}></Image>
-                                </div>
+                                </motion.div>
                                 <p>{project.title}</p>
                             </div>
                         </div>
@@ -465,7 +469,13 @@ export default function ProjectDetail({project, otherProjects}){
                             <div className={styles.final_design_imgs_container}>
                                 {project.final_design.images.slice(0).reverse().map((img, index) => {
                                     return(
-                                        <div key={index.toString()}>
+                                        <motion.div 
+                                            style={{cursor:'pointer'}}
+                                            key={index.toString()} 
+                                            whileHover={{
+                                            scale: 1.05,
+                                            transition: { duration: .4 },
+                                            }}>
                                             <Image 
                                                 src={img.image} 
                                                 height={img.height} 
@@ -474,7 +484,7 @@ export default function ProjectDetail({project, otherProjects}){
                                                 placeholder="blur" 
                                                 blurDataURL={img.image}></Image>
                                             <p>{img.title}</p>
-                                        </div>
+                                        </motion.div>
                                     )
                                 })}
                             </div>
