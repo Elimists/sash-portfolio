@@ -8,6 +8,13 @@
 .top_section{
     display: flex;
 }
+.details_top_left{
+    padding-right: 1rem;
+}
+.project_tags{
+    font-size: 14px;
+    color: var(--color-blue);
+}
 
 .project_highlights{
     height: 100%;

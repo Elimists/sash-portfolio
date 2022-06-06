@@ -158,6 +158,7 @@ export default function ProjectDetail({project, otherProjects}){
             setShowModal={setShowModal} 
             imageSource={imageSource} 
             imageDimension={imageDimension}/>
+
         <div className={styles.container} id={project.title_url_safe}>
             
                 <div className={styles.top_section} id={"#" + elementIds[0].replace(/\s/g, "")}>
@@ -172,7 +173,7 @@ export default function ProjectDetail({project, otherProjects}){
                     <p className={styles.project_description}>{project.description}</p>
                     <p className={styles.project_tags}>{project.tags}</p>
                 </div>
-                    <div className={styles.image_container} onClick={() => [setEnlargeImageState(true), setImageSource(project.image)]}>
+                    <div className={styles.image_container}>
                         <Image  src={project.image} height={400} width={600} alt={project.title} placeholder="blur" blurDataURL={project.image}></Image>
                 </div>
             </div>
