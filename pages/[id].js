@@ -385,7 +385,8 @@ export default function ProjectDetail({project, otherProjects}){
                                                 width={img.width} 
                                                 alt={img.title} 
                                                 placeholder="blur" 
-                                                blurDataURL={img.image}></Image>
+                                                blurDataURL={img.image}
+                                                onClick={() => handleImageEnlarging(img.image)}></Image>
                                             <p>{img.title}</p>
                                         </motion.div>
                                     )
@@ -421,7 +422,8 @@ export default function ProjectDetail({project, otherProjects}){
                                                                     width={img.width}
                                                                     alt={img.title} 
                                                                     placeholder="blur" 
-                                                                    blurDataURL={img.image}></Image>
+                                                                    blurDataURL={img.image}
+                                                                    onClick={() => handleImageEnlarging(img.image)}></Image>
                                                             </div>
                                                             <p>{img.title}</p>
                                                         </motion.div>
@@ -474,7 +476,8 @@ export default function ProjectDetail({project, otherProjects}){
                                         width={project.iterations.width} 
                                         alt={project.title} 
                                         placeholder="blur" 
-                                        blurDataURL={project.iterations.image}></Image>
+                                        blurDataURL={project.iterations.image}
+                                        onClick={() => handleImageEnlarging(project.iterations.image)}></Image>
                                 </motion.div>
                                 <p>{project.title}</p>
                             </div>
@@ -502,7 +505,8 @@ export default function ProjectDetail({project, otherProjects}){
                                                 width={img.width} 
                                                 alt={img.title} 
                                                 placeholder="blur" 
-                                                blurDataURL={img.image}></Image>
+                                                blurDataURL={img.image}
+                                                onClick={() => handleImageEnlarging(img.image)}></Image>
                                             <p>{img.title}</p>
                                         </motion.div>
                                     )

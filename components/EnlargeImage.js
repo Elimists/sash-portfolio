@@ -37,7 +37,7 @@ export default function EnlargeImage({ showModal, setShowModal, imageSource}){
                     animate="visible"
                     >
                         {(imageSource != null) &&
-                            <Image src={imageSource} width={imageSource.naturalWidth} height={imageSource.naturalHeight}></Image>
+                        <Image src={imageSource} width={imageSource.naturalWidth} height={imageSource.naturalHeight} placeholder="blur" blurDataURL={imageSource}/>
                         }
 
                         <motion.div 
