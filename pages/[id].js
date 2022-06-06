@@ -6,6 +6,7 @@ import useWindowDimensions from '../hooks/useWindowDimensions'
 import Link from 'next/link'
 import {useState, useEffect} from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import EnlargeImage from '../components/EnlargeImage'
 
 import ConceptCompAnalysis from '../public/projects/homie/concept_comp_analysis.webp'
 import ConceptDevInfoArch from '../public/projects/homie/concept_dev_info_arch.webp'
@@ -29,7 +30,6 @@ import PersonasTamira from '../public/projects/homie/personas_tamira.webp'
 import ProcessJsxSvgImg from '../components/svgImages/homie/ProcessSvg'
 import UserGroupLandlordJsxSvgImg from '../components/svgImages/homie/UserGroupLandlordsSvg'
 import UserGroupTenantsJsxSvgImg from '../components/svgImages/homie/UserGroupTenantsSvg'
-
 import UserJourneyMap from '../public/projects/homie/user_journey.webp'
 
 export const getStaticPaths = async () => {
@@ -89,8 +89,10 @@ export default function ProjectDetail({project, otherProjects}){
 
     const router = useRouter()
     const { height, width } = useWindowDimensions()
-    const [enlargeImageState, setEnlargeImageState] = useState(false)
-    const [imageSource, setImageSource] = useState("https://picsum.photos/200/300")
+    const [showModal, setShowModal] = useState(false)
+    const [imageSource, setImageSource] = useState(null)
+    const [imageDimension, setImageDimensions] = useState(null)
+
 
     function handleGoingBackOnEnter(event){
         if (event.key === 'Enter'){
@@ -105,11 +107,25 @@ export default function ProjectDetail({project, otherProjects}){
     }
 
 
+    function handleImageEnlarging(imageSource){
+        setImageSource(imageSource)
+        setShowModal(true)
+    }
+
+    useEffect(() => {
+        if(showModal){
+            document.body.style.overflow = 'hidden';
+        }
+        else{
+            document.body.style.overflow = 'auto';
+        }
+    }, [showModal])
+
     
 
     return(
         <>
-       
+        <EnlargeImage showModal={showModal} setShowModal={setShowModal} imageSource={imageSource} imageDimension={imageDimension}/>
         <div className={styles.container} id={project.title_url_safe}>
             
             <div className={styles.top_section}>
@@ -327,7 +343,8 @@ export default function ProjectDetail({project, otherProjects}){
                                         whileHover={{
                                             scale: 1.05,
                                             transition: { duration: .4 },
-                                        }}>
+                                        }}
+                                        >
                                         <div className={styles.persona_image_div}>
                                             <Image 
                                                 src={imageObj.image} 
@@ -335,14 +352,15 @@ export default function ProjectDetail({project, otherProjects}){
                                                 width={imageObj.width} 
                                                 alt={imageObj.title} 
                                                 placeholder="blur" 
-                                                blurDataURL={imageObj.image}></Image>
+                                                blurDataURL={imageObj.image}
+                                                onClick={() => handleImageEnlarging(imageObj.image)}></Image>
                                         </div>
                                         <p className={styles.persona_paragraph}>{imageObj.title}</p>
                                     </motion.div>
                                 )
                                 
                             })}
-                        </div>
+                        </div> 
                     </div>
                     }
 
