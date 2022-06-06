@@ -21,14 +21,15 @@ import FinalDesignMessaging from '../public/projects/homie/final_design_messagin
 import FinalDesignMood from '../public/projects/homie/final_design_mood.webp'
 import Iterations from '../public/projects/homie/iterations.webp'
 import KeyInsights1 from '../public/projects/homie/key_insights1.webp'
-import KeyInsights2 from '../public/projects/homie/key_insights2.webp'
+import KeyInsightsJsx from '../components/svgImages/homie/KeyInsightsSvg'
 import PersonasAiden from '../public/projects/homie/personas_aiden.webp'
 import PersonasCarly from '../public/projects/homie/personas_carly.webp'
 import PersonasSamu from '../public/projects/homie/personas_samu.webp'
 import PersonasTamira from '../public/projects/homie/personas_tamira.webp'
-import Process from '../public/projects/homie/process.svg'
-import UserGroupLandlord from '../public/projects/homie/user_group_landlords.svg'
-import UserGroupTenants from '../public/projects/homie/user_group_tenants.svg'
+import ProcessJsxSvgImg from '../components/svgImages/homie/ProcessSvg'
+import UserGroupLandlordJsxSvgImg from '../components/svgImages/homie/UserGroupLandlordsSvg'
+import UserGroupTenantsJsxSvgImg from '../components/svgImages/homie/UserGroupTenantsSvg'
+
 import UserJourneyMap from '../public/projects/homie/user_journey.webp'
 
 export const getStaticPaths = async () => {
@@ -189,13 +190,7 @@ export default function ProjectDetail({project, otherProjects}){
                             <div className={styles.heading_bar}></div> 
                             <h2 className={styles.details_heading}>Process</h2>
                             <div className={styles.process_image_container}>
-                                <Image 
-                                    src={project.process.image} 
-                                    height={project.process.height} 
-                                    width={project.process.width} 
-                                    alt="Process Image" 
-                                    placeholder="blur" 
-                                    blurDataURL={project.process}></Image>
+                                <ProcessJsxSvgImg/>
                             </div>
                         </div>
                     }
@@ -228,17 +223,8 @@ export default function ProjectDetail({project, otherProjects}){
                             <h2 className={styles.details_heading}>User Groups</h2>
                             <p>{project.user_groups.description}</p>
                             <div className={styles.user_group_image}>
-                                {project.user_groups.images.map((img, index) => {
-                                    <Image 
-                                        key={index.toString()} 
-                                        src={img.image} 
-                                        height={img.height} 
-                                        width={img.width} 
-                                        alt={img.title} 
-                                        placeholder="blur"
-                                        blurDataURL={img.image}/>
-                                })}
-                               
+                                <div><UserGroupTenantsJsxSvgImg /></div>
+                                <div><UserGroupLandlordJsxSvgImg/></div>
                             </div>
                         </div>
                     }
@@ -280,6 +266,7 @@ export default function ProjectDetail({project, otherProjects}){
                                         </div>
                                     )
                                 })}
+                                <KeyInsightsJsx/>
                             </div>
                         </div>
                     }

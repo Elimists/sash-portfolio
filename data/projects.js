@@ -18,7 +18,6 @@ import FinalDesignMessaging from '../public/projects/homie/final_design_messagin
 import FinalDesignMood from '../public/projects/homie/final_design_mood.webp'
 import Iterations from '../public/projects/homie/iterations.webp'
 import KeyInsights1 from '../public/projects/homie/key_insights1.webp'
-import KeyInsights2 from '../public/projects/homie/key_insights2.webp'
 import PersonasAiden from '../public/projects/homie/personas_aiden.webp'
 import PersonasCarly from '../public/projects/homie/personas_carly.webp'
 import PersonasSamu from '../public/projects/homie/personas_samu.webp'
@@ -105,12 +104,6 @@ export const allProjects = [
                     width: 715,
                     height: 200
                 },
-                {
-                    img: KeyInsights2,
-                    title: "",
-                    width: 900,
-                    height: 160
-                }
             ]
         },
         problem_statement: "Our challenge is to improve the rental experience from end to end by standardizing and enhancing key touchpoints along the process—considering tools, listings, documents, and communication methods. The housing rental process is something that many young adults will have to go through at some point in their lives. Therefore, facilitating a smoother entry and experience along the rental journey would bring more confidence and enjoyment to an otherwise stressful task.",
