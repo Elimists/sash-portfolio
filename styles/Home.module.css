@@ -143,11 +143,10 @@
   cursor: pointer;
   padding: 0.4rem 1rem 0.4rem 1rem;
   margin-right: 0.4rem;
-  border: 1px solid var(--color-gray);
+  border: 1px solid var(--color-text);
   border-radius: 50px;
-  color: rgba(26, 26, 26, 0.5);
   white-space: nowrap;
-  color: var(--color-gray);
+  color: var(--color-text);
   font-size: 14px;
   -webkit-tap-highlight-color: transparent;
 }
@@ -173,7 +172,6 @@
   display: grid;
   grid-template: 1fr / 1fr;
   place-items: center;
-  background-color: aqua ;
 }
 
 .fun_filter > * {
