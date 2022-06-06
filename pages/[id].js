@@ -7,6 +7,7 @@ import Link from 'next/link'
 import {useState, useEffect} from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import EnlargeImage from '../components/EnlargeImage'
+import QuickNavigation from '../components/QuickNavigation'
 
 import ConceptCompAnalysis from '../public/projects/homie/concept_comp_analysis.webp'
 import ConceptDevInfoArch from '../public/projects/homie/concept_dev_info_arch.webp'
@@ -74,14 +75,27 @@ export const getStaticProps = async (context) => {
     }
 }
 
-const backdrop = {
-    visible:{
-        opacity: 1
-    },
-    hidden:{
-        opacity: 0
-    }
-}
+
+const elementIds = [
+    "Top",
+    "Overview",
+    "Problem",
+    "Process",
+    "Research Goals",
+    "Recruitment Method",
+    "User Groups",
+    "Recruitment Criteria",
+    "Key Insights",
+    "Problem Statement",
+    "Design Brief",
+    "Personas",
+    "User Journey Map",
+    "Concept Development",
+    "User Testing",
+    "Iterations",
+    "Final Design",
+    "Figma Prototype"
+]
 
 
 
@@ -92,6 +106,7 @@ export default function ProjectDetail({project, otherProjects}){
     const [showModal, setShowModal] = useState(false)
     const [imageSource, setImageSource] = useState(null)
     const [imageDimension, setImageDimensions] = useState(null)
+    const [quickNavPressed, setQuickNavPressed] = useState(false)
 
 
     function handleGoingBackOnEnter(event){
@@ -125,10 +140,27 @@ export default function ProjectDetail({project, otherProjects}){
 
     return(
         <>
-        <EnlargeImage showModal={showModal} setShowModal={setShowModal} imageSource={imageSource} imageDimension={imageDimension}/>
+        <div className={styles.quick_nav_button} onClick={() => setQuickNavPressed(!quickNavPressed)}>
+            <div className={styles.arrow_container}>
+                <motion.div 
+                    className={styles.arrow} 
+                    animate={(quickNavPressed) ? { rotate: 270, duration: .5} : {rotate: 90, duration: .5}}>
+                    &lt;
+                </motion.div>
+            </div>
+        </div>
+        <QuickNavigation 
+            quickNavPressed={quickNavPressed} 
+            setQuickNavPressed={setQuickNavPressed} 
+            elementIds={elementIds}/>
+        <EnlargeImage 
+            showModal={showModal} 
+            setShowModal={setShowModal} 
+            imageSource={imageSource} 
+            imageDimension={imageDimension}/>
         <div className={styles.container} id={project.title_url_safe}>
             
-            <div className={styles.top_section}>
+                <div className={styles.top_section} id={"#" + elementIds[0].replace(/\s/g, "")}>
                 
                 <div className={styles.details_top_left}>
                     <a tabIndex="0" className={styles.go_back_button} onKeyDown={(e) => handleGoingBackOnEnter(e)} onClick={() => {
@@ -170,7 +202,7 @@ export default function ProjectDetail({project, otherProjects}){
 
                     {('overview' in project) &&
                     
-                        <div tabIndex="0" className={styles.detail_section}>
+                            <div tabIndex="0" className={styles.detail_section} id={"#" + elementIds[1].replace(/\s/g, "") }>
                             <div className={styles.heading_bar}></div> 
                             <h2 className={styles.details_heading}>Overview</h2>
                             <p className={styles.details_value}>{project.overview}</p>
@@ -178,7 +210,7 @@ export default function ProjectDetail({project, otherProjects}){
                     }
 
                     {('problem' in project) && 
-                        <div tabIndex="0" className={styles.detail_section} >
+                            <div tabIndex="0" className={styles.detail_section} id={"#" + elementIds[2].replace(/\s/g, "") }>
                             <div className={styles.heading_bar}></div> 
                             <h2 className={styles.details_heading}>Problem</h2>
                             <p className={styles.details_value}>{project.problem}</p>
@@ -186,7 +218,7 @@ export default function ProjectDetail({project, otherProjects}){
                     }
 
                     {('process' in project) &&
-                        <div tabIndex="0" className={styles.detail_section} >
+                            <div tabIndex="0" className={styles.detail_section} id={"#" + elementIds[3].replace(/\s/g, "")} >
                             <div className={styles.heading_bar}></div> 
                             <h2 className={styles.details_heading}>Process</h2>
                             <div className={styles.process_image_container}>
@@ -196,7 +228,7 @@ export default function ProjectDetail({project, otherProjects}){
                     }
 
                     {('research_goals' in project) &&
-                        <div tabIndex="0" className={styles.detail_section} >
+                            <div tabIndex="0" className={styles.detail_section} id={"#" + elementIds[4].replace(/\s/g, "")} >
                             <div className={styles.heading_bar}></div> 
                         <h2 className={styles.details_heading}>Research Goals</h2>
                         <ul className={styles.research_goal_ul}>
@@ -210,7 +242,7 @@ export default function ProjectDetail({project, otherProjects}){
                     }
 
                     {('recruitment_method' in project) && 
-                        <div tabIndex="0" className={styles.detail_section} >
+                            <div tabIndex="0" className={styles.detail_section} id={"#" + elementIds[5].replace(/\s/g, "")} >
                             <div className={styles.heading_bar}></div> 
                         <h2 className={styles.details_heading}>Recruitment Method</h2>
                         <p>{project.recruitment_method}</p>
@@ -218,7 +250,7 @@ export default function ProjectDetail({project, otherProjects}){
                     }
 
                     {('user_groups' in project) && 
-                        <div tabIndex="0" className={styles.detail_section} >
+                            <div tabIndex="0" className={styles.detail_section} id={"#" + elementIds[6].replace(/\s/g, "")} >
                             <div className={styles.heading_bar}></div> 
                             <h2 className={styles.details_heading}>User Groups</h2>
                             <p>{project.user_groups.description}</p>
@@ -230,7 +262,7 @@ export default function ProjectDetail({project, otherProjects}){
                     }
 
                     {('recruitment_criterias' in project ) && 
-                        <div tabIndex="0" className={styles.detail_section} >
+                        <div tabIndex="0" className={styles.detail_section} id={"#" + elementIds[7].replace(/\s/g, "")} >
                             <div className={styles.heading_bar}></div> 
                         <h2 className={styles.details_heading}>Recruitment Criteria</h2>
                         <ol type='1' className={styles.criteria_ol}>
@@ -247,7 +279,7 @@ export default function ProjectDetail({project, otherProjects}){
                     }
 
                     {('key_insights' in project) &&
-                        <div tabIndex="0" className={styles.detail_section} >
+                            <div tabIndex="0" className={styles.detail_section} id={"#" + elementIds[8].replace(/\s/g, "")} >
                             <div className={styles.heading_bar}></div> 
                             <h2>Key Insights</h2>
                             <p>{project.key_insights.details}</p>
@@ -274,7 +306,7 @@ export default function ProjectDetail({project, otherProjects}){
                     }
 
                     {('problem_statement' in project) &&
-                        <div className={styles.detail_section} >
+                            <div className={styles.detail_section} id={"#" + elementIds[9].replace(/\s/g, "")} >
                             <div className={styles.heading_bar}></div>
                             <h2>Problem Statement</h2>
                             <p>{project.problem_statement}</p>
@@ -283,7 +315,7 @@ export default function ProjectDetail({project, otherProjects}){
 
                     {/** DESIGN BRIEFS */}
                     {('design_briefs' in project) &&
-                        <div className={styles.detail_section} >
+                            <div className={styles.detail_section} id={"#" + elementIds[10].replace(/\s/g, "")} >
                             <div className={styles.heading_bar}></div> 
                         <h2 className={styles.details_heading}>Design Brief</h2>
                         {project.design_briefs.map((brief, index) => {
@@ -330,7 +362,7 @@ export default function ProjectDetail({project, otherProjects}){
 
                     {/** PERSONAS */}
                     {('personas' in project) &&
-                        <div className={styles.detail_section} >
+                            <div className={styles.detail_section} id={"#" + elementIds[11].replace(/\s/g, "")} >
                         <div className={styles.heading_bar}></div>
                         <h2 className={styles.details_heading}>Personas</h2>
                         <p>{project.personas.description}</p>
@@ -365,7 +397,7 @@ export default function ProjectDetail({project, otherProjects}){
                     }
 
                     {('user_journey_map' in project) &&
-                        <div className={styles.detail_section} >
+                            <div className={styles.detail_section} id={"#" + elementIds[12].replace(/\s/g, "")} >
                             <div className={styles.heading_bar}></div>
                             <h2 className={styles.details_heading}>User Journey Map</h2>
                             <p>{project.user_journey_map.description}</p>
@@ -396,7 +428,7 @@ export default function ProjectDetail({project, otherProjects}){
                     }
 
                     {('concept_development' in project) &&
-                        <div className={styles.detail_section} >
+                            <div className={styles.detail_section} id={"#" + elementIds[13].replace(/\s/g, "")} >
                             <div className={styles.heading_bar}></div>
                             <h2 className={styles.details_heading}>Concept Developmet</h2>
                             <div className={styles.concept_container_outer}>
@@ -438,7 +470,7 @@ export default function ProjectDetail({project, otherProjects}){
                     }
 
                     {('user_testing' in project) && 
-                        <div className={styles.detail_section} >
+                            <div className={styles.detail_section} id={"#" + elementIds[14].replace(/\s/g, "")} >
                             <div className={styles.heading_bar}></div>
                             <h2 className={styles.details_heading}>User Testing</h2>
                             <p>{project.user_testing.description}</p>
@@ -459,7 +491,7 @@ export default function ProjectDetail({project, otherProjects}){
                     }
 
                     {('iterations' in project) && 
-                        <div className={styles.detail_section} >
+                            <div className={styles.detail_section} id={"#" + elementIds[15].replace(/\s/g, "")} >
                             <div className={styles.heading_bar}></div>
                             <h2 className={styles.details_heading}>Iterations</h2>
                             <p>{project.iterations.description}</p>
@@ -485,7 +517,7 @@ export default function ProjectDetail({project, otherProjects}){
                     }
 
                     {('final_design' in project) && 
-                        <div className={styles.detail_section}>
+                            <div className={styles.detail_section} id={"#" + elementIds[16].replace(/\s/g, "")} >
                             <div className={styles.heading_bar}></div>
                             <h2 className={styles.details_heading}>Final Design</h2>
                             <p>{project.final_design.description}</p>
@@ -516,7 +548,7 @@ export default function ProjectDetail({project, otherProjects}){
                     }
 
                     {('figma_prototype' in project) &&
-                        <div className={styles.detail_section}>
+                            <div className={styles.detail_section} id={"#" + elementIds[17].replace(/\s/g, "")} >
                             <div className={styles.heading_bar}></div>
                             <h2 className={styles.details_heading}>Figma Prototype</h2>
                             {(project.title === "Homie") &&
