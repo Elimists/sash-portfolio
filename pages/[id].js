@@ -455,7 +455,13 @@ export default function ProjectDetail({project, otherProjects}){
                             <p>{project.iterations.description}</p>
                             <div className={styles.iteration_image_container}>
                                 <div>
-                                    <Image src={project.iterations.image} height={350} width={750} alt={project.title} placeholder="blur" blurDataURL={project.iterations.image}></Image>
+                                    <Image 
+                                        src={project.iterations.image} 
+                                        height={project.iterations.height} 
+                                        width={project.iterations.width} 
+                                        alt={project.title} 
+                                        placeholder="blur" 
+                                        blurDataURL={project.iterations.image}></Image>
                                 </div>
                                 <p>{project.title}</p>
                             </div>
@@ -471,7 +477,13 @@ export default function ProjectDetail({project, otherProjects}){
                                 {project.final_design.images.slice(0).reverse().map((img, index) => {
                                     return(
                                         <div key={index.toString()}>
-                                            <Image src={img.image} height={300} width={425} alt={img.title} placeholder="blur" blurDataURL={img.image}></Image>
+                                            <Image 
+                                                src={img.image} 
+                                                height={img.height} 
+                                                width={img.width} 
+                                                alt={img.title} 
+                                                placeholder="blur" 
+                                                blurDataURL={img.image}></Image>
                                             <p>{img.title}</p>
                                         </div>
                                     )

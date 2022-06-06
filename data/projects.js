@@ -283,49 +283,65 @@ export const allProjects = [
         },
         iterations: {
             description: "After getting the results from our user testing we iterated on the problem areas that confused users. We redesigned certain user flows to have more clarity and organization from the feedback we gained from our testing.",
-            image: randomPic,
-            title: "Iterations"
+            image: Iterations,
+            title: "Iterations",
+            width: 786,
+            height: 368
         },
         final_design:{
             description: "After addressing the concerns from our user testing we began the finalization of the design by creating a branding guideline and developing a high-fidelity version of the application.",
             images:[
                 {
-                    image: randomPic,
-                    title: "Mood Board"
+                    image: FinalDesignMood,
+                    title: "Mood Board",
+                    width: 424,
+                    height: 300,
                 },
                 
                 {
-                    image: randomPic,
-                    title: "Housing Search"
+                    image: FinalDesignHousing,
+                    title: "Housing Search",
+                    width: 403,
+                    height: 287,
                 },
                 {
-                    image: randomPic,
-                    title: "Landing Page"
+                    image: FinalDesignLanding,
+                    title: "Landing Page",
+                    width: 403,
+                    height: 287,
                 },
                 {
-                    image: randomPic,
-                    title: "Comparison Page"
+                    image: FinalDesignComparison,
+                    title: "Comparison Page",
+                    width: 403,
+                    height: 287,
                 },
                 {
-                    image: randomPic,
-                    title: "Listing View"
+                    image: FinalDesignListing,
+                    title: "Listing View",
+                    width: 403,
+                    height: 287,
                 },
                 
                 
                 {
-                    image: randomPic,
-                    title: "Booking Page"
+                    image: FinalDesignBooking,
+                    title: "Booking Page",
+                    width: 403,
+                    height: 287,
                 },
 
                 {
-                    image: randomPic,
-                    title: "Messaging"
+                    image: FinalDesignMessaging,
+                    title: "Messaging",
+                    width: 403,
+                    height: 287,
                 },
 
             ]
         },
         figma_prototype:{
-            src: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FQnIjL0JceLMksfBaxw0JWi%2FSash's-Portfolio%3Fnode-id%3D435%253A1599"
+            src: "https://www.figma.com/proto/1XnqrlsKWKXYud37ZUmkJJ/Homie-Project?embed_host=share&kind=&node-id=537%3A1562&page-id=531%3A1143&scaling=min-zoom&starting-point-node-id=537%3A1562&viewport=414%2C532%2C0.06"
         }
 
     },
