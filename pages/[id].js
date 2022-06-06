@@ -354,12 +354,14 @@ export default function ProjectDetail({project, otherProjects}){
                             <div className={styles.user_journey_img_container}>
                                 {project.user_journey_map.images.map((img, index) => {
                                     return(
-                                        <motion.div whileHover={{
-                                            scale: 1.05,
-                                            transition: { duration: .4 },
-                                        }}>
+                                        <motion.div 
+                                            whileHover={{
+                                                scale: 1.05,
+                                                transition: { duration: .4 },
+                                            }}
+                                            key={index.toString()} >
                                             <Image 
-                                                key={index.toString()} 
+                                                
                                                 src={img.image} 
                                                 height={img.height} 
                                                 width={img.width} 
