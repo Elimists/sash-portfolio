@@ -67,5 +67,6 @@
 @media (max-width: 400px) {
     .element_id_container {
         width: calc(100vw - 35%);
+        font-size: 14px;
     }
 }
