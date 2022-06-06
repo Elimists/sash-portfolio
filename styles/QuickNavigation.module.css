@@ -45,3 +45,27 @@
     background-color: rgb(221, 221, 221);
     color: black;
 }
+
+@media (max-width: 1000px) {
+    .element_id_container {
+        width: calc(100vw - 65%);
+    }
+}
+
+@media (max-width: 750px) {
+    .element_id_container {
+        width: calc(100vw - 55%);
+    }
+}
+
+@media (max-width: 575px) {
+    .element_id_container {
+        width: calc(100vw - 45%);
+    }
+}
+
+@media (max-width: 400px) {
+    .element_id_container {
+        width: calc(100vw - 35%);
+    }
+}
