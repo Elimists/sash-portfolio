@@ -171,19 +171,27 @@ export const allProjects = [
             images: [
                 {
                     title: "Aiden: Freshmen Student",
-                    image: randomPic
+                    image: PersonasAiden,
+                    width: 370,
+                    height: 263
                 },
                 {
                     title: "Carly: Long Distance Mover",
-                    image: randomPic
+                    image: PersonasCarly,
+                    width: 370,
+                    height: 263
                 },
                 {
                     title: "Tamira: New Parent",
-                    image: randomPic
+                    image: PersonasTamira,
+                    width: 370,
+                    height: 263
                 },
                 {
                     title: "Samu: Young Professional",
-                    image: randomPic
+                    image: PersonasSamu,
+                    width: 370,
+                    height: 263
                 }
             ]
         },
@@ -191,8 +199,10 @@ export const allProjects = [
             description: "Having uncovered many of the pain-points and oppurtunites from our research we put together a user journey map that showed the rental housing process from start to finish. This journey map allowed us to visualize where the problem areas where and highlight key touch points that could be improved.",
             images: [
                 {
-                    image: randomPic,
-                    title: "Use Journey Map"
+                    image: UserJourneyMap,
+                    title: "Use Journey Map",
+                    width: 1000,
+                    height: 273
                 }
             ]
         },
@@ -202,8 +212,10 @@ export const allProjects = [
                 description: "We began our concept development by doing some market research on existing products and understanding their approach, functionality, and layout.",
                 images: [
                     {
-                        image: randomPic,
-                        title: "Competitive Analysis"
+                        image: ConceptCompAnalysis,
+                        title: "Competitive Analysis",
+                        width: 433,
+                        height: 300
                     }
                 ]
             },
@@ -212,8 +224,10 @@ export const allProjects = [
                 description: "The design solution involved creating an information architecture, comprised of all the possible pages, content, features, and user actions for Homie. Each of these assets were then grouped into named catergories and organized in a hierarchical structure.",
                 images: [
                     {
-                        image: randomPic,
-                        title: "Information Architecture"
+                        image: ConceptDevInfoArch,
+                        title: "Information Architecture",
+                        width: 519,
+                        height: 346
                     }
                 ]
             },
@@ -222,16 +236,22 @@ export const allProjects = [
                 description: "We focused our concept development into three key areas of the application that we identified from our research which needed the most imporvement.",
                 images:[
                     {
-                        image: randomPic,
-                        title: "Landlord Portal - Creating and Managing Listings "
+                        image: ConceptLandlordUi,
+                        title: "Landlord Portal - Creating and Managing Listings ",
+                        width: 1061,
+                        height: 351
                     },
                     {
-                        image: randomPic,
-                        title: "Searching, Organizing, and Saving Listings"
+                        image: ConceptSearching,
+                        title: "Browsing and comparing listings",
+                        width: 1061,
+                        height: 351
                     },
                     {
-                        image: randomPic,
-                        title: "Scheduling Viewings and Communication"
+                        image: ConceptScheduling,
+                        title: "Booking Viewings",
+                        width: 1061,
+                        height: 352
                     }
                 ]
             }

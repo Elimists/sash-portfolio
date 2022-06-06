@@ -350,7 +350,13 @@ export default function ProjectDetail({project, otherProjects}){
                                 return(
                                     <div key={index.toString()} className={styles.persona_container}>
                                         <div className={styles.persona_image_div}>
-                                            <Image src={imageObj.image} height={250} width={350} alt={imageObj.title} placeholder="blur" blurDataURL={imageObj.image}></Image>
+                                            <Image 
+                                                src={imageObj.image} 
+                                                height={imageObj.height} 
+                                                width={imageObj.width} 
+                                                alt={imageObj.title} 
+                                                placeholder="blur" 
+                                                blurDataURL={imageObj.image}></Image>
                                         </div>
                                         <p className={styles.persona_paragraph}>{imageObj.title}</p>
                                     </div>
@@ -370,7 +376,14 @@ export default function ProjectDetail({project, otherProjects}){
                                 {project.user_journey_map.images.map((img, index) => {
                                     return(
                                         <>
-                                            <Image key={index.toString()} src={img.image} height={300} width={1000} alt={img.title} placeholder="blur" blurDataURL={img.image}></Image>
+                                            <Image 
+                                                key={index.toString()} 
+                                                src={img.image} 
+                                                height={img.height} 
+                                                width={img.width} 
+                                                alt={img.title} 
+                                                placeholder="blur" 
+                                                blurDataURL={img.image}></Image>
                                             <p>{img.title}</p>
                                         </>
                                     )
@@ -394,7 +407,13 @@ export default function ProjectDetail({project, otherProjects}){
                                                     return(
                                                         <div key={index.toString()} className={styles.concept_div}>
                                                             <div className={styles.concept_image_div}>
-                                                                <Image src={img.image} layout="fill" objectFit='cover' alt={img.title} placeholder="blur" blurDataURL={img.image}></Image>
+                                                                <Image 
+                                                                    src={img.image}
+                                                                    height={img.height}
+                                                                    width={img.width}
+                                                                    alt={img.title} 
+                                                                    placeholder="blur" 
+                                                                    blurDataURL={img.image}></Image>
                                                             </div>
                                                             <p>{img.title}</p>
                                                         </div>
