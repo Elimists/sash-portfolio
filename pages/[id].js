@@ -4,7 +4,7 @@ import { allProjects } from '../data/projects'
 import {useRouter} from 'next/router'
 import useWindowDimensions from '../hooks/useWindowDimensions'
 import Link from 'next/link'
-import {useState, useEffect} from 'react'
+import {useState, useEffect, useRef} from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import EnlargeImage from '../components/EnlargeImage'
 import QuickNavigation from '../components/QuickNavigation'
@@ -108,7 +108,6 @@ export default function ProjectDetail({project, otherProjects}){
     const [imageDimension, setImageDimensions] = useState(null)
     const [quickNavPressed, setQuickNavPressed] = useState(false)
 
-
     function handleGoingBackOnEnter(event){
         if (event.key === 'Enter'){
             router.push("/#my-projects-library")
@@ -142,30 +141,42 @@ export default function ProjectDetail({project, otherProjects}){
         }
     }, [showModal])
 
+
+    
+
     return(
         <>
+        {/**
         <div className={styles.quick_nav_button} onClick={() => setQuickNavPressed(!quickNavPressed)}>
             <div className={styles.arrow_container}>
-                <motion.div 
-                    className={styles.arrow} 
+                <motion.div
+                    className={styles.arrow}
                     animate={(quickNavPressed) ? { rotate: 270} : {rotate: 90}}>
                     &lt;
                 </motion.div>
             </div>
         </div>
-        <QuickNavigation 
-            quickNavPressed={quickNavPressed} 
-            setQuickNavPressed={setQuickNavPressed} 
+
+        <QuickNavigation
+            quickNavPressed={quickNavPressed}
+            setQuickNavPressed={setQuickNavPressed}
             elementIds={elementIds}/>
+        */}
         <EnlargeImage 
             showModal={showModal} 
             setShowModal={setShowModal} 
             imageSource={imageSource} 
             imageDimension={imageDimension}/>
 
-        <div className={styles.container} id={project.title_url_safe} onClick={() => setQuickNavPressed(false)}>
+        <div 
             
-                <div className={styles.top_section} id={"#" + elementIds[0].replace(/\s/g, "")}>
+            className={styles.container} 
+            id={project.title_url_safe} 
+            onClick={() => setQuickNavPressed(false)}>
+            
+            <div
+                className={styles.top_section} 
+                id={"#" + elementIds[0].replace(/\s/g, "")}>
                 
                 <div className={styles.details_top_left}>
                     <a tabIndex="0" className={styles.go_back_button} onKeyDown={(e) => handleGoingBackOnEnter(e)} onClick={() => {
@@ -207,7 +218,7 @@ export default function ProjectDetail({project, otherProjects}){
 
                     {('overview' in project) &&
                     
-                            <div tabIndex="0" className={styles.detail_section} id={"#" + elementIds[1].replace(/\s/g, "") }>
+                        <div tabIndex="0" className={styles.detail_section} id={"#" + elementIds[1].replace(/\s/g, "") }>
                             <div className={styles.heading_bar}></div> 
                             <h2 className={styles.details_heading}>Overview</h2>
                             <p className={styles.details_value}>{project.overview}</p>
@@ -215,7 +226,7 @@ export default function ProjectDetail({project, otherProjects}){
                     }
 
                     {('problem' in project) && 
-                            <div tabIndex="0" className={styles.detail_section} id={"#" + elementIds[2].replace(/\s/g, "") }>
+                        <div tabIndex="0" className={styles.detail_section} id={"#" + elementIds[2].replace(/\s/g, "") }>
                             <div className={styles.heading_bar}></div> 
                             <h2 className={styles.details_heading}>Problem</h2>
                             <p className={styles.details_value}>{project.problem}</p>
@@ -235,15 +246,15 @@ export default function ProjectDetail({project, otherProjects}){
                     {('research_goals' in project) &&
                             <div tabIndex="0" className={styles.detail_section} id={"#" + elementIds[4].replace(/\s/g, "")} >
                             <div className={styles.heading_bar}></div> 
-                        <h2 className={styles.details_heading}>Research Goals</h2>
-                        <ul className={styles.research_goal_ul}>
+                            <h2 className={styles.details_heading}>Research Goals</h2>
+                            <ul className={styles.research_goal_ul}>
                             {project.research_goals.map((goal, index) => {
                                 return(
                                     <li key={index.toString()} className={styles.research_goal_list_item}>{goal}</li>
                                 )
                             })}
-                        </ul>
-                    </div>
+                            </ul>
+                        </div>
                     }
 
                     {('recruitment_method' in project) && 
@@ -577,7 +588,7 @@ export default function ProjectDetail({project, otherProjects}){
                                         <>
                                             <Link href={'/' + otherProject.element.id + '#' + otherProject.element.title_url_safe} key={otherProject.element.id.toString()}>
                                                 <div id={otherProject.element.title_url_safe} className={styles.other_project_img_container} tabIndex="0" role="button" onKeyDown={(e) => handleEnterToClickSwitch(e, otherProject.element.title_url_safe)} >
-                                                    <p className={styles.project_title}>{otherProject.type} &#160; Project</p>
+                                                    <p>{otherProject.type} Project</p>
                                                     <Image src={otherProject.element.image} alt={otherProject.element.name} width="400" height="250" placeholder="blur" blurDataURL={otherProject.element.image}></Image>
                                                     <p className={styles.project_title}>{otherProject.element.title}</p>
                                                 </div> 

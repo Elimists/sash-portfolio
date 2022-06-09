@@ -4,7 +4,6 @@ import styles from '../styles/Home.module.css'
 import { allProjects } from '../data/projects'
 import Link from 'next/link'
 import {useState, useEffect} from 'react'
-import Script from 'next/script'
 
 //Do not remove the below Image imports
 import CoreProjectImage from '../public/projects/core/core.webp'
@@ -92,16 +91,6 @@ export default function Home({projects}) {
     }
   }
 
-  const [lottieClicked, setLottieClicked] = useState(false)
-  
-  useEffect((lp) => {
-    var lp = document.getElementById("lottie-player")
-  
-  }, [lottieClicked])
-
-  function handleLottiePlayer(lp){
-
-  }
 
 
   const setAboutMeVariants = {
@@ -171,7 +160,7 @@ export default function Home({projects}) {
 
                 {allProjects.map((project) => {
                   return(
-                    <Link  href={'/' + project.id + '#' + project.title_url_safe} key={project.id.toString()} >
+                    <Link  href={'/' + project.id} key={project.id.toString()} >
                       <div id={project.title_url_safe} className={styles.card} tabIndex="0" role="button" onKeyDown={(e) => handleEnterToClickSwitch(e, project.title_url_safe)} >
                         <Image src={project.image} alt={project.name} width="600" height="400" placeholder="blur"></Image>
                         <p className={styles.project_title}>{project.name}</p>

@@ -10,7 +10,6 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    margin-right: 1rem;
 }
 
 .nav_link_group{
@@ -130,7 +129,8 @@
     font-size: 2.75rem;
     font-weight: 200;
 }
-@media (max-width: 650px){
+@media (max-width: 700px){
+    
     .mobile_hamburger_menu{
         display: flex;
     }
@@ -142,6 +142,7 @@
 }
 
 @media (min-width: 650px) {
+    
     .nav_link_group_mobile{
         display: none;
     }

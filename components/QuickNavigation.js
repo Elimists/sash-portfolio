@@ -1,5 +1,5 @@
 import styles from '../styles/QuickNavigation.module.css'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 
@@ -29,6 +29,13 @@ export default function QuickNavigation({quickNavPressed, setQuickNavPressed, el
     useEffect(() => {
         setAllElementIds(elementIds)
     }, [])
+
+    const [elementIdSpacingRemoved, setElementIdSpacingRemoved] = useState([])
+    useEffect(() => {
+        setElementIdSpacingRemoved(elementIds.map((elem, index) => {
+            return(elem.replace(/\s/g, ""))
+        }))
+    }, [])
     
     
   
@@ -43,7 +50,7 @@ export default function QuickNavigation({quickNavPressed, setQuickNavPressed, el
                     initial="hidden"
                     animate="visible"
                     exit={{x: 400, scale: 0, duration: .5}}>
-                    <p>Quick Navigation</p>
+                    <p>Quick Navigation:</p>
                     {allElementIds.map((elementId, index) => {
                         return(
                             <div 
