@@ -1,5 +1,5 @@
 .container {
-  padding: var(--spacing-main)
+  margin: 0 8rem;
 }
 
 .main {

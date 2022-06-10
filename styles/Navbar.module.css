@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     height: 100px;
-    margin: var(--spacing-main);
+    margin: 0 8rem;
 }
 
 .inner_content{
@@ -129,6 +129,7 @@
     font-size: 2.75rem;
     font-weight: 200;
 }
+
 @media (max-width: 700px){
     .container{
         margin: 0 1.4rem;
@@ -144,9 +145,7 @@
 }
 
 @media (min-width: 650px) {
-    .container {
-        margin: 0 1.4rem;
-    }
+
     .nav_link_group_mobile{
         display: none;
     }

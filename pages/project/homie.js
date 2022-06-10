@@ -40,8 +40,6 @@ export default function Homie(){
     const [imageSource, setImageSource] = useState(null)
 
     const isScrolled = useScrolledDown()
-    
-
     function scrollToTheTop() {
         window.scrollTo({
             top: 0,
