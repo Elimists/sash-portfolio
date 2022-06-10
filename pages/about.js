@@ -1,4 +1,3 @@
-import UnderConstruction from '../public/under_construction.svg'
 import Image from 'next/image'
 import styles from '../styles/About.module.css'
 import {useState, useEffect} from 'react'
