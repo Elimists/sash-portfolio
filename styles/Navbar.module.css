@@ -130,7 +130,9 @@
     font-weight: 200;
 }
 @media (max-width: 700px){
-    
+    .container{
+        margin: 0 1.4rem;
+    }
     .mobile_hamburger_menu{
         display: flex;
     }
@@ -142,7 +144,9 @@
 }
 
 @media (min-width: 650px) {
-    
+    .container {
+        margin: 0 1.4rem;
+    }
     .nav_link_group_mobile{
         display: none;
     }
