@@ -45,12 +45,12 @@ export default function Navbar(){
         if (isMobileNavOpened) {
             navBarRight.style.right = "0"
             document.body.style.overflowY = "hidden"
-            document.body.style.position = "fixed"
+            //document.body.style.position = "fixed"
         }
         else {
             navBarRight.style.right = "-100%"
             document.body.style.overflowY = "scroll"
-            document.body.style.position = "relative"
+            //document.body.style.position = "relative"
         }
         
     }, [isMobileNavOpened])
