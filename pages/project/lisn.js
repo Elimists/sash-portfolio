@@ -135,6 +135,7 @@ export default function Lisn(){
                                 height={244}
                                 placeholder="blur"
                                 blurDataURL={BrainStormSessionImage}
+                                alt="Brain Storm Session"
                             />
                             <p>Brainstorming session with team</p>
                         </div>
@@ -145,6 +146,7 @@ export default function Lisn(){
                                 height={244}
                                 placeholder="blur"
                                 blurDataURL={ResearchQuestionsImage}
+                                alt="Research Questions"
                             />
                             <p>Research Questions</p>
                         </div>
@@ -218,7 +220,8 @@ export default function Lisn(){
                                 width={525}
                                 height={289}
                                 placeholder="blur"
-                                blurDataURL={InitialWireframeImage}    
+                                blurDataURL={InitialWireframeImage} 
+                                alt="Initial Wireframe"   
                             />
                             <p>Initial wireframes</p>
                         </div>
@@ -229,6 +232,7 @@ export default function Lisn(){
                                 height={291}
                                 placeholder="blur"
                                 blurDataURL={LofiMockupImage}
+                                alt="Lo-fi Mockup"
                             />
                             <p>Lo-Fi Mockup</p>
                         </div>
@@ -246,7 +250,13 @@ export default function Lisn(){
                     <div className={styles.heading_bar}></div>
                     <h1>Final Onboarding Process</h1>
                     <div>
-                        <iframe width={848} height={441} loading="lazy" src="https://www.figma.com/proto/wvyskMpJxXJ6c2rejTf0yz?embed_host=share&kind=&node-id=310%3A291&page-id=310%3A191&scaling=min-zoom&starting-point-node-id=310%3A227&viewport=1425%2C493%2C0.32" allowFullScreen></iframe>
+                        <iframe 
+                            title='Figma Final Onboarding Process'
+                            width={848} 
+                            height={441} 
+                            loading="lazy" 
+                            src="https://www.figma.com/proto/wvyskMpJxXJ6c2rejTf0yz?embed_host=share&kind=&node-id=310%3A291&page-id=310%3A191&scaling=min-zoom&starting-point-node-id=310%3A227&viewport=1425%2C493%2C0.32" 
+                            allowFullScreen/>
                     </div>
                 </section>
 
@@ -267,6 +277,7 @@ export default function Lisn(){
                             height={558}
                             placeholder="blur"
                             blurDataURL={NewHPIdeationImage1}
+                            alt="New Home Page Image"
                         />
                     </div>
                     <p>
@@ -283,6 +294,7 @@ export default function Lisn(){
                                 height={360}
                                 placeholder="blur"
                                 blurDataURL={SimilarAppsImage}
+                                alt="Similar Apps"
                             />
                             <p>Brainstorming with similar apps in the market</p>
                         </div>
@@ -293,6 +305,7 @@ export default function Lisn(){
                                 height={360}
                                 placeholder="blur"
                                 blurDataURL={BlockframingImage}
+                                alt="Block Framing"
                             />
                             <p>Blockframing</p>
                         </div>
@@ -311,6 +324,9 @@ export default function Lisn(){
                             src={OldConvoCardImage}
                             width={585}
                             height={146}
+                            placeholder="blur"
+                            blurDataURL={OldConvoCardImage}
+                            alt="Old Conversation UI"
                         />
                     </div>
                 </section>
@@ -325,6 +341,7 @@ export default function Lisn(){
                             height={941}
                             placeholder="blur"
                             blurDataURL={HomePageConceptImage}
+                            alt="Home Page Concept Design"
                         />
                     </div>
                 </section>
@@ -339,6 +356,7 @@ export default function Lisn(){
                             height={514}
                             placeholder="blur"
                             blurDataURL={FinalHomePageImage}
+                            alt="Final Home Page Design"
                         />
                     </div>
                 </section>
@@ -355,7 +373,9 @@ export default function Lisn(){
                                     height={300}
                                     width={400}
                                     placeholder="blur"
-                                    blurDataURL={CoreProjectImage} />
+                                    blurDataURL={CoreProjectImage}
+                                    alt="Core Project"
+                                />
                                 <p>Core</p>
                             </div>
                         </Link>
@@ -367,7 +387,9 @@ export default function Lisn(){
                                     height={300}
                                     width={400}
                                     placeholder="blur"
-                                    blurDataURL={WorldJournalImage} />
+                                    blurDataURL={WorldJournalImage} 
+                                    alt="World Journal Project"
+                                />
                                 <p>World Journal</p>
                             </div>
                         </Link>
