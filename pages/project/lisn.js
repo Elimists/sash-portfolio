@@ -15,6 +15,10 @@ import NewHPIdeationImage1 from '../../public/projects/lisn/new_hp.webp'
 import SimilarAppsImage from '../../public/projects/lisn/similar_apps.webp'
 import BlockframingImage from '../../public/projects/lisn/blockframing.webp'
 import OldConvoCardImage from '../../public/projects/lisn/oldconvocard.webp'
+import HomePageConceptImage from '../../public/projects/lisn/homepageconcept.webp'
+import FinalHomePageImage from '../../public/projects/lisn/finalhomepage.webp'
+import CoreProjectImage from '../../public/projects/core/core.webp'
+import WorldJournalImage from '../../public/projects/world-journal/world-journal.webp'
 
 export default function Lisn(){
     const [showModal, setShowModal] = useState(false)
@@ -233,7 +237,8 @@ export default function Lisn(){
                         For each objective I created a small animation that could represent the 
                         feature we wanted to highlight. This also helped create a more visually 
                         appealing onboarding flow and good first impression of the app for new 
-                        users.
+                        users. You can view the animations below on the <b>'Final Onboarding Process'</b>
+                        &nbsp; section.
                     </p>
                 </section>
 
@@ -310,7 +315,64 @@ export default function Lisn(){
                     </div>
                 </section>
 
+                <section className={styles.new_home_page_concepts_section}>
+                    <div className={styles.heading_bar}></div>
+                    <h1>New Home Page Concepts</h1>
+                    <div>
+                        <Image
+                            src={HomePageConceptImage}
+                            width={561}
+                            height={941}
+                            placeholder="blur"
+                            blurDataURL={HomePageConceptImage}
+                        />
+                    </div>
+                </section>
 
+                <section className={styles.final_home_page}>
+                    <div className={styles.heading_bar}></div>
+                    <h1>Final Home Page</h1>
+                    <div>
+                        <Image
+                            src={FinalHomePageImage}
+                            width={726}
+                            height={514}
+                            placeholder="blur"
+                            blurDataURL={FinalHomePageImage}
+                        />
+                    </div>
+                </section>
+
+
+                <section className={styles.other_projects}>
+                    <div className={styles.heading_bar} />
+                    <h1>My Other Projects</h1>
+                    <div>
+                        <Link href="/project/core">
+                            <div>
+                                <Image
+                                    src={CoreProjectImage}
+                                    height={300}
+                                    width={400}
+                                    placeholder="blur"
+                                    blurDataURL={CoreProjectImage} />
+                                <p>Core</p>
+                            </div>
+                        </Link>
+
+                        <Link href="/project/world-journal">
+                            <div>
+                                <Image
+                                    src={WorldJournalImage}
+                                    height={300}
+                                    width={400}
+                                    placeholder="blur"
+                                    blurDataURL={WorldJournalImage} />
+                                <p>World Journal</p>
+                            </div>
+                        </Link>
+                    </div>
+                </section>
             </div>
             {(isScrolled) ? <div tabIndex="0" role="button" className={styles.go_top_button} onClick={() => scrollToTheTop()} onKeyDown={(e) => handleOnEnterPressToTop(e)}>&uarr;</div> : null}
         </>
