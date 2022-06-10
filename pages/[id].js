@@ -364,7 +364,7 @@ export default function ProjectDetail({project, otherProjects}){
                                     <p>{project.new_home_page_ideation.flowB.description}</p>
                                     {project.new_home_page_ideation.flowB.images.map((img, index) => {
                                         return(
-                                            <div className={index.toString()}>
+                                            <div key={index.toString()}>
                                                 <Image
                                                     src={img.image}
                                                     width={img.width}
@@ -381,7 +381,7 @@ export default function ProjectDetail({project, otherProjects}){
                                     <p>{project.new_home_page_ideation.flowC.description}</p>
                                     {project.new_home_page_ideation.flowC.images.map((img, index) => {
                                         return(
-                                            <div className={index.toString()}>
+                                            <div key={index.toString()}>
                                                 <Image
                                                     src={img.image}
                                                     width={img.width}
@@ -428,7 +428,7 @@ export default function ProjectDetail({project, otherProjects}){
                             <p>{project.final_home_page.description}</p>
                             {project.final_home_page.images.map((img, index) => {
                                 return(
-                                    <div>
+                                    <div key={index.toString()}>
                                         <Image
                                             src={img.image}
                                             width={img.width}
