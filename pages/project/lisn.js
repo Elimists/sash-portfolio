@@ -6,7 +6,7 @@ export default function Lisn(){
     return(
         <div className={styles.container}>
             <Image src={uc} width={500} height={350} alt="Under Construction" />
-            <p>Items are currentnly being added into the page. Please check back later.</p>
+            <p>This page is currently being built. Please check back later.</p>
             <Link href="/"><a>Go Back</a></Link>
         </div>
     )
