@@ -107,6 +107,30 @@ export default function ProjectDetail({project, otherProjects}){
     const [imageSource, setImageSource] = useState(null)
     const [imageDimension, setImageDimensions] = useState(null)
     const [quickNavPressed, setQuickNavPressed] = useState(false)
+    const [isScrolledDown, setIsScrolledDown] = useState(false)
+
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 200) {
+                setIsScrolledDown(true)
+            } else {
+                setIsScrolledDown(false)
+            }
+        })
+    }, [])
+
+    function scrollToTheTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
+    }
+
+    function handleOnEnterPressToTop(event) {
+        if (event.key === 'Enter') {
+            scrollToTheTop()
+        }
+    }
 
     function handleGoingBackOnEnter(event){
         if (event.key === 'Enter'){
@@ -233,8 +257,194 @@ export default function ProjectDetail({project, otherProjects}){
                         </div>
                     }
 
+                    {('research' in project) &&
+                        <div tabIndex="0" className={styles.detail_section} >
+                            <div className={styles.heading_bar}></div>
+                            <h2 className={styles.details_heading}>Research</h2>
+                            <p>{project.research.description}</p>
+                            {project.research.images.map((img, index) => {
+                                return(
+                                    <div key={index.toString()}>
+                                        <Image src={img.image} width={290} height={244} placeholder="blur" blurDataURL={img.image}/>
+                                    </div>
+                                )
+                            })}
+                            <p>{project.research.category_insights.description}</p>
+                            {project.research.category_insights.insights.map((insight, index) => {
+                                return(
+                                    <div key={index.toString()}>
+                                        <h4>{insight.title}</h4>
+                                        <p>{insight.description}</p>
+                                    </div>
+                                )
+                            })}
+                            <p>{project.research.category_objectives.description}</p>
+                            {project.research.category_objectives.objectives.map((objective, index) => {
+                                return(
+                                    <div key={index.toString()}>
+                                        <h4>{objective.title}</h4>
+                                        <p>{objective.description}</p>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    }
+
+                    {('ideation' in project) &&
+                        <div tabIndex="0" className={styles.detail_section} >
+                            <div className={styles.heading_bar}></div>
+                            <h2 className={styles.details_heading}>Ideation</h2>
+                            <p>{project.ideation.concept_development.description}</p>
+                            {project.ideation.concept_development.images.map((img, index) => {
+                                return(
+                                    <div key={index.toString()}>
+                                        <Image 
+                                            src={img.image} 
+                                            width={img.width} 
+                                            height={img.height} 
+                                            placeholder="blur" 
+                                            blurDataURL={img.image} 
+                                            alt={img.title}/>
+                                        <p>{img.title}</p>
+                                    </div>
+                                )
+                            })}
+                            <p>{project.ideation.objectives.description}</p>
+                            <div>
+                                {project.ideation.objectives.categories.map((category, index) => {
+                                    return(
+                                        <div key={index.toString()}>
+                                            <h4>{category.title}</h4>
+                                            <p>{category.description}</p>
+                                            <div>
+                                                <Image
+                                                    src={category.image}
+                                                    width={category.width}
+                                                    height={category.height}
+                                                    placeholder="blur"
+                                                    blurDataURL={category.image}
+                                                    alt={category.title + "Image"} />
+                                            </div>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        </div>
+                    }
+
+                    {('final_onboarding_pages' in project) &&
+                         <div tabIndex="0" className={styles.detail_section} >
+                            <div className={styles.heading_bar}></div>
+                            <h2 className={styles.details_heading}>Final Onboarding Process</h2>
+                                <iframe width={848} height={441} loading="lazy" src={project.final_onboarding_pages.src} allowFullScreen></iframe>
+                        </div>
+                    }
+
+                    {('new_home_page_ideation' in project) &&
+                        <div tabIndex="0" className={styles.detail_section} >
+                                <div className={styles.heading_bar}></div>
+                                <h2 className={styles.details_heading}>New Home Page Ideation</h2>
+                                <div>
+                                    <p>{project.new_home_page_ideation.flowA.description}</p>
+                                    {project.new_home_page_ideation.flowA.images.map((img, index) => {
+                                        return(
+                                            <div key={index.toString()}>
+                                                <Image
+                                                    src={img.image}
+                                                    width={img.width}
+                                                    height={img.height}
+                                                    placeholder="blur"
+                                                    blurDataURL={img.image}
+                                                    alt={img.title}/>
+                                            </div>
+                                        )
+                                    })}
+                                </div>
+                                <div>
+                                    <p>{project.new_home_page_ideation.flowB.description}</p>
+                                    {project.new_home_page_ideation.flowB.images.map((img, index) => {
+                                        return(
+                                            <div className={index.toString()}>
+                                                <Image
+                                                    src={img.image}
+                                                    width={img.width}
+                                                    height={img.height}
+                                                    placeholder="blur"
+                                                    blurDataURL={img.image}
+                                                    alt={img.title}/>
+                                                <p>{img.title}</p>
+                                            </div>
+                                        )
+                                    })}
+                                </div>
+                                <div>
+                                    <p>{project.new_home_page_ideation.flowC.description}</p>
+                                    {project.new_home_page_ideation.flowC.images.map((img, index) => {
+                                        return(
+                                            <div className={index.toString()}>
+                                                <Image
+                                                    src={img.image}
+                                                    width={img.width}
+                                                    height={img.height}
+                                                    placeholder="blur"
+                                                    blurDataURL={img.image}
+                                                    alt={img.title}/>
+                                                <p>{img.title}</p>
+                                            </div>
+                                        )
+                                    })}
+                                </div>
+                        </div>
+                    }
+
+                    {('new_home_page_concepts' in project) &&
+                        <div tabIndex="0" className={styles.detail_section} >
+                            <div className={styles.heading_bar}></div>
+                            <h2 className={styles.details_heading}>New Home Page Concepts</h2>
+                            {project.new_home_page_concepts.images.map((img, index) => {
+                                return(
+                                    <div key={index.toString()}>
+                                        <Image
+                                            src={img.image}
+                                            width={img.width}
+                                            height={img.height}
+                                            placeholder="blur"
+                                            blurDataURL={img.image}
+                                            alt={img.image}/>
+                                        <div>
+                                            <h4>{img.title}</h4>
+                                            <p>{img.description}</p>
+                                        </div>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    }
+
+                    {('final_home_page' in project) &&
+                        <div tabIndex="0" className={styles.detail_section} >    
+                            <div className={styles.heading_bar}></div>
+                            <h2 className={styles.details_heading}>Final Home Page</h2>
+                            <p>{project.final_home_page.description}</p>
+                            {project.final_home_page.images.map((img, index) => {
+                                return(
+                                    <div>
+                                        <Image
+                                            src={img.image}
+                                            width={img.width}
+                                            height={img.height}
+                                            placeholder="blur"
+                                            blurDataURL={img.image}
+                                            alt={img.image}/>
+                                    </div>
+                                )
+                            })}
+                            <iframe width={848} height={441}  loading="lazy" src={project.final_home_page.iframe_src} allowFullScreen></iframe>
+                        </div>
+                    }
+
                     {('process' in project) &&
-                            <div tabIndex="0" className={styles.detail_section} id={"#" + elementIds[3].replace(/\s/g, "")} >
+                        <div tabIndex="0" className={styles.detail_section} id={"#" + elementIds[3].replace(/\s/g, "")} >
                             <div className={styles.heading_bar}></div> 
                             <h2 className={styles.details_heading}>Process</h2>
                             <div className={styles.process_image_container}>
@@ -590,7 +800,7 @@ export default function ProjectDetail({project, otherProjects}){
                                                 <div id={otherProject.element.title_url_safe} className={styles.other_project_img_container} tabIndex="0" role="button" onKeyDown={(e) => handleEnterToClickSwitch(e, otherProject.element.title_url_safe)} >
                                                     <p>{otherProject.type} Project</p>
                                                     <Image src={otherProject.element.image} alt={otherProject.element.name} width="400" height="250" placeholder="blur" blurDataURL={otherProject.element.image}></Image>
-                                                    <p className={styles.project_title}>{otherProject.element.title}</p>
+                                                    <p className={styles.other_project_title}>{otherProject.element.title}</p>
                                                 </div> 
                                             </Link>
                                         </>
@@ -602,6 +812,15 @@ export default function ProjectDetail({project, otherProjects}){
                 </div>
             </div>
         </div>
+            {(isScrolledDown) ? 
+                <div 
+                    tabIndex="0" 
+                    role="button" 
+                    className={styles.go_top_button} 
+                    onClick={() => scrollToTheTop()} 
+                    onKeyDown={(e) => handleOnEnterPressToTop(e)}>
+                        &uarr;
+                </div> : null}
         </>
     )
 }
