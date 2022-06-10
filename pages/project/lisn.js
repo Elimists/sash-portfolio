@@ -237,7 +237,7 @@ export default function Lisn(){
                         For each objective I created a small animation that could represent the 
                         feature we wanted to highlight. This also helped create a more visually 
                         appealing onboarding flow and good first impression of the app for new 
-                        users. You can view the animations below on the <b>'Final Onboarding Process'</b>
+                        users. You can view the animations below on the <b>Final Onboarding Process</b>
                         &nbsp; section.
                     </p>
                 </section>
