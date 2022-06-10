@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../../styles/ProjectDetails.module.css'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
+import useScrolledDown from '../../hooks/useScrolledDown'
 
 export default function Lisn(){
     const [showModal, setShowModal] = useState(false)
