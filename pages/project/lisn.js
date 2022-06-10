@@ -1,9 +1,16 @@
-import uc from '../../public/uc.svg'
 import Image from 'next/image'
-import styles from '../../styles/ProjectDetails.module.css'
 import Link from 'next/link'
+import EnlargeImage from '../../components/EnlargeImage'
 import { useState, useEffect } from 'react'
 import useScrolledDown from '../../hooks/useScrolledDown'
+
+/** Assets related to project Lisn */
+import styles from '../../styles/Homie.module.css'
+import LisnImage from '../../public/projects/lisn/lisn.webp'
+import BrainStormSessionImage from '../../public/projects/lisn/brainstorm.webp'
+import ResearchQuestionsImage from '../../public/projects/lisn/research_q.webp'
+import InitialWireframeImage from '../../public/projects/lisn/initial_wireframe.webp'
+import LofiMockupImage from '../../public/projects/lisn/lofi_mockup.webp'
 
 export default function Lisn(){
     const [showModal, setShowModal] = useState(false)
@@ -14,7 +21,7 @@ export default function Lisn(){
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
-        })
+        })``
     }
 
     function handleImageEnlarging(imageSource) {
@@ -32,10 +39,194 @@ export default function Lisn(){
     }, [showModal])
 
     return(
-        <div className={styles.container}>
-            <Image src={uc} width={500} height={350} alt="Under Construction" />
-            <p>This page is currently being built. Please check back later.</p>
-            <Link href="/"><a>Go Back</a></Link>
-        </div>
+        <>
+        <EnlargeImage
+            showModal={showModal}
+            setShowModal={setShowModal}
+            imageSource={imageSource} />
+
+            <div className={styles.container}>
+
+                <section className={styles.top_section}>
+                    <div>
+                        <h1>LISN</h1>
+                        <p>Improving new user onboarding for a mobile application and UI redesign.</p>
+                        <p>UX/UI - User Research - Prototyping - Branding </p>
+                    </div>
+
+                    <Image
+                        src={LisnImage}
+                        height={430}
+                        width={650}
+                        alt="Homie Project Image"
+                        placeholder="blur"
+                        blurDataURL={LisnImage} />
+                </section>
+
+                <section className={styles.synopsis}>
+                    <div>
+                        <h3>Duration</h3>
+                        <p>2 Months</p>
+                    </div>
+                    <div>
+                        <h3>Role</h3>
+                        <p>UX/UI Designer</p>
+                    </div>
+                    <div>
+                        <h3>Type</h3>
+                        <p>Company Initiative</p>
+                    </div>
+                    <div>
+                        <h3>Methods &#38; Tools</h3>
+                        <p>User Research, Co-design workshops, Figma</p>
+                    </div>
+                </section>
+
+                <section className={styles.overview_section}>
+                    <div className={styles.heading_bar}></div>
+                    <h1>Overview</h1>
+                    <p>
+                        LISN is a startup podcast company developing A.I technologies that 
+                        help users discover new podcasts and also alow users to create curated
+                        playlists using clips from different podcasts. The company is growing
+                        its user base and wanted to create an easy to understand onboarding
+                        flow for new users. Additionally, they also wanted to design a new
+                        home page for their mobile app that facilitated a simplified 
+                        user-experience. As their new UX/UI designer I lead the research 
+                        and design of their new onboarding flows and mobile app.
+                    </p>
+                </section>
+
+                <section className={styles.problem_section}>
+                    <div className={styles.heading_bar}></div>
+                    <h1>Problem</h1>
+                    <p>
+                        New users were having a hard time understanding the mobile app as 
+                        there was no introduction provided on how to use the features and 
+                        how to create podcast clips which was the main service at the time. 
+                        The organization of the app also left users confused as their content 
+                        was scattered in different pages and menus. 
+                    </p>
+                </section>
+
+                <section className={styles.research_section}>
+                    <div className={styles.heading_bar}></div>
+                    <h1>Research</h1>
+                    <p>
+                        As a new company, LISN did not have previous user experience research 
+                        or analysis. I began by creating a research plan and working with the
+                        team to identify key areas of the service that we needed to understand 
+                        better. Our main objective was to understand user goals within the app 
+                        and their satisfaction with the current platform. 
+                    </p>
+                    <div>
+                        <div>
+                            <Image
+                                src={BrainStormSessionImage}
+                                width={290}
+                                height={244}
+                                placeholder="blur"
+                                blurDataURL={BrainStormSessionImage}
+                            />
+                            <p>Brainstorming session with team</p>
+                        </div>
+                        <div>
+                            <Image
+                                src={ResearchQuestionsImage}
+                                width={244}
+                                height={244}
+                                placeholder="blur"
+                                blurDataURL={ResearchQuestionsImage}
+                            />
+                            <p>Research Questions</p>
+                        </div>
+                    </div>
+                    <p>
+                        Through interviews and outreach to current users we were able to uncover 
+                        insights into users&sbquo; pain-points and goals when navigating the app.
+                    </p>
+                    <div>
+                        <h3>Insight 1</h3>
+                        <p>
+                            Users wanted to have their frequently listened to content easily 
+                            avavailable and have the ability to organize them in the order they 
+                            preferred 	&#40;i.e chronological, first to last, most popular, etc&#41;
+                        </p>
+                    
+                   
+                        <h3>Insight 2:</h3>
+                        <p>
+                            Users wanted to reduce the time searching for a podcast and have 
+                            their curated content managed for them.
+                        </p>
+                    </div>
+                    <p>
+                        Our team also wanted to highlight key features of the app to new users 
+                        on our onboarding flows. With some internal discussions we narrowed down 
+                        our scope into 3 key features that were most important for new users to 
+                        know.
+                    </p>
+                    <div>
+                        <h3>Objective 1</h3>
+                        <p>
+                            Educate users on “conversations”. Conversations is an in-app feature 
+                            that groups related podcast clips together into a curated playlist 
+                            for easy and quick listening.
+                        </p>
+
+                        <h3>Objective 2:</h3>
+                        <p>
+                            Educate users on “Clips”. Clips is an in-app feature that allows 
+                            users to snip a podcast&sbquo;s audio into just the section they are 
+                            interested in and easily save, share, or use it to create their own 
+                            conversations.
+                        </p>
+
+                        <h3>Objective 3:</h3>
+                        <p>
+                            Welcome user feedback. As the app was new we really wanted to invite 
+                            users to be apart of the growing community and voice their 
+                            concerns/suggestions to help the service improve.
+                        </p>
+
+                    </div>
+                </section>
+
+                <section className={styles.ideation_section}>
+                    <div className={styles.heading_bar}></div>
+                    <h1>Ideation</h1>
+                    <p>
+                        I began the concept development by working on the onbaording screens 
+                        first. I created some wireframes and focused on keeping the content 
+                        short and sweet. We wanted to avoid created a long onboarding flow with 
+                        lots of test. Instead I decided to use small gifs that could highlight 
+                        key features and make the onboarding experience more enjoyable.
+                    </p>
+
+                    <div>
+                        <div>
+                            <Image
+                                src={InitialWireframeImage}
+                                width={525}
+                                height={289}
+                                placeholder="blur"
+                                blurDataURL={InitialWireframeImage}    
+                            />
+                            <p>Initial wireframes</p>
+                        </div>
+                        <div>
+                            <Image
+                                src={LofiMockupImage}
+                                width={715}
+                                height={291}
+                                placeholder="blur"
+                                blurDataURL={LofiMockupImage}
+                            />
+                            <p>Lo-Fi Mockup</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </>
     )
 }

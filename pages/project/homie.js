@@ -79,7 +79,7 @@ export default function Homie(){
         
         <div className={styles.container}>
 
-            <section className={styles.homie_top}>
+            <section className={styles.top_section}>
                 <div>
                     <HomieTitleSvg/>
                     <p>Web application that simplifies and assists the rental housing search process.</p>
