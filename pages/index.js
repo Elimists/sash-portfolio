@@ -17,8 +17,8 @@ const filterTerms = [
   {'term': 'All'},
   {'term': 'UX/UI'},
   {'term': 'Industrial Design'},
-  {'term': 'Logos & Branding'},
-  {'term': 'Fun'}
+  //{'term': 'Logos & Branding'},
+  //{'term': 'Fun'}
 ]
 
 export default function Home({projects}) {
