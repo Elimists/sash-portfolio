@@ -11,6 +11,10 @@ import BrainStormSessionImage from '../../public/projects/lisn/brainstorm.webp'
 import ResearchQuestionsImage from '../../public/projects/lisn/research_q.webp'
 import InitialWireframeImage from '../../public/projects/lisn/initial_wireframe.webp'
 import LofiMockupImage from '../../public/projects/lisn/lofi_mockup.webp'
+import NewHPIdeationImage1 from '../../public/projects/lisn/new_hp.webp'
+import SimilarAppsImage from '../../public/projects/lisn/similar_apps.webp'
+import BlockframingImage from '../../public/projects/lisn/blockframing.webp'
+import OldConvoCardImage from '../../public/projects/lisn/oldconvocard.webp'
 
 export default function Lisn(){
     const [showModal, setShowModal] = useState(false)
@@ -225,7 +229,88 @@ export default function Lisn(){
                             <p>Lo-Fi Mockup</p>
                         </div>
                     </div>
+                    <p>
+                        For each objective I created a small animation that could represent the 
+                        feature we wanted to highlight. This also helped create a more visually 
+                        appealing onboarding flow and good first impression of the app for new 
+                        users.
+                    </p>
                 </section>
+
+                <section className={styles.final_onboarding_section}>
+                    <div className={styles.heading_bar}></div>
+                    <h1>Final Onboarding Process</h1>
+                    <div>
+                        <iframe width={848} height={441} loading="lazy" src="https://www.figma.com/proto/wvyskMpJxXJ6c2rejTf0yz?embed_host=share&kind=&node-id=310%3A291&page-id=310%3A191&scaling=min-zoom&starting-point-node-id=310%3A227&viewport=1425%2C493%2C0.32" allowFullScreen></iframe>
+                    </div>
+                </section>
+
+                <section className={styles.home_page_ideation}>
+                    <div className={styles.heading_bar}></div>
+                    <h1>New Home Page Ideation</h1>
+                    <p>
+                        In addition to the new onboarding pages, we wanted to create a new home page within
+                        the app that better organized content and created easy access to the most used
+                        features. I started concept development with some competitive analysis and then moved
+                        on to create blockframes and wireframes. I was continually testing with the team
+                        throughout this process to ensure cohesion and a feasible development scope.
+                    </p>
+                    <div>
+                        <Image
+                            src={NewHPIdeationImage1}
+                            width={606}
+                            height={558}
+                            placeholder="blur"
+                            blurDataURL={NewHPIdeationImage1}
+                        />
+                    </div>
+                    <p>
+                        As a good UX principle, we wanted to create a home page that felt familar for new 
+                        users. We did not want to overwhelm new users with a completely novel home page 
+                        that required lots of learning, instead we opted to create a familiar flow to other 
+                        apps in the podcast/music market space as many of our users also used these services.
+                    </p>
+                    <div>
+                        <div>
+                            <Image
+                                src={SimilarAppsImage}
+                                width={567}
+                                height={360}
+                                placeholder="blur"
+                                blurDataURL={SimilarAppsImage}
+                            />
+                            <p>Brainstorming with similar apps in the market</p>
+                        </div>
+                        <div>
+                            <Image
+                                src={BlockframingImage}
+                                width={567}
+                                height={360}
+                                placeholder="blur"
+                                blurDataURL={BlockframingImage}
+                            />
+                            <p>Blockframing</p>
+                        </div>
+                    </div>
+                    <p>
+                        One of the challenges we faced was designing a new layout card for our 
+                        conversations feature. Conversations included multiple short clips of various 
+                        podcasts that were put together into a ‘Conversation’. We wanted to create a 
+                        card system that showed users which podcasts were contained within each 
+                        conversation along with a description, duration, original poster, and interaction 
+                        buttons. The challenge was to do this without creating something too busy and 
+                        complicated for mobile screens.
+                    </p>
+                    <div>
+                        <Image
+                            src={OldConvoCardImage}
+                            width={585}
+                            height={146}
+                        />
+                    </div>
+                </section>
+
+
             </div>
             {(isScrolled) ? <div tabIndex="0" role="button" className={styles.go_top_button} onClick={() => scrollToTheTop()} onKeyDown={(e) => handleOnEnterPressToTop(e)}>&uarr;</div> : null}
         </>
