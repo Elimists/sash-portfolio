@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import EnlargeImage from '../../components/EnlargeImage'
 import { useEffect, useState } from 'react'
-
+import useScrolledDown from '../../hooks/useScrolledDown'
 
 /** Assets related to project - Homie */
 import styles from '../../styles/Homie.module.css'
@@ -38,6 +38,16 @@ import WorldJournalImage from '../../public/projects/world-journal/world-journal
 export default function Homie(){
     const [showModal, setShowModal] = useState(false)
     const [imageSource, setImageSource] = useState(null)
+
+    const isScrolled = useScrolledDown()
+    
+
+    function scrollToTheTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
+    }
 
     function handleImageEnlarging(imageSource) {
         setImageSource(imageSource)
@@ -77,6 +87,7 @@ export default function Homie(){
                     <p>Web application that simplifies and assists the rental housing search process.</p>
                     <p>UX/UI - User Research - Visual Design - Behavioral Design</p>
                 </div>
+                
                 <Image 
                     src={HomieImg} 
                     height={430}
@@ -647,6 +658,7 @@ export default function Homie(){
                 </div>
             </section>
         </div>
+            {(isScrolled) ? <div tabIndex="0" role="button" className={styles.go_top_button} onClick={() => scrollToTheTop()} onKeyDown={(e) => handleOnEnterPressToTop(e)}>&uarr;</div> : null}
         </>
     )
 }
