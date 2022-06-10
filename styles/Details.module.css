@@ -11,6 +11,11 @@
 .details_top_left{
     padding-right: 1rem;
 }
+
+.project_title{
+    font-size: 36px;
+    font-weight: 400;
+}
 .project_tags{
     font-size: 14px;
     color: var(--color-blue);
@@ -208,9 +213,9 @@
     width: 300px;
 }
 
-.project_title{
-    font-weight: 700;
-    font-size: 18px;
+.other_project_title{
+    font-size: 20px;
+    font-weight: 500;
 }
 
 
@@ -276,6 +281,20 @@
     justify-content: center;
     margin: 0;
     padding: 0;
+}
+
+.go_top_button {
+    position: fixed;
+    bottom: 20px;
+    width: 50px;
+    text-align: center;
+    right: 40px;
+    background-color: var(--color-text);
+    color: var(--color-background);
+    font-size: 26px;
+    padding: 0.4rem;
+    border-radius: 6px;
+    cursor: pointer;
 }
 @media (max-width: 900px){
     .top_section{
