@@ -21,7 +21,7 @@ export default function Lisn(){
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
-        })``
+        })
     }
 
     function handleImageEnlarging(imageSource) {
@@ -227,6 +227,7 @@ export default function Lisn(){
                     </div>
                 </section>
             </div>
+            {(isScrolled) ? <div tabIndex="0" role="button" className={styles.go_top_button} onClick={() => scrollToTheTop()} onKeyDown={(e) => handleOnEnterPressToTop(e)}>&uarr;</div> : null}
         </>
     )
 }
