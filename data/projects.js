@@ -1,6 +1,9 @@
 import CoreProjectImage from '../public/projects/core/core.webp'
-import LisnProjectImage from '../public/projects/lisn/lisn.webp'
+
 import WorldJournalProjectImage from '../public/projects/world-journal/world-journal.webp'
+
+/** LISN Imports */
+import LisnProjectImage from '../public/projects/lisn/lisn.webp'
 
 /** HOMIE Imports */
 import HomieProjectImage from '../public/projects/homie/homie.webp'
@@ -42,6 +45,7 @@ export const allProjects = [
         type: "Personal",
         role: "UX Researcher & Designer",
         tools: "Interviews, Surveys, Market Research, Competitive Analysis, Figma",
+        link: "/project/homie",
         overview: "This senior project focsued on researching, designing, and validating a digital service that could help improve the user journey in a chosen problem space. Our group chose to tackle the rental housing experience and develop a solution that could streamline the process for beginners and experienced renters.",
         problem: "Overall, the process of finding and securing a housing rental can be a daunting, overwhelming, and cumbersome journey. Most of the process is learned by word of mouth and through trial and error, making it difficult for inexperienced renters to know where to begin and confidently carry out the entire process. There is also a need for more semi-formal education or resources concerning the renting process as a whole, including knowledge around renter rights. Even more experienced renters encounter a slew of issues relating to poor information across rental ads, usability and experience of rental platforms and listings, communication with landlords and roommates, decision making, and legal matters.",
         process: {
@@ -340,45 +344,223 @@ export const allProjects = [
     },
 
     {
-        'id': 2,
-        'image': LisnProjectImage,//LisnProjectImage,//
-        'title': "Lisn",
-        'title_url_safe': "Lisn",
-        'name': "User Research and Onboarding - LISN",
-        'description': "Expanding product market research and improving new user onboarding for a mobile application.",
-        'tags': "UX / UI - User Research - Product Roadmapping - Prototyping - Branding",
-        'duration': "3 Months",
-        'type': "Personal",
-        'role': "Lead Designer",
-        'tools': "Figma, Webflow"
+        id: 2,
+        image: LisnProjectImage,//LisnProjectImage,//
+        title: "Lisn",
+        title_url_safe: "Lisn",
+        name: "User Research and Onboarding - LISN",
+        description: "Improving new user onboarding for a mobile application and UI redesign.",
+        tags: "UX/UI - User Research - Prototyping - Branding",
+        duration: "3 Months",
+        type: "Company Initiative",
+        role: "UX/UI Designer",
+        tools: "User Research, Co-design workshops, Figma",
+        link: "/project/lisn",
+        overview: "LISN is a startup podcast company developing A.I technologies that help users discover new podcasts and also alow users to create curated playlists using clips from different podcasts. The company is growing its user base and wanted to create an easy to understand onboarding flow for new users. Additionally, they also wanted to design a new home page for their mobile app that facilitated a simplified user-experience. As their new UX/UI designer I lead the research and design of their new onboarding flows and mobile app.",
+        problem: "New users were having a hard time understanding the mobile app as there was no introduction provided on how to use the features and how to create podcast clips which was the main service at the time. The organization of the app also left users confused as their content was scattered in different pages and menus.",
+        research: {
+            description: "As a new company, LISN did not have previous user experience research or analysis. I began by creating a research plan and working with the team to identify key areas of the service that we needed to understand better. Our main objective was to understand user goals within the app and their satisfaction with the current platform.",
+            images: [
+                {
+                    image: randomPic,
+                    title: "Brainstorming session with team"
+                },
+                {
+                    image: randomPic,
+                    title: "Research Questions"
+                }
+            ],
+            category_insights:{
+                description:"Through interviews and outreach to current users we were able to uncover insights into users’ pain-points and goals when navigating the app.",
+                insights: [
+                    {
+                        title: "Insight 1:",
+                        description: "Users wanted to have their frequently listened to content easily avavailable and have the ability to organize them in the order they preferred (i.e chronological, first to last, most popular, etc)"
+                    },
+                    {
+                        title: "Insight 2:",
+                        description: "Users wanted to reduce the time searching for a podcast and have their curated content managed for them."
+                    }
+                ]
+            },
+            category_objectives:{
+                description: "Our team also wanted to highlight key features of the app to new users on our onboarding flows. With some internal discussions we narrowed down our scope into 3 key features that were most important for new users to know.",
+                objectives: [
+                    {
+                        title: "Objective 1",
+                        description: "Educate users on “conversations”. Conversations is an in-app feature that groups related podcast clips together into a curated playlist for easy and quick listening.",
+                    },
+                    {
+                        title: "Objective 2",
+                        description: "Educate users on “Clips”. Clips is an in-app feature that allows users to snip a podcast’s audio into just the section they are interested in and easily save, share, or use it to create their own conversations.",
+                    },
+                    {
+                        title: "Objective 3",
+                        description: "Welcome user feedback. As the app was new we really wanted to invite users to be apart of the growing community and voice their concerns/suggestions to help the service improve."
+                    }
+                ]
+            }
+        },
+        ideation: {
+            concept_development: {
+                description: "I began the concept development by working on the onbaording screens first. I created some wireframes and focused on keeping the content short and sweet. We wanted to avoid created a long onboarding flow with lots of test. Instead I decided to use small gifs that could highlight key features and make the onboarding experience more enjoyable.",
+                images:[
+                    {
+                        image: randomPic,
+                        title: "Initial wireframes",
+                        width: 525,
+                        height: 289
+                    },
+                    {
+                        image: randomPic,
+                        title: "Lo-Fi Mockup",
+                        width: 715,
+                        height: 291
+                    }
+                ],
+            },
+            objectives:{
+                description: "For each objective I created a small animation that could represent the feature we wanted to highlight. This also helped create a more visually appealing onboarding flow and good first impression of the app for new users.",
+                categories: [
+                    {
+                        title: "Objective 1",
+                        description: "Educate users on 'conversations'.",
+                        image: randomPic,
+                        width: 267,
+                        height: 267,
+                    },
+                    {
+                        title: "Objective 2",
+                        description: "Educate users on 'Clips'. ",
+                        image: randomPic,
+                        width: 267,
+                        height: 267
+                    },
+                    {
+                        title: "Objective 3",
+                        description: "Welcome user feedback.",
+                        image: randomPic,
+                        width: 188,
+                        height: 327
+                    },
+                    
+                ]
+            },
+
+        },
+        final_onboarding_pages: {
+            src: "https://www.figma.com/proto/wvyskMpJxXJ6c2rejTf0yz/LISN---Onboarding-Screens?embed_host=share&kind=&node-id=310%3A675&page-id=310%3A191&scaling=min-zoom&starting-point-node-id=310%3A227&viewport=1425%2C493%2C0.32"
+        },
+        new_home_page_ideation:{
+            flowA:{
+                description: "In addition to the new onboarding pages, we wanted to create a new home page within the app that better organized content and created easy access to the most used features. I started concept development with some competitive analysis and then moved on to create blockframes and wireframes. I was continually testing with the team throughout this process to ensure cohesion and a feasible development scope.",
+                images: [
+                    {
+                        image: randomPic,
+                        title: "Ideation Flow A",
+                        width: 606,
+                        height: 558
+                    }
+                ]
+            },
+            flowB:{
+                description:"As a good UX principle, we wanted to create a home page that felt familar for new users. We did not want to overwhelm new users with a completely novel home page that required lots of learning, instead we opted to create a familiar flow to other apps in the podcast/music market space as many of our users also used these services.",
+                images:[
+                    {
+                        image: randomPic,
+                        title: "Brainstorming with similar apps in the market",
+                        width: 567,
+                        height: 360
+                    },
+                    {
+                        image: randomPic,
+                        title: "Blockframing",
+                        width: 505,
+                        height: 321
+                    }
+                ]
+            },
+            flowC:{
+                description: "One of the challenges we faced was designing a new layout card for our conversations feature. Conversations included multiple short clips of various podcasts that were put together into a ‘Conversation’. We wanted to create a card system that showed users which podcasts were contained within each conversation along with a description, duration, original poster, and interaction buttons. The challenge was to do this without creating something too busy and complicated for mobile screens.",
+                images: [
+                    {
+                        image: randomPic,
+                        title: "Old conversation layout card",
+                        width: 252,
+                        height: 121
+                    }
+                ]
+            }
+        },
+        new_home_page_concepts:{
+            description: "",
+            images: [
+                {
+                    image: randomPic,
+                    title: "Concept 1 ",
+                    description: "Podcasts clips in a carousel menu, with additional information on the bottom.",
+                    width: 183,
+                    height: 351,
+                },
+                {
+                    image: randomPic,
+                    title: "Concept 2",
+                    description: "An audio waveform that timestamped each podcast clip in the conversation.",
+                    width: 175,
+                    height: 351,
+                },
+                {
+                    image: randomPic,
+                    title: "Concept 3",
+                    description: "A vertical timeline that showed each podcast clip in chronological order",
+                    width: 280,
+                    height: 351,
+                }
+            ]
+        },
+        final_home_page:{
+            description:"After testing the concepts within the team concept 1 was most favourable due to its easy readability, clean layout, and simple development turnaround. ",
+            images:[
+                {
+                    image: randomPic,
+                    title: "",
+                    width: 726,
+                    height: 514
+                }
+            ],
+            iframe_src: "https://www.figma.com/proto/KSj63BgYfeq6OHsA6yPAjV/LISN-Home-Screen-Redesign?embed_host=share&kind=&node-id=12%3A1368&page-id=0%3A1&scaling=min-zoom&show-proto-sidebar=1&starting-point-node-id=12%3A1368&viewport=325%2C921%2C0.63"
+        },
+
     },
 
     {
-        'id': 3,
-        'image': CoreProjectImage,//CoreProjectImage,//
-        'title': "Core",
-        'title_url_safe': "Core",
-        'name': "Blood Pressure Monitor - Core.",
-        'description': "Product redesign of a blood pressure monitor with mobile application geared towards athletes.",
-        'tags': "Industrial Design - User Research - UX/UI - Prototyping - 3D CAD",
-        'duration': "3 Months",
-        'type': "Personal",
-        'role': "Lead Designer",
-        'tools': "Figma, Webflow"
+        id: 3,
+        image: CoreProjectImage,//CoreProjectImage,//
+        title: "Core",
+        title_url_safe: "Core",
+        name: "Blood Pressure Monitor - Core.",
+        description: "Product redesign of a blood pressure monitor with mobile application geared towards athletes.",
+        tags: "Industrial Design - User Research - UX/UI - Prototyping - 3D CAD",
+        duration: "3 Months",
+        type: "Personal",
+        role: "Lead Designer",
+        tools: "Figma, Webflow",
+        link: "/project/core",
     },
 
     {
-        'id': 4,
-        'image': WorldJournalProjectImage,//WorldJournalProjectImage,//
-        'title': "World Journal",
-        'title_url_safe': "WorldJournal",
-        'name': "NASA Design Sprint - World Journal",
-        'description': "Web application that aims to utilize the satellite imagery and live video feeds from the Internation Space Station for educational purposes.",
-        'tags': "Web Design - Interaction Design - UX/UI",
-        'duration': "3 Months",
-        'type': "Personal",
-        'role': "Lead Designer",
-        'tools': "Figma, Webflow"
+        id: 4,
+        image: WorldJournalProjectImage,//WorldJournalProjectImage,//
+        title: "World Journal",
+        title_url_safe: "WorldJournal",
+        name: "NASA Design Sprint - World Journal",
+        description: "Web application that aims to utilize the satellite imagery and live video feeds from the Internation Space Station for educational purposes.",
+        tags: "Web Design - Interaction Design - UX/UI",
+        duration: "3 Months",
+        type: "Personal",
+        role: "Lead Designer",
+        tools: "Figma, Webflow",
+        link: "/project/world-journal",
     },
 
 ]

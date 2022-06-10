@@ -1,0 +1,164 @@
+.container{
+    margin: 1rem 8rem; /*Spacing outside the container. Left and right*/
+}
+
+.container > section {
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 0; /*Spacing between sections*/
+}
+
+.container > section > h1,
+.container > section > p,
+.container > section > h2 {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    text-align: justify;
+}
+
+.container > section > h1{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.container > section > h2{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.container > section > ul > li {
+    margin-top: 1rem;
+}
+
+.container > section > ol > li > h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 0.1rem;
+}
+.container > section > ol > li > p {
+    margin-top: 0.5rem
+}
+.container > section > ol > li::marker{
+    font-weight: 700;
+}
+.container > section > ol > li {
+    margin-top: 1.5rem;
+}
+
+.homie_top{
+    flex-direction: row !important;
+}
+.homie_top > div{
+    padding-right: 0.5rem;
+}
+.homie_top > div > p:nth-child(3){
+    font-size: 14px;
+    color: var(--color-blue);
+}
+
+.synopsis{
+    flex-direction: row !important;
+    justify-content: space-around;
+}
+.synopsis > div{
+    width: 250px;
+}
+.synopsis > div > h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.process_section > div:nth-child(3),
+.user_group_section > div:nth-child(4)
+{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+}
+
+.key_insights > div:nth-child(4){
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-top: 2rem;
+}
+.key_insights > div > div:nth-child(2){
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.personas > div:nth-child(4){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+}
+.personas > div > div,
+.final_design_section>div>div {
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+
+.user_journey_map > div:nth-child(4),
+.concept_development > div:nth-child(5),
+.concept_development > div:nth-child(8),
+.concept_development > div:nth-child(11),
+.concept_development > div:nth-child(12),
+.concept_development > div:nth-child(13),
+.iteration_section > div:nth-child(4){
+    margin-top: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+}
+.concept_development > div:nth-child(5) {
+    cursor: default !important;
+}
+.concept_development > h2 {
+    margin-top: 1rem !important;
+}
+
+.final_design_section > div:nth-child(4){
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.figma_prototype > div:nth-child(3){
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.other_projects > div:nth-child(3){
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 5px;
+    background: rgb(159, 199, 252);
+    background: linear-gradient(45deg, rgba(159, 199, 252, 0.3) 0%, rgba(230, 177, 254, 0.3) 50%, rgba(211, 77, 116, 0.3) 100%);
+}
+.other_projects > div > div{
+    cursor: pointer;
+}
+.heading_bar {
+    height: 3px;
+    width: 45px;
+    border-radius: 20px;
+    background: rgb(159, 199, 252);
+    background: linear-gradient(90deg, rgba(159, 199, 252, 1) 0%, rgba(230, 177, 254, 1) 50%, rgba(211, 77, 116, 1) 100%);
+}

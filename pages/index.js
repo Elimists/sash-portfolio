@@ -160,7 +160,7 @@ export default function Home({projects}) {
 
                 {allProjects.map((project) => {
                   return(
-                    <Link  href={'/' + project.id} key={project.id.toString()} >
+                    <Link  href={project.link} >
                       <div id={project.title_url_safe} className={styles.card} tabIndex="0" role="button" onKeyDown={(e) => handleEnterToClickSwitch(e, project.title_url_safe)} >
                         <Image src={project.image} alt={project.name} width="600" height="400" placeholder="blur"></Image>
                         <p className={styles.project_title}>{project.name}</p>
