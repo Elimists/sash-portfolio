@@ -259,6 +259,11 @@
 .analysis_section > div:nth-child(4) > div:nth-child(2){
     margin-top: 2rem;
     margin-bottom: 2rem;
+    padding: 1rem 1rem;
+    background-color: var(--bg-color-image);
+    border-radius: 5px;
+    width: auto;
+    max-width: 500px;
 }
 .analysis_section > div:nth-child(4) > p{
     margin-top: 2rem;
