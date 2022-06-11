@@ -50,7 +50,6 @@ body{
   width: auto;
   background-color: var(--color-background);
   color: var(--color-text);
-  max-width: 1300px;
 }
 
 a {

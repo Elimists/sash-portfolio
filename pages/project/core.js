@@ -585,13 +585,13 @@ export default function CoreBP(){
                             <div>
                                 <Image
                                     src={HomieProjectImage}
-                                    height={300}
+                                    height={280}
                                     width={400}
                                     placeholder="blur"
                                     blurDataURL={HomieProjectImage}
                                     alt="Homie Project"
                                 />
-                                <p>Core</p>
+                                <p>Homie</p>
                             </div>
                         </Link>
 
