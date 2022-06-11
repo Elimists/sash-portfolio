@@ -135,7 +135,8 @@
 .concept_development > div:nth-child(12),
 .concept_development > div:nth-child(13),
 .iteration_section > div:nth-child(4),
-.research_wj_section>div:nth-child(5){
+.research_wj_section>div:nth-child(5),
+.market_econ_section > div:nth-child(4){
     margin-top: 2rem;
     flex-direction: column;
     justify-content: center;
@@ -144,11 +145,16 @@
     font-size: 14px;
 }
 .concept_development > div:nth-child(5),
-.research_wj_section>div:nth-child(5){
+.research_wj_section>div:nth-child(5),
+.market_econ_section>div:nth-child(4){
     cursor: default !important;
 }
 .concept_development > h2 {
     margin-top: 1rem !important;
+}
+
+.market_econ_section>div:nth-child(4) > div:nth-child(2){
+    margin-top: 3rem;
 }
 
 .research_wj_section > p:nth-child(4),
