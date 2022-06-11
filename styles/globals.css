@@ -26,7 +26,6 @@ body[data-theme="light"]{
   --bg-color-image: hsl(0, 0%, 100%);
   
   --homie-svg-color: hsl(344, 44%, 15%);
-
 }
 
 body[data-theme="dark"]{
@@ -50,6 +49,7 @@ body{
   width: auto;
   background-color: var(--color-background);
   color: var(--color-text);
+  max-width: 1300px;
 }
 
 a {
