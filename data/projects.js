@@ -67,7 +67,7 @@ export const allProjects = [
         title: "World Journal",
         title_url_safe: "WorldJournal",
         name: "NASA Design Sprint - World Journal",
-        description: "Web application that aims to utilize the satellite imagery and live video feeds from the Internation Space Station for educational purposes.",
+        description: "Web application that aims to utilize the satellite imagery and live video feeds from the International Space Station for educational purposes.",
         tags: "Web Design - Interaction Design - UX/UI",
         duration: "3 Months",
         type: "Personal",

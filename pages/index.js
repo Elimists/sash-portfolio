@@ -132,7 +132,10 @@ export default function Home({projects}) {
               <h1 className={styles.my_name}>
                 Sash Mahara
               </h1>
-              <p className={styles.hello}>I&apos;m a industrial designer who specializes in user-centered design and research. I&apos;m passionate about all things tech and love to create amazing experiences through digital or physical products.</p>
+              <p className={styles.hello}>
+                I&apos; m an Industrial Designer who specializes in user-centered design and research.I&apos; m passionate about technology and love to create amazing experiences through well designed products.
+              
+                </p>
               
               <div role='button' className={styles.check_out} onClick={() => handleScroll()} onKeyDown={(e) => handleOnEnterPressToProjects(e)} tabIndex="0" >
                 

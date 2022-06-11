@@ -74,7 +74,7 @@ export default function Lisn(){
                 <section className={styles.synopsis}>
                     <div>
                         <h3>Duration</h3>
-                        <p>2 Months</p>
+                        <p>2021 - Present</p>
                     </div>
                     <div>
                         <h3>Role</h3>
@@ -95,12 +95,12 @@ export default function Lisn(){
                     <h1>Overview</h1>
                     <p>
                         LISN is a startup podcast company developing A.I technologies that 
-                        help users discover new podcasts and also alow users to create curated
+                        help users discover new podcasts and also allow users to create curated
                         playlists using clips from different podcasts. The company is growing
                         its user base and wanted to create an easy to understand onboarding
                         flow for new users. Additionally, they also wanted to design a new
                         home page for their mobile app that facilitated a simplified 
-                        user-experience. As their new UX/UI designer I lead the research 
+                        user-experience. As their new UX/UI designer I led the research 
                         and design of their new onboarding flows and mobile app.
                     </p>
                 </section>
@@ -159,7 +159,7 @@ export default function Lisn(){
                         <h3>Insight 1</h3>
                         <p>
                             Users wanted to have their frequently listened to content easily 
-                            avavailable and have the ability to organize them in the order they 
+                            available and have the ability to organize them in the order they 
                             preferred 	&#40;i.e chronological, first to last, most popular, etc&#41;
                         </p>
                     
@@ -206,10 +206,10 @@ export default function Lisn(){
                     <div className={styles.heading_bar}></div>
                     <h1>Ideation</h1>
                     <p>
-                        I began the concept development by working on the onbaording screens 
+                        I began the concept development by working on the onboarding screens 
                         first. I created some wireframes and focused on keeping the content 
                         short and sweet. We wanted to avoid created a long onboarding flow with 
-                        lots of test. Instead I decided to use small gifs that could highlight 
+                        lots of test. Instead, I decided to use small gifs that could highlight 
                         key features and make the onboarding experience more enjoyable.
                     </p>
 
@@ -281,7 +281,7 @@ export default function Lisn(){
                         />
                     </div>
                     <p>
-                        As a good UX principle, we wanted to create a home page that felt familar for new 
+                        As a good UX principle, we wanted to create a home page that felt familiar for new 
                         users. We did not want to overwhelm new users with a completely novel home page 
                         that required lots of learning, instead we opted to create a familiar flow to other 
                         apps in the podcast/music market space as many of our users also used these services.
@@ -313,7 +313,7 @@ export default function Lisn(){
                     <p>
                         One of the challenges we faced was designing a new layout card for our 
                         conversations feature. Conversations included multiple short clips of various 
-                        podcasts that were put together into a ‘Conversation’. We wanted to create a 
+                        podcasts that were put together into a &sbquo;Conversation&sbquo;. We wanted to create a 
                         card system that showed users which podcasts were contained within each 
                         conversation along with a description, duration, original poster, and interaction 
                         buttons. The challenge was to do this without creating something too busy and 
@@ -349,6 +349,10 @@ export default function Lisn(){
                 <section className={styles.final_home_page}>
                     <div className={styles.heading_bar}></div>
                     <h1>Final Home Page</h1>
+                    <p>
+                        After testing the concepts within the team concept 1 was the most favourable due to its easy readability, 
+                        clean layout, and simple development turnaround. 
+                    </p>
                     <div>
                         <Image
                             src={FinalHomePageImage}
@@ -358,6 +362,16 @@ export default function Lisn(){
                             blurDataURL={FinalHomePageImage}
                             alt="Final Home Page Design"
                         />
+                       
+                    </div>
+                    <p>New Home Page</p>
+                    <div>
+                        <iframe
+                            title='Homie Figma Prototype'
+                            width={848}
+                            height={441}
+                            oading="lazy" src="https://www.figma.com/proto/KSj63BgYfeq6OHsA6yPAjV/LISN-Home-Screen-Redesign?embed_host=share&kind=&node-id=12%3A1368&page-id=0%3A1&scaling=min-zoom&show-proto-sidebar=1&starting-point-node-id=12%3A1368&viewport=325%2C921%2C0.63"
+                            allowFullScreen />
                     </div>
                 </section>
 
