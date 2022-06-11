@@ -151,6 +151,7 @@ export default function Home({projects}) {
           <motion.div className={styles.my_project_section} variants={setProjectsVariants} initial="hidden" animate="visible">
             <section id="my-projects-library" className={styles.my_project_section}>
             <p className={styles.work_heading}>WORK</p>
+              {/** 
               <div className={styles.filter_options}>
                 {filterTerms.map((theTerm) => {
                   return(
@@ -159,6 +160,8 @@ export default function Home({projects}) {
                 })}
                 
               </div>
+              */}
+
               <div className={styles.grid}>
 
                 {allProjects.map((project) => {

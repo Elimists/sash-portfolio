@@ -93,7 +93,11 @@ export default function About(){
                      </p>
                     
                     <div className={styles.button_container}>
-                        <a tabIndex="0" className={styles.view_resume_button} href="https://drive.google.com/file/d/12Y5TtXeRIY8R-bKxoWOFnFrtpOI8rAyX/view" target="_blank" rel="noreferrer">
+                        <a 
+                            tabIndex="0" 
+                            className={styles.view_resume_button} 
+                            href="https://drive.google.com/file/d/12zibUhoU-DBae07y2o3fW8IH4n0WWkTq/view" 
+                            target="_blank" rel="noreferrer">
                             <span className={styles.material_symbols_sharp}>
                                 description
                             </span>

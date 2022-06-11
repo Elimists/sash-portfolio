@@ -22,6 +22,11 @@
 .user_group_svg_style{
     stroke: var(--color-text);
 }
+
+.homie_svg_log{
+    fill: var(--homie-svg-color)
+}
+
 @media (max-width: 650px) {
     .sash_logo{
         width: 36px;
