@@ -50,7 +50,7 @@
     align-items: center;
 }
 .top_section > div{
-    padding-right: 0.5rem;
+    margin-right: 2rem;
     max-width: 500px;
 }
 .top_section > div > p:nth-child(3){
