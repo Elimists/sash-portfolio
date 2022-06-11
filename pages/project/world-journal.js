@@ -13,6 +13,9 @@ import IdeationImage1 from '../../public/projects/world-journal/ideation.webp'
 import IdeationImage2 from '../../public/projects/world-journal/existingservices.webp'
 import ProposalImage1 from '../../public/projects/world-journal/uimockup1.webp'
 import ProposalImage2 from '../../public/projects/world-journal/uimockup2.webp'
+import FinalPosterImage from '../../public/projects/world-journal/finalposter.webp'
+import CoreProjectImage from '../../public/projects/core/core.webp'
+import LisnProjectImage from '../../public/projects/lisn/lisn.webp'
 
 export default function WorldJournal(){
 
@@ -250,6 +253,50 @@ export default function WorldJournal(){
                 <section className={styles.final_poster_wj}>
                     <div className={styles.heading_bar}></div>
                     <h1>Final Poster</h1>
+                    <div>
+                        <Image
+                            src={FinalPosterImage}
+                            width={836}
+                            height={1488}
+                            placeholder="blur"
+                            blurDataURL={FinalPosterImage}
+                            alt="Final Poster Image"
+                        />
+                    </div>
+                </section>
+
+                <section className={styles.other_projects}>
+                    <div className={styles.heading_bar} />
+                    <h1>My Other Projects</h1>
+                    <div>
+                        <Link href="/project/core">
+                            <div>
+                                <Image
+                                    src={CoreProjectImage}
+                                    height={300}
+                                    width={400}
+                                    placeholder="blur"
+                                    blurDataURL={CoreProjectImage}
+                                    alt="Core Project"
+                                />
+                                <p>Core</p>
+                            </div>
+                        </Link>
+
+                        <Link href="/project/lisn">
+                            <div>
+                                <Image
+                                    src={LisnProjectImage}
+                                    height={300}
+                                    width={400}
+                                    placeholder="blur"
+                                    blurDataURL={LisnProjectImage}
+                                    alt="Lisn Project Image"
+                                />
+                                <p>Lisn</p>
+                            </div>
+                        </Link>
+                    </div>
                 </section>
             </div>
         </>

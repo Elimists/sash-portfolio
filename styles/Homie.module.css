@@ -81,11 +81,11 @@
 .home_page_ideation > div:nth-child(8),
 .new_home_page_concepts_section>div:nth-child(3),
 .final_home_page>div:nth-child(3),
-.research_wj_section>div:nth-child(5),
 .ideation_wj_section>div:nth-child(4),
 .ideation_wj_section>div:nth-child(6),
 .concept_proposal_section > div:nth-child(4),
-.concept_proposal_section > div:nth-child(5)
+.concept_proposal_section > div:nth-child(5),
+.final_poster_wj > div:nth-child(3)
 {
     display: flex;
     justify-content: space-evenly;
@@ -134,7 +134,8 @@
 .concept_development > div:nth-child(11),
 .concept_development > div:nth-child(12),
 .concept_development > div:nth-child(13),
-.iteration_section > div:nth-child(4){
+.iteration_section > div:nth-child(4),
+.research_wj_section>div:nth-child(5){
     margin-top: 2rem;
     flex-direction: column;
     justify-content: center;
@@ -142,7 +143,8 @@
     cursor: pointer;
     font-size: 14px;
 }
-.concept_development > div:nth-child(5) {
+.concept_development > div:nth-child(5),
+.research_wj_section>div:nth-child(5){
     cursor: default !important;
 }
 .concept_development > h2 {
