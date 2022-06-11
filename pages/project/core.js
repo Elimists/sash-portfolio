@@ -13,6 +13,10 @@ import ResearchImage from '../../public/projects/core/research.webp'
 import ProjectionImage from '../../public/projects/core/gbprojections.webp'
 import MarketShareImage from '../../public/projects/core/gbmarketshare.webp'
 
+import LisnProjectImage from '../../public/projects/lisn/lisn.webp'
+import HomieProjectImage from '../../public/projects/homie/homie.webp'
+
+
 export default function CoreBP(){
     const [showModal, setShowModal] = useState(false)
     const [imageSource, setImageSource] = useState(null)
@@ -194,6 +198,45 @@ export default function CoreBP(){
                         their persona in mind. The goal was to see what the experience would 
                         be for this person when using a blood pressure monitor.
                     </p>
+                </section>
+
+
+
+
+
+
+                <section className={styles.other_projects}>
+                    <div className={styles.heading_bar} />
+                    <h1>My Other Projects</h1>
+                    <div>
+                        <Link href="/project/core">
+                            <div>
+                                <Image
+                                    src={HomieProjectImage}
+                                    height={300}
+                                    width={400}
+                                    placeholder="blur"
+                                    blurDataURL={HomieProjectImage}
+                                    alt="Homie Project"
+                                />
+                                <p>Core</p>
+                            </div>
+                        </Link>
+
+                        <Link href="/project/lisn">
+                            <div>
+                                <Image
+                                    src={LisnProjectImage}
+                                    height={300}
+                                    width={400}
+                                    placeholder="blur"
+                                    blurDataURL={LisnProjectImage}
+                                    alt="Lisn Project Image"
+                                />
+                                <p>Lisn</p>
+                            </div>
+                        </Link>
+                    </div>
                 </section>
 
             </div>

@@ -57,6 +57,10 @@
     font-size: 14px;
     color: var(--color-blue);
 }
+.top_section > div > h1{
+    font-size: 36px;
+    font-weight: 400;
+}
 
 
 .synopsis{
