@@ -193,7 +193,9 @@
     display: flex;
     justify-content: center;
 }
-.final_onboarding_section > div > iframe {
+.final_onboarding_section > div > iframe,
+.final_home_page > div > iframe,
+.figma_prototype > div > iframe {
     border: none;
 }
 
