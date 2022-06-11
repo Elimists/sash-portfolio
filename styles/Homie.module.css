@@ -91,6 +91,7 @@
     justify-content: space-evenly;
     margin-top: 2rem;
     text-align: center;
+    font-size: 14px;
 }
 
 .ideation_section > div:nth-child(4),
