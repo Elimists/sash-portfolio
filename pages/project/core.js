@@ -119,6 +119,7 @@ export default function CoreBP(){
                 </section>
                 
             </div>
+            {(isScrolled) ? <div tabIndex="0" role="button" className={styles.go_top_button} onClick={() => scrollToTheTop()} onKeyDown={(e) => handleOnEnterPressToTop(e)}>&uarr;</div> : null}
         </>
     )
 }
