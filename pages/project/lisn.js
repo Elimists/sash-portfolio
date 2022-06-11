@@ -252,8 +252,8 @@ export default function Lisn(){
                     <div>
                         <iframe 
                             title='Figma Final Onboarding Process'
-                            width={848} 
-                            height={441} 
+                            width={447} 
+                            height={795} 
                             loading="lazy" 
                             src="https://www.figma.com/proto/wvyskMpJxXJ6c2rejTf0yz?embed_host=share&kind=&node-id=310%3A291&page-id=310%3A191&scaling=min-zoom&starting-point-node-id=310%3A227&viewport=1425%2C493%2C0.32" 
                             allowFullScreen/>
@@ -369,7 +369,7 @@ export default function Lisn(){
                         <iframe
                             title='Homie Figma Prototype'
                             width={430}
-                            height={926}
+                            height={844}
                             loading="lazy" 
                             src="https://www.figma.com/proto/KSj63BgYfeq6OHsA6yPAjV/LISN-Home-Screen-Redesign?embed_host=share&kind=&node-id=12%3A1368&page-id=0%3A1&scaling=min-zoom&show-proto-sidebar=1&starting-point-node-id=12%3A1368&viewport=325%2C921%2C0.63"
                             />
