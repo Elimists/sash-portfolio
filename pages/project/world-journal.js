@@ -250,7 +250,7 @@ export default function WorldJournal(){
                     </div>
                 </section>
 
-                <section className={styles.final_poster_wj}>
+                <section className={styles.final_poster}>
                     <div className={styles.heading_bar}></div>
                     <h1>Final Poster</h1>
                     <div>
@@ -260,7 +260,7 @@ export default function WorldJournal(){
                             height={1488}
                             placeholder="blur"
                             blurDataURL={FinalPosterImage}
-                            alt="Final Poster Image"
+                            alt="Final presentation poster for World Journal"
                         />
                     </div>
                 </section>

@@ -80,6 +80,7 @@
 .user_group_section > div:nth-child(4),
 .research_section>div:nth-child(4),
 .ideation_section > div:nth-child(4),
+.ideation_section > div:nth-child(6),
 .home_page_ideation > div:nth-child(4),
 .home_page_ideation > div:nth-child(6),
 .home_page_ideation > div:nth-child(8),
@@ -89,7 +90,7 @@
 .ideation_wj_section>div:nth-child(6),
 .concept_proposal_section > div:nth-child(4),
 .concept_proposal_section > div:nth-child(5),
-.final_poster_wj > div:nth-child(3)
+.final_poster > div:nth-child(3)
 {
     display: flex;
     justify-content: space-evenly;
@@ -99,9 +100,19 @@
 }
 
 .ideation_section > div:nth-child(4),
-.home_page_ideation>div:nth-child(6)
+.home_page_ideation>div:nth-child(6),
+.ideation_section>div:nth-child(6)
 {
     flex-direction: column !important;
+}
+
+.ideation_section > div:nth-child(4) > div:nth-child(2),
+.ideation_section>div:nth-child(4)>div:nth-child(3){
+    margin-top: 2rem;
+}
+.ideation_section > p:nth-child(5){
+    margin-top: 4rem;
+    margin-bottom: 2rem;
 }
 
 .key_insights > div:nth-child(4){
@@ -225,6 +236,39 @@
     padding: 1.5rem;
     background-color: var(--bg-color-image);
     border-radius: 5px;
+}
+
+.ideation_core_section > div:nth-child(4){
+    padding-left: 2rem;
+}
+.ideation_core_section > div:nth-child(4) > div:nth-child(3),
+.ideation_core_section > div:nth-child(4) > div:nth-child(6),
+.ideation_core_section > div:nth-child(4) > div:nth-child(8),
+.ideation_core_section > div:nth-child(4) > div:nth-child(11){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    transform: translateX(-2rem);
+}
+
+.analysis_section > div:nth-child(4) > h3{
+   padding-left: 2rem;
+}
+.analysis_section > div:nth-child(4) > div:nth-child(2){
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.analysis_section > div:nth-child(4) > p{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.analysis_section > div:nth-child(4) > div:nth-child(5){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
 
 /*OTHER STYLING - HEADING BAR and GO TOP BUTTON*/
