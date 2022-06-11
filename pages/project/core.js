@@ -581,7 +581,7 @@ export default function CoreBP(){
                     <div className={styles.heading_bar} />
                     <h1>My Other Projects</h1>
                     <div>
-                        <Link href="/project/core">
+                        <Link href="/project/homie">
                             <div>
                                 <Image
                                     src={HomieProjectImage}
