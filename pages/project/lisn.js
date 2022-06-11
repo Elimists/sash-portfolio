@@ -372,7 +372,8 @@ export default function Lisn(){
                             height={844}
                             loading="lazy" 
                             src="https://www.figma.com/proto/KSj63BgYfeq6OHsA6yPAjV/LISN-Home-Screen-Redesign?embed_host=share&kind=&node-id=12%3A1368&page-id=0%3A1&scaling=min-zoom&show-proto-sidebar=1&starting-point-node-id=12%3A1368&viewport=325%2C921%2C0.63"
-                            />
+                            allowFullScreen
+                        />
                     </div>
                 </section>
 

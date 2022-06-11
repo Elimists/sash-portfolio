@@ -89,7 +89,9 @@
 .ideation_wj_section>div:nth-child(6),
 .concept_proposal_section > div:nth-child(4),
 .concept_proposal_section > div:nth-child(5),
-.final_poster > div:nth-child(3)
+.final_poster > div:nth-child(3),
+.final_home_page>div:nth-child(4),
+.final_home_page>div:nth-child(6)
 {
     display: flex;
     justify-content: space-evenly;
@@ -151,9 +153,7 @@
 .concept_development > div:nth-child(13),
 .iteration_section > div:nth-child(4),
 .research_wj_section>div:nth-child(5),
-.market_econ_section > div:nth-child(4),
-.final_home_page>div:nth-child(4),
-.final_home_page>div:nth-child(6){
+.market_econ_section > div:nth-child(4){
     margin-top: 2rem;
     flex-direction: column;
     justify-content: center;
@@ -227,6 +227,7 @@
 .home_page_ideation > p:nth-child(5){
     margin-top: 2rem;
 }
+
 
 .home_page_ideation>div:nth-child(4),
 .home_page_ideation > div:nth-child(8),
@@ -325,7 +326,6 @@
     .top_section > div{
         margin-top: 2rem;
     }
-   
 
     .synopsis{
         justify-content: flex-start;
@@ -349,8 +349,6 @@
     .research_section > div:nth-child(4){
         flex-direction: column;
     }
-
-    
 
     .home_page_ideation>div:nth-child(4),
     .home_page_ideation>div:nth-child(8),
