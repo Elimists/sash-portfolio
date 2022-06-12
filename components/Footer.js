@@ -21,7 +21,7 @@ const listOfTechAndLibraries = [
     },
     
     {
-        name: "udDraw",
+        name: "unDraw",
         website: "https://undraw.co/",
         type: "Open source illustrations"
     }
