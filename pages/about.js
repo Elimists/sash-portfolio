@@ -8,9 +8,6 @@ import useWindowDimensions from '../hooks/useWindowDimensions'
 
 import {motion} from 'framer-motion'
 
-
-
-
 export default function About(){
 
     const { height, width } = useWindowDimensions()
