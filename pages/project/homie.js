@@ -4,6 +4,7 @@ import Link from 'next/link'
 import EnlargeImage from '../../components/EnlargeImage'
 import { useEffect, useState } from 'react'
 import useScrolledDown from '../../hooks/useScrolledDown'
+import {motion} from 'framer-motion'
 
 /** Assets related to project - Homie */
 import styles from '../../styles/Homie.module.css'
@@ -34,6 +35,15 @@ import FinalDesignMessaging from '../../public/projects/homie/final_design_messa
 import FinalDesignMood from '../../public/projects/homie/final_design_mood.webp'
 import CoreProjectImage from '../../public/projects/core/core.webp'
 import WorldJournalImage from '../../public/projects/world-journal/world-journal.webp'
+
+
+const hoverScaleAnimation = {
+    scale: 1.07,
+    transition: {
+        duration: .3
+    }
+}
+
 
 export default function Homie(){
     const [showModal, setShowModal] = useState(false)
@@ -343,7 +353,7 @@ export default function Homie(){
                     the breadth of users we wanted to cater to.
                 </p>
                 <div>
-                    <div>
+                    <motion.div whileHover={hoverScaleAnimation}>
                         <Image 
                             src={PersonasAiden} 
                             width={370} 
@@ -353,9 +363,9 @@ export default function Homie(){
                             alt="Aiden Persona"
                             onClick={() => handleImageEnlarging(PersonasAiden)}/>
                         <p>Aiden: Freshmen Student</p>
-                    </div>
+                    </motion.div>
 
-                    <div>
+                    <motion.div whileHover={hoverScaleAnimation}>
                         <Image 
                             src={PersonasCarly} 
                             width={370} 
@@ -365,9 +375,9 @@ export default function Homie(){
                             alt="Carly Persona" 
                                 onClick={() => handleImageEnlarging(PersonasCarly)}/>
                         <p>Carly: Long Distance Mover</p>
-                    </div>
+                    </motion.div>
 
-                    <div>
+                    <motion.div whileHover={hoverScaleAnimation}>
                         <Image 
                             src={PersonasTamira} 
                             width={370} 
@@ -377,9 +387,9 @@ export default function Homie(){
                             alt="Tamira Persona"
                             onClick={() => handleImageEnlarging(PersonasTamira)}/>
                         <p>Tamira: New Parent</p>
-                    </div>
+                    </motion.div>
 
-                    <div>
+                    <motion.div whileHover={hoverScaleAnimation}>
                         <Image 
                             src={PersonasSamu} 
                             width={370} 
@@ -389,7 +399,7 @@ export default function Homie(){
                             alt="Samu Persona"
                             onClick={() => handleImageEnlarging(PersonasSamu)}/>
                         <p>Samu: Young Professional</p>
-                    </div>
+                    </motion.div>
                 </div>
             </section>
 
@@ -401,7 +411,7 @@ export default function Homie(){
                     that showed the rental housing process from start to finish. This journey map allowed us to visualize where the 
                     problem areas where and highlight key touch points that could be improved.
                 </p>
-                <div>
+                <motion.div whileHover={hoverScaleAnimation}>
                     <Image 
                         src={UserJourneyMap} 
                         width={1062} 
@@ -411,7 +421,7 @@ export default function Homie(){
                         alt="User Journe Map Image"
                         onClick={() => handleImageEnlarging(UserJourneyMap)}/>
                     <p>User Journey Map</p>
-                </div>
+                </motion.div>
             </section>
 
             <section className={styles.concept_development}>
@@ -427,7 +437,7 @@ export default function Homie(){
 
                 <h2>Application Architecture</h2>
                 <p>The design solution involved creating an information architecture, comprised of all the possible pages, content, features, and user actions for Homie. Each of these assets were then grouped into named categories and organized in a hierarchical structure. </p>
-                <div>
+                <motion.div whileHover={hoverScaleAnimation}>
                     <Image 
                         src={ConceptApplicationArch} 
                         width={519} 
@@ -437,12 +447,12 @@ export default function Homie(){
                         alt="Application Architecture Image"
                         onClick={() => handleImageEnlarging(ConceptApplicationArch)}/>
                     <p>Information Architecture</p>
-                </div>
+                </motion.div>
 
                 <h2>UI Development</h2>
                 <p>We focused our concept development into three key areas of the application that we identified from our research which needed the most improvement.</p>
                 
-                <div>
+                <motion.div whileHover={hoverScaleAnimation}>
                     <Image 
                         src={ConceptLandlordPortal} 
                         width={1061} 
@@ -452,9 +462,9 @@ export default function Homie(){
                         alt="Landlord Portal Image"
                         onClick={() => handleImageEnlarging(ConceptLandlordPortal)}/>
                     <p>Landlord Portal - Creating and Managing Listings </p>
-                </div>
+                </motion.div>
 
-                <div>
+                <motion.div whileHover={hoverScaleAnimation}>
                     <Image 
                         src={ConceptBrowsingListings} 
                         width={1061} 
@@ -464,9 +474,9 @@ export default function Homie(){
                         alt="Browsing and comparing Image"
                         onClick={() => handleImageEnlarging(ConceptBrowsingListings)}/>
                     <p>Browsing and comparing listings</p>
-                </div>
+                </motion.div>
 
-                <div>
+                <motion.div whileHover={hoverScaleAnimation}>
                     <Image 
                         src={ConceptScheduling} 
                         width={1061} 
@@ -476,7 +486,7 @@ export default function Homie(){
                         alt="Booking Viewings Image"
                         onClick={() => handleImageEnlarging(ConceptScheduling)}/>
                     <p>Booking Viewings</p>
-                </div>
+                </motion.div>
             </section>
 
             <section className={styles.user_testing}>
@@ -519,7 +529,7 @@ export default function Homie(){
                     After getting the results from our user testing we iterated on the problem areas that confused users. We redesigned 
                     certain user flows to have more clarity and organization from the feedback we gained from our testing.
                 </p>
-                <div>
+                <motion.div whileHover={hoverScaleAnimation}>
                     <Image 
                         src={Iterations} 
                         width={786} 
@@ -528,7 +538,7 @@ export default function Homie(){
                         blurDataURL={Iterations} 
                         alt="Iteration Image"
                         onClick={() => handleImageEnlarging(Iterations)}/>
-                </div>
+                </motion.div>
             </section>
 
             <section className={styles.final_design_section}>
@@ -539,7 +549,7 @@ export default function Homie(){
                     guideline and developing a high-fidelity version of the application.
                 </p>
                 <div>
-                    <div>
+                    <motion.div whileHover={hoverScaleAnimation}>
                         <Image 
                             src={FinalDesignMood} 
                             width={424} 
@@ -549,8 +559,8 @@ export default function Homie(){
                             alt="Final Design Image"
                             onClick={() => handleImageEnlarging(FinalDesignMood)}/>
                         <p>Mood Board</p>
-                    </div>
-                    <div>
+                    </motion.div>
+                    <motion.div whileHover={hoverScaleAnimation}>
                         <Image 
                             src={FinalDesignLanding} 
                             width={403} height={287} 
@@ -559,8 +569,8 @@ export default function Homie(){
                             alt="Landing Page Imge" 
                             onClick={() => handleImageEnlarging(FinalDesignLanding)}/>
                         <p>Landing Page</p>
-                    </div>
-                    <div>
+                    </motion.div>
+                    <motion.div whileHover={hoverScaleAnimation}>
                         <Image 
                             src={FinalDesignHousing} 
                             width={403} 
@@ -570,8 +580,8 @@ export default function Homie(){
                             alt="Housing Page Image" 
                             onClick={() => handleImageEnlarging(FinalDesignHousing)}/>
                         <p>Housing Search</p>
-                    </div>
-                    <div>
+                    </motion.div>
+                    <motion.div whileHover={hoverScaleAnimation}>
                         <Image 
                             src={FinalDesignListing} 
                             width={403} 
@@ -581,8 +591,8 @@ export default function Homie(){
                             alt="Listing Page Image" 
                             onClick={() => handleImageEnlarging(FinalDesignListing)}/>
                         <p>Listing View</p>
-                    </div>
-                    <div>
+                    </motion.div>
+                    <motion.div whileHover={hoverScaleAnimation}>
                         <Image 
                             src={FinalDesignComparison} 
                             width={403} 
@@ -592,8 +602,8 @@ export default function Homie(){
                             alt="Comparison Page Image" 
                             onClick={() => handleImageEnlarging(FinalDesignComparison)}/>
                         <p>Comparison Page</p>
-                    </div>
-                    <div>
+                    </motion.div>
+                    <motion.div whileHover={hoverScaleAnimation}>
                         <Image 
                             src={FinalDesignMessaging} 
                             width={403} 
@@ -603,8 +613,8 @@ export default function Homie(){
                             alt="Final Design Messaging" 
                             onClick={() => handleImageEnlarging(FinalDesignMessaging)}/>
                         <p>Messaging View</p>
-                    </div>
-                    <div>
+                    </motion.div>
+                    <motion.div whileHover={hoverScaleAnimation}>
                         <Image 
                             src={FinalDesignBooking} 
                             width={403} 
@@ -614,7 +624,7 @@ export default function Homie(){
                             alt="Final Design Booking" 
                             onClick={() => handleImageEnlarging(FinalDesignBooking)}/>
                         <p>Booking Page</p>
-                    </div>
+                    </motion.div>
                 </div>
             </section>
 

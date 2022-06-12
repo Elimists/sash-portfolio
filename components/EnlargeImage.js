@@ -35,7 +35,9 @@ export default function EnlargeImage({ showModal, setShowModal, imageSource}){
                     className={styles.container}
                     variants={backdrop}
                     initial="hidden"
-                    animate="visible">
+                    animate="visible"
+                    exit="hidden"
+                    >
                         {(imageSource != null) &&
                         <div id="image-div" className={styles.image_container}>
                             <TransformWrapper 

@@ -24,6 +24,7 @@
     background-color: var(--color-text);
     top: 2rem;
     right: 4rem;
+    border: 1px solid black;
 }
 
 .image_container{
