@@ -221,7 +221,7 @@ export default function Homie(){
                         <p>
                             To see how preferred living situations influence how users go about the housing hunt. For 
                             example, how they interact with landlords and other potential roommates. Identify different 
-                            touchpoints from the standpoint of different types of users.
+                            touch points from the standpoint of different types of users.
                         </p>
                     </li>
                     <li>
@@ -245,7 +245,7 @@ export default function Homie(){
                     Using data coding methods &#40;see below&#41; we identified key insights revolved around the lack of 
                     standardization of listings, communication methods, lease agreements, and the rental platforms 
                     themselves. There was a need for more consistency and streamlining in these areas to ensure users 
-                    have more pleasant experiences at different touchpoints and make the most informed housing decisions. 
+                    have more pleasant experiences at different touch points and make the most informed housing decisions. 
                     There was also a need for more personal, accurate, centralized and verified information regarding 
                     landlords and their properties &#40;including roommates where applicable&#41;. The issue here is that tenants 
                     often desire a better sense of their potential living conditions and interactions with the landlord, 
