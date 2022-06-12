@@ -7,6 +7,7 @@ import useScrolledDown from '../../hooks/useScrolledDown'
 /** Assets realted to the project Core.  */
 import styles from '../../styles/Homie.module.css'
 import CoreTitleSvg from '../../components/svgImages/core/CoreTitleSvg'
+import CoreTitleDarkModeSvg from '../../components/svgImages/core/CoreTitleDarkModeSvg'
 import CoreImage from '../../public/projects/core/core.webp'
 import CoreProcessSvg from '../../components/svgImages/core/CoreProcessSvg'
 import ResearchImage from '../../public/projects/core/research.webp'
@@ -75,7 +76,10 @@ export default function CoreBP(){
             <div className={styles.container}>
                 <section className={styles.top_section}>
                     <div>
-                        <CoreTitleSvg/>
+                        <div className={styles.core_title_div}>
+                            <p>Core</p>
+                            <div></div>
+                        </div>
                         <p>
                             Product redesign of a blood pressure monitor with a mobile 
                             application geared towards athletes.
