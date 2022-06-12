@@ -109,6 +109,11 @@ export default function Footer(){
         <>
             <ModalListTechnologies showModal={showModal} setShowModal={setShowModal}/>
             <footer className={styles.container}>
+
+                <p>
+                    &copy; 2022 Sash Mahara. All rights reserved.
+                </p>
+
                 <p>
                     Sash Mahara&apos;s portfolio &#40;www.mahara.ca&#41; 
                     built by &nbsp;
@@ -118,14 +123,16 @@ export default function Footer(){
                             href="https://www.linkedin.com/in/pran-pandey-6a7696195" 
                             target="__blank" 
                             >
-                            Pran Pandey
+                            Pran Pandey.
                         </a>
                     </b>
                     
                 </p>
 
+                
+
                 <p className={styles.technology_list} onClick={() => setShowModal(true)}>
-                    View all technologies &#38; libraries being utilized
+                    Technologies &#38; Libraries used
                 </p>
 
             </footer>

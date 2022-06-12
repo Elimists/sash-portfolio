@@ -7,6 +7,10 @@
     justify-content: space-between;
 }
 
+.container > P {
+    padding: 0.5rem 0;
+    font-size: 14px !important;
+}
 .built_by{
     cursor: pointer;
     color: hsl(200, 78%, 34%);
@@ -74,7 +78,11 @@
         padding-top: 1rem;
         flex-direction: column;
         align-items: center;
-        font-size: 14px;
+    }
+    .container>P {
+        margin-top: 0.1rem;
+        padding: 0.1rem 0;
+        font-size: 14px !important;
     }
 }
 
@@ -97,4 +105,6 @@
         margin: 0.5rem;
         padding: 0.5rem;
     }
+
+    
 }
