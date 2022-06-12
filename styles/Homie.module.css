@@ -208,9 +208,6 @@
     padding: 2rem;
     background: rgb(159, 199, 252);
     background: linear-gradient(45deg, rgba(159, 199, 252, 0.3) 0%, rgba(230, 177, 254, 0.3) 50%, rgba(211, 77, 116, 0.3) 100%);
-    margin-left: -8rem;
-    margin-right: -8rem;
-    margin-bottom: 0 !important;
 }
 .other_projects > div > div{
     cursor: pointer;
