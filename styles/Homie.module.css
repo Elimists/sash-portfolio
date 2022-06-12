@@ -382,12 +382,12 @@
     }
 
     .core_title_div>p:nth-child(1) {
-        font-size: 42px;
+        font-size: 36px;
     }
 
     .core_title_div>div {
         
-        transform: translate(5px, -12px);
+        transform: translate(5px, -10px);
     }
         
 }
