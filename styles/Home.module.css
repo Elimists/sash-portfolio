@@ -199,15 +199,21 @@
   }
 }
 
+@media (max-width: 1000px) {
+  .container {
+    margin: 1rem 3rem;
+    /*Spacing outside the container. Left and right*/
+  }
+}
+
 @media (max-width: 750px) {
   .container{
-    margin: 0 2rem;
+    margin: 0 1.5rem;
   }
 
   .main{
     padding: 0;
   }
-
 
   .card {
     width: auto;

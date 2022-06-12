@@ -130,9 +130,16 @@
     font-weight: 200;
 }
 
-@media (max-width: 700px){
+@media (max-width: 1000px) {
+    .container {
+        margin: 1rem 3rem;
+        /*Spacing outside the container. Left and right*/
+    }
+}
+
+@media (max-width: 750px){
     .container{
-        margin: 0 1.4rem;
+        margin: 0 1.5rem;
     }
     .mobile_hamburger_menu{
         display: flex;
