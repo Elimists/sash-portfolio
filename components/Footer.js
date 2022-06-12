@@ -38,16 +38,16 @@ const backdrop = {
 
 const modalVariant = {
     hidden:{
-        y: "150vh",
+        y: "120vh",
         opacity: 0
     },
     visible:{
         y: "12vh",
         opacity: 1,
         transition:{
-            delay: .3,
+            delay: .1,
             type: "spring",
-            stiffness: 40
+            bounce: 0.3
         }
     }
 }
@@ -115,8 +115,8 @@ export default function Footer(){
                 </p>
 
                 <p>
-                    Sash Mahara&apos;s portfolio &#40;www.mahara.ca&#41; 
-                    built by &nbsp;
+                    Designed by Sash Mahara &#160; | &#160;
+                    Built by &nbsp;
                     <b>
                         <a
                             className={styles.built_by} 
