@@ -20,11 +20,6 @@ const listOfTechAndLibraries = [
         type: "Javascript animation library"
     },
     
-    {
-        name: "unDraw",
-        website: "https://undraw.co/",
-        type: "Open source illustrations"
-    }
 ]
 
 const backdrop = {
@@ -129,10 +124,11 @@ export default function Footer(){
                 </p>
 
                 
-
+                {/** 
                 <p className={styles.technology_list} onClick={() => setShowModal(true)}>
                     Technologies &#38; Libraries used
                 </p>
+                */}
 
             </footer>
         </>
