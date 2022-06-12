@@ -284,6 +284,25 @@
     font-size: 14px;
 }
 
+.core_title_div{
+    display: flex;
+    align-items: flex-end;
+}
+.core_title_div > p{
+    margin: 0;
+}
+.core_title_div > p:nth-child(1){
+    font-size: 52px;
+    font-weight: 200;
+}
+.core_title_div > div{
+    height: 8px;
+    width: 8px;
+    background-color: hsl(208, 76%, 50%);
+    border-radius: 50px;
+    transform: translate(5px, -15px);
+}
+
 /*OTHER STYLING - HEADING BAR and GO TOP BUTTON*/
 .heading_bar {
     height: 3px;
@@ -360,6 +379,15 @@
         margin-left: -1.4rem;
         margin-right: -1.4rem;
         border-radius: 0 !important;
+    }
+
+    .core_title_div>p:nth-child(1) {
+        font-size: 42px;
+    }
+
+    .core_title_div>div {
+        
+        transform: translate(5px, -12px);
     }
         
 }
