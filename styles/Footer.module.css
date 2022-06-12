@@ -1,0 +1,90 @@
+.container{
+    margin-left: 8rem;
+    margin-right: 8rem;
+    margin-top: 2rem;
+    border-top: 1px solid var(--seperation-background);
+    display: flex;
+    justify-content: space-between;
+}
+
+.built_by{
+    cursor: pointer;
+    color: hsl(200, 78%, 34%);
+}
+
+.technology_list{
+    cursor: pointer;
+}
+
+.modal_container{
+    position: fixed;
+    top: 0;
+    left:  0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 10000;
+}
+
+.modal{
+    margin: 0 auto;
+    width: 400px;
+    padding: 2rem;
+    text-align: center;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+.tech_div{
+    margin: 1rem;
+    padding: 1rem;
+}
+.tech_div > a{
+    font-size: 24px;
+    color: black;
+}
+.tech_div > p{
+    margin: 0;
+    color: black;
+}
+
+.tech_div:hover{
+    background-color: rgb(207, 207, 207);
+    border-radius: 5px;
+}
+
+.close_button{
+    cursor: pointer;
+    padding: 1rem;
+    background-color: rgb(239, 142, 142);
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+
+@media (max-width: 1000px) {
+    .container{
+        margin: 1rem 3rem;
+    }
+}
+
+@media (max-width: 900px){
+    .container{
+        padding-top: 1rem;
+        flex-direction: column;
+        align-items: center;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        padding-top: 1rem;
+        margin: 1rem 1.5rem;
+        flex-direction: column;
+        font-size: 14px;
+        align-items: flex-start;
+        text-align: justify;
+    }
+}
