@@ -87,4 +87,14 @@
         align-items: flex-start;
         text-align: justify;
     }
+
+    .tech_div>a {
+        font-size: 20px;
+        color: black;
+    }
+
+    .tech_div {
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
 }

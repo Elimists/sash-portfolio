@@ -96,6 +96,15 @@ const ModalListTechnologies = ({showModal, setShowModal}) => {
 export default function Footer(){
 
     const [showModal, setShowModal] = useState(false)
+
+    useEffect(() => {
+        if (showModal){
+            document.body.style.overflowY = "hidden"
+        }
+        else{
+            document.body.style.overflowY = "scroll"
+        }
+    }, [showModal])
     return(
         <>
             <ModalListTechnologies showModal={showModal} setShowModal={setShowModal}/>
