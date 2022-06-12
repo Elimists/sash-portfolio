@@ -101,7 +101,7 @@ export default function Footer(){
             <ModalListTechnologies showModal={showModal} setShowModal={setShowModal}/>
             <footer className={styles.container}>
                 <p>
-                    Sash Mahara's portfolio &#40;www.mahara.ca&#41; 
+                    Sash Mahara&apos;s portfolio &#40;www.mahara.ca&#41; 
                     built by &nbsp;
                     <b>
                         <a
@@ -116,7 +116,7 @@ export default function Footer(){
                 </p>
 
                 <p className={styles.technology_list} onClick={() => setShowModal(true)}>
-                    View all technologies  &#38; libraries being utilized
+                    View all technologies &#38; libraries being utilized
                 </p>
 
             </footer>
