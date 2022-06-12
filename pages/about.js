@@ -56,14 +56,24 @@ export default function About(){
                         variants={setImageVariants} 
                         initial="hidden"
                         animate="visible">
-                        <Image src={AboutSashImage} quality={100} alt='Sash Picture' placeholder='blur'/>
+                        <Image 
+                            src={AboutSashImage} 
+                            quality={100} 
+                            alt="Sash Mahara is an Industrial Designer from Canada who loves to create unique and meaningful products" 
+                            placeholder='blur'
+                            blurDataURL={AboutSashImage}/>
                     </motion.div> :
                     <motion.div 
                         className={styles.image_container}
                         variants={setImageVariants}
                         initial="hidden"
                         animate="visible">
-                        <Image src={AboutSashImageMobile} quality={100} alt="Sash Picture" placeholder='blur'/>
+                        <Image 
+                            src={AboutSashImageMobile} 
+                            quality={100} 
+                            alt="Sash Mahara is an Industrial Designer from Canada who loves to create unique and meaningful products" 
+                            placeholder='blur'
+                            blurDataURL={AboutSashImageMobile}/>
                     </motion.div>
                     }
                

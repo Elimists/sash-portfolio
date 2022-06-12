@@ -268,7 +268,7 @@ export default function Homie(){
                             height={200}
                             placeholder="blur"
                             blurDataURL={DataCodingImage}
-                            alt="Data Coding Image"/>
+                            alt="Data coding results from conducting user research"/>
                         <p>Data Coding</p>
                         
                     </div>
@@ -360,7 +360,7 @@ export default function Homie(){
                             height={260} 
                             placeholder="blur" 
                             blurDataURL={PersonasAiden} 
-                            alt="Aiden Persona"
+                            alt="Persona for Aiden who is a freshman student looking for a place"
                             onClick={() => handleImageEnlarging(PersonasAiden)}/>
                         <p>Aiden: Freshmen Student</p>
                     </motion.div>
@@ -372,7 +372,7 @@ export default function Homie(){
                             height={260} 
                             placeholder="blur" 
                             blurDataURL={PersonasCarly} 
-                            alt="Carly Persona" 
+                            alt="Persona for Carly who is a long distance mover looking for a place" 
                                 onClick={() => handleImageEnlarging(PersonasCarly)}/>
                         <p>Carly: Long Distance Mover</p>
                     </motion.div>
@@ -384,7 +384,7 @@ export default function Homie(){
                             height={260} 
                             placeholder="blur" 
                             blurDataURL={PersonasTamira} 
-                            alt="Tamira Persona"
+                            alt="Persona for Tamira who is a new parent looking to rent"
                             onClick={() => handleImageEnlarging(PersonasTamira)}/>
                         <p>Tamira: New Parent</p>
                     </motion.div>
@@ -396,7 +396,7 @@ export default function Homie(){
                             height={260} 
                             placeholder="blur" 
                             blurDataURL={PersonasSamu} 
-                            alt="Samu Persona"
+                            alt="Persona for Samu who is interested in renting"
                             onClick={() => handleImageEnlarging(PersonasSamu)}/>
                         <p>Samu: Young Professional</p>
                     </motion.div>
@@ -418,7 +418,7 @@ export default function Homie(){
                         height={273} 
                         placeholder="blur" 
                         blurDataURL={UserJourneyMap} 
-                        alt="User Journe Map Image"
+                        alt="User journey map put together after our research"
                         onClick={() => handleImageEnlarging(UserJourneyMap)}/>
                     <p>User Journey Map</p>
                 </motion.div>
