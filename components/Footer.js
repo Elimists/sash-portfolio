@@ -123,10 +123,9 @@ export default function Footer(){
                             href="https://www.linkedin.com/in/pran-pandey-6a7696195" 
                             target="__blank" 
                             >
-                            Pran Pandey.
+                            Pran Pandey
                         </a>
                     </b>
-                    
                 </p>
 
                 

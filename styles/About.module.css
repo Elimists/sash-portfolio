@@ -46,13 +46,14 @@
     border: 2px solid;
     border-image: linear-gradient(90deg, rgba(244, 168, 161, 1) 0%, rgba(143, 161, 233, 1) 12%, rgba(116, 179, 245, 1) 25%, rgba(92, 216, 243, 1) 41%, rgba(74, 173, 238, 1) 56%) 1;
     margin-top: 2rem;
+    margin-right: 1rem;
 }
 
 
 
 .button_container{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     padding-bottom: 2rem;
     width: 100%;
@@ -114,7 +115,6 @@
     }
 
     .button_container{
-        
         justify-content: space-evenly;
     }
 
