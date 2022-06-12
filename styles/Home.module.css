@@ -21,6 +21,8 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  max-width: 260px;
+  
 }
 
 .check_out_text{
