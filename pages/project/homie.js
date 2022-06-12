@@ -46,6 +46,7 @@ const hoverScaleAnimation = {
 
 
 export default function Homie(){
+
     const [showModal, setShowModal] = useState(false)
     const [imageSource, setImageSource] = useState(null)
 
@@ -70,15 +71,6 @@ export default function Homie(){
             document.body.style.overflow = 'auto';
         }
     }, [showModal])
-
-    /** 
-    const [quickNavPressed, setQuickNavPressed] = useState(false)
-    useEffect(() => {
-        if (showModal) {
-            setQuickNavPressed(false)
-        }
-    }, [showModal])
-    */
 
     return(
         <>
