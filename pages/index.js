@@ -133,7 +133,7 @@ export default function Home({projects}) {
                 Sash Mahara
               </h1>
               <p className={styles.hello}>
-                I&apos; m an Industrial Designer who specializes in user-centered design and research.I&apos; m passionate about technology and love to create amazing experiences through well designed products.
+                I&apos;m an Industrial Designer who specializes in user-centered design and research.I&apos;m passionate about technology and love to create amazing experiences through well designed products.
               
                 </p>
               
