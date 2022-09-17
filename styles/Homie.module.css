@@ -303,6 +303,12 @@
     transform: translate(5px, -15px);
 }
 
+.problem_image_div{
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5rem;
+}
+
 /*OTHER STYLING - HEADING BAR and GO TOP BUTTON*/
 .heading_bar {
     height: 3px;
