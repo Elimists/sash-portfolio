@@ -16,7 +16,7 @@ export const allProjects = [
         title_url_safe: "Homie",
         name: "Rental Housing Search - Homie",
         description: "Web application that simplifies and assists the housing rental search process.",
-        tags: "UX/UI - User Research - Visual Design - Behavioural Design",
+        tags: "UX/UI - User Research - Visual Design - Usability Testing",
         duration: "3 Months",
         type: "Personal",
         role: "UX Researcher & Designer",

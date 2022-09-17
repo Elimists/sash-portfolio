@@ -35,7 +35,12 @@ import FinalDesignMessaging from '../../public/projects/homie/final_design_messa
 import FinalDesignMood from '../../public/projects/homie/final_design_mood.webp'
 import CoreProjectImage from '../../public/projects/core/core.webp'
 import WorldJournalImage from '../../public/projects/world-journal/world-journal.webp'
-
+import ProblemImage from '../../public/projects/homie/problem_image.webp'
+import ResearchGoals from  '../../public/projects/homie/research_goals.webp'
+import UserGroups from  '../../public/projects/homie/user_groups.webp'
+import RecruitmentCriteria from  '../../public/projects/homie/recruitment_criteria.webp'
+import UserTesting from  '../../public/projects/homie/user_testing.webp'
+import DesignObjectives from  '../../public/projects/homie/design_objectives.webp'
 
 const hoverScaleAnimation = {
     scale: 1.07,
@@ -85,7 +90,7 @@ export default function Homie(){
                 <div>
                     <HomieTitleSvg/>
                     <p>Web application that simplifies and assists the rental housing search process.</p>
-                    <p>UX/UI - User Research - Visual Design - Behavioral Design</p>
+                    <p>UX/UI - User Research - Visual Design - Usability Testing</p>
                 </div>
                 
                 <Image 
@@ -131,16 +136,19 @@ export default function Homie(){
                 <div className={styles.heading_bar}></div>
                 <h1>Problem</h1>
                 <p>
-                    Overall, the process of finding and securing a housing rental can be a daunting, 
-                    overwhelming, and cumbersome journey. Most of the process is learned by word of 
-                    mouth and through trial and error, making it difficult for inexperienced renters 
-                    to know where to begin and confidently carry out the entire process. There is also
-                    a need for more semi-formal education or resources concerning the renting process 
-                    as a whole, including knowledge around renter rights. Even more experienced renters 
-                    encounter a slew of issues relating to poor information across rental ads, usability
-                    and experience of rental platforms and listings, communication with landlords and 
-                    roommates, decision-making, and legal matters.
+                    The process of finding and securing rental housing can be a daunting, overwhelming, and cumbersome journey. 
+                    Renters encounter a slew of issues relating to poor information across rental ads, usability and experience of rental platforms and listings, communication with landlords and roommates, decision-making, and legal matters. 
+                    There is also a need for more education and resources around renter rights.
                 </p>
+                <div>
+                    <Image 
+                        src={ProblemImage} 
+                        width={526} 
+                        height={124}
+                        placeholder="blur"
+                        blurDataURL={ProblemImage}
+                        alt="Problem"/>
+                </div>
             </section>
 
             <section className={styles.process_section}>
@@ -154,12 +162,15 @@ export default function Homie(){
             <section className={styles.research_goal_section}>
                 <div className={styles.heading_bar}></div>
                 <h1>Research Goals</h1>
-                <ul>
-                    <li>Understand the tools and services that renters are currently using during their house hunt to find areas of improvement within existing tools.</li>
-                    <li>Identify key criteria renters look for when searching for housing to empower them to make better housing decisions.</li>
-                    <li>Understand user&#39;s knowledge regarding renting legalities to educate and build confidence in the renting process.</li>
-                    <li>Gain insight into the end-to-end process of renting a property to uncover pain points and challenges to improve and streamline the experience for the renter.</li>
-                </ul>
+                <div>
+                    <Image 
+                        src={ResearchGoals} 
+                        width={648} 
+                        height={265}
+                        placeholder="blur"
+                        blurDataURL={ResearchGoals}
+                        alt="Research Goals"/>
+                </div>
             </section>
 
             <section className={styles.recruitment_method_section}>
@@ -176,81 +187,41 @@ export default function Homie(){
                 <div className={styles.heading_bar}></div>
                 <h1>User Group</h1>
                 <p>
-                    We divided our recruitment to 75-80% of interviewees from User Group 1, and 20-25% interviewees from User Group 2 since the 
-                    service is targeted towards tenants.
+                    We divided our recruitment into two different types of users. 
+                    User group 1 was tenants and group 2 were landlords.
                 </p>
                 <div>
-                    <UserGroupTenantsSvg/>
-                    <UserGroupLandlordsSvg/>
+                    <Image 
+                        src={UserGroups} 
+                        width={265} 
+                        height={142}
+                        placeholder="blur"
+                        blurDataURL={UserGroups}
+                        alt="User Groups"/>
                 </div>
             </section>
 
             <section className={styles.recruitment_criteria}>
                 <div className={styles.heading_bar}></div>
                 <h1>Recruitment Criteria</h1>
-                <ol type="1">
-                   <li>
-                        <h3>Age Range: 18-19, 20-22, 23-26, 27+</h3>
-                        <p>
-                            We divided age ranges to track relationships between users&#39; age and housing criteria, 
-                            previous experience, budget, and occupation. Considering people&#39;s motivations/life 
-                            goals/habits to help make informed roommate matching decisions.
-                        </p>
-                    </li> 
-                    <li>
-                        <h3>Occupation: &#40;recent high school grad, university/college students, international students, 
-                            working professional&#41;
-                        </h3>
-                        <p>
-                            We divided occupations to gain insight into the relationship between budget, relocation, 
-                            as well as possible housing situation preferences and any barriers.
-                        </p>
-                    </li>
-                    <li>
-                        <h3>Budget &#40;&gt;$500, $500-900, $900-1200, $1200+&#41;</h3>
-                        <p>
-                            We divided budget into ranges to identify how broad users&#39; options can be, get a better 
-                            understanding of renters&#39; budgets match with the market, as well as to understand how
-                            budget influences characteristics users look for when looking into housing.
-                        </p>
-                    </li>
-                    <li>
-                        <h3>Preferred Living Situation: &#40;single living alone, couple moving in together, group  of 
-                            friends looking to move together, or single moving into existing housing situation&#41;
-                        </h3>
-                        <p>
-                            To see how preferred living situations influence how users go about the housing hunt. For 
-                            example, how they interact with landlords and other potential roommates. Identify different 
-                            touch points from the standpoint of different types of users.
-                        </p>
-                    </li>
-                    <li>
-                        <h3>
-                            Renting Experience/Knowledge &#40;First-time renter, 2-4 times renting experience, 5+ times 
-                            renting experience&#41;
-                        </h3>
-                        <p>
-                            To help determine if users are new or experienced renters and to understand their current 
-                            knowledge/confidence  and process for finding rental housing.
-                        </p>
-                    </li>
-                </ol>
+                <div>
+                    <Image 
+                        src={RecruitmentCriteria} 
+                        width={674} 
+                        height={512}
+                        placeholder="blur"
+                        blurDataURL={RecruitmentCriteria}
+                        alt="Recruitment Criteria"/>
+                </div>
             </section>
 
             <section className={styles.key_insights}>
                 <div className={styles.heading_bar}></div>
                 <h1>Key Insights &#38; Themes</h1>
                 <p>
-                    The results of our user research highlight many pain-points and opportunities for improvement. 
-                    Using data coding methods &#40;see below&#41; we identified key insights revolved around the lack of 
-                    standardization of listings, communication methods, lease agreements, and the rental platforms 
-                    themselves. There was a need for more consistency and streamlining in these areas to ensure users 
-                    have more pleasant experiences at different touch points and make the most informed housing decisions. 
-                    There was also a need for more personal, accurate, centralized and verified information regarding 
-                    landlords and their properties &#40;including roommates where applicable&#41;. The issue here is that tenants 
-                    often desire a better sense of their potential living conditions and interactions with the landlord, 
-                    and landlords feel the same way about tenants. Addressing these challenges will ultimately lead to more
-                    trust between users and confidence in the housing rental journey.
+                The results of our user research highlight many pain-points and opportunities for improvement. 
+                Using data coding methods (see below) we identified key insights revolved around the lack of standardization of listings, communication methods, lease agreements, and the rental platforms themselves. 
+                There was also a need for more personal, accurate, centralized and verified information regarding landlords and their properties (including roommates where applicable). 
                 </p>
                 <div>
                     <div>
@@ -286,51 +257,41 @@ export default function Homie(){
                 <div className={styles.heading_bar}/>
                 <h1>Design Brief</h1>
                 <h2>Goals &#38; Objectives</h2>
-                <ul>
-                    <li>Educate and build confidence in the renting process for users of all experience levels</li>
-                    <li>Streamline the process of renting from the initial housing search to move in</li>
-                    <li>Increase transparency and facilitate effective communication, to build trust between users</li>
-                    <li>Facilitate safe and secure interactions between users</li>
-                </ul>
-
+                <div>
+                <Image 
+                            src={DesignObjectives} 
+                            width={643} 
+                            height={275}
+                            placeholder="blur"
+                            blurDataURL={DesignObjectives}
+                            alt="Design Goals and Objectives"/>
+                </div>
+                
                 <h2>Design Requirements &#38; Features</h2>
                 <ol type="1">
                     <li>
-                        <h3>Chat feature</h3>
-                        <p>Read receipts, scheduling feature.</p>
+                        <h3>Chat feature &#38; Scheduling</h3>
                     </li>
                     <li>
                         <h3>Document Management &#40; for applications and leases&#41;</h3>
-                        <p>Standardized forms, highlighting changes made by landlords, centralize document signing and transfers.</p>
                     </li>
                     <li>
-                        <h3>Resource packages</h3>
-                        <p>Housing search 101, terminology, legal matters, etc.</p>
+                        <h3>Resource packages, Tips &#38; Tricks, Legal Information</h3>
                     </li>
                     <li>
-                        <h3>Holistic Map</h3>
-                        <p>Crime hotspots, amenities, proximity, transportation, attractions, etc.</p>
+                        <h3>Holistic Map, Bus Routes, Ammenities, Crime Spots</h3>
                     </li>
                     <li>
-                        <h3>Unifying and Standardizing Listings</h3>
-                        <p>Fill-in-blank listings, preset filters, AI-generated descriptions, photo tips, renewal prompts, “Hot listings” tag.</p>
+                        <h3>Standardizing Listings</h3>
                     </li>
                     <li>
                         <h3>Tenant &amp; landlord accounts</h3>
-                        <p>Tenants profile, save filters, favourite listings, discussion forums, reviews, document hub, Landlord profile, 
-                            reviews &amp; ratings, verification, payment preferences.</p>
                     </li>
                     <li>
                         <h3>Favourite Listings</h3>
-                        <p>Creating different lists &amp; folders, pros &amp; cons, comparison charts.</p>
                     </li>
                     <li>
                         <h3>Verification &amp; Virtual Tours</h3>
-                        <p>Booking a tour, in-app video calling, two-step verification.</p>
-                    </li>
-                    <li>
-                        <h3>Moving tips &amp; tricks</h3>
-                        <p>Checklists, 3rd party moving resources.</p>
                     </li>
                 </ol>
 
