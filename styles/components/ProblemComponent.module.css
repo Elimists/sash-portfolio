@@ -1,0 +1,21 @@
+.container{
+    padding: 1.5rem;
+}
+
+.icon_info_div{
+    display: flex;
+    align-items: center;
+    margin: 0.2rem 0;
+}
+
+.icon_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    min-width: 4.5rem;
+}
+
+.icon_info_div > p {
+    margin-left: 0.5rem;
+}

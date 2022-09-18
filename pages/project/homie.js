@@ -11,8 +11,6 @@ import styles from '../../styles/Homie.module.css'
 import HomieImg from '../../public/projects/homie/homie.webp'
 import HomieTitleSvg from '../../components/svgImages/homie/HomieTitleSvg'
 import HomieProcessSVG from '../../components/svgImages/homie/ProcessSvg'
-import UserGroupLandlordsSvg from '../../components/svgImages/homie/UserGroupLandlordsSvg'
-import UserGroupTenantsSvg from '../../components/svgImages/homie/UserGroupTenantsSvg'
 import DataCodingImage from '../../public/projects/homie/key_insights1.webp'
 import KeyInsightsJsx from '../../components/svgImages/homie/KeyInsightsSvg'
 import PersonasAiden from '../../public/projects/homie/personas_aiden.webp'
@@ -35,12 +33,11 @@ import FinalDesignMessaging from '../../public/projects/homie/final_design_messa
 import FinalDesignMood from '../../public/projects/homie/final_design_mood.webp'
 import CoreProjectImage from '../../public/projects/core/core.webp'
 import WorldJournalImage from '../../public/projects/world-journal/world-journal.webp'
-import ProblemImage from '../../components/svgImages/homie/ProblemImage'
 import ResearchGoals from  '../../public/projects/homie/research_goals.webp'
 import UserGroups from  '../../public/projects/homie/user_groups.webp'
 import RecruitmentCriteria from  '../../public/projects/homie/recruitment_criteria.webp'
-import UserTesting from  '../../public/projects/homie/user_testing.webp'
 import DesignObjectives from  '../../public/projects/homie/design_objectives.webp'
+import ProblemSetComponent from '../../components/svgImages/homie/ProblemIcons'
 
 const hoverScaleAnimation = {
     scale: 1.07,
@@ -140,9 +137,7 @@ export default function Homie(){
                     Renters encounter a slew of issues relating to poor information across rental ads, usability and experience of rental platforms and listings, communication with landlords and roommates, decision-making, and legal matters. 
                     There is also a need for more education and resources around renter rights.
                 </p>
-                <div className={styles.problem_image_div}>
-                   <ProblemImage/>
-                </div>
+                <ProblemSetComponent/>
             </section>
 
             <section className={styles.process_section}>
