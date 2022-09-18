@@ -45,7 +45,7 @@ const hoverScaleAnimation = {
 }
 
 
-export default function Homie(){
+export default function HomieOld(){
 
     const [showModal, setShowModal] = useState(false)
     const [imageSource, setImageSource] = useState(null)

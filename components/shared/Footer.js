@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import styles from '../styles/Footer.module.css'
+import styles from "@footer-styles"
 import {useState, useEffect, useRef} from 'react'
 import {motion, AnimatePresence} from 'framer-motion'
 

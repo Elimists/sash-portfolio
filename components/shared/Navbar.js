@@ -1,4 +1,4 @@
-import styles from '../styles/Navbar.module.css'
+import styles from "@navbar-styles"
 import Link from 'next/link'
 import Image from 'next/image'
 import {useRouter} from 'next/router'
@@ -10,7 +10,7 @@ import SashLogo from './logos/SashLogo'
 
 import {motion} from 'framer-motion'
 
-import useWindowDimensions from '../hooks/useWindowDimensions'
+import useWindowDimensions from '@/hooks/useWindowDimensions'
 
 const navLinks = [
     {'name': 'Home', 'href': '/'},

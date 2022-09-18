@@ -1,5 +1,5 @@
 import React from "react";
-import styles from '../../styles/Logo.module.css'
+import styles from "@style-shared-logo"
 import {motion} from 'framer-motion'
 
 const svgVariants = {
