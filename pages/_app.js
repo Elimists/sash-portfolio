@@ -1,5 +1,5 @@
-import '../styles/globals.css'
-import Layout from '../components/Layout'
+import "@global-css"
+import Layout from "@layout"
 import {motion} from 'framer-motion'
 
 function MyApp({ Component, pageProps, router }) {

@@ -1,0 +1,8 @@
+.bar{
+    margin-bottom: -0.5rem;
+    height: 3px;
+    width: 45px;
+    border-radius: 20px;
+    background: rgb(159, 199, 252);
+    background: linear-gradient(90deg, rgba(159, 199, 252, 1) 0%, rgba(230, 177, 254, 1) 50%, rgba(211, 77, 116, 1) 100%);
+}

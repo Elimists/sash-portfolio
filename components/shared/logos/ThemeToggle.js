@@ -1,4 +1,4 @@
-import styles from '../../styles/Logo.module.css'
+import styles from "@style-shared-logo"
 
 export default function ThemeToggle(){
 

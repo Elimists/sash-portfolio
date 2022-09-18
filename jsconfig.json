@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+
+        "@layout":["components/Layout"],
+        "@global-css":["styles/globals.css"],
+
+        /* Shared project component imports*/
+        "@project-highlight":["components/projects/shared/ProjectHighlight"],
+        "@project-highlight-styles":["styles/projects/shared/ProjectHighlight.module.css"],
+        "@styled-bar-component":["components/projects/shared/StyledBar"],
+        "@styled-bar-styles":["styles/projects/shared/StyledBar.module.css"],
+        "@style-shared-logo": ["styles/shared/Logo.module.css"],
+        "@shared-fragment-project-style": ["styles/projects/shared/SharedFragmentStyle.module.css"],
+       
+        
+
+        /* 'Homie' project imports */
+        "@homie-main-image":["public/projects/homie/homie.webp"],
+        "@homie-main-component":["components/projects/homie/HomieComponent"],
+
+        /* 'Navbar' imports*/
+        "@navbar-styles": ["styles/shared/Navbar.module.css"],
+        "@footer-styles": ["styles/shared/Footer.module.css"],
+        "@navbar-component": ["components/shared/Navbar"],
+        "@footer-component": ["components/shared/Footer"],
+
+        /* 'hooks' imports */
+        "@/hooks/*":["hooks/*"],
+        }
+    }
+  }

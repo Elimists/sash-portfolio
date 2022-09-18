@@ -1,0 +1,16 @@
+{
+    "favorites.resources": [
+        {
+            "filePath": "components\\projects\\homie\\highlight",
+            "group": "Default"
+        },
+        {
+            "filePath": "components\\projects\\homie\\problem",
+            "group": "Default"
+        },
+        {
+            "filePath": "components\\projects\\world-journal",
+            "group": "Default"
+        }
+    ]
+}
