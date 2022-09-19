@@ -162,16 +162,6 @@ export default function Homie(){
                 </div>
             </section>
 
-            <section className={styles.recruitment_method_section}>
-                <div className={styles.heading_bar}></div>
-                <h1>Recruitment Method</h1>
-                <p>
-                    Our methods involved reaching out to friends and family &#40; and their wider network&#41; to find users that would fit our recruitment 
-                    criteria &#40;see below&#41;. Posting in Carleton University student groups on social media &#40;i.e.: Reddit and Facebook&#41; requesting 
-                    volunteers.
-                </p>
-            </section>
-
             <section className={styles.user_group_section}>
                 <div className={styles.heading_bar}></div>
                 <h1>User Group</h1>
@@ -228,18 +218,6 @@ export default function Homie(){
                         <KeyInsightsJsx />
                     </div>
                 </div>
-            </section>
-
-            <section className={styles.problem_statement}>
-                <div className={styles.heading_bar}></div>
-                <h1>Problem Statement</h1>
-                <p>
-                    Our challenge is to improve the rental experience from end to end by standardizing and enhancing key 
-                    touchpoints along the process—considering tools, listings, documents, and communication methods. The 
-                    housing rental process is something that many young adults will have to go through at some point in 
-                    their lives. Therefore, facilitating a smoother entry and experience along the rental journey would 
-                    bring more confidence and enjoyment to an otherwise stressful task.
-                </p>
             </section>
 
             <section className={styles.design_brief}>
@@ -440,28 +418,22 @@ export default function Homie(){
                     each user task was. At the end we interviewed each participant on their experience. Through our user testers, we gained key 
                     insights into what features functioned smoothly and what needed tweaking.
                 </p>
-                <ol type="1">
-                    <li>
+        
                         <h3>Task: Conduct a search for a 2 bedroom house in the local area</h3>
                         <p>Average Time: 26 seconds</p>
                         <p>Results: Easy to understand and navigate. No issues.</p>
-                    </li>
-                    <li>
+                    
                         <h3>Task: Compare 2 listings from your favourites</h3>
                         <p>Average Time: 2:25 minutes</p>
                         <p>Results: Mixed reviews, users had trouble understanding where their favourite listings go and how to select them for comparison. Needs improvement.</p>
-                    </li>
-                    <li>
+                    
                         <h3>Task: Book a virtual meeting with a landlord</h3>
                         <p>Average Time: 1:30 minutes</p>
                         <p>Results: Difficult to find at first but once started it was easy to understand and schedule. Needs slight improvement.</p>
-                    </li>
-                    <li>
+                    
                         <h3>Task: Create and fill out a listing</h3>
                         <p>Average Time: 8:16 minutes </p>
                         <p>Results: Users had difficulty uploading multiple images, image navigation was hard to understand. Listing score confused users and no ability to tag photos. Needs improvement.</p>
-                    </li>
-                </ol>
             </section>
 
             <section className={styles.iteration_section}>
