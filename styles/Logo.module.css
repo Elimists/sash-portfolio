@@ -27,6 +27,13 @@
     fill: var(--homie-svg-color)
 }
 
+.problem_svg_image{
+    stroke: var(--color-text);
+}
+.problem_svg_image_text{
+    fill: var(--color-text);
+}
+
 @media (max-width: 650px) {
     .sash_logo{
         width: 36px;
