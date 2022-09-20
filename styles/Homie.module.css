@@ -309,6 +309,34 @@
     padding-top: 1.5rem;
 }
 
+.problem_section_img_div,
+.problem_comp_div,
+.researchgoals_img_div,
+.user_testing_comp_div{
+    margin-top: 1.2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.recruitcrit_img_div{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.designreq_div,
+.designbrief_div{
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+.designbrief_div > h1 {
+    font-size: 14px;
+}
+.designreq_div > ol >li::marker{
+    font-weight: bold;
+}
+
+
 /*OTHER STYLING - HEADING BAR and GO TOP BUTTON*/
 .heading_bar {
     height: 3px;
@@ -395,7 +423,24 @@
         
         transform: translate(5px, -10px);
     }
-        
+
+    .researchgoals_img_div,
+    .user_testing_comp_div{
+        margin-top: 1rem;
+        display: flex;
+    }
+
+    .designbrief_div{
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+    
+    .recruitcrit_img_div{
+        margin-top: 2rem;
+        display: flex;
+    }
+
+    
 }
 
 @media (max-width: 950px){

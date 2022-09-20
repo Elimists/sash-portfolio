@@ -37,7 +37,11 @@ import ResearchGoals from  '../../public/projects/homie/research_goals.webp'
 import UserGroups from  '../../public/projects/homie/user_groups.webp'
 import RecruitmentCriteria from  '../../public/projects/homie/recruitment_criteria.webp'
 import DesignObjectives from  '../../public/projects/homie/design_objectives.webp'
+import ProblemSectionImage from '../../public/projects/homie/problemsection.webp'
+
+import UserTestingComponent from '../../components/svgImages/homie/UserTestingComponent'
 import ProblemSetComponent from '../../components/svgImages/homie/ProblemIcons'
+
 
 const hoverScaleAnimation = {
     scale: 1.07,
@@ -137,7 +141,15 @@ export default function Homie(){
                     Renters encounter a slew of issues relating to poor information across rental ads, usability and experience of rental platforms and listings, communication with landlords and roommates, decision-making, and legal matters. 
                     There is also a need for more education and resources around renter rights.
                 </p>
-                <ProblemSetComponent/>
+                <div className={styles.problem_section_img_div}>
+                    <Image 
+                        src={ProblemSectionImage} 
+                        width={500} 
+                        height={124}
+                        placeholder="blur"
+                        blurDataURL={ProblemSectionImage}
+                        alt="Problem section image"/>
+                </div>
             </section>
 
             <section className={styles.process_section}>
@@ -151,14 +163,8 @@ export default function Homie(){
             <section className={styles.research_goal_section}>
                 <div className={styles.heading_bar}></div>
                 <h1>Research Goals</h1>
-                <div>
-                    <Image 
-                        src={ResearchGoals} 
-                        width={648} 
-                        height={265}
-                        placeholder="blur"
-                        blurDataURL={ResearchGoals}
-                        alt="Research Goals"/>
+                <div className={styles.problem_comp_div}>
+                    <ProblemSetComponent/>
                 </div>
             </section>
 
@@ -183,7 +189,7 @@ export default function Homie(){
             <section className={styles.recruitment_criteria}>
                 <div className={styles.heading_bar}></div>
                 <h1>Recruitment Criteria</h1>
-                <div>
+                <div className={styles.recruitcrit_img_div}>
                     <Image 
                         src={RecruitmentCriteria} 
                         width={674} 
@@ -223,44 +229,48 @@ export default function Homie(){
             <section className={styles.design_brief}>
                 <div className={styles.heading_bar}/>
                 <h1>Design Brief</h1>
-                <h2>Goals &#38; Objectives</h2>
-                <div>
-                <Image 
-                            src={DesignObjectives} 
-                            width={643} 
-                            height={275}
-                            placeholder="blur"
-                            blurDataURL={DesignObjectives}
-                            alt="Design Goals and Objectives"/>
+                <div className={styles.designbrief_div}>
+                    <h3>Goals &#38; Objectives</h3>
+                    <div>
+                        <Image 
+                                    src={DesignObjectives} 
+                                    width={643} 
+                                    height={275}
+                                    placeholder="blur"
+                                    blurDataURL={DesignObjectives}
+                                    alt="Design Goals and Objectives"/>
+                    </div>
                 </div>
                 
-                <h2>Design Requirements &#38; Features</h2>
-                <ol type="1">
-                    <li>
-                        <h3>Chat feature &#38; Scheduling</h3>
-                    </li>
-                    <li>
-                        <h3>Document Management &#40; for applications and leases&#41;</h3>
-                    </li>
-                    <li>
-                        <h3>Resource packages, Tips &#38; Tricks, Legal Information</h3>
-                    </li>
-                    <li>
-                        <h3>Holistic Map, Bus Routes, Ammenities, Crime Spots</h3>
-                    </li>
-                    <li>
-                        <h3>Standardizing Listings</h3>
-                    </li>
-                    <li>
-                        <h3>Tenant &amp; landlord accounts</h3>
-                    </li>
-                    <li>
-                        <h3>Favourite Listings</h3>
-                    </li>
-                    <li>
-                        <h3>Verification &amp; Virtual Tours</h3>
-                    </li>
-                </ol>
+                <div className={styles.designreq_div}>
+                    <h3>Design Requirements &#38; Features</h3>
+                    <ol type="1">
+                        <li>
+                            <h4>Chat feature &#38; Scheduling</h4>
+                        </li>
+                        <li>
+                            <h4>Document Management &#40; for applications and leases&#41;</h4>
+                        </li>
+                        <li>
+                            <h4>Resource packages, Tips &#38; Tricks, Legal Information</h4>
+                        </li>
+                        <li>
+                            <h4>Holistic Map, Bus Routes, Ammenities, Crime Spots</h4>
+                        </li>
+                        <li>
+                            <h4>Standardizing Listings</h4>
+                        </li>
+                        <li>
+                            <h4>Tenant &amp; landlord accounts</h4>
+                        </li>
+                        <li>
+                            <h4>Favourite Listings</h4>
+                        </li>
+                        <li>
+                            <h4>Verification &amp; Virtual Tours</h4>
+                        </li>
+                    </ol>
+                </div>
 
                 
             </section>
@@ -418,22 +428,11 @@ export default function Homie(){
                     each user task was. At the end we interviewed each participant on their experience. Through our user testers, we gained key 
                     insights into what features functioned smoothly and what needed tweaking.
                 </p>
-        
-                        <h3>Task: Conduct a search for a 2 bedroom house in the local area</h3>
-                        <p>Average Time: 26 seconds</p>
-                        <p>Results: Easy to understand and navigate. No issues.</p>
-                    
-                        <h3>Task: Compare 2 listings from your favourites</h3>
-                        <p>Average Time: 2:25 minutes</p>
-                        <p>Results: Mixed reviews, users had trouble understanding where their favourite listings go and how to select them for comparison. Needs improvement.</p>
-                    
-                        <h3>Task: Book a virtual meeting with a landlord</h3>
-                        <p>Average Time: 1:30 minutes</p>
-                        <p>Results: Difficult to find at first but once started it was easy to understand and schedule. Needs slight improvement.</p>
-                    
-                        <h3>Task: Create and fill out a listing</h3>
-                        <p>Average Time: 8:16 minutes </p>
-                        <p>Results: Users had difficulty uploading multiple images, image navigation was hard to understand. Listing score confused users and no ability to tag photos. Needs improvement.</p>
+
+                <div className={styles.user_testing_comp_div}>
+                    <UserTestingComponent/>
+                </div>
+                       
             </section>
 
             <section className={styles.iteration_section}>
