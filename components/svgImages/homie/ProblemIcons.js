@@ -122,7 +122,7 @@ export default function ProblemSetComponent(){
                 <div className={styles.icon_div}>
                     {Knowledge()}
                 </div>
-                <p>Understand users' knowledge regarding renting legalities</p>
+                <p>Understand users&apos; knowledge regarding renting legalities</p>
             </div>
 
             <div className={styles.icon_info_div}>
