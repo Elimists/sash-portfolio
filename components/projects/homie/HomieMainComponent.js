@@ -1,6 +1,5 @@
 import HighlightFragment from "./highlight/HighlightFragment"
-import Problem from "./problem/Problem"
-import Process from "./process/Process"
+import { Problem } from "./HomieFragments"
 
 export default function Homie(){
 
@@ -9,8 +8,8 @@ export default function Homie(){
 
             <HighlightFragment/>
             <Problem/>
-            <Process/>
         </div>
     )
 
 }
+

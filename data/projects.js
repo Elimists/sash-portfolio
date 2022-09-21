@@ -21,7 +21,7 @@ export const allProjects = [
         type: "Personal",
         role: "UX Researcher & Designer",
         tools: "Interviews, Surveys, Market Research, Competitive Analysis, Figma",
-        link: "/project/homie",
+        link: "/projects/homie",
         overview: "This senior project focsued on researching, designing, and validating a digital service that could help improve the user journey in a chosen problem space. Our group chose to tackle the rental housing experience and develop a solution that could streamline the process for beginners and experienced renters.",
         problem: "Overall, the process of finding and securing a housing rental can be a daunting, overwhelming, and cumbersome journey. Most of the process is learned by word of mouth and through trial and error, making it difficult for inexperienced renters to know where to begin and confidently carry out the entire process. There is also a need for more semi-formal education or resources concerning the renting process as a whole, including knowledge around renter rights. Even more experienced renters encounter a slew of issues relating to poor information across rental ads, usability and experience of rental platforms and listings, communication with landlords and roommates, decision making, and legal matters.",
         alt_text: "Homie assists user in housing rental search process",
@@ -39,7 +39,7 @@ export const allProjects = [
         type: "Company Initiative",
         role: "UX/UI Designer",
         tools: "User Research, Co-design workshops, Figma",
-        link: "/project/lisn",
+        link: "/projects/lisn",
         overview: "LISN is a startup podcast company developing A.I technologies that help users discover new podcasts and also alow users to create curated playlists using clips from different podcasts. The company is growing its user base and wanted to create an easy to understand onboarding flow for new users. Additionally, they also wanted to design a new home page for their mobile app that facilitated a simplified user-experience. As their new UX/UI designer I lead the research and design of their new onboarding flows and mobile app.",
         problem: "New users were having a hard time understanding the mobile app as there was no introduction provided on how to use the features and how to create podcast clips which was the main service at the time. The organization of the app also left users confused as their content was scattered in different pages and menus.",
         alt_text: "Lisn assists users in curating podcasts using A.I technologies"
@@ -57,7 +57,7 @@ export const allProjects = [
         type: "Personal",
         role: "Lead Designer",
         tools: "Figma, Webflow",
-        link: "/project/core",
+        link: "/projects/core",
         alt_text: "Core app supports athletes to maintain their health by providing quick and accurate blood pressure results"
     },
 
@@ -73,7 +73,7 @@ export const allProjects = [
         type: "Personal",
         role: "Lead Designer",
         tools: "Figma, Webflow",
-        link: "/project/world-journal",
+        link: "/projects/world-journal",
         alt_text: "World Journal aims to connect people through the use of live satelitte imagery"
     },
 
