@@ -2,8 +2,8 @@
 import Image from 'next/image'
 import styles from '../../../styles/components/FeaturedComponent.module.css'
 
+/**Import Images Here */
 import AcidoImage from '../../../public/featured/acidorocket.webp'
-
 
 /** Data */
 const featuredData = [
@@ -45,8 +45,8 @@ const FractionalComponent = ({featured, index}) => {
             <div>
             <Image
                 src={featured.image}
-                height={375}
-                width={500}
+                height={350}
+                width={475}
                 alt="ACIDO Rocket Design Award"
                 blurDataURL={featured.image}
             />
