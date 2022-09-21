@@ -1,6 +1,7 @@
 /**Imports */
 import Image from 'next/image'
 import styles from '../../../styles/components/FeaturedComponent.module.css'
+import {motion} from 'framer-motion'
 
 /**Import Images Here */
 import AcidoImage from '../../../public/featured/acidorocket.webp'
@@ -12,7 +13,7 @@ const featuredData = [
         title: "ACIDO Rocket Design Award",
         link: "https://acido.info/MemoryCache",
         date: "July 1, 2022",
-        description: "Achieved the Design Thinking Award at the 2022 Industrial Design competition for my work on my capstone project, The MemoryCache. Hosted by the Association of Chartered Industrial Designers of Ontario. Award was sponsored by Entro.",
+        description: <p>Achieved the Design Thinking Award at the 2022 Industrial Design competition for my work on my capstone project, The MemoryCache. Hosted by the Association of Chartered Industrial Designers of Ontario. Award was sponsored by Entro.</p>,
         image: AcidoImage
     },
 
@@ -23,9 +24,14 @@ export default function FeaturedComponent(){
 
     return(
         <>
-            {featuredData.map((featured, index) => {
+            {featuredData.map((featured) => {
                 return(
-                    <div key={index}><FractionalComponent featured={featured} index={index}/></div>
+                    <motion.div 
+                        key={featured.id.toString()}
+                        
+                        >
+                            <FractionalComponent featured={featured}/>
+                    </motion.div>
                 )
             })}
         </>
@@ -33,14 +39,19 @@ export default function FeaturedComponent(){
 }
 
 /** Fractional componenet */
-const FractionalComponent = ({featured, index}) => {
+const FractionalComponent = ({featured}) => {
     return(
         <>
-        <div className={styles.container}>
+        <motion.div 
+            className={styles.container}
+            initial={{ opacity: 0, scale: 0.3 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration:(featured.id*0.50 ) }}
+            >
             <div className={styles.text_div}>
                 <h1><a target="_href" href={featured.link}>{featured.title} &#8599;</a></h1>
                 <h5>{featured.date}</h5>
-                <p>{featured.description}</p>
+                {featured.description}
             </div>
             <div>
             <Image
@@ -51,7 +62,7 @@ const FractionalComponent = ({featured, index}) => {
                 blurDataURL={featured.image}
             />
             </div>
-        </div>
+        </motion.div>
         <LongColorfulBottomBar/>
         </>
     )
