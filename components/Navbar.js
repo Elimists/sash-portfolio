@@ -14,8 +14,9 @@ import useWindowDimensions from '../hooks/useWindowDimensions'
 
 const navLinks = [
     {'name': 'Home', 'href': '/'},
+    {'name': 'Featured', 'href': '/featured'},
     {'name': 'About', 'href': '/about'},
-
+    
 ]
 export default function Navbar(){
     const router = useRouter()
