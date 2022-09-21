@@ -36,7 +36,7 @@ export default function FeaturedComponent(){
 const FractionalComponent = ({featured, index}) => {
     return(
         <>
-        <div>
+        <div className={styles.container}>
             <div className={styles.text_div}>
                 <h1><a target="_href" href={featured.link}>{featured.title} &#8599;</a></h1>
                 <h5>{featured.date}</h5>
