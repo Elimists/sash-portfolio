@@ -135,9 +135,11 @@ export default function Navbar(){
                     </Link>
                 </div>
 
+                {/** 
                 <div className={(activeTheme == "light") ? styles.light_theme : styles.dark_theme} onClick={() => swapTheme()}>
                     <ThemeToggle />
                 </div>
+                */}
             </div>
             
         </div>
