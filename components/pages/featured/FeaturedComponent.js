@@ -95,14 +95,14 @@ const FractionalComponent = ({featured}) => {
                 <h5>{featured.date}</h5>
                 {featured.description}
             </div>
-            <div>
-            <Image
-                src={featured.image}
-                height={223}
-                width={301}
-                alt="ACIDO Rocket Design Award"
-                blurDataURL={featured.image}
-            />
+            <div className={styles.image_div}>
+                <Image
+                    src={featured.image}
+                    height={223}
+                    width={301}
+                    alt="ACIDO Rocket Design Award"
+                    blurDataURL={featured.image}
+                />
             </div>
         </motion.div>
         <LongColorfulBottomBar/>
