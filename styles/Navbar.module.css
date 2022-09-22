@@ -151,12 +151,6 @@
 
 }
 
-@media (min-width: 650px) {
-
-    .nav_link_group_mobile{
-        display: none;
-    }
-}
 
 @keyframes animateToDark {
     0% {

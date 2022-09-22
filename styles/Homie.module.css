@@ -336,6 +336,9 @@
     font-weight: bold;
 }
 
+.featured_comp_inner_div{
+    margin-top: 3rem;
+}
 
 /*OTHER STYLING - HEADING BAR and GO TOP BUTTON*/
 .heading_bar {

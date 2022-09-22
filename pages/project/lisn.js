@@ -195,7 +195,7 @@ export default function Lisn(){
                         <h3>Objective 3:</h3>
                         <p>
                             Welcome user feedback. As the app was new we really wanted to invite 
-                            users to be apart of the growing community and voice their 
+                            users to be a part of the growing community and voice their 
                             concerns/suggestions to help the service improve.
                         </p>
 
