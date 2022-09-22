@@ -26,7 +26,7 @@ const featuredData = [
         title: "Carleton University Graduate Feature",
         link: "https://newsroom.carleton.ca/story/graduates-reflect-on-life-at-carleton/",
         date: "June 15 ,2022",
-        description: <p>Featured on Carleton University’s Graduate Highlights page, outlining my involvement and leadership within the university and academic achievements.</p>,
+        description: <p>Featured on Carleton University&apos;s Graduate Highlights page, outlining my involvement and leadership within the university and academic achievements.</p>,
         image: Graduate
     },
 
@@ -35,7 +35,7 @@ const featuredData = [
         title: "Award of Excellence, School of Industrial Design",
         link: "https://www.linkedin.com/posts/sashmahara_industrialdesign-activity-6925495960189943809-Imh0?utm_source=share&utm_medium=member_desktop",
         date: "April 30 ,2022",
-        description: <p>Received the Award of Excellence from Carleton University’s School of Industrial Design for my work on my capstone project, <b><u>The MemoryCache.</u></b></p>,
+        description: <p>Received the Award of Excellence from Carleton University&apos;s School of Industrial Design for my work on my capstone project, <b><u>The MemoryCache.</u></b></p>,
         image: Studioaward
     },
 
@@ -44,7 +44,7 @@ const featuredData = [
         title: "Gilles Memorial Award",
         link: "https://carleton.ca/id/story/sashmahara/",
         date: "April 21 ,2021",
-        description: <p>Received the Gilles Memorial Award for displaying good ‘Form Giving’ for my work in my capstone project, <b><u>The MemoryCache.</u></b></p>,
+        description: <p>Received the Gilles Memorial Award for displaying good &lsquo;Form Giving&rsquo; for my work in my capstone project, <b><u>The MemoryCache.</u></b></p>,
         image: gillesaward
     },
 
@@ -81,13 +81,14 @@ export default function FeaturedComponent(){
 
 /** Fractional componenet */
 const FractionalComponent = ({featured}) => {
+    const loadRate = 0.49;
     return(
         <>
         <motion.div 
             className={styles.container}
             initial={{ opacity: 0, scale: 0.3 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration:(featured.id*0.50 ) }}
+            transition={{ duration:(featured.id * loadRate ) }}
             >
             <div className={styles.text_div}>
                 <h1><a target="_href" href={featured.link}>{featured.title} &#8599;</a></h1>
