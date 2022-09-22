@@ -81,7 +81,7 @@ export default function FeaturedComponent(){
 
 /** Fractional componenet */
 const FractionalComponent = ({featured}) => {
-    const loadRate = 0.49;
+    const loadRate = 0.48;
     return(
         <>
         <motion.div 
