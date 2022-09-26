@@ -168,7 +168,7 @@ const synopsisSection = () => {
             </div>
             <div>
                 <h3>Role</h3>
-                <p>UX Researcher &#38; Designer</p>
+                <p>UX Researcher</p>
             </div>
             <div>
                 <h3>Type</h3>
