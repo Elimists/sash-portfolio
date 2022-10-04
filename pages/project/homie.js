@@ -104,6 +104,13 @@ export default function Homie(){
         otherProjectSection()
     ]
 
+    /**
+     * initial={{ opacity: 0, x: xValueOffScreen}}
+        whileInView={{ opacity: 1, x: 0}}
+        transition={{ duration: 0.4, type: "spring", stiffness: 100}}
+        viewport={{ once: true, amount: 0.2}}
+     */
+
     return(
         <>
             <EnlargeImage showModal={showModal} setShowModal={setShowModal} imageSource={imageSource}/>
@@ -117,10 +124,7 @@ export default function Homie(){
                 }
                 return(
                     <motion.div 
-                        initial={{ opacity: 0, x: xValueOffScreen}}
-                        whileInView={{ opacity: 1, x: 0}}
-                        transition={{ duration: 0.4, type: "spring", stiffness: 100}}
-                        viewport={{ once: true, amount: 0.2}}
+                        
                         className={styles.container} 
                         key={index.toString()}
 
