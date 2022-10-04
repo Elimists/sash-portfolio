@@ -2,11 +2,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
 }
 
 .text_div{
     max-width: 610px;
-    padding-right: 2rem;
 }
 
 .text_div > h1{
@@ -24,6 +25,8 @@
 .text_div > h5{
     margin: 0;
     font-weight: 400;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
 }
 
 .text_div > p {

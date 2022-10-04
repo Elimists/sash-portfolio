@@ -443,6 +443,19 @@
         display: flex;
     }
 
+    .go_top_button{
+        position: fixed;
+        bottom: 20px;
+        width: 50px;
+        text-align: center;
+        right: 90px;
+        background-color: var(--color-text);
+        color: var(--color-background);
+        font-size: 26px;
+        padding: 0.4rem;
+        border-radius: 6px;
+        cursor: pointer;
+    }
     
 }
 

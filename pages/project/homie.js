@@ -4,7 +4,7 @@ import Link from 'next/link'
 import EnlargeImage from '../../components/EnlargeImage'
 import { useEffect, useState } from 'react'
 import useScrolledDown from '../../hooks/useScrolledDown'
-import {motion} from 'framer-motion'
+import { motion } from "framer-motion"
 
 /** Assets related to project - Homie */
 import styles from '../../styles/Homie.module.css'
@@ -33,7 +33,6 @@ import FinalDesignMessaging from '../../public/projects/homie/final_design_messa
 import FinalDesignMood from '../../public/projects/homie/final_design_mood.webp'
 import CoreProjectImage from '../../public/projects/core/core.webp'
 import WorldJournalImage from '../../public/projects/world-journal/world-journal.webp'
-import ResearchGoals from  '../../public/projects/homie/research_goals.webp'
 import UserGroups from  '../../public/projects/homie/user_groups.webp'
 import RecruitmentCriteria from  '../../public/projects/homie/recruitment_criteria.webp'
 import DesignObjectives from  '../../public/projects/homie/design_objectives.webp'
@@ -51,12 +50,14 @@ const hoverScaleAnimation = {
 }
 
 
+
 export default function Homie(){
 
     const [showModal, setShowModal] = useState(false)
     const [imageSource, setImageSource] = useState(null)
 
     const isScrolled = useScrolledDown()
+
     function scrollToTheTop() {
         window.scrollTo({
             top: 0,
@@ -78,62 +79,131 @@ export default function Homie(){
         }
     }, [showModal])
 
+    /**List containing sections pertaining to the Homie project
+     * To change the order of the sections in the page, simply 
+     * rearrange/reorder the items in the list below.
+     */
+    const homiePageSectionList = [
+        homieTopSection(),
+        synopsisSection(),
+        overviewSection(),
+        problemSection(),
+        processSection(),
+        researchGoalSection(),
+        userGroupSection(),
+        recruitmentCriteriaSection(),
+        keyInsightsSection(),
+        designBriefSection(),
+        personasSection(handleImageEnlarging),
+        userJourneyMapSection(),
+        conceptDevelopmentSection(handleImageEnlarging),
+        userTestingSection(),
+        iterationSection(handleImageEnlarging),
+        finalDesignSection(handleImageEnlarging),
+        figmaPrototypeSection(),
+        otherProjectSection()
+    ]
+
+    /**
+     * initial={{ opacity: 0, x: xValueOffScreen}}
+        whileInView={{ opacity: 1, x: 0}}
+        transition={{ duration: 0.4, type: "spring", stiffness: 100}}
+        viewport={{ once: true, amount: 0.2}}
+     */
+
     return(
         <>
-        <EnlargeImage 
-            showModal={showModal} 
-            setShowModal={setShowModal}
-            imageSource={imageSource}/>
-        
-        <div className={styles.container}>
+            <EnlargeImage showModal={showModal} setShowModal={setShowModal} imageSource={imageSource}/>
+            {homiePageSectionList.map((section, index) => {
+                var xValueOffScreen
+                if (index % 2 == 0){
+                    xValueOffScreen = "-25vw"
+                }
+                else{
+                    xValueOffScreen = "25vw"
+                }
+                return(
+                    <motion.div 
+                        
+                        className={styles.container} 
+                        key={index.toString()}
 
-            <section className={styles.top_section}>
-                <div>
-                    <HomieTitleSvg/>
-                    <p>Web application that simplifies and assists the rental housing search process.</p>
-                    <p>UX/UI - User Research - Visual Design - Usability Testing</p>
-                </div>
-                
-                <Image 
-                    src={HomieImg} 
-                    height={430}
-                    width={650} 
-                    alt="Homie Project Image"
-                    placeholder="blur" 
-                    blurDataURL={HomieImg}/>
-            </section>
+                    >
+                            {section}
+                    </motion.div>
+                )
+            })}
 
-            <section className={styles.synopsis}>
-                <div>
-                    <h3>Duration</h3>
-                    <p>4 Months</p>
-                </div>
-                <div>
-                    <h3>Role</h3>
-                    <p>UX Researcher &#38; Designer</p>
-                </div>
-                <div>
-                    <h3>Type</h3>
-                    <p>Group Project</p>
-                </div>
-                <div>
-                    <h3>Methods &#38; Tools</h3>
-                    <p>Interviews, Surveys, Market Research, Competitive Analysis, Figma</p>
-                </div>
-            </section>
+            {(isScrolled) ? <div tabIndex="0" role="button" className={styles.go_top_button} onClick={() => scrollToTheTop()} onKeyDown={(e) => handleOnEnterPressToTop(e)}>&uarr;</div> : null}
+            
+            
+        </>
+    )
+}
 
-            <section className={styles.overview_section}>
-                <div className={styles.heading_bar}></div>
-                <h1>Overview</h1>
-                <p>
-                    This senior project focused on researching, designing, and validating a 
-                    digital service that could help improve the user journey in a chosen problem space. 
-                    Our group chose to tackle the rental housing experience and develop a solution that 
-                    could streamline the process for beginners and experienced renters.
-                </p>
-            </section>
 
-            <section className={styles.problem_section}>
+/**All sectional fragments for the Homie project */
+const homieTopSection = () => {
+    return(
+        <section className={styles.top_section}>
+            <div>
+                <HomieTitleSvg/>
+                <p>Web application that simplifies and assists the rental housing search process.</p>
+                <p>UX/UI - User Research - Visual Design - Usability Testing</p>
+            </div>
+            
+            <Image 
+                src={HomieImg} 
+                height={430}
+                width={650} 
+                alt="Homie Project Image"
+                placeholder="blur" 
+                blurDataURL={HomieImg}/>
+        </section>
+    )
+}
+
+const synopsisSection = () => {
+    return(
+        <section className={styles.synopsis}>
+            <div>
+                <h3>Duration</h3>
+                <p>4 Months</p>
+            </div>
+            <div>
+                <h3>Role</h3>
+                <p>UX Researcher</p>
+            </div>
+            <div>
+                <h3>Type</h3>
+                <p>Group Project</p>
+            </div>
+            <div>
+                <h3>Methods &#38; Tools</h3>
+                <p>Interviews, Surveys, Market Research, Competitive Analysis, Figma</p>
+            </div>
+        </section>
+    )
+}
+
+const overviewSection = () => {
+    return(
+        <section className={styles.overview_section}>
+            <div className={styles.heading_bar}></div>
+            <h1>Overview</h1>
+            <p>
+                This senior project focused on researching, designing, and validating a 
+                digital service that could help improve the user journey in a chosen problem space. 
+                Our group chose to tackle the rental housing experience and develop a solution that 
+                could streamline the process for beginners and experienced renters.
+            </p>
+        </section>
+    )
+}
+
+const problemSection = () => {
+    return(
+        <section className={styles.problem_section}>
                 <div className={styles.heading_bar}></div>
                 <h1>Problem</h1>
                 <p>
@@ -151,440 +221,488 @@ export default function Homie(){
                         alt="Problem section image"/>
                 </div>
             </section>
+    )
+}
 
-            <section className={styles.process_section}>
-                <div className={styles.heading_bar}></div>
-                <h1>Process</h1>
-                <div>
-                    <HomieProcessSVG/>
-                </div>
-            </section>
+const processSection = () => {
+    return(
+        <section className={styles.process_section}>
+            <div className={styles.heading_bar}></div>
+            <h1>Process</h1>
+            <div>
+                <HomieProcessSVG/>
+            </div>
+        </section>
+    )
+}
 
-            <section className={styles.research_goal_section}>
+const researchGoalSection = () => {
+    return(
+        <section className={styles.research_goal_section}>
                 <div className={styles.heading_bar}></div>
                 <h1>Research Goals</h1>
                 <div className={styles.problem_comp_div}>
                     <ProblemSetComponent/>
                 </div>
-            </section>
+        </section>
+    )
+}
 
-            <section className={styles.user_group_section}>
-                <div className={styles.heading_bar}></div>
-                <h1>User Group</h1>
-                <p>
-                    We divided our recruitment into two different types of users. 
-                    User group 1 was tenants and group 2 were landlords.
-                </p>
+const userGroupSection = () => {
+    return(
+        <section className={styles.user_group_section}>
+            <div className={styles.heading_bar}></div>
+            <h1>User Group</h1>
+            <p>
+                We divided our recruitment into two different types of users. 
+                User group 1 was tenants and group 2 were landlords.
+            </p>
+            <div>
+                <Image 
+                    src={UserGroups} 
+                    width={265} 
+                    height={142}
+                    placeholder="blur"
+                    blurDataURL={UserGroups}
+                    alt="User Groups"/>
+            </div>
+        </section>
+    )
+}
+
+const recruitmentCriteriaSection = () => {
+    return(
+        <section className={styles.recruitment_criteria}>
+            <div className={styles.heading_bar}></div>
+            <h1>Recruitment Criteria</h1>
+            <div className={styles.recruitcrit_img_div}>
+                <Image 
+                    src={RecruitmentCriteria} 
+                    width={674} 
+                    height={512}
+                    placeholder="blur"
+                    blurDataURL={RecruitmentCriteria}
+                    alt="Recruitment Criteria"/>
+            </div>
+        </section>
+    )
+} 
+
+const keyInsightsSection = () => {
+    return(
+        <section className={styles.key_insights}>
+            <div className={styles.heading_bar}></div>
+            <h1>Key Insights &#38; Themes</h1>
+            <p>
+            The results of our user research highlight many pain-points and opportunities for improvement. 
+            Using data coding methods (see below) we identified key insights revolved around the lack of standardization of listings, communication methods, lease agreements, and the rental platforms themselves. 
+            There was also a need for more personal, accurate, centralized and verified information regarding landlords and their properties (including roommates where applicable). 
+            </p>
+            <div>
                 <div>
                     <Image 
-                        src={UserGroups} 
-                        width={265} 
-                        height={142}
+                        src={DataCodingImage} 
+                        width={715} 
+                        height={200}
                         placeholder="blur"
-                        blurDataURL={UserGroups}
-                        alt="User Groups"/>
+                        blurDataURL={DataCodingImage}
+                        alt="Data coding results from conducting user research"/>
+                    <p>Data Coding</p>
+                    
                 </div>
-            </section>
-
-            <section className={styles.recruitment_criteria}>
-                <div className={styles.heading_bar}></div>
-                <h1>Recruitment Criteria</h1>
-                <div className={styles.recruitcrit_img_div}>
-                    <Image 
-                        src={RecruitmentCriteria} 
-                        width={674} 
-                        height={512}
-                        placeholder="blur"
-                        blurDataURL={RecruitmentCriteria}
-                        alt="Recruitment Criteria"/>
-                </div>
-            </section>
-
-            <section className={styles.key_insights}>
-                <div className={styles.heading_bar}></div>
-                <h1>Key Insights &#38; Themes</h1>
-                <p>
-                The results of our user research highlight many pain-points and opportunities for improvement. 
-                Using data coding methods (see below) we identified key insights revolved around the lack of standardization of listings, communication methods, lease agreements, and the rental platforms themselves. 
-                There was also a need for more personal, accurate, centralized and verified information regarding landlords and their properties (including roommates where applicable). 
-                </p>
                 <div>
+                    <KeyInsightsJsx />
+                </div>
+            </div>
+        </section>
+    )
+}
+
+const designBriefSection = () => {
+    return(
+        <section className={styles.design_brief}>
+            <div className={styles.heading_bar}/>
+            <h1>Design Brief</h1>
+            <div className={styles.designbrief_div}>
+                <h3>Goals &#38; Objectives</h3>
+                <div>
+                    <Image 
+                                src={DesignObjectives} 
+                                width={643} 
+                                height={275}
+                                placeholder="blur"
+                                blurDataURL={DesignObjectives}
+                                alt="Design Goals and Objectives"/>
+                </div>
+            </div>
+            
+            <div className={styles.designreq_div}>
+                <h3>Design Requirements &#38; Features</h3>
+                <ol type="1">
+                    <li>
+                        <h4>Chat feature &#38; Scheduling</h4>
+                    </li>
+                    <li>
+                        <h4>Document Management &#40; for applications and leases&#41;</h4>
+                    </li>
+                    <li>
+                        <h4>Resource packages, Tips &#38; Tricks, Legal Information</h4>
+                    </li>
+                    <li>
+                        <h4>Holistic Map, Bus Routes, Ammenities, Crime Spots</h4>
+                    </li>
+                    <li>
+                        <h4>Standardizing Listings</h4>
+                    </li>
+                    <li>
+                        <h4>Tenant &amp; landlord accounts</h4>
+                    </li>
+                    <li>
+                        <h4>Favourite Listings</h4>
+                    </li>
+                    <li>
+                        <h4>Verification &amp; Virtual Tours</h4>
+                    </li>
+                </ol>
+            </div>
+        </section>
+    )
+}
+
+const personasSection = (handleImageEnlarging) => {
+    return(
+        <section className={styles.personas}>
+            <div className={styles.heading_bar} />
+            <h1>Personas</h1>
+            <p>
+                After determining our design brief we created four personas from our background research which captured
+                the breadth of users we wanted to cater to.
+            </p>
+            <div>
+                <motion.div whileHover={hoverScaleAnimation}>
+                    <Image 
+                        src={PersonasAiden} 
+                        width={370} 
+                        height={260} 
+                        placeholder="blur" 
+                        blurDataURL={PersonasAiden} 
+                        alt="Persona for Aiden who is a freshman student looking for a place"
+                        onClick={() => handleImageEnlarging(PersonasAiden)}/>
+                    <p>Aiden: Freshmen Student</p>
+                </motion.div>
+
+                <motion.div whileHover={hoverScaleAnimation}>
+                    <Image 
+                        src={PersonasCarly} 
+                        width={370} 
+                        height={260} 
+                        placeholder="blur" 
+                        blurDataURL={PersonasCarly} 
+                        alt="Persona for Carly who is a long distance mover looking for a place" 
+                            onClick={() => handleImageEnlarging(PersonasCarly)}/>
+                    <p>Carly: Long Distance Mover</p>
+                </motion.div>
+
+                <motion.div whileHover={hoverScaleAnimation}>
+                    <Image 
+                        src={PersonasTamira} 
+                        width={370} 
+                        height={260} 
+                        placeholder="blur" 
+                        blurDataURL={PersonasTamira} 
+                        alt="Persona for Tamira who is a new parent looking to rent"
+                        onClick={() => handleImageEnlarging(PersonasTamira)}/>
+                    <p>Tamira: New Parent</p>
+                </motion.div>
+
+                <motion.div whileHover={hoverScaleAnimation}>
+                    <Image 
+                        src={PersonasSamu} 
+                        width={370} 
+                        height={260} 
+                        placeholder="blur" 
+                        blurDataURL={PersonasSamu} 
+                        alt="Persona for Samu who is interested in renting"
+                        onClick={() => handleImageEnlarging(PersonasSamu)}/>
+                    <p>Samu: Young Professional</p>
+                </motion.div>
+            </div>
+        </section>
+    )
+}
+
+const userJourneyMapSection = () => {
+    <section className={styles.user_journey_map}>
+        <div className={styles.heading_bar} />
+        <h1>User Journey Map</h1>
+        <p>
+            Having uncovered many of the pain-points and opportunities from our research we put together a user journey map 
+            that showed the rental housing process from start to finish. This journey map allowed us to visualize where the 
+            problem areas where and highlight key touch points that could be improved.
+        </p>
+        <motion.div whileHover={hoverScaleAnimation}>
+            <Image 
+                src={UserJourneyMap} 
+                width={1062} 
+                height={273} 
+                placeholder="blur" 
+                blurDataURL={UserJourneyMap} 
+                alt="User journey map put together after our research"
+                onClick={() => handleImageEnlarging(UserJourneyMap)}/>
+            <p>User Journey Map</p>
+        </motion.div>
+    </section>
+}
+
+const conceptDevelopmentSection = (handleImageEnlarging) => {
+    return(
+        <section className={styles.concept_development}>
+            <div className={styles.heading_bar} />
+            <h1>Concept Development</h1>
+
+            <h2>Competitive Analysis</h2>
+            <p>We began our concept development by doing some market research on existing products and understanding their approach, functionality, and layout.</p>
+            <div className={styles.concept_dev_imgs_div}>
+                <Image src={ConceptCompAnalysis} width={433} height={300} placeholder="blur" blurDataURL={ConceptCompAnalysis} alt="Competitive Analysis Image"/>
+                <p>Competitive Analysis</p>
+            </div>
+
+            <h2>Application Architecture</h2>
+            <p>The design solution involved creating an information architecture, comprised of all the possible pages, content, features, and user actions for Homie. Each of these assets were then grouped into named categories and organized in a hierarchical structure. </p>
+            <motion.div whileHover={hoverScaleAnimation}>
+                <Image 
+                    src={ConceptApplicationArch} 
+                    width={519} 
+                    height={346} 
+                    placeholder="blur" 
+                    blurDataURL={ConceptApplicationArch} 
+                    alt="Application Architecture Image"
+                    onClick={() => handleImageEnlarging(ConceptApplicationArch)}/>
+                <p>Information Architecture</p>
+            </motion.div>
+
+            <h2>UI Development</h2>
+            <p>We focused our concept development into three key areas of the application that we identified from our research which needed the most improvement.</p>
+            
+            <motion.div whileHover={hoverScaleAnimation}>
+                <Image 
+                    src={ConceptLandlordPortal} 
+                    width={1061} 
+                    height={351} 
+                    placeholder="blur" 
+                    blurDataURL={ConceptLandlordPortal} 
+                    alt="Landlord Portal Image"
+                    onClick={() => handleImageEnlarging(ConceptLandlordPortal)}/>
+                <p>Landlord Portal - Creating and Managing Listings </p>
+            </motion.div>
+
+            <motion.div whileHover={hoverScaleAnimation}>
+                <Image 
+                    src={ConceptBrowsingListings} 
+                    width={1061} 
+                    height={351}
+                    placeholder="blur" 
+                    blurDataURL={ConceptBrowsingListings} 
+                    alt="Browsing and comparing Image"
+                    onClick={() => handleImageEnlarging(ConceptBrowsingListings)}/>
+                <p>Browsing and comparing listings</p>
+            </motion.div>
+
+            <motion.div whileHover={hoverScaleAnimation}>
+                <Image 
+                    src={ConceptScheduling} 
+                    width={1061} 
+                    height={351} 
+                    placeholder="blur" 
+                    blurDataURL={ConceptScheduling} 
+                    alt="Booking Viewings Image"
+                    onClick={() => handleImageEnlarging(ConceptScheduling)}/>
+                <p>Booking Viewings</p>
+            </motion.div>
+        </section>
+    )
+}
+
+const userTestingSection = () => {
+    return(
+        <section className={styles.user_testing}>
+            <div className={styles.heading_bar} />
+            <h1>User Testing</h1>
+            <p>
+                The usability testing was an eye opening moment for the group to update and improve our design. We asked each participant to 
+                complete a certain task, and we were not allowed to intervene. We also timed each participant to understand how efficient 
+                each user task was. At the end we interviewed each participant on their experience. Through our user testers, we gained key 
+                insights into what features functioned smoothly and what needed tweaking.
+            </p>
+
+            <div className={styles.user_testing_comp_div}>
+                <UserTestingComponent/>
+            </div> 
+        </section>
+    )
+}
+
+const iterationSection = (handleImageEnlarging) => {
+    return(
+        <section className={styles.iteration_section}>
+            <div className={styles.heading_bar} />
+            <h1>Iterations</h1>
+            <p>
+                After getting the results from our user testing we iterated on the problem areas that confused users. We redesigned 
+                certain user flows to have more clarity and organization from the feedback we gained from our testing.
+            </p>
+            <motion.div whileHover={hoverScaleAnimation}>
+                <Image 
+                    src={Iterations} 
+                    width={786} 
+                    height={368} 
+                    placeholder="blur" 
+                    blurDataURL={Iterations} 
+                    alt="Iteration Image"
+                    onClick={() => handleImageEnlarging(Iterations)}/>
+            </motion.div>
+        </section>
+    )
+}
+
+const finalDesignSection = (handleImageEnlarging) => {
+    return(
+        <section className={styles.final_design_section}>
+            <div className={styles.heading_bar} />
+            <h1>Final Design</h1>
+            <p>
+                After addressing the concerns from our user testing we began the finalization of the design by creating a branding 
+                guideline and developing a high-fidelity version of the application.
+            </p>
+            <div>
+                <motion.div whileHover={hoverScaleAnimation}>
+                    <Image 
+                        src={FinalDesignMood} 
+                        width={424} 
+                        height={300} 
+                        placeholder="blur" 
+                        blurDataURL={FinalDesignMood} 
+                        alt="Final Design Image"
+                        onClick={() => handleImageEnlarging(FinalDesignMood)}/>
+                    <p>Mood Board</p>
+                </motion.div>
+                <motion.div whileHover={hoverScaleAnimation}>
+                    <Image 
+                        src={FinalDesignLanding} 
+                        width={403} height={287} 
+                        placeholder="blur" 
+                        blurDataURL={FinalDesignLanding} 
+                        alt="Landing Page Imge" 
+                        onClick={() => handleImageEnlarging(FinalDesignLanding)}/>
+                    <p>Landing Page</p>
+                </motion.div>
+                <motion.div whileHover={hoverScaleAnimation}>
+                    <Image 
+                        src={FinalDesignHousing} 
+                        width={403} 
+                        height={287} 
+                        placeholder="blur" 
+                        blurDataURL={FinalDesignHousing} 
+                        alt="Housing Page Image" 
+                        onClick={() => handleImageEnlarging(FinalDesignHousing)}/>
+                    <p>Housing Search</p>
+                </motion.div>
+                <motion.div whileHover={hoverScaleAnimation}>
+                    <Image 
+                        src={FinalDesignListing} 
+                        width={403} 
+                        height={287} 
+                        placeholder="blur" 
+                        blurDataURL={FinalDesignListing} 
+                        alt="Listing Page Image" 
+                        onClick={() => handleImageEnlarging(FinalDesignListing)}/>
+                    <p>Listing View</p>
+                </motion.div>
+                <motion.div whileHover={hoverScaleAnimation}>
+                    <Image 
+                        src={FinalDesignComparison} 
+                        width={403} 
+                        height={287} 
+                        placeholder="blur" 
+                        blurDataURL={FinalDesignComparison} 
+                        alt="Comparison Page Image" 
+                        onClick={() => handleImageEnlarging(FinalDesignComparison)}/>
+                    <p>Comparison Page</p>
+                </motion.div>
+                <motion.div whileHover={hoverScaleAnimation}>
+                    <Image 
+                        src={FinalDesignMessaging} 
+                        width={403} 
+                        height={287} 
+                        placeholder="blur" 
+                        blurDataURL={FinalDesignMessaging} 
+                        alt="Final Design Messaging" 
+                        onClick={() => handleImageEnlarging(FinalDesignMessaging)}/>
+                    <p>Messaging View</p>
+                </motion.div>
+                <motion.div whileHover={hoverScaleAnimation}>
+                    <Image 
+                        src={FinalDesignBooking} 
+                        width={403} 
+                        height={287} 
+                        placeholder="blur" 
+                        blurDataURL={FinalDesignBooking} 
+                        alt="Final Design Booking" 
+                        onClick={() => handleImageEnlarging(FinalDesignBooking)}/>
+                    <p>Booking Page</p>
+                </motion.div>
+            </div>
+        </section>
+    )
+}
+
+const figmaPrototypeSection = () => {
+    return(
+        <section className={styles.figma_prototype}>
+            <div className={styles.heading_bar} />
+            <h1>Figma Prototype</h1>
+            <div>
+                <iframe 
+                    title='Homie Figma Prototype'
+                    width={1300} 
+                    height={662} 
+                    oading="lazy" src="https://www.figma.com/proto/1XnqrlsKWKXYud37ZUmkJJ/Homie-Project?embed_host=share&kind=&node-id=537%3A1562&page-id=531%3A1143&scaling=min-zoom&starting-point-node-id=537%3A1562&viewport=414%2C532%2C0.06" 
+                    allowFullScreen/>
+            </div>
+        </section>
+    )
+}
+
+const otherProjectSection = () => {
+    return(
+        <section className={styles.other_projects}>
+            <div className={styles.heading_bar} />
+            <h1>My Other Projects</h1>
+            <div>
+                <Link href="/project/core">
                     <div>
                         <Image 
-                            src={DataCodingImage} 
-                            width={715} 
-                            height={200}
-                            placeholder="blur"
-                            blurDataURL={DataCodingImage}
-                            alt="Data coding results from conducting user research"/>
-                        <p>Data Coding</p>
-                        
-                    </div>
-                    <div>
-                        <KeyInsightsJsx />
-                    </div>
-                </div>
-            </section>
-
-            <section className={styles.design_brief}>
-                <div className={styles.heading_bar}/>
-                <h1>Design Brief</h1>
-                <div className={styles.designbrief_div}>
-                    <h3>Goals &#38; Objectives</h3>
-                    <div>
-                        <Image 
-                                    src={DesignObjectives} 
-                                    width={643} 
-                                    height={275}
-                                    placeholder="blur"
-                                    blurDataURL={DesignObjectives}
-                                    alt="Design Goals and Objectives"/>
-                    </div>
-                </div>
-                
-                <div className={styles.designreq_div}>
-                    <h3>Design Requirements &#38; Features</h3>
-                    <ol type="1">
-                        <li>
-                            <h4>Chat feature &#38; Scheduling</h4>
-                        </li>
-                        <li>
-                            <h4>Document Management &#40; for applications and leases&#41;</h4>
-                        </li>
-                        <li>
-                            <h4>Resource packages, Tips &#38; Tricks, Legal Information</h4>
-                        </li>
-                        <li>
-                            <h4>Holistic Map, Bus Routes, Ammenities, Crime Spots</h4>
-                        </li>
-                        <li>
-                            <h4>Standardizing Listings</h4>
-                        </li>
-                        <li>
-                            <h4>Tenant &amp; landlord accounts</h4>
-                        </li>
-                        <li>
-                            <h4>Favourite Listings</h4>
-                        </li>
-                        <li>
-                            <h4>Verification &amp; Virtual Tours</h4>
-                        </li>
-                    </ol>
-                </div>
-
-                
-            </section>
-
-            <section className={styles.personas}>
-                <div className={styles.heading_bar} />
-                <h1>Personas</h1>
-                <p>
-                    After determining our design brief we created four personas from our background research which captured
-                    the breadth of users we wanted to cater to.
-                </p>
-                <div>
-                    <motion.div whileHover={hoverScaleAnimation}>
-                        <Image 
-                            src={PersonasAiden} 
-                            width={370} 
-                            height={260} 
-                            placeholder="blur" 
-                            blurDataURL={PersonasAiden} 
-                            alt="Persona for Aiden who is a freshman student looking for a place"
-                            onClick={() => handleImageEnlarging(PersonasAiden)}/>
-                        <p>Aiden: Freshmen Student</p>
-                    </motion.div>
-
-                    <motion.div whileHover={hoverScaleAnimation}>
-                        <Image 
-                            src={PersonasCarly} 
-                            width={370} 
-                            height={260} 
-                            placeholder="blur" 
-                            blurDataURL={PersonasCarly} 
-                            alt="Persona for Carly who is a long distance mover looking for a place" 
-                                onClick={() => handleImageEnlarging(PersonasCarly)}/>
-                        <p>Carly: Long Distance Mover</p>
-                    </motion.div>
-
-                    <motion.div whileHover={hoverScaleAnimation}>
-                        <Image 
-                            src={PersonasTamira} 
-                            width={370} 
-                            height={260} 
-                            placeholder="blur" 
-                            blurDataURL={PersonasTamira} 
-                            alt="Persona for Tamira who is a new parent looking to rent"
-                            onClick={() => handleImageEnlarging(PersonasTamira)}/>
-                        <p>Tamira: New Parent</p>
-                    </motion.div>
-
-                    <motion.div whileHover={hoverScaleAnimation}>
-                        <Image 
-                            src={PersonasSamu} 
-                            width={370} 
-                            height={260} 
-                            placeholder="blur" 
-                            blurDataURL={PersonasSamu} 
-                            alt="Persona for Samu who is interested in renting"
-                            onClick={() => handleImageEnlarging(PersonasSamu)}/>
-                        <p>Samu: Young Professional</p>
-                    </motion.div>
-                </div>
-            </section>
-
-            <section className={styles.user_journey_map}>
-                <div className={styles.heading_bar} />
-                <h1>User Journey Map</h1>
-                <p>
-                    Having uncovered many of the pain-points and opportunities from our research we put together a user journey map 
-                    that showed the rental housing process from start to finish. This journey map allowed us to visualize where the 
-                    problem areas where and highlight key touch points that could be improved.
-                </p>
-                <motion.div whileHover={hoverScaleAnimation}>
-                    <Image 
-                        src={UserJourneyMap} 
-                        width={1062} 
-                        height={273} 
-                        placeholder="blur" 
-                        blurDataURL={UserJourneyMap} 
-                        alt="User journey map put together after our research"
-                        onClick={() => handleImageEnlarging(UserJourneyMap)}/>
-                    <p>User Journey Map</p>
-                </motion.div>
-            </section>
-
-            <section className={styles.concept_development}>
-                <div className={styles.heading_bar} />
-                <h1>Concept Development</h1>
-
-                <h2>Competitive Analysis</h2>
-                <p>We began our concept development by doing some market research on existing products and understanding their approach, functionality, and layout.</p>
-                <div className={styles.concept_dev_imgs_div}>
-                    <Image src={ConceptCompAnalysis} width={433} height={300} placeholder="blur" blurDataURL={ConceptCompAnalysis} alt="Competitive Analysis Image"/>
-                    <p>Competitive Analysis</p>
-                </div>
-
-                <h2>Application Architecture</h2>
-                <p>The design solution involved creating an information architecture, comprised of all the possible pages, content, features, and user actions for Homie. Each of these assets were then grouped into named categories and organized in a hierarchical structure. </p>
-                <motion.div whileHover={hoverScaleAnimation}>
-                    <Image 
-                        src={ConceptApplicationArch} 
-                        width={519} 
-                        height={346} 
-                        placeholder="blur" 
-                        blurDataURL={ConceptApplicationArch} 
-                        alt="Application Architecture Image"
-                        onClick={() => handleImageEnlarging(ConceptApplicationArch)}/>
-                    <p>Information Architecture</p>
-                </motion.div>
-
-                <h2>UI Development</h2>
-                <p>We focused our concept development into three key areas of the application that we identified from our research which needed the most improvement.</p>
-                
-                <motion.div whileHover={hoverScaleAnimation}>
-                    <Image 
-                        src={ConceptLandlordPortal} 
-                        width={1061} 
-                        height={351} 
-                        placeholder="blur" 
-                        blurDataURL={ConceptLandlordPortal} 
-                        alt="Landlord Portal Image"
-                        onClick={() => handleImageEnlarging(ConceptLandlordPortal)}/>
-                    <p>Landlord Portal - Creating and Managing Listings </p>
-                </motion.div>
-
-                <motion.div whileHover={hoverScaleAnimation}>
-                    <Image 
-                        src={ConceptBrowsingListings} 
-                        width={1061} 
-                        height={351}
-                        placeholder="blur" 
-                        blurDataURL={ConceptBrowsingListings} 
-                        alt="Browsing and comparing Image"
-                        onClick={() => handleImageEnlarging(ConceptBrowsingListings)}/>
-                    <p>Browsing and comparing listings</p>
-                </motion.div>
-
-                <motion.div whileHover={hoverScaleAnimation}>
-                    <Image 
-                        src={ConceptScheduling} 
-                        width={1061} 
-                        height={351} 
-                        placeholder="blur" 
-                        blurDataURL={ConceptScheduling} 
-                        alt="Booking Viewings Image"
-                        onClick={() => handleImageEnlarging(ConceptScheduling)}/>
-                    <p>Booking Viewings</p>
-                </motion.div>
-            </section>
-
-            <section className={styles.user_testing}>
-                <div className={styles.heading_bar} />
-                <h1>User Testing</h1>
-                <p>
-                    The usability testing was an eye opening moment for the group to update and improve our design. We asked each participant to 
-                    complete a certain task, and we were not allowed to intervene. We also timed each participant to understand how efficient 
-                    each user task was. At the end we interviewed each participant on their experience. Through our user testers, we gained key 
-                    insights into what features functioned smoothly and what needed tweaking.
-                </p>
-
-                <div className={styles.user_testing_comp_div}>
-                    <UserTestingComponent/>
-                </div>
-                       
-            </section>
-
-            <section className={styles.iteration_section}>
-                <div className={styles.heading_bar} />
-                <h1>Iterations</h1>
-                <p>
-                    After getting the results from our user testing we iterated on the problem areas that confused users. We redesigned 
-                    certain user flows to have more clarity and organization from the feedback we gained from our testing.
-                </p>
-                <motion.div whileHover={hoverScaleAnimation}>
-                    <Image 
-                        src={Iterations} 
-                        width={786} 
-                        height={368} 
-                        placeholder="blur" 
-                        blurDataURL={Iterations} 
-                        alt="Iteration Image"
-                        onClick={() => handleImageEnlarging(Iterations)}/>
-                </motion.div>
-            </section>
-
-            <section className={styles.final_design_section}>
-                <div className={styles.heading_bar} />
-                <h1>Final Design</h1>
-                <p>
-                    After addressing the concerns from our user testing we began the finalization of the design by creating a branding 
-                    guideline and developing a high-fidelity version of the application.
-                </p>
-                <div>
-                    <motion.div whileHover={hoverScaleAnimation}>
-                        <Image 
-                            src={FinalDesignMood} 
-                            width={424} 
+                            src={CoreProjectImage} 
                             height={300} 
-                            placeholder="blur" 
-                            blurDataURL={FinalDesignMood} 
-                            alt="Final Design Image"
-                            onClick={() => handleImageEnlarging(FinalDesignMood)}/>
-                        <p>Mood Board</p>
-                    </motion.div>
-                    <motion.div whileHover={hoverScaleAnimation}>
-                        <Image 
-                            src={FinalDesignLanding} 
-                            width={403} height={287} 
-                            placeholder="blur" 
-                            blurDataURL={FinalDesignLanding} 
-                            alt="Landing Page Imge" 
-                            onClick={() => handleImageEnlarging(FinalDesignLanding)}/>
-                        <p>Landing Page</p>
-                    </motion.div>
-                    <motion.div whileHover={hoverScaleAnimation}>
-                        <Image 
-                            src={FinalDesignHousing} 
-                            width={403} 
-                            height={287} 
-                            placeholder="blur" 
-                            blurDataURL={FinalDesignHousing} 
-                            alt="Housing Page Image" 
-                            onClick={() => handleImageEnlarging(FinalDesignHousing)}/>
-                        <p>Housing Search</p>
-                    </motion.div>
-                    <motion.div whileHover={hoverScaleAnimation}>
-                        <Image 
-                            src={FinalDesignListing} 
-                            width={403} 
-                            height={287} 
-                            placeholder="blur" 
-                            blurDataURL={FinalDesignListing} 
-                            alt="Listing Page Image" 
-                            onClick={() => handleImageEnlarging(FinalDesignListing)}/>
-                        <p>Listing View</p>
-                    </motion.div>
-                    <motion.div whileHover={hoverScaleAnimation}>
-                        <Image 
-                            src={FinalDesignComparison} 
-                            width={403} 
-                            height={287} 
-                            placeholder="blur" 
-                            blurDataURL={FinalDesignComparison} 
-                            alt="Comparison Page Image" 
-                            onClick={() => handleImageEnlarging(FinalDesignComparison)}/>
-                        <p>Comparison Page</p>
-                    </motion.div>
-                    <motion.div whileHover={hoverScaleAnimation}>
-                        <Image 
-                            src={FinalDesignMessaging} 
-                            width={403} 
-                            height={287} 
-                            placeholder="blur" 
-                            blurDataURL={FinalDesignMessaging} 
-                            alt="Final Design Messaging" 
-                            onClick={() => handleImageEnlarging(FinalDesignMessaging)}/>
-                        <p>Messaging View</p>
-                    </motion.div>
-                    <motion.div whileHover={hoverScaleAnimation}>
-                        <Image 
-                            src={FinalDesignBooking} 
-                            width={403} 
-                            height={287} 
-                            placeholder="blur" 
-                            blurDataURL={FinalDesignBooking} 
-                            alt="Final Design Booking" 
-                            onClick={() => handleImageEnlarging(FinalDesignBooking)}/>
-                        <p>Booking Page</p>
-                    </motion.div>
-                </div>
-            </section>
+                            width={400}
+                            placeholder="blur"
+                            blurDataURL={CoreProjectImage}/>
+                        <p>Core</p>
+                    </div>
+                </Link>
 
-            <section className={styles.figma_prototype}>
-                <div className={styles.heading_bar} />
-                <h1>Figma Prototype</h1>
-                <div>
-                    <iframe 
-                        title='Homie Figma Prototype'
-                        width={1300} 
-                        height={662} 
-                        oading="lazy" src="https://www.figma.com/proto/1XnqrlsKWKXYud37ZUmkJJ/Homie-Project?embed_host=share&kind=&node-id=537%3A1562&page-id=531%3A1143&scaling=min-zoom&starting-point-node-id=537%3A1562&viewport=414%2C532%2C0.06" 
-                        allowFullScreen/>
-                </div>
-            </section>
-
-            <section className={styles.other_projects}>
-                <div className={styles.heading_bar} />
-                <h1>My Other Projects</h1>
-                <div>
-                    <Link href="/project/core">
-                        <div>
-                            <Image 
-                                src={CoreProjectImage} 
-                                height={300} 
-                                width={400}
-                                placeholder="blur"
-                                blurDataURL={CoreProjectImage}/>
-                            <p>Core</p>
-                        </div>
-                    </Link>
-
-                    <Link href="/project/world-journal">
-                        <div>
-                            <Image
-                                src={WorldJournalImage}
-                                height={300}
-                                width={400}
-                                placeholder="blur"
-                                blurDataURL={WorldJournalImage} />
-                            <p>World Journal</p>
-                        </div>
-                    </Link>
-                </div>
-            </section>
-        </div>
-            {(isScrolled) ? <div tabIndex="0" role="button" className={styles.go_top_button} onClick={() => scrollToTheTop()} onKeyDown={(e) => handleOnEnterPressToTop(e)}>&uarr;</div> : null}
-        </>
+                <Link href="/project/world-journal">
+                    <div>
+                        <Image
+                            src={WorldJournalImage}
+                            height={300}
+                            width={400}
+                            placeholder="blur"
+                            blurDataURL={WorldJournalImage} />
+                        <p>World Journal</p>
+                    </div>
+                </Link>
+            </div>
+        </section>
     )
 }

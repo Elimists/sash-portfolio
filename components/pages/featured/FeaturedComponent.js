@@ -91,7 +91,7 @@ const FractionalComponent = ({featured}) => {
             transition={{ duration:(featured.id * loadRate ) }}
             >
             <div className={styles.text_div}>
-                <h1><a target="_href" href={featured.link}>{featured.title} &#8599;</a></h1>
+                <h1><a target="_href" href={featured.link}>{featured.title} <LinkArrow/></a></h1>
                 <h5>{featured.date}</h5>
                 {featured.description}
             </div>
@@ -117,3 +117,25 @@ const LongColorfulBottomBar = () => {
         <div className={styles.colorful_bottom_bar}/>
     )
 }
+
+
+function LinkArrow() {
+    return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke="#000"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M7 17L17 7M7 7h10v10"
+        ></path>
+      </svg>
+    );
+  }
+  
