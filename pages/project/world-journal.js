@@ -6,16 +6,27 @@ import useScrolledDown from '../../hooks/useScrolledDown'
 
 /** Assets realted to the project World Journal  */
 import styles from '../../styles/Homie.module.css'
-import WorldJournalImage from '../../public/projects/world-journal/world-journal.webp'
+
 import WorldJournalProcess from '../../components/svgImages/world-journal/WorldJournalProcess'
-import FactorsAffectingImage from '../../public/projects/world-journal/factors.webp'
-import IdeationImage1 from '../../public/projects/world-journal/ideation.webp'
-import IdeationImage2 from '../../public/projects/world-journal/existingservices.webp'
-import ProposalImage1 from '../../public/projects/world-journal/uimockup1.webp'
-import ProposalImage2 from '../../public/projects/world-journal/uimockup2.webp'
-import FinalPosterImage from '../../public/projects/world-journal/finalposter.webp'
+
+
+/**Object containing all images in the public/projects/world-journal folder */
 import CoreProjectImage from '../../public/projects/core/core.webp'
 import LisnProjectImage from '../../public/projects/lisn/lisn.webp'
+
+/**
+ * Imports all images in the public/projects/world-journal folder 
+ * */
+ function importAll(r) {
+    let images = {};
+    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+    return images;
+}
+
+/**Object containing all images in the public/projects/homie folder */
+const images = importAll(require.context('../../public/projects/world-journal', false, /\.(webp|jpe?g|svg)$/));
+
+
 
 export default function WorldJournal(){
 
@@ -65,11 +76,11 @@ export default function WorldJournal(){
                     </div>
 
                     <Image
-                        src={WorldJournalImage}
+                        src={images['world-journal.webp']}
                         width={650}
                         height={430}
                         placeholder="blur"
-                        blurDataURL={WorldJournalImage} 
+                        blurDataURL={images['world-journal.webp']} 
                         alt="World Journal Image"
                         />
                 </section>
@@ -162,11 +173,11 @@ export default function WorldJournal(){
                     </p>
                     <div>
                         <Image
-                            src={FactorsAffectingImage}
+                            src={images['factors.webp']}
                             width={576}
                             height={308}
                             placeholder="blur"
-                            blurDataURL={FactorsAffectingImage}
+                            blurDataURL={images['factors.webp']}
                             alt="Factors affecting image"
                         />
                         <p>Factors that contribute to the Overview Effect</p>
@@ -186,11 +197,11 @@ export default function WorldJournal(){
                     </p>
                     <div>
                         <Image
-                            src={IdeationImage1}
+                            src={images['ideation.webp']}
                             width={626}
                             height={446}
                             placeholder="blur"
-                            blurDataURL={IdeationImage1}
+                            blurDataURL={images['ideation.webp']}
                             alt="Ideation Image 1"
                         />
                     </div>
@@ -204,11 +215,11 @@ export default function WorldJournal(){
                     </p>
                     <div>
                         <Image
-                            src={IdeationImage2}
+                            src={images['existingservices.webp']}
                             width={498}
                             height={280}
                             placeholder="blur"
-                            blurDataURL={IdeationImage2}
+                            blurDataURL={images['existingservices.webp']}
                             alt="Ideation Image 2"
                         />
                     </div>
@@ -230,21 +241,21 @@ export default function WorldJournal(){
                     </p>
                     <div>
                         <Image
-                            src={ProposalImage1}
+                            src={images['uimockup1.webp']}
                             width={838}
                             height={410}
                             placeholder="blur"
-                            blurDataURL={ProposalImage1}
+                            blurDataURL={images['uimockup1.webp']}
                             alt="UI Mockup 1"
                         />
                     </div>
                     <div>
                         <Image
-                            src={ProposalImage2}
+                            src={images['uimockup2.webp']}
                             width={840}
                             height={254}
                             placeholder="blur"
-                            blurDataURL={ProposalImage2}
+                            blurDataURL={images['uimockup2.webp']}
                             alt="UI Mockup 2"
                         />
                     </div>
@@ -255,11 +266,11 @@ export default function WorldJournal(){
                     <h1>Final Poster</h1>
                     <div>
                         <Image
-                            src={FinalPosterImage}
+                            src={images['finalposter.webp']}
                             width={836}
                             height={1488}
                             placeholder="blur"
-                            blurDataURL={FinalPosterImage}
+                            blurDataURL={images['finalposter.webp']}
                             alt="Final presentation poster for World Journal"
                         />
                     </div>
