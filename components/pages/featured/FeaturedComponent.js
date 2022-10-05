@@ -92,7 +92,7 @@ const FractionalComponent = ({featured}) => {
             >
             <div className={styles.text_div}>
                 <h1><a target="_href" href={featured.link}>{featured.title} <LinkArrow/></a></h1>
-                <h5>{featured.date}</h5>
+                <h5 className={styles.date}>{featured.date}</h5>
                 {featured.description}
             </div>
             <div className={styles.image_div}>
@@ -123,8 +123,8 @@ function LinkArrow() {
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
+        width="18"
+        height="18"
         fill="none"
         viewBox="0 0 24 24"
       >

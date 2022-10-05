@@ -6,19 +6,23 @@ import useScrolledDown from '../../hooks/useScrolledDown'
 
 /** Assets related to project Lisn */
 import styles from '../../styles/Homie.module.css'
-import LisnImage from '../../public/projects/lisn/lisn.webp'
-import BrainStormSessionImage from '../../public/projects/lisn/brainstorm.webp'
-import ResearchQuestionsImage from '../../public/projects/lisn/research_q.webp'
-import InitialWireframeImage from '../../public/projects/lisn/initial_wireframe.webp'
-import LofiMockupImage from '../../public/projects/lisn/lofi_mockup.webp'
-import NewHPIdeationImage1 from '../../public/projects/lisn/new_hp.webp'
-import SimilarAppsImage from '../../public/projects/lisn/similar_apps.webp'
-import BlockframingImage from '../../public/projects/lisn/blockframing.webp'
-import OldConvoCardImage from '../../public/projects/lisn/oldconvocard.webp'
-import HomePageConceptImage from '../../public/projects/lisn/homepageconcept.webp'
-import FinalHomePageImage from '../../public/projects/lisn/finalhomepage.webp'
+
+/**Requried images for the 'Other Projects' section at the bottom */
 import CoreProjectImage from '../../public/projects/core/core.webp'
 import WorldJournalImage from '../../public/projects/world-journal/world-journal.webp'
+
+/**
+ * Imports all images in the public/projects/lisn folder 
+ * */
+ function importAll(r) {
+    let images = {};
+    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+    return images;
+}
+
+/**Object containing all images in the public/projects/lisn folder */
+const images = importAll(require.context('../../public/projects/lisn', false, /\.(webp|jpe?g|svg)$/));
+
 
 export default function Lisn(){
     const [showModal, setShowModal] = useState(false)
@@ -63,12 +67,12 @@ export default function Lisn(){
                     </div>
 
                     <Image
-                        src={LisnImage}
+                        src={images['lisn.webp']}
                         height={430}
                         width={650}
                         alt="Homie Project Image"
                         placeholder="blur"
-                        blurDataURL={LisnImage} />
+                        blurDataURL={images['lisn.webp']} />
                 </section>
 
                 <section className={styles.synopsis}>
@@ -130,22 +134,22 @@ export default function Lisn(){
                     <div>
                         <div>
                             <Image
-                                src={BrainStormSessionImage}
+                                src={images['brainstorm.webp']}
                                 width={290}
                                 height={244}
                                 placeholder="blur"
-                                blurDataURL={BrainStormSessionImage}
+                                blurDataURL={images['brainstorm.webp']}
                                 alt="Brain Storm Session"
                             />
                             <p>Brainstorming session with team</p>
                         </div>
                         <div>
                             <Image
-                                src={ResearchQuestionsImage}
+                                src={images['research_q.webp']}
                                 width={244}
                                 height={244}
                                 placeholder="blur"
-                                blurDataURL={ResearchQuestionsImage}
+                                blurDataURL={images['research_q.webp']}
                                 alt="Research Questions"
                             />
                             <p>Research Questions</p>
@@ -216,22 +220,22 @@ export default function Lisn(){
                     <div>
                         <div>
                             <Image
-                                src={InitialWireframeImage}
+                                src={images['initial_wireframe.webp']}
                                 width={525}
                                 height={289}
                                 placeholder="blur"
-                                blurDataURL={InitialWireframeImage} 
+                                blurDataURL={images['initial_wireframe.webp']} 
                                 alt="Initial Wireframe"   
                             />
                             <p>Initial wireframes</p>
                         </div>
                         <div>
                             <Image
-                                src={LofiMockupImage}
+                                src={images['lofi_mockup.webp']}
                                 width={715}
                                 height={291}
                                 placeholder="blur"
-                                blurDataURL={LofiMockupImage}
+                                blurDataURL={images['lofi_mockup.webp']}
                                 alt="Lo-fi Mockup"
                             />
                             <p>Lo-Fi Mockup</p>
@@ -272,11 +276,11 @@ export default function Lisn(){
                     </p>
                     <div>
                         <Image
-                            src={NewHPIdeationImage1}
+                            src={images['new_hp.webp']}
                             width={606}
                             height={558}
                             placeholder="blur"
-                            blurDataURL={NewHPIdeationImage1}
+                            blurDataURL={images['new_hp.webp']}
                             alt="New Home Page Image"
                         />
                     </div>
@@ -289,22 +293,22 @@ export default function Lisn(){
                     <div>
                         <div>
                             <Image
-                                src={SimilarAppsImage}
+                                src={images['similar_apps.webp']}
                                 width={567}
                                 height={360}
                                 placeholder="blur"
-                                blurDataURL={SimilarAppsImage}
+                                blurDataURL={images['similar_apps.webp']}
                                 alt="Similar Apps"
                             />
                             <p>Brainstorming with similar apps in the market</p>
                         </div>
                         <div>
                             <Image
-                                src={BlockframingImage}
+                                src={images['blockframing.webp']}
                                 width={567}
                                 height={360}
                                 placeholder="blur"
-                                blurDataURL={BlockframingImage}
+                                blurDataURL={images['blockframing.webp']}
                                 alt="Block Framing"
                             />
                             <p>Blockframing</p>
@@ -321,11 +325,11 @@ export default function Lisn(){
                     </p>
                     <div>
                         <Image
-                            src={OldConvoCardImage}
+                            src={images['oldconvocard.webp']}
                             width={585}
                             height={146}
                             placeholder="blur"
-                            blurDataURL={OldConvoCardImage}
+                            blurDataURL={images['oldconvocard.webp']}
                             alt="Old Conversation UI"
                         />
                     </div>
@@ -336,11 +340,11 @@ export default function Lisn(){
                     <h1>New Home Page Concepts</h1>
                     <div>
                         <Image
-                            src={HomePageConceptImage}
+                            src={images['homepageconcept.webp']}
                             width={561}
                             height={941}
                             placeholder="blur"
-                            blurDataURL={HomePageConceptImage}
+                            blurDataURL={images['homepageconcept.webp']}
                             alt="Home Page Concept Design"
                         />
                     </div>
@@ -355,11 +359,11 @@ export default function Lisn(){
                     </p>
                     <div>
                         <Image
-                            src={FinalHomePageImage}
+                            src={images['finalhomepage.webp']}
                             width={726}
                             height={514}
                             placeholder="blur"
-                            blurDataURL={FinalHomePageImage}
+                            blurDataURL={images['finalhomepage.webp']}
                             alt="Final Home Page Design"
                         />
                        
