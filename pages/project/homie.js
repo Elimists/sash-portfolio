@@ -6,41 +6,30 @@ import { useEffect, useState } from 'react'
 import useScrolledDown from '../../hooks/useScrolledDown'
 import { motion } from "framer-motion"
 
-/** Assets related to project - Homie */
+/** Required svgs */
 import styles from '../../styles/Homie.module.css'
-import HomieImg from '../../public/projects/homie/homie.webp'
 import HomieTitleSvg from '../../components/svgImages/homie/HomieTitleSvg'
 import HomieProcessSVG from '../../components/svgImages/homie/ProcessSvg'
-import DataCodingImage from '../../public/projects/homie/key_insights1.webp'
 import KeyInsightsJsx from '../../components/svgImages/homie/KeyInsightsSvg'
-import PersonasAiden from '../../public/projects/homie/personas_aiden.webp'
-import PersonasCarly from '../../public/projects/homie/personas_carly.webp'
-import PersonasSamu from '../../public/projects/homie/personas_samu.webp'
-import PersonasTamira from '../../public/projects/homie/personas_tamira.webp'
-import UserJourneyMap from '../../public/projects/homie/user_journey.webp'
-import ConceptCompAnalysis from '../../public/projects/homie/concept_comp_analysis.webp'
-import ConceptApplicationArch from '../../public/projects/homie/concept_dev_info_arch.webp'
-import ConceptLandlordPortal from '../../public/projects/homie/concept_dev_landlord_ui.webp'
-import ConceptScheduling from '../../public/projects/homie/concept_dev_scheduling_ui.webp'
-import ConceptBrowsingListings from '../../public/projects/homie/concept_dev_searching_ui.webp'
-import Iterations from '../../public/projects/homie/iterations.webp'
-import FinalDesignBooking from '../../public/projects/homie/final_design_booking.webp'
-import FinalDesignComparison from '../../public/projects/homie/final_design_comparison.webp'
-import FinalDesignHousing from '../../public/projects/homie/final_design_housing.webp'
-import FinalDesignLanding from '../../public/projects/homie/final_design_landing.webp'
-import FinalDesignListing from '../../public/projects/homie/final_design_listing.webp'
-import FinalDesignMessaging from '../../public/projects/homie/final_design_messaging.webp'
-import FinalDesignMood from '../../public/projects/homie/final_design_mood.webp'
-import CoreProjectImage from '../../public/projects/core/core.webp'
-import WorldJournalImage from '../../public/projects/world-journal/world-journal.webp'
-import UserGroups from  '../../public/projects/homie/user_groups.webp'
-import RecruitmentCriteria from  '../../public/projects/homie/recruitment_criteria.webp'
-import DesignObjectives from  '../../public/projects/homie/design_objectives.webp'
-import ProblemSectionImage from '../../public/projects/homie/problemsection.webp'
-
 import UserTestingComponent from '../../components/svgImages/homie/UserTestingComponent'
 import ProblemSetComponent from '../../components/svgImages/homie/ProblemIcons'
 
+/**Requried images for the 'Other Projects' section at the bottom */
+import CoreProjectImage from '../../public/projects/core/core.webp'
+import WorldJournalImage from '../../public/projects/world-journal/world-journal.webp'
+
+
+/**
+ * Imports all images in the public/projects/homie folder 
+ * */
+function importAll(r) {
+    let images = {};
+    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+    return images;
+}
+
+/**Object containing all images in the public/projects/homie folder */
+const images = importAll(require.context('../../public/projects/homie', false, /\.(webp|jpe?g|svg)$/));
 
 const hoverScaleAnimation = {
     scale: 1.07,
@@ -50,9 +39,8 @@ const hoverScaleAnimation = {
 }
 
 
-
+/** Component that is exported */
 export default function Homie(){
-
     const [showModal, setShowModal] = useState(false)
     const [imageSource, setImageSource] = useState(null)
 
@@ -153,12 +141,12 @@ const homieTopSection = () => {
             </div>
             
             <Image 
-                src={HomieImg} 
+                src={images['homie.webp']} 
                 height={430}
                 width={650} 
                 alt="Homie Project Image"
                 placeholder="blur" 
-                blurDataURL={HomieImg}/>
+                blurDataURL={images['homie.webp']}/>
         </section>
     )
 }
@@ -213,11 +201,11 @@ const problemSection = () => {
                 </p>
                 <div className={styles.problem_section_img_div}>
                     <Image 
-                        src={ProblemSectionImage} 
+                        src={images['problemsection.webp']} 
                         width={500} 
                         height={124}
                         placeholder="blur"
-                        blurDataURL={ProblemSectionImage}
+                        blurDataURL={images['problemsection.webp']}
                         alt="Problem section image"/>
                 </div>
             </section>
@@ -259,11 +247,11 @@ const userGroupSection = () => {
             </p>
             <div>
                 <Image 
-                    src={UserGroups} 
+                    src={images['user_groups.webp']} 
                     width={265} 
                     height={142}
                     placeholder="blur"
-                    blurDataURL={UserGroups}
+                    blurDataURL={images['user_groups.webp']}
                     alt="User Groups"/>
             </div>
         </section>
@@ -277,11 +265,11 @@ const recruitmentCriteriaSection = () => {
             <h1>Recruitment Criteria</h1>
             <div className={styles.recruitcrit_img_div}>
                 <Image 
-                    src={RecruitmentCriteria} 
+                    src={images['recruitment_criteria.webp']} 
                     width={674} 
                     height={512}
                     placeholder="blur"
-                    blurDataURL={RecruitmentCriteria}
+                    blurDataURL={images['recruitment_criteria.webp']}
                     alt="Recruitment Criteria"/>
             </div>
         </section>
@@ -301,11 +289,11 @@ const keyInsightsSection = () => {
             <div>
                 <div>
                     <Image 
-                        src={DataCodingImage} 
+                        src={images['key_insights1.webp']} 
                         width={715} 
                         height={200}
                         placeholder="blur"
-                        blurDataURL={DataCodingImage}
+                        blurDataURL={images['key_insights1.webp']}
                         alt="Data coding results from conducting user research"/>
                     <p>Data Coding</p>
                     
@@ -327,11 +315,11 @@ const designBriefSection = () => {
                 <h3>Goals &#38; Objectives</h3>
                 <div>
                     <Image 
-                                src={DesignObjectives} 
+                                src={images['design_objectives.webp']} 
                                 width={643} 
                                 height={275}
                                 placeholder="blur"
-                                blurDataURL={DesignObjectives}
+                                blurDataURL={images['design_objectives.webp']}
                                 alt="Design Goals and Objectives"/>
                 </div>
             </div>
@@ -381,49 +369,49 @@ const personasSection = (handleImageEnlarging) => {
             <div>
                 <motion.div whileHover={hoverScaleAnimation}>
                     <Image 
-                        src={PersonasAiden} 
+                        src={images['personas_aiden.webp']} 
                         width={370} 
                         height={260} 
                         placeholder="blur" 
-                        blurDataURL={PersonasAiden} 
+                        blurDataURL={images['personas_aiden.webp']} 
                         alt="Persona for Aiden who is a freshman student looking for a place"
-                        onClick={() => handleImageEnlarging(PersonasAiden)}/>
+                        onClick={() => handleImageEnlarging(images['personas_aiden.webp'])}/>
                     <p>Aiden: Freshmen Student</p>
                 </motion.div>
 
                 <motion.div whileHover={hoverScaleAnimation}>
                     <Image 
-                        src={PersonasCarly} 
+                        src={images['personas_carly.webp']} 
                         width={370} 
                         height={260} 
                         placeholder="blur" 
-                        blurDataURL={PersonasCarly} 
+                        blurDataURL={images['personas_carly.webp']} 
                         alt="Persona for Carly who is a long distance mover looking for a place" 
-                            onClick={() => handleImageEnlarging(PersonasCarly)}/>
+                            onClick={() => handleImageEnlarging(images['personas_carly.webp'])}/>
                     <p>Carly: Long Distance Mover</p>
                 </motion.div>
 
                 <motion.div whileHover={hoverScaleAnimation}>
                     <Image 
-                        src={PersonasTamira} 
+                        src={images['personas_tamira.webp']} 
                         width={370} 
                         height={260} 
                         placeholder="blur" 
-                        blurDataURL={PersonasTamira} 
+                        blurDataURL={images['personas_tamira.webp']} 
                         alt="Persona for Tamira who is a new parent looking to rent"
-                        onClick={() => handleImageEnlarging(PersonasTamira)}/>
+                        onClick={() => handleImageEnlarging(images['personas_tamira.webp'])}/>
                     <p>Tamira: New Parent</p>
                 </motion.div>
 
                 <motion.div whileHover={hoverScaleAnimation}>
                     <Image 
-                        src={PersonasSamu} 
+                        src={images['personas_samu.webp']} 
                         width={370} 
                         height={260} 
                         placeholder="blur" 
-                        blurDataURL={PersonasSamu} 
+                        blurDataURL={images['personas_samu.webp']} 
                         alt="Persona for Samu who is interested in renting"
-                        onClick={() => handleImageEnlarging(PersonasSamu)}/>
+                        onClick={() => handleImageEnlarging(images['personas_samu.webp'])}/>
                     <p>Samu: Young Professional</p>
                 </motion.div>
             </div>
@@ -442,13 +430,13 @@ const userJourneyMapSection = () => {
         </p>
         <motion.div whileHover={hoverScaleAnimation}>
             <Image 
-                src={UserJourneyMap} 
+                src={images['user_journey.webp']} 
                 width={1062} 
                 height={273} 
                 placeholder="blur" 
-                blurDataURL={UserJourneyMap} 
+                blurDataURL={images['user_journey.webp']} 
                 alt="User journey map put together after our research"
-                onClick={() => handleImageEnlarging(UserJourneyMap)}/>
+                onClick={() => handleImageEnlarging(images['user_journey.webp'])}/>
             <p>User Journey Map</p>
         </motion.div>
     </section>
@@ -463,7 +451,13 @@ const conceptDevelopmentSection = (handleImageEnlarging) => {
             <h2>Competitive Analysis</h2>
             <p>We began our concept development by doing some market research on existing products and understanding their approach, functionality, and layout.</p>
             <div className={styles.concept_dev_imgs_div}>
-                <Image src={ConceptCompAnalysis} width={433} height={300} placeholder="blur" blurDataURL={ConceptCompAnalysis} alt="Competitive Analysis Image"/>
+                <Image 
+                    src={images['concept_comp_analysis.webp']} 
+                    width={433} 
+                    height={300} 
+                    placeholder="blur" 
+                    blurDataURL={images['concept_comp_analysis.webp']} 
+                    alt="Competitive Analysis Image"/>
                 <p>Competitive Analysis</p>
             </div>
 
@@ -471,13 +465,13 @@ const conceptDevelopmentSection = (handleImageEnlarging) => {
             <p>The design solution involved creating an information architecture, comprised of all the possible pages, content, features, and user actions for Homie. Each of these assets were then grouped into named categories and organized in a hierarchical structure. </p>
             <motion.div whileHover={hoverScaleAnimation}>
                 <Image 
-                    src={ConceptApplicationArch} 
+                    src={images['concept_dev_info_arch.webp']} 
                     width={519} 
                     height={346} 
                     placeholder="blur" 
-                    blurDataURL={ConceptApplicationArch} 
+                    blurDataURL={images['concept_dev_info_arch.webp']} 
                     alt="Application Architecture Image"
-                    onClick={() => handleImageEnlarging(ConceptApplicationArch)}/>
+                    onClick={() => handleImageEnlarging(images['concept_dev_info_arch.webp'])}/>
                 <p>Information Architecture</p>
             </motion.div>
 
@@ -486,37 +480,37 @@ const conceptDevelopmentSection = (handleImageEnlarging) => {
             
             <motion.div whileHover={hoverScaleAnimation}>
                 <Image 
-                    src={ConceptLandlordPortal} 
+                    src={images['concept_dev_landlord_ui.webp']} 
                     width={1061} 
                     height={351} 
                     placeholder="blur" 
-                    blurDataURL={ConceptLandlordPortal} 
+                    blurDataURL={images['concept_dev_landlord_ui.webp']} 
                     alt="Landlord Portal Image"
-                    onClick={() => handleImageEnlarging(ConceptLandlordPortal)}/>
+                    onClick={() => handleImageEnlarging(images['concept_dev_landlord_ui.webp'])}/>
                 <p>Landlord Portal - Creating and Managing Listings </p>
             </motion.div>
 
             <motion.div whileHover={hoverScaleAnimation}>
                 <Image 
-                    src={ConceptBrowsingListings} 
+                    src={images['concept_dev_searching_ui.webp']} 
                     width={1061} 
                     height={351}
                     placeholder="blur" 
-                    blurDataURL={ConceptBrowsingListings} 
+                    blurDataURL={images['concept_dev_searching_ui.webp']} 
                     alt="Browsing and comparing Image"
-                    onClick={() => handleImageEnlarging(ConceptBrowsingListings)}/>
+                    onClick={() => handleImageEnlarging(images['concept_dev_searching_ui.webp'])}/>
                 <p>Browsing and comparing listings</p>
             </motion.div>
 
             <motion.div whileHover={hoverScaleAnimation}>
                 <Image 
-                    src={ConceptScheduling} 
+                    src={images['concept_dev_scheduling_ui.webp']} 
                     width={1061} 
                     height={351} 
                     placeholder="blur" 
-                    blurDataURL={ConceptScheduling} 
+                    blurDataURL={images['concept_dev_scheduling_ui.webp']} 
                     alt="Booking Viewings Image"
-                    onClick={() => handleImageEnlarging(ConceptScheduling)}/>
+                    onClick={() => handleImageEnlarging(images['concept_dev_scheduling_ui.webp'])}/>
                 <p>Booking Viewings</p>
             </motion.div>
         </section>
@@ -553,13 +547,13 @@ const iterationSection = (handleImageEnlarging) => {
             </p>
             <motion.div whileHover={hoverScaleAnimation}>
                 <Image 
-                    src={Iterations} 
+                    src={images['iterations.webp']} 
                     width={786} 
                     height={368} 
                     placeholder="blur" 
-                    blurDataURL={Iterations} 
+                    blurDataURL={images['iterations.webp']} 
                     alt="Iteration Image"
-                    onClick={() => handleImageEnlarging(Iterations)}/>
+                    onClick={() => handleImageEnlarging(images['iterations.webp'])}/>
             </motion.div>
         </section>
     )
@@ -577,78 +571,78 @@ const finalDesignSection = (handleImageEnlarging) => {
             <div>
                 <motion.div whileHover={hoverScaleAnimation}>
                     <Image 
-                        src={FinalDesignMood} 
+                        src={images['final_design_mood.webp']} 
                         width={424} 
                         height={300} 
                         placeholder="blur" 
-                        blurDataURL={FinalDesignMood} 
+                        blurDataURL={images['final_design_mood.webp']} 
                         alt="Final Design Image"
-                        onClick={() => handleImageEnlarging(FinalDesignMood)}/>
+                        onClick={() => handleImageEnlarging(images['final_design_mood.webp'])}/>
                     <p>Mood Board</p>
                 </motion.div>
                 <motion.div whileHover={hoverScaleAnimation}>
                     <Image 
-                        src={FinalDesignLanding} 
+                        src={images['final_design_landing.webp']} 
                         width={403} height={287} 
                         placeholder="blur" 
-                        blurDataURL={FinalDesignLanding} 
+                        blurDataURL={images['final_design_landing.webp']} 
                         alt="Landing Page Imge" 
-                        onClick={() => handleImageEnlarging(FinalDesignLanding)}/>
+                        onClick={() => handleImageEnlarging(images['final_design_landing.webp'])}/>
                     <p>Landing Page</p>
                 </motion.div>
                 <motion.div whileHover={hoverScaleAnimation}>
                     <Image 
-                        src={FinalDesignHousing} 
+                        src={images['final_design_housing.webp']} 
                         width={403} 
                         height={287} 
                         placeholder="blur" 
-                        blurDataURL={FinalDesignHousing} 
+                        blurDataURL={images['final_design_housing.webp']} 
                         alt="Housing Page Image" 
-                        onClick={() => handleImageEnlarging(FinalDesignHousing)}/>
+                        onClick={() => handleImageEnlarging(images['final_design_housing.webp'])}/>
                     <p>Housing Search</p>
                 </motion.div>
                 <motion.div whileHover={hoverScaleAnimation}>
                     <Image 
-                        src={FinalDesignListing} 
+                        src={images['final_design_listing.webp']} 
                         width={403} 
                         height={287} 
                         placeholder="blur" 
-                        blurDataURL={FinalDesignListing} 
+                        blurDataURL={images['final_design_listing.webp']} 
                         alt="Listing Page Image" 
-                        onClick={() => handleImageEnlarging(FinalDesignListing)}/>
+                        onClick={() => handleImageEnlarging(images['final_design_listing.webp'])}/>
                     <p>Listing View</p>
                 </motion.div>
                 <motion.div whileHover={hoverScaleAnimation}>
                     <Image 
-                        src={FinalDesignComparison} 
+                        src={images['final_design_comparison.webp']} 
                         width={403} 
                         height={287} 
                         placeholder="blur" 
-                        blurDataURL={FinalDesignComparison} 
+                        blurDataURL={images['final_design_comparison.webp']} 
                         alt="Comparison Page Image" 
-                        onClick={() => handleImageEnlarging(FinalDesignComparison)}/>
+                        onClick={() => handleImageEnlarging(images['final_design_comparison.webp'])}/>
                     <p>Comparison Page</p>
                 </motion.div>
                 <motion.div whileHover={hoverScaleAnimation}>
                     <Image 
-                        src={FinalDesignMessaging} 
+                        src={images['final_design_messaging.webp']} 
                         width={403} 
                         height={287} 
                         placeholder="blur" 
-                        blurDataURL={FinalDesignMessaging} 
+                        blurDataURL={images['final_design_messaging.webp']} 
                         alt="Final Design Messaging" 
-                        onClick={() => handleImageEnlarging(FinalDesignMessaging)}/>
+                        onClick={() => handleImageEnlarging(images['final_design_messaging.webp'])}/>
                     <p>Messaging View</p>
                 </motion.div>
                 <motion.div whileHover={hoverScaleAnimation}>
                     <Image 
-                        src={FinalDesignBooking} 
+                        src={images['final_design_booking.webp']} 
                         width={403} 
                         height={287} 
                         placeholder="blur" 
-                        blurDataURL={FinalDesignBooking} 
+                        blurDataURL={images['final_design_booking.webp']} 
                         alt="Final Design Booking" 
-                        onClick={() => handleImageEnlarging(FinalDesignBooking)}/>
+                        onClick={() => handleImageEnlarging(images['final_design_booking.webp'])}/>
                     <p>Booking Page</p>
                 </motion.div>
             </div>
