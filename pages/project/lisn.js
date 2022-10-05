@@ -12,7 +12,7 @@ import CoreProjectImage from '../../public/projects/core/core.webp'
 import WorldJournalImage from '../../public/projects/world-journal/world-journal.webp'
 
 /**
- * Imports all images in the public/projects/homie folder 
+ * Imports all images in the public/projects/lisn folder 
  * */
  function importAll(r) {
     let images = {};
@@ -20,7 +20,7 @@ import WorldJournalImage from '../../public/projects/world-journal/world-journal
     return images;
 }
 
-/**Object containing all images in the public/projects/homie folder */
+/**Object containing all images in the public/projects/lisn folder */
 const images = importAll(require.context('../../public/projects/lisn', false, /\.(webp|jpe?g|svg)$/));
 
 
