@@ -6,37 +6,26 @@ import useScrolledDown from '../../hooks/useScrolledDown'
 
 /** Assets realted to the project Core.  */
 import styles from '../../styles/Homie.module.css'
-import CoreTitleSvg from '../../components/svgImages/core/CoreTitleSvg'
-import CoreTitleDarkModeSvg from '../../components/svgImages/core/CoreTitleDarkModeSvg'
 import CoreImage from '../../public/projects/core/core.webp'
 import CoreProcessSvg from '../../components/svgImages/core/CoreProcessSvg'
-import ResearchImage from '../../public/projects/core/research.webp'
-import ProjectionImage from '../../public/projects/core/gbprojections.webp'
-import MarketShareImage from '../../public/projects/core/gbmarketshare.webp'
-import AnalysisImage1 from '../../public/projects/core/analysis1.webp'
-import AnalysisImage2 from '../../public/projects/core/analysis2.webp'
-import AnalysisImage3 from '../../public/projects/core/analysis3.webp'
-import ProjectAutopsyImage1 from '../../public/projects/core/autopsy1.webp'
-import ProjectAutopsyImage2 from '../../public/projects/core/autopsy2.webp'
-import ProjectAutopsyImage3 from '../../public/projects/core/autopsy3.webp'
-import ProjectAutopsyImage4 from '../../public/projects/core/autopsy4.webp'
-import IdeationImage1 from '../../public/projects/core/ideation1.webp'
-import IdeationImage2 from '../../public/projects/core/ideation2.webp'
-import IdeationImage3 from '../../public/projects/core/ideation3.webp'
-import IdeationImage4 from '../../public/projects/core/ideation4.webp'
-import PivotImage1 from '../../public/projects/core/pivot1.webp'
-import PivotImage2 from '../../public/projects/core/pivot2.webp'
-import FinalDesignImage1 from '../../public/projects/core/final1.webp'
-import FinalDesignImage2 from '../../public/projects/core/final2.webp'
-import FinalDesignImage3 from '../../public/projects/core/final3.webp'
-import FinalDesignImage4 from '../../public/projects/core/final4.webp'
-import FinalDesignImage5 from '../../public/projects/core/final5.webp'
-import UxUiDevImage1 from '../../public/projects/core/uxuidev1.webp'
-import UxUiDevImage2 from '../../public/projects/core/uxuidev2.webp'
-import FinalPresentationImage from '../../public/projects/core/finalpresentation.webp'
 
+/**Requried images for the 'Other Projects' section at the bottom */
 import LisnProjectImage from '../../public/projects/lisn/lisn.webp'
 import HomieProjectImage from '../../public/projects/homie/homie.webp'
+
+
+/**
+ * Imports all images in the public/projects/core folder 
+ * */
+ function importAll(r) {
+    let images = {};
+    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+    return images;
+}
+
+/**Object containing all images from the public/projects/core folder */
+const images = importAll(require.context('../../public/projects/core', false, /\.(webp|jpe?g|svg)$/));
+
 
 
 export default function CoreBP(){
@@ -164,11 +153,11 @@ export default function CoreBP(){
                     </p>
                     <div>
                         <Image
-                            src={ResearchImage}
+                            src={images['research.webp']}
                             width={1057}
                             height={464}
                             placeholder="blur"
-                            blurDataURL={ResearchImage}
+                            blurDataURL={images['research.webp']}
                             alt="Brain Storm Session"
                         />
                     </div>
@@ -188,22 +177,22 @@ export default function CoreBP(){
                     <div>
                         <div>
                             <Image
-                                src={ProjectionImage}
+                                src={images['gbprojections.webp']}
                                 width={530}
                                 height={281}
                                 placeholder="blur"
-                                blurDataURL={ProjectionImage}
+                                blurDataURL={images['gbprojections.webp']}
                                 alt="Projection"
                             />
                             <p>Global Blood Pressure Monitor Market Size with projections</p>
                         </div>
                         <div>
                             <Image
-                                src={MarketShareImage}
+                                src={images['gbmarketshare.webp']}
                                 width={530}
                                 height={284}
                                 placeholder="blur"
-                                blurDataURL={MarketShareImage}
+                                blurDataURL={images['gbmarketshare.webp']}
                                 alt="Market Share"
                             />
                             <p>Global Blood Pressure Monitor Market Share by monitor type</p>
@@ -227,11 +216,11 @@ export default function CoreBP(){
                         <h3>Persona</h3>
                         <div>
                             <Image
-                                src={AnalysisImage1}
+                                src={images['analysis1.webp']}
                                 width={496}
                                 height={144}
                                 placeholder="blur"
-                                blurDataURL={AnalysisImage1}
+                                blurDataURL={images['analysis1.webp']}
                                 alt="Professional cross country skier"
                             />
                         </div>
@@ -251,21 +240,21 @@ export default function CoreBP(){
                         <div>
                             <div>
                                 <Image
-                                    src={AnalysisImage2}
+                                    src={images['analysis2.webp']}
                                     width={376}
                                     height={282}
                                     placeholder="blur"
-                                    blurDataURL={AnalysisImage2}
+                                    blurDataURL={images['analysis2.webp']}
                                     alt="Blood Pressure monitor used for user analysis"
                                 />
                             </div>
                             <div>
                                 <Image
-                                    src={AnalysisImage3}
+                                    src={images['analysis3.webp']}
                                     width={798}
                                     height={353}
                                     placeholder="blur"
-                                    blurDataURL={AnalysisImage3}
+                                    blurDataURL={images['analysis3.webp']}
                                     alt="Analysis using drawings."
                                 />
                             </div>
@@ -284,33 +273,33 @@ export default function CoreBP(){
                     <div>
                         <div>
                             <Image
-                                src={ProjectAutopsyImage1}
+                                src={images['autopsy1.webp']}
                                 width={612}
                                 height={500}
                                 placeholder="blur"
-                                blurDataURL={ProjectAutopsyImage1}
+                                blurDataURL={images['autopsy1.webp']}
                                 alt="Product deconstruction to better understand design"
                             />
                             <p>Product Deconstruction</p>
                         </div>
                         <div>
                             <Image
-                                src={ProjectAutopsyImage2}
+                                src={images['autopsy2.webp']}
                                 width={402}
                                 height={259}
                                 placeholder="blur"
-                                blurDataURL={ProjectAutopsyImage2}
+                                blurDataURL={images['autopsy2.webp']}
                                 alt="Product cannot be stored properly and is cluttered"
                             />
                             <p>Product is not well designed for easy storage. This makes daily use annoying and messy.</p>
                         </div>
                         <div>
                             <Image
-                                src={ProjectAutopsyImage3}
+                                src={images['autopsy3.webp']}
                                 width={232}
                                 height={257}
                                 placeholder="blur"
-                                blurDataURL={ProjectAutopsyImage3}
+                                blurDataURL={images['autopsy3.webp']}
                                 alt="Product display is outdate and could use a refresher"
                             />
                             <p>Product display is outdated and could use a refresh.</p>
@@ -324,11 +313,11 @@ export default function CoreBP(){
                     <div>
                         <div>
                         <Image
-                            src={ProjectAutopsyImage4}
+                            src={images['autopsy4.webp']}
                             width={673}
                             height={442}
                             placeholder="blur"
-                            blurDataURL={ProjectAutopsyImage4}
+                            blurDataURL={images['autopsy4.webp']}
                             alt="Product was deconstructed and a 2D diagram was drawn of its internal parts"
                         />
                         <p>Product was deconstructed and a 2D diagram was drawn of its internal parts.</p>
@@ -353,11 +342,11 @@ export default function CoreBP(){
                         </p>
                         <div>
                             <Image
-                                src={IdeationImage1}
+                                src={images['ideation1.webp']}
                                 width={566}
                                 height={215}
                                 placeholder="blur"
-                                blurDataURL={IdeationImage1}
+                                blurDataURL={images['ideation1.webp']}
                                 alt="High-end health and fitness products"
                             />
                             <p>High-end health and fitness products</p>
@@ -372,11 +361,11 @@ export default function CoreBP(){
                         </p>
                         <div>
                             <Image
-                                src={IdeationImage2}
+                                src={images['ideation2.webp']}
                                 width={762}
                                 height={452}
                                 placeholder="blur"
-                                blurDataURL={IdeationImage2}
+                                blurDataURL={images['ideation2.webp']}
                                 alt="Concept sketches for a wireless device"
                             />
                             <p>Concept sketches for a wireless device</p>
@@ -389,11 +378,11 @@ export default function CoreBP(){
                         </p>
                         <div>
                             <Image
-                                src={IdeationImage3}
+                                src={images['ideation3.webp']}
                                 width={755}
                                 height={361}
                                 placeholder="blur"
-                                blurDataURL={IdeationImage3}
+                                blurDataURL={images['ideation3.webp']}
                                 alt="User testing different forms"
                             />
                             <p>User testing different forms</p>
@@ -411,11 +400,11 @@ export default function CoreBP(){
                         </p>
                         <div>
                             <Image
-                                src={IdeationImage4}
+                                src={images['ideation4.webp']}
                                 width={700}
                                 height={400} 
                                 placeholder="blur"
-                                blurDataURL={IdeationImage4}
+                                blurDataURL={images['ideation4.webp']}
                                 alt="Final concept sketch for the Core device"
                             />
                             <p>Final concept sketch</p>
@@ -438,22 +427,22 @@ export default function CoreBP(){
                     <div>
                         <div>
                             <Image
-                                src={PivotImage1}
+                                src={images['pivot1.webp']}
                                 width={637}
                                 height={458}
                                 placeholder="blur"
-                                blurDataURL={PivotImage1}
+                                blurDataURL={images['pivot1.webp']}
                                 alt="Iterative sketches to explore new hinge mechanics"
                             />
                             <p>Iterative sketches to explore new hinge mechanics</p>
                         </div>
                         <div>
                             <Image
-                                src={PivotImage2}
+                                src={images['pivot2.webp']}
                                 width={311}
                                 height={289}
                                 placeholder="blur"
-                                blurDataURL={PivotImage2}
+                                blurDataURL={images['pivot2.webp']}
                                 alt="New design concept for the device with changes applied"
                             />
                             <p>New lo-fi concept with changes applied</p>
@@ -475,54 +464,54 @@ export default function CoreBP(){
                     <div>
                         <div>
                             <Image
-                                src={FinalDesignImage1}
+                                src={images['final1.webp']}
                                 width={716}
                                 height={458}
                                 placeholder="blur"
-                                blurDataURL={FinalDesignImage1}
+                                blurDataURL={images['final1.webp']}
                                 alt="Parts related to the final design of the product."
                             />
                         </div>
                         <div>
                             <Image
-                                src={FinalDesignImage2}
+                                src={images['final2.webp']}
                                 width={554}
                                 height={416}
                                 placeholder="blur"
-                                blurDataURL={FinalDesignImage2}
+                                blurDataURL={images['final2.webp']}
                                 alt="3D printed prototype for the final design."
                             />
                             <p>ABS 3D printed prototype</p>
                         </div>
                         <div>
                             <Image
-                                src={FinalDesignImage3}
+                                src={images['final3.webp']}
                                 width={785}
                                 height={488}
                                 placeholder="blur"
-                                blurDataURL={FinalDesignImage3}
+                                blurDataURL={images['final3.webp']}
                                 alt="Technical drawing related to the final design for Core"
                             />
                             <p>Technical Drawings</p>
                         </div>
                         <div>
                             <Image
-                                src={FinalDesignImage4}
+                                src={images['final4.webp']}
                                 width={735}
                                 height={236}
                                 placeholder="blur"
-                                blurDataURL={FinalDesignImage4}
+                                blurDataURL={images['final4.webp']}
                                 alt="Painting the 3D printed prototype of the Core"
                             />
                             <p>Painting Process</p>
                         </div>
                         <div>
                             <Image
-                                src={FinalDesignImage5}
+                                src={images['final5.webp']}
                                 width={819}
                                 height={231}
                                 placeholder="blur"
-                                blurDataURL={FinalDesignImage5}
+                                blurDataURL={images['final5.webp']}
                                 alt="Final product after painting and assembly"
                             />
                         </div>
@@ -543,22 +532,22 @@ export default function CoreBP(){
                     <div>
                         <div>
                             <Image
-                                src={UxUiDevImage1}
+                                src={images['uxuidev1.webp']}
                                 width={606}
                                 height={461}
                                 placeholder="blur"
-                                blurDataURL={UxUiDevImage1}
+                                blurDataURL={images['uxuidev1.webp']}
                                 alt="Wireframing user flows for the new Core app"
                             />
                             <p>Wireframing user flows</p>
                         </div>
                         <div>
                             <Image
-                                src={UxUiDevImage2}
+                                src={images['uxuidev2.webp']}
                                 width={650}
                                 height={336}
                                 placeholder="blur"
-                                blurDataURL={UxUiDevImage2}
+                                blurDataURL={images['uxuidev2.webp']}
                                 alt="Render of the UI for the new Core app"
                             />
                             <p>UI Mockup</p>
@@ -571,11 +560,11 @@ export default function CoreBP(){
                     <h1>Final Presentation</h1>
                     <div>
                         <Image
-                            src={FinalPresentationImage}
+                            src={images['finalpresentation.webp']}
                             width={820}
                             height={1040}
                             placeholder="blur"
-                            blurDataURL={FinalPresentationImage}
+                            blurDataURL={images['finalpresentation.webp']}
                             alt="The final presentation poster for the Core project"
                         />
                     </div>
