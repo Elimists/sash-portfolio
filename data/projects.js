@@ -8,6 +8,9 @@ import LisnProjectImage from '../public/projects/lisn/lisn.webp'
 /** HOMIE Imports */
 import HomieProjectImage from '../public/projects/homie/homie.webp'
 
+/** MemoryCache Imports */
+import MemoryCacheImage from '../public/projects/memorycache/memorycache.webp'
+
 export const allProjects = [
     {
         id: 1, //Requried
@@ -75,6 +78,22 @@ export const allProjects = [
         tools: "Figma, Webflow",
         link: "/project/world-journal",
         alt_text: "World Journal aims to connect people through the use of live satelitte imagery"
+    },
+
+    {
+        id: 5,
+        image: MemoryCacheImage,//MemoryCacheImage,//
+        title: "The MemoryCache",
+        title_url_safe: "MemoryCache",
+        name: "The MemoryCache - Holographic Sharing Device",
+        description: "An assistive storytelling device that uses holograms to share memories and memorabilia",
+        tags: "Extended Reality - Interaction Design - User Research - User Experience - Emerging Technology",
+        duration: "8 Months",
+        type: "Individual Project, Capstone Project",
+        role: "Product Designer",
+        tools: "Primary &#38 Secondary Research, User Tests, 3D Printing, Figma, Fusion360, Keyshot",
+        link: "/project/memorycache",
+        alt_text: "The MemoryCache is an explorative device uncovering the new ways of how people can save and share memories through holograms."
     },
 
 ]

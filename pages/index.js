@@ -10,6 +10,7 @@ import CoreProjectImage from '../public/projects/core/core.webp'
 import HomieProjectImage from '../public/projects/homie/homie.webp' 
 import LisnProjectImage from '../public/projects/lisn/lisn.webp'
 import WorldJournalProjectImage from '../public/projects/world-journal/world-journal.webp'
+import MemoryCacheImage from '../public/projects/memorycache/memorycache.webp'
 
 import { motion } from 'framer-motion'
 
@@ -133,7 +134,7 @@ export default function Home({projects}) {
                 Sash Mahara
               </h1>
               <p className={styles.hello}>
-                I&apos;m an Industrial Designer who specializes in user-centered design and research. I&apos;m passionate about technology and love to create amazing experiences through well designed products.
+                I&apos;m a Product Designer who specializes in user-centered design and research. I&apos;m passionate about technology and love to create amazing experiences through well designed products.
               
                 </p>
               
