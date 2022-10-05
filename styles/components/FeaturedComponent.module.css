@@ -16,22 +16,16 @@
     margin: 0;
     margin-bottom: 0.2rem;
     text-decoration-line: underline;
-    text-decoration-thickness: 0.1px;
     text-align: start;
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
 }
 
-.text_div > h5{
+.date{
     margin: 0;
     font-weight: 400;
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
 }
 
 .text_div > p {
     text-align: start;
-    padding-left: 1.2rem;
     padding-right: 1.2rem;
 }
 
@@ -64,6 +58,10 @@
         margin-top: 2rem;
         align-items: center;
         justify-content: center;
+    }
+
+    .text_div > h5{
+        text-align: left;
     }
 
 }
