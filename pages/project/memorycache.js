@@ -31,7 +31,7 @@ import FinalDesignImage5 from '../../public/projects/core/final5.webp'
 import UxUiDevImage1 from '../../public/projects/core/uxuidev1.webp'
 import UxUiDevImage2 from '../../public/projects/core/uxuidev2.webp'
 import FinalPresentationImage from '../../public/projects/core/finalpresentation.webp'
-import MemoryCacheImage from '../../public/projects/memorycache/memorycache.webp'
+import MemoryCacheImage from '../../public/projects/memorycache/Hero.webp'
 import Timeline from '../../public/projects/memorycache/timeline.webp'
 
 
@@ -98,12 +98,12 @@ export default function CoreBP(){
                     </div>
 
                     <Image 
-                    src={images['memorycache.webp']} 
+                    src={images['Hero.webp']} 
                     height={430}
                     width={650} 
-                    alt="Homie Project Image"
+                    alt="MemoryCache Image"
                     placeholder="blur" 
-                    blurDataURL={images['memorycache.webp']}/>
+                    blurDataURL={images['Hero.webp']}/>
                 </section>
 
                 <section className={styles.synopsis}>
@@ -189,7 +189,7 @@ export default function CoreBP(){
                     </div>
                 </section>
 
-                <section className={styles.market_econ_section}>
+                <section className={styles.research_section}>
                     <div className={styles.heading_bar}></div>
                     <h1>User Research</h1>
                     <p>
@@ -221,7 +221,7 @@ export default function CoreBP(){
                     </div>
                 </section>
 
-                <section className={styles.analysis_section}>
+                <section className={styles.research_section}>
                     <div className={styles.heading_bar}></div>
                     <h1>Data Analysis</h1>
                     <p>
@@ -255,189 +255,66 @@ export default function CoreBP(){
 
                 <section className={styles.ideation_section}>
                     <div className={styles.heading_bar}></div>
-                    <h1>Project Autopsy</h1>
+                    <h1>Results From Data Analysis - Data Visualization</h1>
                     <p>
-                        The blood pressure monitor was then taken apart to learn more about the 
-                        size and shape of the internal components and the technology behind the 
-                        device.
+                        After synthesizing the data into key themes and insights the results were very informative.
+                        Using diagrams and journey maps I was able to highlight how the data correlated and what the main learning outcomes were.
+                        The Journey map also helped showcased what area of the user journey could be improved and where the most amount of effort should be focused.
+                        The data was shown to stakeholders and profs who were able to understand the problem through these visuals.
                     </p>
                     <div>
                         <div>
-                            <Image
-                                src={ProjectAutopsyImage1}
-                                width={612}
-                                height={500}
-                                placeholder="blur"
-                                blurDataURL={ProjectAutopsyImage1}
-                                alt="Product deconstruction to better understand design"
-                            />
-                            <p>Product Deconstruction</p>
+                            <Image 
+                                src={images['datavisual_1.webp']} 
+                                height={461}
+                                width={778} 
+                                alt="Data Visualization"
+                                placeholder="blur" 
+                                blurDataURL={images['datavisual_1.webp']}/>
+                                <p>Visual Diagram Showing the Key Themes From User Data</p>
                         </div>
                         <div>
-                            <Image
-                                src={ProjectAutopsyImage2}
-                                width={402}
-                                height={259}
-                                placeholder="blur"
-                                blurDataURL={ProjectAutopsyImage2}
-                                alt="Product cannot be stored properly and is cluttered"
-                            />
-                            <p>Product is not well designed for easy storage. This makes daily use annoying and messy.</p>
-                        </div>
-                        <div>
-                            <Image
-                                src={ProjectAutopsyImage3}
-                                width={232}
-                                height={257}
-                                placeholder="blur"
-                                blurDataURL={ProjectAutopsyImage3}
-                                alt="Product display is outdate and could use a refresher"
-                            />
-                            <p>Product display is outdated and could use a refresh.</p>
-                        </div>
-                    </div>
-                    <p>
-                        The key components were measured and cut out into shapes that mimicked 
-                        their size. These were then used to ideate a new component layout, and 
-                        to help guide a more feasible design.
-                    </p>
-                    <div>
-                        <div>
-                        <Image
-                            src={ProjectAutopsyImage4}
-                            width={673}
-                            height={442}
-                            placeholder="blur"
-                            blurDataURL={ProjectAutopsyImage4}
-                            alt="Product was deconstructed and a 2D diagram was drawn of its internal parts"
-                        />
-                        <p>Product was deconstructed and a 2D diagram was drawn of its internal parts.</p>
+                            <Image 
+                                src={images['datavisual_2.webp']} 
+                                height={461}
+                                width={778}  
+                                alt="Journey Map"
+                                placeholder="blur" 
+                                blurDataURL={images['datavisual_2.webp']}/>
+                                <p>User Journey Map and Area of Opportunity</p>
                         </div>
                     </div>
                 </section>
                 
                 <section className={styles.ideation_core_section}>
                     <div className={styles.heading_bar}></div>
-                    <h1>Ideation &#38; Concept Development</h1>
+                    <h1>Design Brief</h1>
                     <p>
-                        The blood pressure monitor was then taken apart to learn more about the 
-                        size and shape of the internal components and the technology behind the 
-                        device.
-                    </p>
+                        The research phase helped uncover many areas of improvement and key considerations that should be made when tackling this problem.
+                        Utilizing the research gained I put together a design brief to serve as a roadmap for future development.
+                    </p> 
                     <div>
-                        <h3>Product Inspiration</h3>
-                        <p>
-                            Taking a look into modern fitness products, current product trends 
-                            lean towards clean and minimal designs. Most products have neutral 
-                            colors with black and white being the most common.
-                        </p>
-                        <div>
-                            <Image
-                                src={IdeationImage1}
-                                width={566}
-                                height={215}
-                                placeholder="blur"
-                                blurDataURL={IdeationImage1}
-                                alt="High-end health and fitness products"
-                            />
-                            <p>High-end health and fitness products</p>
-                        </div>
-
-                        <h3>Initial Sketches</h3>
-                        <p>
-                            The idea started off by trying to explore solutions for a blood 
-                            pressure monitor that could be used wirelessly and charge on a dock 
-                            when not in use. Focus was kept on making sure the display could 
-                            face the user and not be hard to see.
-                        </p>
-                        <div>
-                            <Image
-                                src={IdeationImage2}
-                                width={762}
-                                height={452}
-                                placeholder="blur"
-                                blurDataURL={IdeationImage2}
-                                alt="Concept sketches for a wireless device"
-                            />
-                            <p>Concept sketches for a wireless device</p>
-                        </div>
-                        <p>
-                            From the ideation sketches low-fidelity mock-ups were constructed 
-                            to test the ideas and rank them among each other. Model 4 ranked 
-                            the highest in user testing due to its simple form factor, ease of 
-                            cuff storage and easy to see display position.
-                        </p>
-                        <div>
-                            <Image
-                                src={IdeationImage3}
-                                width={755}
-                                height={361}
-                                placeholder="blur"
-                                blurDataURL={IdeationImage3}
-                                alt="User testing different forms"
-                            />
-                            <p>User testing different forms</p>
-                        </div>
-
-                        <h3>Final Concept</h3>
-                        <p>
-                            Although the finalized concept addressed many of the pain points 
-                            from our original blood pressure monitor, it still had a few 
-                            shortcomings that were discovered. The main issue with the 
-                            finalized concept was that it did not allow for easy portability 
-                            as the form was difficult to store. Further ideation was needed to 
-                            increase portability and reduce the form factor for traveling 
-                            purposes. Exploration into a collapsible device was investigated.
-                        </p>
-                        <div>
-                            <Image
-                                src={IdeationImage4}
-                                width={700}
-                                height={400} 
-                                placeholder="blur"
-                                blurDataURL={IdeationImage4}
-                                alt="Final concept sketch for the Core device"
-                            />
-                            <p>Final concept sketch</p>
-                        </div>
+                        <Image 
+                                src={images['designbrief2.svg']} 
+                                height={376}
+                                width={1212} 
+                                alt="Design Brief"
+                                placeholder="blur" 
+                                blurDataURL={images['designbrief2.svg']}/>
                     </div>
                 </section>
 
                 <section className={styles.ideation_section}>
                     <div className={styles.heading_bar}></div>
-                    <h1>Pivot &#38; Takeaways</h1>
-                    <p>
-                        Although the finalized concept addressed many of the pain points from 
-                        our original blood pressure monitor, it still had a few shortcomings 
-                        that were discovered. The main issue with the finalized concept was 
-                        that it did not allow for easy portability as the form was difficult 
-                        to store. Further ideation was needed to increase portability and 
-                        reduce the form factor for traveling purposes. Exploration into a 
-                        collapsible device was investigated.
-                    </p>
+                    <h1>Concept Development</h1>
                     <div>
-                        <div>
-                            <Image
-                                src={PivotImage1}
-                                width={637}
-                                height={458}
-                                placeholder="blur"
-                                blurDataURL={PivotImage1}
-                                alt="Iterative sketches to explore new hinge mechanics"
-                            />
-                            <p>Iterative sketches to explore new hinge mechanics</p>
-                        </div>
-                        <div>
-                            <Image
-                                src={PivotImage2}
-                                width={311}
-                                height={289}
-                                placeholder="blur"
-                                blurDataURL={PivotImage2}
-                                alt="New design concept for the device with changes applied"
-                            />
-                            <p>New lo-fi concept with changes applied</p>
-                        </div>
+                         <Image 
+                                src={images['conceptdevelopment.webp']} 
+                                height={3933}
+                                width={723} 
+                                alt="Concept Development Journey"
+                                placeholder="blur" 
+                                blurDataURL={images['conceptdevelopment.webp']}/>
                     </div>
                 </section>
 
@@ -446,118 +323,82 @@ export default function CoreBP(){
                     <div className={styles.heading_bar}></div>
                     <h1>Final Design</h1>
                     <p>
-                        The refined concept was taken further and modeled on SolidWorks. 
-                        Using CAD software allowed for further development as the folding and 
-                        hinge mechanics could be worked out and the overall form could be 
-                        understood more clearly. After finalizing the CAD model a physical 
-                        model was made using 3D printed ABS plastic.
+                        Check out this short video (1m40s) to see how the device works!
                     </p>
                     <div>
-                        <div>
-                            <Image
-                                src={FinalDesignImage1}
-                                width={716}
-                                height={458}
-                                placeholder="blur"
-                                blurDataURL={FinalDesignImage1}
-                                alt="Parts related to the final design of the product."
-                            />
-                        </div>
-                        <div>
-                            <Image
-                                src={FinalDesignImage2}
-                                width={554}
-                                height={416}
-                                placeholder="blur"
-                                blurDataURL={FinalDesignImage2}
-                                alt="3D printed prototype for the final design."
-                            />
-                            <p>ABS 3D printed prototype</p>
-                        </div>
-                        <div>
-                            <Image
-                                src={FinalDesignImage3}
-                                width={785}
-                                height={488}
-                                placeholder="blur"
-                                blurDataURL={FinalDesignImage3}
-                                alt="Technical drawing related to the final design for Core"
-                            />
-                            <p>Technical Drawings</p>
-                        </div>
-                        <div>
-                            <Image
-                                src={FinalDesignImage4}
-                                width={735}
-                                height={236}
-                                placeholder="blur"
-                                blurDataURL={FinalDesignImage4}
-                                alt="Painting the 3D printed prototype of the Core"
-                            />
-                            <p>Painting Process</p>
-                        </div>
-                        <div>
-                            <Image
-                                src={FinalDesignImage5}
-                                width={819}
-                                height={231}
-                                placeholder="blur"
-                                blurDataURL={FinalDesignImage5}
-                                alt="Final product after painting and assembly"
-                            />
-                        </div>
+                        <iframe src="https://player.vimeo.com/video/698033014?h=6eb6ceadea" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                        <p><a href="https://vimeo.com/698033014">MemoryCache</a> from <a href="https://vimeo.com/user167769784">Sash Mahara</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
                     </div>
                 </section>
                 
-                <section className={styles.ideation_section}>
-                    <div className={styles.heading_bar}></div>
-                    <h1>UX/UI Development</h1>
-                    <p>
-                        Current market trends for modern blood pressure monitors shows that 
-                        internet of things is becoming increasingly popular. Many new devices 
-                        coming onto the market today feature connectible phone apps to enhance 
-                        the devices use and tracking potential. Following this a connectible 
-                        app was also designed to go along with the redesigned blood pressure 
-                        monitor.
-                    </p>
+        <section className={styles.final_design_section}>
+            <div className={styles.heading_bar} />
+                    <h1>Looks Like Model</h1>
                     <div>
                         <div>
-                            <Image
-                                src={UxUiDevImage1}
-                                width={606}
-                                height={461}
-                                placeholder="blur"
-                                blurDataURL={UxUiDevImage1}
-                                alt="Wireframing user flows for the new Core app"
-                            />
-                            <p>Wireframing user flows</p>
+                            <Image 
+                                src={images['model1.jpg']} 
+                                height={359}
+                                width={298} 
+                                alt="Looks like model"
+                                placeholder="blur" 
+                                blurDataURL={images['model1.jpg']}/>
                         </div>
                         <div>
-                            <Image
-                                src={UxUiDevImage2}
-                                width={650}
-                                height={336}
-                                placeholder="blur"
-                                blurDataURL={UxUiDevImage2}
-                                alt="Render of the UI for the new Core app"
-                            />
-                            <p>UI Mockup</p>
+                            <Image 
+                                src={images['model2.jpg']} 
+                                height={359}
+                                width={298} 
+                                alt="Looks like model"
+                                placeholder="blur" 
+                                blurDataURL={images['model2.jpg']}/>
+                        </div>
+                        <div>
+                            <Image 
+                                src={images['model3.jpg']} 
+                                height={359}
+                                width={298}
+                                alt="Looks like model"
+                                placeholder="blur" 
+                                blurDataURL={images['model3.jpg']}/>
+                        </div>
+                        <div>
+                            <Image 
+                                src={images['model4.jpg']} 
+                                height={359}
+                                width={298} 
+                                alt="Looks like model"
+                                placeholder="blur" 
+                                blurDataURL={images['model4.jpg']}/>
                         </div>
                     </div>
                 </section>
                 
                 <section className={styles.final_poster}>
                     <div className={styles.heading_bar}></div>
-                    <h1>Final Presentation</h1>
+                    <h1>Final Poster</h1>
                     <div>
-                        <Image
-                            src={FinalPresentationImage}
-                            width={820}
-                            height={1040}
-                            placeholder="blur"
-                            blurDataURL={FinalPresentationImage}
-                            alt="The final presentation poster for the Core project"
-                        />
+                        <Image 
+                                src={images['finalposter.jpg']} 
+                                height={1443}
+                                width={1113} 
+                                alt="Final Presentatino Poster"
+                                placeholder="blur" 
+                                blurDataURL={images['finalposter.jpg']}/>
+                    </div>
+                </section>
+
+                <section className={styles.final_poster}>
+                    <div className={styles.heading_bar}></div>
+                    <h1>Results &#38; Take-aways</h1>
+                    <div>
+                        <Image 
+                                src={images['results_takeaways.svg']} 
+                                height={569}
+                                width={1113} 
+                                alt="Results and Take-Aways"
+                                placeholder="blur" 
+                                blurDataURL={images['results_takeaways.svg']}/>
                     </div>
                 </section>
 
