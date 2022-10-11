@@ -25,8 +25,6 @@ const images = importAll(require.context('../../public/projects/memorycache', fa
 
 
 export default function CoreBP(){
-    const [showModal, setShowModal] = useState(false)
-    const [imageSource, setImageSource] = useState(null)
 
     const isScrolled = useScrolledDown()
     function scrollToTheTop() {
@@ -36,35 +34,15 @@ export default function CoreBP(){
         })
     }
 
-    function handleImageEnlarging(imageSource) {
-        setImageSource(imageSource)
-        setShowModal(true)
-    }
-
-    useEffect(() => {
-        if (showModal) {
-            document.body.style.overflow = 'hidden';
-        }
-        else {
-            document.body.style.overflow = 'auto';
-        }
-    }, [showModal])
-
     return(
         <>
-            <EnlargeImage
-                showModal={showModal}
-                setShowModal={setShowModal}
-                imageSource={imageSource}
-            />
-
             <div className={styles.container}>
                 
                 {topSection()}
                 {synopsis()}
                 {overviewSection()}
-                {problemSection()}
-                {processSection()}
+                {areaOfFocusSection()}
+                {projectTimelineSection()}
                 {researchSection()}
                 {dataAnalysisSection()}
                 {resultFromAnalysisSection()}
@@ -75,11 +53,6 @@ export default function CoreBP(){
                 {finalPosterSection()}
                 {resultsAndTakeawaysSection()}
                 {otherProjectSection()}
-
-               
-
-                
-
             </div>
             {(isScrolled) ? <div tabIndex="0" role="button" className={styles.go_top_button} onClick={() => scrollToTheTop()} onKeyDown={(e) => handleOnEnterPressToTop(e)}>&uarr;</div> : null}
         </>
@@ -142,13 +115,36 @@ const overviewSection = () => {
             <p>
                 This 4th year capstone project was centered around the idea of social connectedness and personal informatics.
                 The  challenge was to investigate a problem at the intersection between social interaction and personal data and to create a physical and/or digital solution to address these issues.
-                <b>I chose to focus on the issues of bereavement and mourning caused by the loss of a loved one as this issue was rooted in social connectedness as well as personal informatics.</b>
+                <b> I chose to focus on the issues of bereavement and mourning caused by the loss of a loved one as this issue was rooted in social connectedness as well as personal informatics.</b>
             </p>
         </section>
     )
 }
 
-const problemSection = () => {
+const areaOfFocusSection = () => {
+    return(
+        <section className={styles.process_section}>
+            <div className={styles.heading_bar}></div>
+            <h1>Area of Focus</h1>
+            <p>
+            Researching into the issues of grief and how they are connected with social connectedness led me to discover new insights.
+            Through my research evolution I discovered that <b>storytelling and the sharing of memories and memorabilia were extremely enriching and beneficial for people who were mourning.</b>
+            </p>
+            <div style={{display: "flex", alignItems: "center"}}>
+                <Image 
+                src={images['areaoffocus.webp']} 
+                height={398}
+                width={620} 
+                alt="Area of Focus Image"
+                placeholder="blur" 
+                blurDataURL={images['areaoffocus.webp']}/>
+                <p>Research Evolution</p>
+            </div>
+        </section>
+    )
+}
+
+const projectTimelineSection = () => {
     return(
         <section className={styles.problem_section}>
             <div className={styles.heading_bar}></div>
@@ -166,28 +162,6 @@ const problemSection = () => {
     )
 }
 
-const processSection = () => {
-    return(
-        <section className={styles.process_section}>
-            <div className={styles.heading_bar}></div>
-            <h1>Area of Focus</h1>
-            <p>
-            Researching into the issues of grief and how they are connected with social connectedness led me to discover new insights.
-            Through my research evolution I discovered that <b>storytelling and the sharing of memories and memorabilia were extremely enriching and beneficial for people who were mourning.</b>
-            </p>
-            <div>
-                <Image 
-                src={images['areaoffocus.webp']} 
-                height={398}
-                width={620} 
-                alt="Area of Focus Image"
-                placeholder="blur" 
-                blurDataURL={images['areaoffocus.webp']}/>
-                <p>Research Evolution</p>
-            </div>
-        </section>
-    )
-}
 
 const researchSection = () => {
     return(
