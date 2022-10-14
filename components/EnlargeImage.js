@@ -44,7 +44,7 @@ export default function EnlargeImage({ showModal, setShowModal, imageSource}){
                                 defaultScale={1}>
                                     <TransformComponent>
                                         <Image 
-                                            src={imageSource} 
+                                            src={imageSource}
                                             width={imageSource.naturalWidth}
                                             height={imageSource.naturalHeight} 
                                             placeholder="blur"
