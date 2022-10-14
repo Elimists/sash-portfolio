@@ -83,7 +83,7 @@ export default function Homie(){
         keyInsightsSection(),
         designBriefSection(),
         personasSection(handleImageEnlarging),
-        userJourneyMapSection(),
+        userJourneyMapSection(handleImageEnlarging),
         conceptDevelopmentSection(handleImageEnlarging),
         userTestingSection(),
         iterationSection(handleImageEnlarging),
@@ -419,27 +419,29 @@ const personasSection = (handleImageEnlarging) => {
     )
 }
 
-const userJourneyMapSection = () => {
-    <section className={styles.user_journey_map}>
-        <div className={styles.heading_bar} />
-        <h1>User Journey Map</h1>
-        <p>
-            Having uncovered many of the pain-points and opportunities from our research we put together a user journey map 
-            that showed the rental housing process from start to finish. This journey map allowed us to visualize where the 
-            problem areas where and highlight key touch points that could be improved.
-        </p>
-        <motion.div whileHover={hoverScaleAnimation}>
-            <Image 
-                src={images['user_journey.webp']} 
-                width={1062} 
-                height={273} 
-                placeholder="blur" 
-                blurDataURL={images['user_journey.webp']} 
-                alt="User journey map put together after our research"
-                onClick={() => handleImageEnlarging(images['user_journey.webp'])}/>
-            <p>User Journey Map</p>
-        </motion.div>
-    </section>
+const userJourneyMapSection = (handleImageEnlarging) => {
+    return(
+        <section className={styles.user_journey_map}>
+            <div className={styles.heading_bar} />
+            <h1>User Journey Map</h1>
+            <p>
+                Having uncovered many of the pain-points and opportunities from our research we put together a user journey map 
+                that showed the rental housing process from start to finish. This journey map allowed us to visualize where the 
+                problem areas where and highlight key touch points that could be improved.
+            </p>
+            <motion.div whileHover={hoverScaleAnimation}>
+                <Image 
+                    src={images['user_journey.webp']} 
+                    width={1062} 
+                    height={273} 
+                    placeholder="blur" 
+                    blurDataURL={images['user_journey.webp']} 
+                    alt="User journey map put together after our research"
+                    onClick={() => handleImageEnlarging(images['user_journey.webp'])}/>
+                <p>User Journey Map</p>
+            </motion.div>
+        </section>
+    )
 }
 
 const conceptDevelopmentSection = (handleImageEnlarging) => {
