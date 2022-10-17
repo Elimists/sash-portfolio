@@ -148,7 +148,7 @@ const areaOfFocusSection = () => {
             <div className={styles.heading_bar}></div>
             <h1>Area of Focus</h1>
             <p>
-            Researching into the issues of grief and how they are connected with social connectedness led me to discover new insights.
+            Research into grief management and how they are connected with social connectedness led me to discover new insights.
             Through my research evolution I discovered that <b>storytelling and the sharing of memories and memorabilia were extremely enriching and beneficial for people who were mourning.</b>
             </p>
             <div className={mcStyles.image_div_style}>
@@ -190,9 +190,8 @@ const researchPlanningSection = () => {
             <div className={styles.heading_bar}></div>
             <h1>Research Planning</h1>
             <p>
-            To understand more deeply the process of storytelling and it’s pain-points I would need to conduct user research.
-            To being this process I began by creating a research plan outlining the overview of what I wanted to understand from the user.
-            I broke down the research plan from problem to goal, and then to research questions.
+            I began by creating a research plan outlining the overview of what I wanted to understand from the user.
+            I broke down the research plan from problems to goals, and then to research questions.
             After creating the research questions I divided them into interview questions and survey questions as some were more qualitative and others were more quantitative.
             </p>
             <div className={mcStyles.image_div_style}>
@@ -255,7 +254,7 @@ const resultFromAnalysisSection = () => {
                 After synthesizing the data into key themes and insights the results were very informative.
                 Using diagrams and journey maps I was able to highlight how the data correlated and what the main learning outcomes were.
                 The Journey map also helped showcased what area of the user journey could be improved and where the most amount of effort should be focused.
-                The data was shown to stakeholders and profs who were able to understand the problem through these visuals.
+                The data was shown to stakeholders and professors who were able to understand the problem through these visuals.
             </p>
             <div>
                 <div>
@@ -322,7 +321,7 @@ const designBriefSection = () => {
                            Allow users to add stories and memorabilia. 
                         </li>
                         <li>
-                           Decrease teh emotional barrier to reach out by creating a non-alarming indicator of interset. 
+                           Decrease the emotional barrier to reach out by creating a non-alarming indicator of interset. 
                         </li>
                         <li>
                            Increase frequency of social interactions and sharing among users.
@@ -507,7 +506,7 @@ const howItWorksSectionA = (isMobileView) => {
     return(
         <section className={styles.ideation_section}>
             <div className={styles.heading_bar}></div>
-            <h1>How it works</h1>
+            <h1>How It Works - Concept</h1>
             <p>
                 Check out this video (3min) to see the concept use cycle.
             </p>
@@ -539,9 +538,9 @@ const howItWorksSectionB = () => {
     return(
         <section className={styles.ideation_section}>
             <div className={styles.heading_bar}></div>
-            <h1>How it works</h1>
+            <h1>How It Works - Final</h1>
             <p>
-                Check out this short video (1m40s) to see how the device works!
+                Check out this short video (1min40s) to see how the device works!
             </p>
             <div className={mcStyles.final_design_video_div_B}>
                 <iframe 
