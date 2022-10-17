@@ -508,7 +508,7 @@ const howItWorksSectionA = () => {
                 height="360" 
                 frameBorder="0"
                 allow="autoplay; fullscreen; picture-in-picture"  
-                allowFullscreen></iframe>
+                allowFullScreen></iframe>
                 <div>
                         <Image 
                             src={images['second_steps.webp']} 
