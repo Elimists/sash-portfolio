@@ -47,7 +47,8 @@ export default function CoreBP(){
                 {resultFromAnalysisSection()}
                 {designBriefSection()}
                 {conceptDevelopmentSection()}
-                {finalDesignSection()}
+                {howItWorksSectionA()}
+                {howItWorksSectionB()}
                 {looksLikeModelSection()}
                 {finalPosterSection()}
                 {resultsAndTakeawaysSection()}
@@ -477,28 +478,61 @@ const conceptDevelopmentSection = () => {
         <section className={styles.ideation_section}>
             <div className={styles.heading_bar}></div>
             <h1>Concept Development</h1>
-            <div>
+            <div className={mcStyles.concept_dev_image_div}>
+                    
                     <Image 
-                        src={images['conceptdevelopment.webp']} 
-                        height={3933}
-                        width={723} 
-                        alt="Concept Development Journey"
+                        src={images['first_steps.webp']} 
+                        height={3071*0.45}
+                        width={1392*0.45} 
+                        alt="Concept Development Journey First Round"
                         placeholder="blur" 
-                        blurDataURL={images['conceptdevelopment.webp']}/>
+                        blurDataURL={images['first_steps.webp']}/>
             </div>
         </section>
     )
 }
 
-const finalDesignSection = () => {
+const howItWorksSectionA = () => {
     return(
         <section className={styles.ideation_section}>
             <div className={styles.heading_bar}></div>
-            <h1>Final Design</h1>
+            <h1>How it works</h1>
+            <p>
+                Check out this video (3min) to see the concept use cycle.
+            </p>
+            <div className={mcStyles.final_design_video_div_A}>
+            <iframe 
+                title="Concept Use Cycle" 
+                src="https://player.vimeo.com/video/760661686?h=7210c14569" 
+                width="640" 
+                height="360" 
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture"  
+                allowfullscreen></iframe>
+                <div>
+                        <Image 
+                            src={images['second_steps.webp']} 
+                            height={4752*0.45}
+                            width={1324*0.45} 
+                            alt="Concept Development Journey Second Round"
+                            placeholder="blur" 
+                            blurDataURL={images['second_steps.webp']}/>
+                </div>
+            </div>
+        </section>
+    )
+}
+
+
+const howItWorksSectionB = () => {
+    return(
+        <section className={styles.ideation_section}>
+            <div className={styles.heading_bar}></div>
+            <h1>How it works</h1>
             <p>
                 Check out this short video (1m40s) to see how the device works!
             </p>
-            <div className={mcStyles.final_design_video_div}>
+            <div className={mcStyles.final_design_video_div_B}>
                 <iframe 
                     src="https://player.vimeo.com/video/698033014?h=6eb6ceadea" 
                     frameBorder="0" 
