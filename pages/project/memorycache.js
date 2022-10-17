@@ -506,9 +506,9 @@ const howItWorksSectionA = () => {
                 src="https://player.vimeo.com/video/760661686?h=7210c14569" 
                 width="640" 
                 height="360" 
-                frameborder="0"
+                frameBorder="0"
                 allow="autoplay; fullscreen; picture-in-picture"  
-                allowfullscreen></iframe>
+                allowFullscreen></iframe>
                 <div>
                         <Image 
                             src={images['second_steps.webp']} 
