@@ -17,7 +17,7 @@ const featuredData = [
         title: "ACIDO Rocket Design Award",
         link: "https://acido.info/MemoryCache",
         date: "July 1, 2022",
-        description: <p>Achieved the Design Thinking Award at the 2022 Industrial Design competition for my work on my capstone project, <b><u>The MemoryCache.</u></b> Hosted by the Association of Chartered Industrial Designers of Ontario. Award was sponsored by Entro.</p>,
+        description: <p>Achieved the Design Thinking Award at the 2022 Industrial Design competition for my work on my capstone project, <a href="https://www.mahara.ca/project/memorycache"><b><u>The MemoryCache.</u></b></a> Hosted by the Association of Chartered Industrial Designers of Ontario. Award was sponsored by Entro.</p>,
         image: AcidoImage
     },
 
@@ -35,7 +35,7 @@ const featuredData = [
         title: "Award of Excellence, School of Industrial Design",
         link: "https://www.linkedin.com/posts/sashmahara_industrialdesign-activity-6925495960189943809-Imh0?utm_source=share&utm_medium=member_desktop",
         date: "April 30 ,2022",
-        description: <p>Received the Award of Excellence from Carleton University&apos;s School of Industrial Design for my work on my capstone project, <b><u>The MemoryCache.</u></b></p>,
+        description: <p>Received the Award of Excellence from Carleton University&apos;s School of Industrial Design for my work on my capstone project, <a href="https://www.mahara.ca/project/memorycache"><b><u>The MemoryCache.</u></b></a></p>,
         image: Studioaward
     },
 
@@ -44,7 +44,7 @@ const featuredData = [
         title: "Gilles Memorial Award",
         link: "https://carleton.ca/id/story/sashmahara/",
         date: "April 21 ,2021",
-        description: <p>Received the Gilles Memorial Award for displaying good &lsquo;Form Giving&rsquo; for my work in my capstone project, <b><u>The MemoryCache.</u></b></p>,
+        description: <p>Received the Gilles Memorial Award for displaying good &lsquo;Form Giving&rsquo; for my work in my capstone project, <a href="https://www.mahara.ca/project/memorycache"><b><u>The MemoryCache.</u></b></a></p>,
         image: gillesaward
     },
 
