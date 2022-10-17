@@ -70,6 +70,18 @@ const topSection = () => {
                     An assistive storytelling device that uses holograms to share memories and memorabilia.
                 </p>
                 <p>Extended Reality - Interaction Design - User Research - User Experience - Emerging Technology</p>
+                <a href="https://acido.info/MemoryCache" target="__blank">
+                    <div className={mcStyles.acido_award_div}>
+                        <Image
+                            src={images['acido_award.webp']}
+                            height={80}
+                            width={320}
+                            alt="Acido Award Link"
+                            placeholder="blur"
+                            blurDataUrl={images['acido_award.webp']}
+                        />
+                    </div>
+                </a>
             </div>
 
             <Image 
@@ -272,24 +284,26 @@ const designBriefSection = () => {
             </p> 
             <div className={mcStyles.design_brief_visual}>
                 <div className={mcStyles.design_brief_individual_div}>
-                    {usersIcon()}
+                    <div>{usersIcon()}</div>
                     <p><b>Who: </b> Universal</p>
                 </div>
                 <div className={mcStyles.design_brief_individual_div}>
-                    {boxIcon()}
-                    <p><b>What: </b> Universal</p>
-                </div>
-                <div >
-                    {calendarIcon()}
-                    <p><b>When: </b> Universal</p>
+                    <div>{boxIcon()}</div>
+                    <p><b>What: </b> Physical Product With Digital Component</p>
                 </div>
                 <div className={mcStyles.design_brief_individual_div}>
-                    {locationIcon()}
-                    <p><b>Where: </b> Universal</p>
+                    <div>{calendarIcon()}</div>
+                    <p><b>When: </b> 1 year of more post death</p>
                 </div>
-                <div>
-                    {targetIcon()}
-                    <b>Design Objectives: </b>
+                <div className={mcStyles.design_brief_individual_div}>
+                    <div>{locationIcon()}</div>
+                    <p><b>Where: </b> Home Environment</p>
+                </div>
+                <div className={mcStyles.design_brief_individual_div}>
+                    <div>
+                        <div>{targetIcon()}</div>
+                        <p> <b>Design Objectives: </b></p>
+                    </div>
                     <ul>
                         <li>
                            Facilitate close friends and family to connect through an interactve medium. 
