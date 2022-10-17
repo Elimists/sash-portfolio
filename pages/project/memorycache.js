@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import useScrolledDown from '../../hooks/useScrolledDown'
+import useWindowDimensions from '../../hooks/useWindowDimensions'
+import { useEffect, useState } from 'react'
 
 /** Assets realted to the project Core.  */
 import styles from '../../styles/Homie.module.css'
@@ -25,6 +27,13 @@ const images = importAll(require.context('../../public/projects/memorycache', fa
 
 export default function CoreBP(){
 
+    const { width } = useWindowDimensions()
+    const [isMobileView, setIsMobileView] = useState(false)
+    useEffect(() => {
+        if (width <= 700) {setIsMobileView(true)}
+        else{setIsMobileView(false)}
+    }, [width])
+
     const isScrolled = useScrolledDown()
     function scrollToTheTop() {
         window.scrollTo({
@@ -46,8 +55,8 @@ export default function CoreBP(){
                 {dataAnalysisSection()}
                 {resultFromAnalysisSection()}
                 {designBriefSection()}
-                {conceptDevelopmentSection()}
-                {howItWorksSectionA()}
+                {conceptDevelopmentSection(isMobileView)}
+                {howItWorksSectionA(isMobileView)}
                 {howItWorksSectionB()}
                 {looksLikeModelSection()}
                 {finalPosterSection()}
@@ -473,26 +482,28 @@ const designBriefSection = () => {
     
 }
 
-const conceptDevelopmentSection = () => {
+const conceptDevelopmentSection = (isMobileView) => {
+
     return(
         <section className={styles.ideation_section}>
             <div className={styles.heading_bar}></div>
-            <h1>Concept Development</h1>
+            <h1>Concept Developmment</h1>
             <div className={mcStyles.concept_dev_image_div}>
                     
                     <Image 
-                        src={images['first_steps.webp']} 
-                        height={3071*0.45}
-                        width={1392*0.45} 
+                        src={isMobileView ? images['first_steps_mobile.webp']: images['first_steps.webp']} 
+                        height={isMobileView ? (4125*0.45): (3071*0.45)}
+                        width={isMobileView? (766*0.45): (1392*0.45)} 
                         alt="Concept Development Journey First Round"
                         placeholder="blur" 
-                        blurDataURL={images['first_steps.webp']}/>
+                        blurDataURL={isMobileView ? images['first_steps_mobile.webp']: images['first_steps.webp']}/>
             </div>
         </section>
     )
 }
 
-const howItWorksSectionA = () => {
+const howItWorksSectionA = (isMobileView) => {
+
     return(
         <section className={styles.ideation_section}>
             <div className={styles.heading_bar}></div>
@@ -511,12 +522,12 @@ const howItWorksSectionA = () => {
                 allowFullScreen></iframe>
                 <div>
                         <Image 
-                            src={images['second_steps.webp']} 
-                            height={4752*0.45}
-                            width={1324*0.45} 
+                            src={isMobileView ? images['second_steps_mobile.webp']: images['second_steps.webp']} 
+                            height={isMobileView ? (6190*0.45): (4752*0.45)}
+                            width={isMobileView ? (776*0.45): (1324*0.45)} 
                             alt="Concept Development Journey Second Round"
                             placeholder="blur" 
-                            blurDataURL={images['second_steps.webp']}/>
+                            blurDataURL={isMobileView ? images['second_steps_mobile.webp']: images['second_steps.webp']}/>
                 </div>
             </div>
         </section>
