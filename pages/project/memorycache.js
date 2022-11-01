@@ -321,7 +321,7 @@ const designBriefSection = () => {
                            Allow users to add stories and memorabilia. 
                         </li>
                         <li>
-                           Decrease the emotional barrier to reach out by creating a non-alarming indicator of interset. 
+                           Decrease the emotional barrier to reach out by creating a non-alarming indicator of intereset. 
                         </li>
                         <li>
                            Increase frequency of social interactions and sharing among users.
