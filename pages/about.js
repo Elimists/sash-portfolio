@@ -80,7 +80,7 @@ export default function About(){
                     initial="hidden"
                     animate="visible">
                     <h3 className={styles.meet_sash}>Meet Sash</h3>
-                    <p>Hi there! I&#39;m an Industrial Designer from Canada who loves to create unique and meaningful products.</p>
+                    <p>Hi there! I&#39;m an Product Designer from Canada who loves to create unique and meaningful products.</p>
                     <p>I completed my Bachelor&#39;s degree in Industrial Design from Carleton University in 2022. My projects included 
                         a blend of physical and digital products which has provided me with a multi-disciplinary skill set in areas 
                         such as UX/UI, physical and digital prototyping, CAD, manufacturing, human factors, and marketing. 
@@ -90,7 +90,7 @@ export default function About(){
                         My focus was on user-experience analysis as well as early stage prototyping and concept development.
                     </p>
                     <p>
-                        From 2021 - 2022 I worked as a UX/UI Designer at  LISN, a podcast platform that developed AI technologies to 
+                        From 2021 - 2022 I worked as a UX/UI Designer at  LISN, a podcast platform that's developing AI technologies to 
                         enhance podcast discovery and curation. I conducted user research analysis and concept development for 
                         new product features and integration. I lead the design of new customer on-boarding flows and the redesign 
                         of the platform for their LISN 2.0 launch.
@@ -103,7 +103,7 @@ export default function About(){
                         <a 
                             tabIndex="0" 
                             className={styles.view_resume_button} 
-                            href="https://drive.google.com/file/d/12zibUhoU-DBae07y2o3fW8IH4n0WWkTq/view" 
+                            href="https://drive.google.com/file/d/1wZJ64j88DUFCOCHXiYB8xlg_bWEbnK3K/view?usp=sharing" 
                             target="_blank" rel="noreferrer">
                             <span className={styles.material_symbols_sharp}>
                                 description
