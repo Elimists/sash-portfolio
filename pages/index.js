@@ -133,10 +133,8 @@ export default function Home({projects}) {
                 Sash Mahara
               </h1>
               <p className={styles.hello}>
-                I&apos;m a Product Designer who specializes in user-centered design and research. I&apos;m passionate about technology and love to create amazing experiences through well designed products.
-              
-                </p>
-              
+                I&apos;m a industrial designer who specializes in user-centered design and research. I&apos;m passionate about pushing the boundaries of human innovation and love to create amazing experiences through digital and phsyical products.
+              </p>
               <div role='button' className={styles.check_out} onClick={() => handleScroll()} onKeyDown={(e) => handleOnEnterPressToProjects(e)} tabIndex="0" >
                 
                 <p className={styles.check_out_text}>
