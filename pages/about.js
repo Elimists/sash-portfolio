@@ -90,7 +90,7 @@ export default function About(){
                         My focus was on user-experience analysis as well as early stage prototyping and concept development.
                     </p>
                     <p>
-                        From 2021 - 2022 I worked as a UX/UI Designer at  LISN, a podcast platform that's developing AI technologies to 
+                        From 2021 - 2022 I worked as a UX/UI Designer at  LISN, a podcast platform that&#39;s developing AI technologies to 
                         enhance podcast discovery and curation. I conducted user research analysis and concept development for 
                         new product features and integration. I lead the design of new customer on-boarding flows and the redesign 
                         of the platform for their LISN 2.0 launch.
@@ -103,7 +103,8 @@ export default function About(){
                         <a 
                             tabIndex="0" 
                             className={styles.view_resume_button} 
-                            href="https://drive.google.com/file/d/1wZJ64j88DUFCOCHXiYB8xlg_bWEbnK3K/view?usp=sharing" 
+                            href="https://drive.google.com/file/d/1wZJ64j88DUFCOCHXiYB8xlg_bWEbnK3K/view"
+                            type="application/pdf" 
                             target="_blank" rel="noreferrer">
                             <span className={styles.material_symbols_sharp}>
                                 description
