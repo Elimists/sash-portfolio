@@ -1,11 +1,12 @@
 import BlogCard from "../../components/blog/BlogCard";
 import Link from 'next/link'
+import styles from '../../styles/components/BlogCard.module.css'
 
 export default function Blogs({blogData}){
     const alldata = blogData.data
     
     return(
-        <>
+        <div className={styles.blogs_container}>
             {
                 alldata.map((data, index) => {
                     return(
@@ -19,7 +20,7 @@ export default function Blogs({blogData}){
                     )
                 })
             }
-        </>
+        </div>
     )
     
 }
