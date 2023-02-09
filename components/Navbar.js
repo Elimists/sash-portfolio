@@ -14,6 +14,7 @@ import useWindowDimensions from '../hooks/useWindowDimensions'
 
 const navLinks = [
     {'name': 'Home', 'href': '/'},
+    {'name': 'Blog', 'href': '/blogs'},
     {'name': 'Featured', 'href': '/featured'},
     {'name': 'About', 'href': '/about'},
     
