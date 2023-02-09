@@ -1,15 +1,23 @@
-import styles from '../../styles/components/AllBlogComponent.module.css'
+import styles from '../../styles/components/BlogCard.module.css'
 
-export default function BlogCard(){
+export default function BlogCard({data}){
 
+    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+                        ];
+
+    var datePublished = new Date(data.attributes.publishedAt)
+    const month = monthNames[datePublished.getMonth()]
+    const year = datePublished.getFullYear()
+    const stringDate = month.toString() + " " + year.toString();
     return(
         <div className={styles.blog_div}>
             <div className={styles.left_div}>
-                <h2>Title of the Article</h2>
-                <p>Anim ut adipisicing adipisicing amet voluptate aliquip deserunt adipisicing commodo voluptate occaecat mollit proident in.</p>
+                <h2>{data.attributes.title}</h2>
+                <p>{data.attributes.synopsis}</p>
                 <div className={styles.sub_info}>
-                    <p>5 min read</p>
-                    <p>Jan 23, 2023</p>
+                    <p>{data.attributes.readtime}</p>
+                    <p>{stringDate}</p>
                 </div>
                 
                 <div className={styles.read_button_div}>
@@ -17,7 +25,7 @@ export default function BlogCard(){
                 </div>
             </div>
             <div className={styles.right_div}>
-                <img src="https://picsum.photos/510/335"></img>
+                <img src={data.attributes.coverimage.data.attributes.url}></img>
             </div>
         </div>
     )

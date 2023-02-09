@@ -662,7 +662,7 @@ const figmaPrototypeSection = () => {
                     title='Homie Figma Prototype'
                     width={1300} 
                     height={662} 
-                    oading="lazy" src="https://www.figma.com/proto/1XnqrlsKWKXYud37ZUmkJJ/Homie-Project?embed_host=share&kind=&node-id=537%3A1562&page-id=531%3A1143&scaling=min-zoom&starting-point-node-id=537%3A1562&viewport=414%2C532%2C0.06" 
+                    loading="lazy" src="https://www.figma.com/proto/1XnqrlsKWKXYud37ZUmkJJ/Homie-Project?embed_host=share&kind=&node-id=537%3A1562&page-id=531%3A1143&scaling=min-zoom&starting-point-node-id=537%3A1562&viewport=414%2C532%2C0.06" 
                     allowFullScreen/>
             </div>
         </section>
