@@ -25,7 +25,7 @@ export default function Blogs({blogData}){
     
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
 
     const res = await fetch("https://mahara-cms.herokuapp.com/api/blogs?populate=*")
     const data = await res.json()
