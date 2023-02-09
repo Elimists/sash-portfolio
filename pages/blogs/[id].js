@@ -13,6 +13,7 @@ export default function Blog({blog}){
     )
 }
 
+/*
 export async function getStaticPaths(){
 
     const res = await fetch("https://mahara-cms.herokuapp.com/api/blogs?populate=*")
@@ -31,8 +32,9 @@ export async function getStaticPaths(){
         fallback: false
     }
 }
+*/
 
-export async function getStaticProps(context){
+export async function getServerSideProps(context){
     const id = context.params.id
     const res = await fetch("https://mahara-cms.herokuapp.com/api/blogs/" + id +"?populate=*")
     const data = await res.json()
