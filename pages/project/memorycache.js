@@ -88,7 +88,7 @@ const topSection = () => {
                             width={320}
                             alt="Acido Award Link"
                             placeholder="blur"
-                            blurDataUrl={images['acido_award.webp']}
+                            blurDataURL={images['acido_award.webp']}
                         />
                     </div>
                 </a>
