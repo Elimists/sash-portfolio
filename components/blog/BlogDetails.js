@@ -14,7 +14,9 @@ export default function BlogDetails({blog}){
     const stringDate = month.toString() + ", " + year.toString();
 
 
-    const md = new MarkdownIt()
+    const md = new MarkdownIt({
+        html: true
+      })
     const htmlContent = md.render(blog.attributes.details)
     return(
 
