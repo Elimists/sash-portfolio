@@ -14,7 +14,7 @@ export default function BlogCard({data}){
                 </div>
                 
                 <div className={styles.read_button_div}>
-                    <p>READ &rarr;</p>
+                    <p>Read on Medium &rarr;</p>
                 </div>
             </div>
             <div className={styles.right_div}>
@@ -22,8 +22,8 @@ export default function BlogCard({data}){
                     alt={data.alt}
                     src={data.coverimage.src}
                     layout='fill'
-                    sizes='100vw'
                     style={{borderBottomRightRadius: "7px", borderTopRightRadius: "7px"}}
+                    blurDataURL={data.coverimage.src}
                 />
 
                 
