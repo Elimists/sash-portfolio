@@ -58,22 +58,22 @@ NASA saves many of the satellite images on their **&quot;Windows on Earth&quot;*
 
 <div>
     <div>
-        <a target="_blank" href="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676140469/mahara-projects/worldjournal/imag1_y1oek8.webp">
+        <a>
             <img alt="UI Mockup 1" src="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676140469/mahara-projects/worldjournal/imag1_y1oek8.webp">
         </a>
     </div>
     <div>
-        <a target="_blank" href="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676140469/mahara-projects/worldjournal/imag2_iefkzo.webp">
+        <a>
             <img alt="UI Mockup 1" src="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676140469/mahara-projects/worldjournal/imag2_iefkzo.webp">
         </a>
     </div>
     <div>
-        <a target="_blank" href="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676140469/mahara-projects/worldjournal/imag3_cuzzxx.webp">
+        <a>
             <img alt="UI Mockup 1" src="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676140469/mahara-projects/worldjournal/imag3_cuzzxx.webp">
         </a>
     </div>
      <div>
-        <a target="_blank" href="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676140469/mahara-projects/worldjournal/imag4_sze6gh.webp">
+        <a>
             <img alt="UI Mockup 1" src="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676140469/mahara-projects/worldjournal/imag4_sze6gh.webp">
         </a>
     </div>
