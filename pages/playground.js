@@ -1,8 +1,7 @@
-import ProblemSetComponent from "../components/svgImages/homie/ProblemIcons"
-
 export default function playground(){
-
     return(
-        <ProblemSetComponent/>
+        <div>
+            Welcome to devs test page!
+        </div>
     )
 }
