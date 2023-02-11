@@ -3,9 +3,14 @@ import Image from 'next/image'
 
 export default function BlogCard({data}){
 
+    const {bcgcolor} = data
+
     return(
         <div className={styles.blog_div}>
-            <div className={styles.left_div}>
+            <div className={
+                (data.id % 2 == 0) ? `${styles.blue} ${styles.left_div}` : `${styles.red}  ${styles.left_div}`
+                }
+                >
                 <h2>{data.title}</h2>
                 <p>{data.synopsis}</p>
                 <div className={styles.sub_info}>
