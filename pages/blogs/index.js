@@ -1,6 +1,7 @@
 import BlogCard from "../../components/blog/BlogCard";
 import Link from 'next/link'
 import styles from '../../styles/components/BlogCard.module.css'
+import process from 'process'
 
 export default function Blogs({data}){
     const contents = JSON.parse(data.contents)
@@ -30,8 +31,11 @@ export default function Blogs({data}){
 }
 
 export async function getServerSideProps() {
+    var currentEnv = process.env.NODE_ENV
 
-    const res = await fetch("http://localhost:3000/api/blogs")
+    var url = (currentEnv == "development") ? "http://localhost:3000/api/blogs": "https://www.mahara.ca/api/blogs"
+
+    const res = await fetch(url)
     const data = await res.json()
 
     return{
