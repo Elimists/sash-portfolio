@@ -5,8 +5,6 @@ import process from 'process'
 
 export default function Blogs({data}){
     const contents = JSON.parse(data.contents)
-
-    console.log(contents)
     
     return(
         <div className={styles.blogs_container}>
