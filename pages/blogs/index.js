@@ -2,24 +2,28 @@ import BlogCard from "../../components/blog/BlogCard";
 import Link from 'next/link'
 import styles from '../../styles/components/BlogCard.module.css'
 
-export default function Blogs({blogData}){
-    const alldata = blogData.data
+export default function Blogs({data}){
+    const contents = JSON.parse(data.contents)
+
+    console.log(contents)
     
     return(
         <div className={styles.blogs_container}>
+            
             {
-                alldata.map((data, index) => {
+                contents.map((content, index) => {
                     return(
                         <Link 
-                            href={'/blogs/' + data.id}
+                            href={content.link}
                             key={index.toString()}>
-                                <a>
-                                    <BlogCard data={data}/>
+                                <a target="__blank">
+                                    <BlogCard data={content}/>
                                 </a>
                         </Link>
                     )
                 })
             }
+           
         </div>
     )
     
@@ -27,12 +31,12 @@ export default function Blogs({blogData}){
 
 export async function getServerSideProps() {
 
-    const res = await fetch("https://mahara-cms.herokuapp.com/api/blogs?populate=*")
+    const res = await fetch("http://localhost:3000/api/blogs")
     const data = await res.json()
 
     return{
         props:{
-            blogData: data
+            data
         }
     }
 }
