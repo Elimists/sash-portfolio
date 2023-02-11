@@ -56,6 +56,29 @@ The International Space Stations takes multiple of photos of earth daily. These 
 
 NASA saves many of the satellite images on their **&quot;Windows on Earth&quot;** website which is updated regularly. In recent years NASA has even begun to feature timelapse videos, curating photos into special photo albums, and even created a picture game. Even with these new features majority of the images and videos do not get enough attention. Fortunately, becuase these images already exist on the web and are free for use, there exists an oppurtunity to use these images in other services that could attract more users.
 
+<div>
+    <div>
+        <a target="_blank" href="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676140469/mahara-projects/worldjournal/imag1_y1oek8.webp">
+            <img alt="UI Mockup 1" src="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676140469/mahara-projects/worldjournal/imag1_y1oek8.webp">
+        </a>
+    </div>
+    <div>
+        <a target="_blank" href="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676140469/mahara-projects/worldjournal/imag2_iefkzo.webp">
+            <img alt="UI Mockup 1" src="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676140469/mahara-projects/worldjournal/imag2_iefkzo.webp">
+        </a>
+    </div>
+    <div>
+        <a target="_blank" href="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676140469/mahara-projects/worldjournal/imag3_cuzzxx.webp">
+            <img alt="UI Mockup 1" src="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676140469/mahara-projects/worldjournal/imag3_cuzzxx.webp">
+        </a>
+    </div>
+     <div>
+        <a target="_blank" href="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676140469/mahara-projects/worldjournal/imag4_sze6gh.webp">
+            <img alt="UI Mockup 1" src="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676140469/mahara-projects/worldjournal/imag4_sze6gh.webp">
+        </a>
+    </div>
+</div>
+
 One of the unique phenomenons from viewing the earth from outer space is known as the “Overview Effect”, a term which was popularized by author Frank White. During our time with Frank he noted that in his experience interviewing and studying astronauts who had returned from space many of them had a new perspective on earth, life, and the interconnectedness of it all. It has been discribed as “a cognitive shift in awareness.” I wanted to bring this feeling of the Overview Effect to these satellite images and help users feel that shift in perspective.
 
 ![Contributors to Overview Effect](https://res.cloudinary.com/dl2igmjxv/image/upload/v1676095086/mahara-projects/worldjournal/factors_x5jkag.webp)
