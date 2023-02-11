@@ -1,23 +1,16 @@
 import styles from '../../styles/components/BlogCard.module.css'
+import Image from 'next/image'
 
 export default function BlogCard({data}){
 
-    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-                        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-                        ];
-
-    var datePublished = new Date(data.attributes.publishedAt)
-    const month = monthNames[datePublished.getMonth()]
-    const year = datePublished.getFullYear()
-    const stringDate = month.toString() + " " + year.toString();
     return(
         <div className={styles.blog_div}>
             <div className={styles.left_div}>
-                <h2>{data.attributes.title}</h2>
-                <p>{data.attributes.synopsis}</p>
+                <h2>{data.title}</h2>
+                <p>{data.synopsis}</p>
                 <div className={styles.sub_info}>
-                    <p>{data.attributes.readtime}</p>
-                    <p>{stringDate}</p>
+                    <p>{data.readtime}</p>
+                    <p>{data.date}</p>
                 </div>
                 
                 <div className={styles.read_button_div}>
@@ -25,7 +18,15 @@ export default function BlogCard({data}){
                 </div>
             </div>
             <div className={styles.right_div}>
-                <img src={data.attributes.coverimage.data.attributes.url}></img>
+                <Image
+                    alt={data.alt}
+                    src={data.coverimage.src}
+                    layout='fill'
+                    sizes='100vw'
+                    style={{borderBottomRightRadius: "7px", borderTopRightRadius: "7px"}}
+                />
+
+                
             </div>
         </div>
     )

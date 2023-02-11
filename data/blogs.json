@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "title": "Recreating Hand-Drawn Image in AI: A Prompt Engineering Study Using Midjourney",
+        "synopsis": "How well can an AI image generator recreate a hand-drawn image?",
+        "readtime": "8 Min Read",
+        "date": "Feb, 2023",
+        "link": "https://medium.com/@sash.mahara/recreating-hand-drawn-image-in-a-i-a-prompt-engineering-study-using-midjourney-a88908f144f6",
+        "coverimage": {
+            "src": "/../public/blog/blog1.webp",
+            "height": 500,
+            "width": 500,
+            "alt": "Blog Post 1 Image"
+        }
+    }
+]
