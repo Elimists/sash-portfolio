@@ -45,7 +45,6 @@ export default function CoreBP(){
     return(
         <>
             <div className={styles.container}>
-                
                 {topSection()}
                 {synopsis()}
                 {overviewSection()}
