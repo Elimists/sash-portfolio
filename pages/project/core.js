@@ -10,12 +10,6 @@ import GoToTopButton from '../../components/GoToTopButton'
 
 export default function Core({data}){
     const isScrolled = useScrolledDown()
-    function scrollToTheTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        })
-    }
 
     const md = new MarkdownIt({
         html: true
