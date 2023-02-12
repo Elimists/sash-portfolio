@@ -9,7 +9,7 @@ import LisnProjectImage from '../public/projects/lisn/lisn.webp'
 import HomieProjectImage from '../public/projects/homie/homie.webp'
 
 /** MemoryCache Imports */
-import MemoryCacheImage from '../public/projects/memorycache/Hero.webp'
+import MemoryCacheImage from '../public/projects/memorycache/memorycache.webp'
 
 export const allProjects = [
 
