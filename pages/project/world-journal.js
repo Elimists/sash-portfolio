@@ -1,8 +1,20 @@
 import process from 'process'
 import MarkdownIt from 'markdown-it'
 import styles from '../../styles/ProjectDetails.module.css'
+import useWindowDimensions from '../../hooks/useWindowDimensions'
+import useScrolledDown from '../../hooks/useScrolledDown'
+
 
 export default function WorldJournal({data}){
+
+    const { width } = useWindowDimensions()
+    const isScrolled = useScrolledDown()
+    function scrollToTheTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
+    }
 
     const md = new MarkdownIt({
         html: true
@@ -10,20 +22,13 @@ export default function WorldJournal({data}){
 
     const htmlContent = md.render(data.contents)
 
-    function test(element) {
-        var newTab = window.open();
-        setTimeout(function() {
-            newTab.document.body.innerHTML = element.innerHTML;
-        }, 500);
-        return false;
-    }
-
     return(
         <div className={styles.container}>
             <section
                 className={styles.main_section}
                 dangerouslySetInnerHTML={{__html: htmlContent}}>
             </section>
+            {(isScrolled) ? <div tabIndex="0" role="button" className={styles.go_top_button} onClick={() => scrollToTheTop()} onKeyDown={(e) => handleOnEnterPressToTop(e)}>&uarr;</div> : null}
         </div>
     )
 }
