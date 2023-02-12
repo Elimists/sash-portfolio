@@ -6,6 +6,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import LisnProjectImage from '../../public/projects/lisn/lisn.webp'
 import HomieProjectImage from '../../public/projects/homie/homie.webp'
+import GoToTopButton from '../../components/GoToTopButton'
 
 export default function Core({data}){
     const isScrolled = useScrolledDown()
@@ -29,7 +30,7 @@ export default function Core({data}){
                 dangerouslySetInnerHTML={{__html: htmlContent}}>
             </section>
             {otherProjectSection()}
-            {(isScrolled) ? <div tabIndex="0" role="button" className={styles.go_top_button} onClick={() => scrollToTheTop()} onKeyDown={(e) => handleOnEnterPressToTop(e)}>&uarr;</div> : null}
+            {(isScrolled) ? <GoToTopButton/> : null}
         </div>
     )
 }
