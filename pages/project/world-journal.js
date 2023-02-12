@@ -1,13 +1,11 @@
 import process from 'process'
 import MarkdownIt from 'markdown-it'
 import styles from '../../styles/ProjectDetails.module.css'
-import useWindowDimensions from '../../hooks/useWindowDimensions'
 import useScrolledDown from '../../hooks/useScrolledDown'
 
 
 export default function WorldJournal({data}){
 
-    const { width } = useWindowDimensions()
     const isScrolled = useScrolledDown()
     function scrollToTheTop() {
         window.scrollTo({
