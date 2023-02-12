@@ -56,7 +56,7 @@ The International Space Stations takes multiple of photos of earth daily. These 
 
 NASA saves many of the satellite images on their **&quot;Windows on Earth&quot;** website which is updated regularly. In recent years NASA has even begun to feature timelapse videos, curating photos into special photo albums, and even created a picture game. Even with these new features majority of the images and videos do not get enough attention. Fortunately, becuase these images already exist on the web and are free for use, there exists an oppurtunity to use these images in other services that could attract more users.
 
-<div>
+<div style="display: flex; flex-wrap: wrap; justify-content: center;">
     <div>
         <a>
             <img alt="UI Mockup 1" src="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676140469/mahara-projects/worldjournal/imag1_y1oek8.webp">
@@ -69,12 +69,12 @@ NASA saves many of the satellite images on their **&quot;Windows on Earth&quot;*
     </div>
     <div>
         <a>
-            <img alt="UI Mockup 1" src="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676140469/mahara-projects/worldjournal/imag3_cuzzxx.webp">
+            <img alt="UI Mockup 1" src="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676140469/mahara-projects/worldjournal/imag4_sze6gh.webp">
         </a>
     </div>
      <div>
         <a>
-            <img alt="UI Mockup 1" src="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676140469/mahara-projects/worldjournal/imag4_sze6gh.webp">
+            <img alt="UI Mockup 1" src="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676140469/mahara-projects/worldjournal/imag3_cuzzxx.webp">
         </a>
     </div>
 </div>
