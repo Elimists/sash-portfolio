@@ -1,20 +1,56 @@
+<section>
+    <div>
+        <h1>The MemoryCache</h1>
+        <h2>An assistive storytelling device that uses holograms to share memories and memorabilia.</h2>
+        <p>Extended Reality - Interaction Design - User Research - User Experience - Emerging Technology</p>
+    </div>
+    <div>
+        <img src="/projects/memorycache/memorycache.webp"/>
+    </div>
+</section>
+
+<section>
+    <div>
+        <h3>Duration</h3>
+        <p>8 Months</p>
+    </div>
+    <div>
+        <h3>Role</h3>
+        <p>Product Designer</p>
+    </div>
+    <div>
+        <h3>Type</h3>
+        <p>Individual Project, Capstone Projectt</p>
+    </div>
+    <div>
+        <h3>Methods &amp; Tools</h3>
+        <p>Primary & Secondary Research, User Tests, 3D Printing, Figma, Fusion360, Keyshot</p>
+    </div>
+</section>
+
+<section>
+
+---
+
 ### Overview
 
-This 4th year capstone project was centered around the idea of social connectedness and personal informatics. The challenge was to investigate a problem at the intersection between social interaction and personal data and to create a physical and/or digital solution to address these issues. **I chose to focus on the issues of bereavement and mourning caused by the loss of a loved one as this issue was rooted in social connectedness as well as personal informatics**.
+This 4th year capstone project was centered around the idea of social connectedness and personal informatics. The challenge was to investigate a problem at the intersection between social interaction and personal data and to create a physical and/or digital solution to address these issues. I chose to focus on the issues of bereavement and mourning caused by the loss of a loved one as this issue was rooted in social connectedness as well as personal informatics.
 
 ---
 
 ### Area of Focus
 
-Research into grief management and how they are connected with social connectedness led me to discover new insights. Through my research evolution I discovered that **storytelling and the sharing of memories and memorabilia were extremely enriching and beneficial for people who were mourning**.
+Research into grief management and how they are connected with social connectedness led me to discover new insights. Through my research evolution I discovered that storytelling and the sharing of memories and memorabilia were extremely enriching and beneficial for people who were mourning.
 
-![Research Evolution](https://res.cloudinary.com/dl2igmjxv/image/upload/v1676052794/mahara-projects/memorycache/areaoffocus_it5axr.webp)
+![Research Evolution](https://res.cloudinary.com/dl2igmjxv/image/upload/v1676064936/mahara-projects/memorycache/areaoffocus_t3hml3.webp)
 
 ---
 
 ### Project Timeline
 
-![Project Timeline](https://res.cloudinary.com/dl2igmjxv/image/upload/v1676055814/mahara-projects/memorycache/timeline_igsdfz.webp)
+<p>
+    <img src="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676064937/mahara-projects/memorycache/timeline_lbsdlp.webp" alt="Project timeline visual" style="width: 100%;"/>
+</p>
 
 ---
 
@@ -73,7 +109,7 @@ The research phase helped uncover many areas of improvement and key consideratio
 
 Check out this video (3min) to see the concept use cycle.
 
-[![Initial How It Works](https://i.vimeocdn.com/filter/overlay?src0=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F1527725379-a691fa8237ff415b1bdfbb06963403a273508f3d512a80ec96f5014c3f4d68c5-d_295x166&src1=http%3A%2F%2Ff.vimeocdn.com%2Fp%2Fimages%2Fcrawler_play.png)](https://vimeo.com/760661686)
+<iframe title="Concept Use Cycle" src="https://player.vimeo.com/video/760661686?h=7210c14569" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe>
 
 ![How It Works - Concept](https://res.cloudinary.com/dl2igmjxv/image/upload/v1676064937/mahara-projects/memorycache/second_steps_azne9s.webp)
 
@@ -83,32 +119,36 @@ Check out this video (3min) to see the concept use cycle.
 
 Check out this short video (1min40s) to see how the device works!
 
-[![How It Works Final](https://i.vimeocdn.com/filter/overlay?src0=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F1411692128-f2c13019a0c5664b3b2ecb72a2094ed474c7ce09501dc5c593d9d392a4bbfdb5-d_295x166&src1=http%3A%2F%2Ff.vimeocdn.com%2Fp%2Fimages%2Fcrawler_play.png)](https://vimeo.com/698033014)
+<iframe src="https://player.vimeo.com/video/698033014?h=6eb6ceadea" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" display="block"></iframe>
 
 ---
 
 ### Looks Like Model
 
-<section class="quadrant">
-    <div>
-        <img src="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676064936/mahara-projects/memorycache/model1_lcfku9.webp">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-around; margin-top: 1.4rem;">
+    <div style="width: 300px;">
+        <img style="width: 100%;" src="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676064936/mahara-projects/memorycache/model1_lcfku9.webp">
     </div>
-    <div>
-        <img src="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676064936/mahara-projects/memorycache/model2_xpgu6x.webp">
+    <div style="width: 300px;">
+        <img style="width: 100%;" src="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676064936/mahara-projects/memorycache/model2_xpgu6x.webp">
     </div>
-    <div>
-        <img src="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676064936/mahara-projects/memorycache/model3_yil6yp.webp">
+    <div style="width: 300px;">
+        <img style="width: 100%;" src="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676064936/mahara-projects/memorycache/model3_yil6yp.webp">
     </div>
-    <div>
-        <img src="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676064936/mahara-projects/memorycache/model4_tvyhmz.webp">
+    <div style="width: 300px;">
+        <img style="width: 100%;" src="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676064936/mahara-projects/memorycache/model4_tvyhmz.webp">
     </div>
-</section>
+</div>
 
 ---
 
 ### Final Poster
 
-![Final Poster](https://res.cloudinary.com/dl2igmjxv/image/upload/v1676064935/mahara-projects/memorycache/finalposter_btvmik.webp)
+<p>
+    <a target="_blank" href="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676064935/mahara-projects/memorycache/finalposter_btvmik.webp">
+        <img src="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676064935/mahara-projects/memorycache/finalposter_btvmik.webp" alt="Final Poster" style="width: 100%;"/>
+    </a>
+</p>
 
 ---
 
@@ -116,6 +156,12 @@ Check out this short video (1min40s) to see how the device works!
 
 ![Results and Take-aways](https://res.cloudinary.com/dl2igmjxv/image/upload/v1676064937/mahara-projects/memorycache/result_takeaway_zfwqrw.webp)
 
+</section>
+
+<section>
+
 ---
 
-### My Other Projects
+## My Other Projects
+
+</section>
