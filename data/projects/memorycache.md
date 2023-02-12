@@ -154,7 +154,9 @@ Check out this short video (1min40s) to see how the device works!
 
 ### Results & Take-aways
 
-![Results and Take-aways](https://res.cloudinary.com/dl2igmjxv/image/upload/v1676064937/mahara-projects/memorycache/result_takeaway_zfwqrw.webp)
+<p>
+    <img src="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676064937/mahara-projects/memorycache/result_takeaway_zfwqrw.webp" alt="Result and Take-aways: Design Objectives" style="width: 100%;"/>
+</p>
 
 </section>
 
