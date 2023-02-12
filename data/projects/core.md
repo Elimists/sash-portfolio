@@ -191,7 +191,7 @@ The refined concept was taken further and modeled on SolidWorks. Using CAD softw
     <h5>Painting Process</h5>
 </p>
 
-<div style="display: flex; flex-wrap: wrap !important;">
+<div style="display: flex; flex-wrap: wrap !important; justify-content: center;">
     <img src="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676169545/mahara-projects/core/painted1_aok5nf.webp"/>
     <img src="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676169651/mahara-projects/core/painted2_gwpxiz.webp"/>
     <img src="https://res.cloudinary.com/dl2igmjxv/image/upload/v1676169658/mahara-projects/core/painted3_shuvjz.webp"/>
