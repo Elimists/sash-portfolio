@@ -5,7 +5,6 @@ import useScrolledDown from '../../hooks/useScrolledDown'
 
 
 export default function WorldJournal({data}){
-
     const isScrolled = useScrolledDown()
     function scrollToTheTop() {
         window.scrollTo({

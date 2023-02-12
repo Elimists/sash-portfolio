@@ -4,7 +4,6 @@ import styles from '../../styles/ProjectDetails.module.css'
 import useScrolledDown from '../../hooks/useScrolledDown'
 
 export default function Core({data}){
-
     const isScrolled = useScrolledDown()
     function scrollToTheTop() {
         window.scrollTo({
