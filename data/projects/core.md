@@ -223,3 +223,11 @@ Current market trends for modern blood pressure monitors shows that internet of 
     </a>
 </p>
 </section>
+
+<section style="width: 100%;">
+
+---
+
+## My Other Projects
+
+</section>
