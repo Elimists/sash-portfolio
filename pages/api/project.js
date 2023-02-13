@@ -19,10 +19,10 @@ export default async function handler(req, res) {
 
     try{
         const fileContents = await fs.readFile(dataDirectory + '/projects/' + slug + '.md', 'utf-8');
-        return res.status(200).json({'error': false, 'status': 'File read successfully', 'contents': fileContents})
+        return res.status(200).json({'error': false, 'status': 'File read successfully', 'contents': fileContents, 'slug': slug})
     }catch(error){
         if (error.code === 'ENOENT') {
-            return res.status(404).json({'error': true, 'message': 'Unable to get content from file', 'contents': 'There is no project named ' + slug})
+            return res.status(404).json({'error': true, 'message': 'Unable to get content from file', 'contents': 'Could not find: ' + slug, 'slug': slug})
         }
     }
   }
