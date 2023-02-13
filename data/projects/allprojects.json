@@ -1,0 +1,11 @@
+[
+    {
+        "id": 1,
+        "slug": "memorycache",
+        "name": "The MemoryCache",
+        "synopsis": "An assistive storytelling device that uses holograms to share memories and memorabilia",
+        "tags": "Extended Reality - Interaction Design - User Research - User Experience - Emerging Technology",
+        "local_img": "/projects/memorycache/memorycache.webp",
+        "cdn_img": "https://res.cloudinary.com/dl2igmjxv/image/upload/v1676064935/mahara-projects/memorycache/Hero_wm53eq.webp"
+    }
+]

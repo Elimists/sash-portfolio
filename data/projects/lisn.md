@@ -1,7 +1,7 @@
 <section>
     <div>
         <h1>Lisn</h1>
-        <h2>Web application that aims to utilize the satellite imagery and live video feeds from the Internation Space Station for educational purposes.</h2>
+        <h2>Improving new user onboarding for a mobile application and UI redesign.</h2>
         <p>UX/UI - User Research - Prototyping - Branding</p>
     </div>
     <div>
