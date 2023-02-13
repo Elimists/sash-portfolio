@@ -178,12 +178,8 @@ export default function Home({projects}) {
               </div>
             </section>
           </motion.div>
-
-
           {(isScrolledDown) ? <div tabIndex="0" role="button" className={styles.go_top_button} onClick={() => scrollToTheTop()} onKeyDown={(e) => handleOnEnterPressToTop(e)}>&uarr;</div> : null}
         </main>
-
-      
       </div>
     </>
   )
