@@ -4,6 +4,8 @@ import styles from '../../styles/ProjectDetails.module.css'
 import useScrolledDown from '../../hooks/useScrolledDown'
 import Link from 'next/link'
 import Image from 'next/image'
+import DOMPurify from 'isomorphic-dompurify'
+
 import LisnProjectImage from '../../public/projects/lisn/lisn.webp'
 import HomieProjectImage from '../../public/projects/homie/homie.webp'
 import GoToTopButton from '../../components/GoToTopButton'
@@ -15,13 +17,16 @@ export default function Core({data}){
         html: true
     })
 
+
     const htmlContent = md.render(data.contents)
+
+    const cleanedContent = DOMPurify.sanitize(htmlContent)
 
     return(
         <div className={styles.container}>
             <section
                 className={styles.main_section}
-                dangerouslySetInnerHTML={{__html: htmlContent}}>
+                dangerouslySetInnerHTML={{__html: cleanedContent}}>
             </section>
             {otherProjectSection()}
             {(isScrolled) ? <GoToTopButton/> : null}
