@@ -20,7 +20,7 @@
     </div>
     <div>
         <h3>Type</h3>
-        <p>Individual Project, Capstone Projectt</p>
+        <p>Individual Project, Capstone Project</p>
     </div>
     <div>
         <h3>Methods &amp; Tools</h3>
