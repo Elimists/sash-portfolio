@@ -1,6 +1,12 @@
 import path from 'path';
 import { promises as fs } from 'fs';
 
+/**
+ * API - Returns a json payload containing projects from data/projects/allprojects.json
+ * @params none
+ * @return {json}
+ * 
+ */
 export default async function handler(req, res) {
 
     const dataDirectory = path.join(process.cwd(), 'data');

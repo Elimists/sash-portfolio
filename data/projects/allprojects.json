@@ -2,10 +2,46 @@
     {
         "id": 1,
         "slug": "memorycache",
-        "name": "The MemoryCache",
+        "name": "The MemoryCache - Holographic Sharing Device",
         "synopsis": "An assistive storytelling device that uses holograms to share memories and memorabilia",
         "tags": "Extended Reality - Interaction Design - User Research - User Experience - Emerging Technology",
         "local_img": "/projects/memorycache/memorycache.webp",
         "cdn_img": "https://res.cloudinary.com/dl2igmjxv/image/upload/v1676064935/mahara-projects/memorycache/Hero_wm53eq.webp"
+    },
+    {
+        "id": 2,
+        "slug": "homie",
+        "name": "Rental Housing Search - Homie",
+        "synopsis": "Web application that simplifies and assists the housing rental search process.",
+        "tags": "UX/UI - User Research - Visual Design - Usability Testing",
+        "local_img": "/projects/homie/homie.webp",
+        "cdn_img": ""
+    },
+    {
+        "id": 3,
+        "slug": "lisn",
+        "name": "User Research and Onboarding - LISN",
+        "synopsis": "Improving new user onboarding for a mobile application and UI redesign.",
+        "tags": "UX/UI - User Research - Prototyping - Branding",
+        "local_img": "/projects/lisn/lisn.webp",
+        "cdn_img": "https://res.cloudinary.com/dl2igmjxv/image/upload/v1676171960/mahara-projects/lisn/image_18_ebcgrc.webp"
+    },
+    {
+        "id": 4,
+        "slug": "core",
+        "name": "Blood Pressure Monitor - Core",
+        "synopsis": "Product redesign of a blood pressure monitor with a mobile application geared towards athletes.",
+        "tags": "Industrial Design - User Research - UX/UI Rapid Prototyping - CAD",
+        "local_img": "/projects/lisn/lisn.webp",
+        "cdn_img": "https://res.cloudinary.com/dl2igmjxv/image/upload/v1676166562/mahara-projects/core/core_ljky5j.webp"
+    },
+    {
+        "id": 5,
+        "slug": "worldjournal",
+        "name": "NASA Design Spring - World Journal",
+        "synopsis": "Web application that aims to utilize the satellite imagery and live video feeds from the Internation Space Station for educational purposes.",
+        "tags": "Web Design - Design Sprint - UX/UI",
+        "local_img": "/projects/lisn/lisn.webp",
+        "cdn_img": "https://res.cloudinary.com/dl2igmjxv/image/upload/v1676094744/mahara-projects/worldjournal/world_journal_dflvr9.webp"
     }
 ]
