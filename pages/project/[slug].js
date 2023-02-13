@@ -4,13 +4,13 @@ import styles from '../../styles/ProjectDetails.module.css'
 import useScrolledDown from '../../hooks/useScrolledDown'
 import Link from 'next/link'
 import Image from 'next/image'
-import MemoryCache from '../../public/projects/memorycache/memorycache.webp'
+import LisnProjectImage from '../../public/projects/lisn/lisn.webp'
 import HomieProjectImage from '../../public/projects/homie/homie.webp'
 import GoToTopButton from '../../components/GoToTopButton'
 
 export default function Core({data}){
     const isScrolled = useScrolledDown()
-    
+
     const md = new MarkdownIt({
         html: true
     })
@@ -29,12 +29,21 @@ export default function Core({data}){
     )
 }
 
-export async function getServerSideProps() {
+export async function getServerSideProps(context) {
     var currentEnv = process.env.NODE_ENV
 
-    var url = (currentEnv == "development") ? "http://localhost:3000/api/projects/lisn": "https://www.mahara.ca/api/projects/lisn"
+    var slug = context.params.slug
 
-    const res = await fetch(url)
+    var url = (currentEnv == "development") ? "http://localhost:3000/api/project" : "https://www.mahara.ca/api/project"
+    const res = await fetch(url, {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({slug})
+    })
+    
     const data = await res.json()
 
     return{
@@ -63,21 +72,20 @@ const otherProjectSection = () => {
                 </Link>
             </div>
             <div>
-                <Link href="/project/memorycache">
+                <Link href="/project/lisn">
                     <div>
                         <Image
-                            src={MemoryCache}
+                            src={LisnProjectImage}
                             height={300}
                             width={400}
                             placeholder="blur"
-                            blurDataURL={MemoryCache}
-                            alt="MemoryChache Project Image"
+                            blurDataURL={LisnProjectImage}
+                            alt="Lisn Project Image"
                         />
-                        <p>MemoryCache</p>
+                        <p>Lisn</p>
                     </div>
                 </Link>
             </div>
         </section>
     )
 }
-

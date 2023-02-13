@@ -92,7 +92,7 @@ export const allProjects = [
         type: "Personal",
         role: "Lead Designer",
         tools: "Figma, Webflow",
-        link: "/project/world-journal",
+        link: "/project/worldjournal",
         alt_text: "World Journal aims to connect people through the use of live satelitte imagery"
     },
 
