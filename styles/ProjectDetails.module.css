@@ -196,11 +196,6 @@
     padding: 1rem;
 }
 
-.other_projects div:nth-child(3),
-.other_projects div:nth-child(4){
-    display: none;
-}
-
 .go_top_button{
     position: fixed;
     bottom: 20px;
