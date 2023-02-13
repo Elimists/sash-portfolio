@@ -18,7 +18,7 @@ export default function OtherProjects({slug}){
         setEditedData(datas.map(element => {return element.replace(" ", "").toLowerCase()}))
         var indexOfSlugInData = edited.indexOf(slug)
         var tempData = datas.filter((data, idx) => idx !== indexOfSlugInData)
-        setNewData(tempData.sort(() => Math.random() - 0.5))
+        setNewData(tempData.sort(() => Math.random() - 0.5).slice(0, 2))
     }, [slug])
 
     if (!edited.includes(slug)) {
