@@ -2,13 +2,9 @@ import process from 'process'
 import MarkdownIt from 'markdown-it'
 import styles from '../../styles/ProjectDetails.module.css'
 import useScrolledDown from '../../hooks/useScrolledDown'
-import Link from 'next/link'
-import Image from 'next/image'
 import DOMPurify from 'isomorphic-dompurify'
-
-import LisnProjectImage from '../../public/projects/lisn/lisn.webp'
-import HomieProjectImage from '../../public/projects/homie/homie.webp'
 import GoToTopButton from '../../components/GoToTopButton'
+import OtherProjects from '../../components/OtherProjecs'
 
 export default function Core({data}){
     const isScrolled = useScrolledDown()
@@ -28,7 +24,7 @@ export default function Core({data}){
                 className={styles.main_section}
                 dangerouslySetInnerHTML={{__html: cleanedContent}}>
             </section>
-            {otherProjectSection()}
+            <OtherProjects slug={data.slug}/>
             {(isScrolled) ? <GoToTopButton/> : null}
         </div>
     )
@@ -56,41 +52,4 @@ export async function getServerSideProps(context) {
             data
         }
     }
-}
-
-const otherProjectSection = () => {
-    return(
-        <section className={styles.other_projects}>
-            <div>
-                <Link href="/project/homie">
-                    <div>
-                        <Image
-                            src={HomieProjectImage}
-                            height={280}
-                            width={400}
-                            placeholder="blur"
-                            blurDataURL={HomieProjectImage}
-                            alt="Homie Project"
-                        />
-                        <p>Homie</p>
-                    </div>
-                </Link>
-            </div>
-            <div>
-                <Link href="/project/lisn">
-                    <div>
-                        <Image
-                            src={LisnProjectImage}
-                            height={300}
-                            width={400}
-                            placeholder="blur"
-                            blurDataURL={LisnProjectImage}
-                            alt="Lisn Project Image"
-                        />
-                        <p>Lisn</p>
-                    </div>
-                </Link>
-            </div>
-        </section>
-    )
 }

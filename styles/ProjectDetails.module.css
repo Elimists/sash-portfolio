@@ -145,9 +145,29 @@
     width: 100%;
 }
 
-.main_section section:nth-of-type(3) ul li {
+.main_section section:nth-of-type(3) li{
     margin-top: 1rem;
     font-size: 18px;
+}
+
+.main_section section:nth-of-type(3) a{
+    transition: transform .2s;
+    transition-timing-function: linear;
+}
+
+.main_section section:nth-of-type(3) a:hover{
+    transform: scale(1.1);
+}
+
+.main_section section:nth-of-type(3) div div a img{
+    transition-timing-function: linear;
+    transition: transform .2s;
+}
+
+.main_section section:nth-of-type(3) div div a img:hover {
+    -webkit-box-shadow: 0px 0px 8px 1px #474747; 
+    box-shadow: 0px 0px 8px 1px #646464;
+    border-radius: 10px;
 }
 
 .main_section section hr{
@@ -159,7 +179,8 @@
     background: linear-gradient(90deg,#9fc7fc,#e6b1fe 50%,#d34d74);
 }
 
-.other_projects{
+.other_projects
+{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -173,6 +194,11 @@
 .other_projects div{
     cursor: pointer;
     padding: 1rem;
+}
+
+.other_projects div:nth-child(3),
+.other_projects div:nth-child(4){
+    display: none;
 }
 
 .go_top_button{
@@ -189,6 +215,16 @@
     cursor: pointer;
 }
 
+.not_exist{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.not_exist p {
+    font-size: 20px;
+    color: rgb(224, 59, 59);
+    font-weight: 500;
+}
 /*Dynamic screen size stylings*/
 @media (max-width: 1000px) {
 
@@ -250,12 +286,16 @@
         width: 100%;
     }
 
-    .main_section section:nth-of-type(3) ul li {
+    .main_section section:nth-of-type(3) li {
         margin-top: 0.6rem;
         font-size: 16px;
     }
 
     .other_projects {
         flex-direction: column;   
+    }
+
+    .main_section section:nth-of-type(3) div{
+        width: 100% !important;
     }
 }

@@ -8,7 +8,7 @@ import {useState, useEffect} from 'react'
 import CoreProjectImage from '../public/projects/core/core.webp'
 import HomieProjectImage from '../public/projects/homie/homie.webp' 
 import LisnProjectImage from '../public/projects/lisn/lisn.webp'
-import WorldJournalProjectImage from '../public/projects/world-journal/world-journal.webp'
+import WorldJournalProjectImage from '../public/projects/worldjournal/worldjournal.webp'
 import MemoryCacheImage from '../public/projects/memorycache/memorycache.webp'
 
 import { motion } from 'framer-motion'
