@@ -1,6 +1,6 @@
 import CoreProjectImage from '../public/projects/core/core.webp'
 
-import WorldJournalProjectImage from '../public/projects/world-journal/world-journal.webp'
+import WorldJournalProjectImage from '../public/projects/worldjournal/worldjournal.webp'
 
 /** LISN Imports */
 import LisnProjectImage from '../public/projects/lisn/lisn.webp'
