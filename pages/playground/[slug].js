@@ -1,8 +1,7 @@
 import { useRouter } from "next/router"
 import OtherProjects from "../../components/OtherProjecs"
 
-export default function Project({data}){
-    var slug = data.slug
+export default function Project(){ 
     return(
         <div>
             
