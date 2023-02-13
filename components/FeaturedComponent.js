@@ -1,14 +1,14 @@
 /**Imports */
 import Image from 'next/image'
-import styles from '../../../styles/components/FeaturedComponent.module.css'
+import styles from '../styles/components/FeaturedComponent.module.css'
 import {motion} from 'framer-motion'
 
 /**Import Images Here */
-import AcidoImage from '../../../public/featured/acidorocket.webp'
-import Graduate from "../../../public/featured/graduated.webp"
-import gillesaward from "../../../public/featured/gillesaward.webp"
-import Studioaward from "../../../public/featured/Studioaward.webp"
-import medicalaward from "../../../public/featured/medicalaward.webp"
+import AcidoImage from '../public/featured/acidorocket.webp'
+import Graduate from "../public/featured/graduated.webp"
+import gillesaward from "../public/featured/gillesaward.webp"
+import Studioaward from "../public/featured/Studioaward.webp"
+import medicalaward from "../public/featured/medicalaward.webp"
 
 /** Data */
 const featuredData = [
