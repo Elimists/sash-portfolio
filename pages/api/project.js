@@ -1,6 +1,12 @@
 import path from 'path';
 import { promises as fs } from 'fs';
 
+/**
+ * API - Returns a json payload containing data for a single project.
+ * @param {slug}
+ * @return {json}
+ * 
+ */
 export default async function handler(req, res) {
 
     if (req.method !== 'POST'){

@@ -1,7 +1,7 @@
 <section>
     <div>
         <h1>Core.</h1>
-        <h2>Product redesign of a blood pressure monitor with a mobile application geared towards athletes..</h2>
+        <h2>Product redesign of a blood pressure monitor with a mobile application geared towards athletes.</h2>
         <p>Industrial Design - User Research - UX/UI Rapid Prototyping - CAD</p>
     </div>
     <div>
