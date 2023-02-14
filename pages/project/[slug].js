@@ -5,6 +5,12 @@ import useScrolledDown from '../../hooks/useScrolledDown'
 import DOMPurify from 'isomorphic-dompurify'
 import GoToTopButton from '../../components/GoToTopButton'
 import OtherProjects from '../../components/OtherProjecs'
+import { unified } from 'unified'
+import rehypeParse from 'rehype-parse'
+import rehypeStringify from 'rehype-stringify'
+import { visit } from 'unist-util-visit'
+import parameterize from 'parameterize'
+import TableOfContents from '../../components/TableOfContents'
 
 export default function Core({data}){
     const isScrolled = useScrolledDown()
@@ -13,20 +19,48 @@ export default function Core({data}){
         html: true
     })
 
-
     const htmlContent = md.render(data.contents)
 
-    const cleanedContent = DOMPurify.sanitize(htmlContent)
+    const tableOfContents = []
+
+    const content  = unified()
+    .use(rehypeParse, {
+        fragment: true,
+    })
+    .use(() => {
+        return (tree) => {
+            visit(tree, 'element', (node) => {
+                if (node.tagName === 'h3'){
+                    const id = parameterize(node.children[0].value)
+                    node.properties.id = id
+                    tableOfContents.push(
+                        {
+                            id,
+                            title: node.children[0].value
+                        }
+                    )
+                }
+            })
+        }
+    })
+    .use(rehypeStringify)
+    .processSync(htmlContent)
+    .toString()
+
+    const cleanedContent = DOMPurify.sanitize(content)
 
     return(
-        <div className={styles.container}>
-            <section
-                className={styles.main_section}
-                dangerouslySetInnerHTML={{__html: cleanedContent}}>
-            </section>
-            <OtherProjects slug={data.slug}/>
-            {(isScrolled) ? <GoToTopButton/> : null}
-        </div>
+        <>
+            <TableOfContents toc={tableOfContents}/>
+            <div className={styles.container}>
+                <section
+                    className={styles.main_section}
+                    dangerouslySetInnerHTML={{__html: cleanedContent}}>
+                </section>
+                <OtherProjects slug={data.slug}/>
+                {(isScrolled) ? <GoToTopButton/> : null}
+            </div>
+        </>
     )
 }
 
