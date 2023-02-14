@@ -49,6 +49,7 @@ export default function Core({data}){
 
     const cleanedContent = DOMPurify.sanitize(content)
 
+
     return(
         <>
             <TableOfContents toc={tableOfContents}/>

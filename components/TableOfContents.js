@@ -1,5 +1,7 @@
 import styles from '../styles/TableOfContents.module.css'
 import { AnimatePresence, motion, useCycle } from "framer-motion";
+import useWindowDimensions from '../hooks/useWindowDimensions'
+import {useState, useEffect} from 'react'
 
 
 const itemVariants = {
@@ -27,6 +29,12 @@ const itemVariants = {
 export default function TableOfContents({toc}){
 
     const [open, cycleOpen] = useCycle(false, true);
+    const { height, width } = useWindowDimensions()
+
+    const [mobileToCMenu, setMobileToCMenu] = useState(false)
+    useEffect(() => {
+        if (width <= 1500) {setMobileToCMenu(true)}
+    }, [width])
 
     return(
         
@@ -64,10 +72,16 @@ export default function TableOfContents({toc}){
             </motion.aside>
             )}
         </AnimatePresence>
-
+        
+        {(mobileToCMenu) ? 
+        <div className={styles.mobile_button_div}>
+            <button onClick={cycleOpen}>{open ? "<" : ">>"}</button>
+        </div> :
         <div className={styles.button_div}>
             <button onClick={cycleOpen}>{open ? "Close" : "Table of Contents"}</button>
         </div>
+        }
+        
     </>
     )
 }
