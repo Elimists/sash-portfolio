@@ -14,13 +14,13 @@ const itemVariants = {
   const sideVariants = {
     closed: {
       transition: {
-        staggerChildren: 0.07,
+        staggerChildren: 0.0,
         staggerDirection: -1
       }
     },
     open: {
       transition: {
-        staggerChildren: 0.07,
+        staggerChildren: 0.02,
         staggerDirection: 1
       }
     }
@@ -48,7 +48,7 @@ export default function TableOfContents({toc}){
                 }}
                 exit={{
                 width: 0,
-                transition: { delay: 0.1, duration: 0.1 }
+                transition: { delay: 0.03, duration: 0.03 }
                 }}
             >
                 <motion.div
